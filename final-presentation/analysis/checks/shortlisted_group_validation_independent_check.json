@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "method": "Independent R calculations from frozen OOF data; no fitting or tuning",
+  "checks": [
+    "Subgroup population: 1,631 listings / 625 distinct hosts / 544 positives",
+    "Pooled three-group expected quota and both hit counts independently reproduced",
+    "Each fixed group quota and model, frozen baseline and random expected counts reproduced",
+    "Combined fixed-group quota 409 and 202 model positives reproduced",
+    "All 15 group-by-fold baselines are constant and equal uniform-random expected selection",
+    "Group-by-fold sensitivity: 416 quota / 222 model positives / 138.700462 expected baseline positives reproduced",
+    "Association stability artifact is present with both five-fold directional checks"
+  ],
+  "check_count": 7
+}

@@ -1,12 +1,20 @@
 # Melbourne Airbnb Market Screening
 
+## Final presentation released 1 October 2026
+
+The [final presentation package](final-presentation/README.md) contains the 10-slide PowerPoint, speaking script, updated analysis code and aggregate results. The [evidence map](final-presentation/EVIDENCE_MAP.md) links each slide to its supporting files and explains the limits of the checks.
+
+The final main model is logistic regression for clearer explanation; random forest remains a benchmark. The client is framed as planning to lease homes. The interim report below is retained as the historical version, including its earlier model selection and wording.
+
+## Archived interim report
+
 Interim Project Report
 
 CMCE30005 Business Analytics Challenge | Semester 2 2026 | TheNextChapter Group 2
 
 Eric Huang, Loc Le, Qihang Sun and Maksym Xu
 
-Repository: https://github.com/Qihang-cpu/CMCE30005-TheNextChapter
+Repository: https://github.com/maksym-xu/CMCE30005-TheNextChapter
 
 ## Introduction
 

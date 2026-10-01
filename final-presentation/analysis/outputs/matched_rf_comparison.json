@@ -1,0 +1,163 @@
+{
+  "purpose": "Supplementary like-for-like predictor comparison; does not change the presentation model or its existing outputs",
+  "data": {
+    "listings": 3873,
+    "hosts": 1726,
+    "positive_listings": 981,
+    "review_threshold": 30,
+    "folds": 5
+  },
+  "same_inputs": {
+    "columns": [
+      "areaYarra",
+      "areaYarra Ranges",
+      "areaPort Phillip",
+      "areaStonnington",
+      "areaMerri-bek",
+      "dwellingHouse/townhouse",
+      "bedrooms2",
+      "bedrooms3",
+      "price_vs_similar_10",
+      "one_nightYes",
+      "amenities_10"
+    ],
+    "design": "Same model-matrix predictors for both learners; host-grouped folds frozen; segment price medians learned inside each training fold"
+  },
+  "random_forest": {
+    "implementation": "R randomForest 4.7.1.2",
+    "ntree": 250,
+    "mtry": 3,
+    "nodesize": 10,
+    "bootstrap_replace": true,
+    "class_weights": "none",
+    "seed_rule": "30005 + fold",
+    "tuning": "None. Parameters fixed before inspecting this supplementary comparison."
+  },
+  "checks": {
+    "logistic_max_probability_difference_from_verified_main": 6.106226635438361e-16,
+    "host_overlap": false,
+    "same_listing_ids": true,
+    "same_outcomes": true,
+    "same_folds": true,
+    "same_expected_quota": 969
+  },
+  "quota": {
+    "method": "Exactly ceil(n/4) in expectation, sharing remaining quota uniformly across boundary ties",
+    "rf_score_boundary": 0.21199999999999999,
+    "rf_boundary_tied_listings": 29,
+    "rf_boundary_selection_weight": 0.89655172413793105
+  },
+  "metrics": [
+    {
+      "model": "logistic",
+      "auc": 0.70513388545574773,
+      "brier_score": 0.17179616219041369,
+      "precision_top_quarter": 0.43653250773993807,
+      "recall_top_quarter": 0.43119266055045874,
+      "expected_screened_n": 969,
+      "expected_true_positives": 423
+    },
+    {
+      "model": "random_forest",
+      "auc": 0.6837740372753125,
+      "brier_score": 0.18722648902659447,
+      "precision_top_quarter": 0.4514785950677912,
+      "recall_top_quarter": 0.44595592112200766,
+      "expected_screened_n": 968.99999999999966,
+      "expected_true_positives": 437.48275862068954
+    }
+  ],
+  "folds": [
+    {
+      "fold": 0,
+      "train_listings": 3155,
+      "test_listings": 718,
+      "train_hosts": 1395,
+      "test_hosts": 331,
+      "logistic_auc": 0.79153549593941053,
+      "rf_auc": 0.72701660735468565,
+      "logistic_brier": 0.14100924907730841,
+      "rf_brier": 0.15409557660167131,
+      "auc_difference_rf_minus_logistic": -0.064518888584724876,
+      "brier_difference_rf_minus_logistic": 0.013086327524362895
+    },
+    {
+      "fold": 1,
+      "train_listings": 3059,
+      "test_listings": 814,
+      "train_hosts": 1350,
+      "test_hosts": 376,
+      "logistic_auc": 0.70868383098824816,
+      "rf_auc": 0.65180487602906567,
+      "logistic_brier": 0.20613827856961925,
+      "rf_brier": 0.2494730614250614,
+      "auc_difference_rf_minus_logistic": -0.056878954959182493,
+      "brier_difference_rf_minus_logistic": 0.04333478285544215
+    },
+    {
+      "fold": 2,
+      "train_listings": 3113,
+      "test_listings": 760,
+      "train_hosts": 1397,
+      "test_hosts": 329,
+      "logistic_auc": 0.7831283398391149,
+      "rf_auc": 0.7750513506657174,
+      "logistic_brier": 0.1710795615563554,
+      "rf_brier": 0.18938096842105262,
+      "auc_difference_rf_minus_logistic": -0.0080769891733974974,
+      "brier_difference_rf_minus_logistic": 0.018301406864697223
+    },
+    {
+      "fold": 3,
+      "train_listings": 3124,
+      "test_listings": 749,
+      "train_hosts": 1394,
+      "test_hosts": 332,
+      "logistic_auc": 0.5986415247364153,
+      "rf_auc": 0.62622250846810745,
+      "logistic_brier": 0.16979790966590716,
+      "rf_brier": 0.15938418157543391,
+      "auc_difference_rf_minus_logistic": 0.027580983731692155,
+      "brier_difference_rf_minus_logistic": -0.010413728090473251
+    },
+    {
+      "fold": 4,
+      "train_listings": 3041,
+      "test_listings": 832,
+      "train_hosts": 1368,
+      "test_hosts": 358,
+      "logistic_auc": 0.68053760139611541,
+      "rf_auc": 0.66099360113757555,
+      "logistic_brier": 0.16721903299002419,
+      "rf_brier": 0.17801467307692309,
+      "auc_difference_rf_minus_logistic": -0.019544000258539862,
+      "brier_difference_rf_minus_logistic": 0.0107956400868989
+    }
+  ],
+  "paired_host_bootstrap": {
+    "replicates": 1000,
+    "predictions_held_fixed": true,
+    "intervals": [
+      {
+        "metric": "auc",
+        "difference_rf_minus_logistic": -0.021359848180435237,
+        "ci95_lower": -0.042320650046686989,
+        "ci95_upper": 0.00098143600112828803
+      },
+      {
+        "metric": "brier",
+        "difference_rf_minus_logistic": 0.015430326836180785,
+        "ci95_lower": 0.003751051227502241,
+        "ci95_upper": 0.027285299080413081
+      },
+      {
+        "metric": "precision",
+        "difference_rf_minus_logistic": 0.01494608732785313,
+        "ci95_lower": -0.02345851786514902,
+        "ci95_upper": 0.073106424600579548
+      }
+    ],
+    "limitation": "Intervals omit refitting, tuning, model-selection and threshold uncertainty."
+  },
+  "limitations": ["This uses R randomForest, not the interim Python scikit-learn implementation; it is a new matched-input benchmark, not a reproduction of the old forest.", "nodesize in randomForest is not identical to min_samples_leaf in scikit-learn.", "One fixed RF configuration and one seed rule are evaluated; neither family is exhaustively tuned.", "The same exploratory snapshot and folds have been used in prior analyses.", "Current listing settings explain historical review activity; these are not causal or future-profit predictions."]
+}

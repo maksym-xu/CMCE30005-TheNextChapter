@@ -1,0 +1,17 @@
+scope,metric,ci95_lower,ci95_upper,host_replicates
+pooled_three_groups,model_precision,0.33055347829421694,0.6593049327354259,1000
+pooled_three_groups,segment_mean_precision,0.13236262199704427,0.3360745314206761,1000
+pooled_three_groups,random_expected_precision,0.26422762915873377,0.4097360528492666,1000
+pooled_three_groups,gain_model_minus_segment_mean_pp,9.456885939191878,43.1082529668738,1000
+pooled_three_groups,gain_model_minus_random_pp,3.237925298765628,28.011234344358705,1000
+fixed_quota_within_each_group,model_precision,0.33629380449362845,0.6545688427903192,1000
+fixed_quota_within_each_group,segment_mean_precision,0.12483430275413362,0.2895877548608294,1000
+fixed_quota_within_each_group,random_expected_precision,0.2642298579836308,0.4095531479365001,1000
+fixed_quota_within_each_group,gain_model_minus_segment_mean_pp,12.796126874173906,44.76266698749692,1000
+fixed_quota_within_each_group,gain_model_minus_random_pp,3.6189497197744553,27.834443953288055,1000
+Melbourne 2BR Apartment/unit,model_precision,0.3050831097441267,0.6462110520781449,1000
+Melbourne 2BR Apartment/unit,gain_model_minus_random_pp,0.7130128821728547,27.604429186393386,1000
+Melbourne 3BR Apartment/unit,model_precision,0.2986899065846434,0.8111111111111111,1000
+Melbourne 3BR Apartment/unit,gain_model_minus_random_pp,-1.274000796059621,37.36360422194351,1000
+Yarra Ranges 3BR House/townhouse,model_precision,0.3333333333333333,0.7368421052631579,1000
+Yarra Ranges 3BR House/townhouse,gain_model_minus_random_pp,6.5706140350877185,40.32414754730043,1000

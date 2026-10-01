@@ -1,0 +1,3 @@
+model,expected_screened_n,expected_true_positives,expected_false_positives,expected_false_negatives,expected_true_negatives
+logistic,969,423,546,558,2346
+random_forest,969,437.48275862069,531.51724137931,543.51724137931,2360.48275862069

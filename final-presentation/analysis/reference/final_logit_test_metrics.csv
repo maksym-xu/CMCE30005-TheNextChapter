@@ -1,0 +1,16 @@
+metric,value,note
+listings,3873,""
+hosts,1726,""
+busy_share,0.253292021688613,Share with 30+ reviews in 365 days
+auc_full_model,0.705133885455748,"Pooled out-of-fold, five host-grouped folds"
+auc_location_and_size_only,0.584766158674568,"Area, dwelling type and bedrooms only"
+folds_where_full_beats_location_only,5,Per-fold AUC comparison
+flag_rule,0.75,Top quarter of out-of-fold predicted chances
+flagged_listings,969,""
+flagged_and_busy,423,""
+flagged_not_busy,546,""
+not_flagged_but_busy,558,""
+not_flagged_not_busy,2346,""
+hit_rate_in_flagged_top_quarter,0.436532507739938,Precision
+share_of_busy_caught,0.431192660550459,Recall
+hit_rate_top_quarter_location_only,0.293478260869565,""

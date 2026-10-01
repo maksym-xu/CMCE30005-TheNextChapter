@@ -1,0 +1,168 @@
+{
+  "sample": {
+    "source_listings": 25728,
+    "analysis_listings": 3873,
+    "hosts": 1726
+  },
+  "segments": [
+    {
+      "label": "City of Melbourne\n3BR apartments",
+      "n": 306,
+      "share": 0.366013071895425,
+      "lo": 0.273021141322202,
+      "hi": 0.457432197140399,
+      "share_label": "36.6%",
+      "range_label": "27.3–45.7%"
+    },
+    {
+      "label": "City of Melbourne\n2BR apartments",
+      "n": 1235,
+      "share": 0.327935222672065,
+      "lo": 0.268575647871602,
+      "hi": 0.396141294809355,
+      "share_label": "32.8%",
+      "range_label": "26.9–39.6%"
+    },
+    {
+      "label": "Yarra Ranges\n3BR houses / townhouses",
+      "n": 90,
+      "share": 0.3,
+      "lo": 0.218732040229885,
+      "hi": 0.390271937202131,
+      "share_label": "30.0%",
+      "range_label": "21.9–39.0%"
+    }
+  ],
+  "screening": {
+    "values": [
+      0.2532920216886135,
+      0.280689613306624,
+      0.436532507739938
+    ]
+  },
+  "temporal": {
+    "values": [
+      0.27121609798775154,
+      0.14861294583883752
+    ]
+  },
+  "provenance": [
+    {
+      "source": "analysis/outputs/presentation_metrics.json",
+      "section": "segments",
+      "note": "Prioritisation is a client workflow proposal, not a statistically certain ordering."
+    },
+    {
+      "source": "Project/Airbnb project brief.pdf; analysis/outputs/presentation_metrics.json",
+      "section": "segments"
+    },
+    {
+      "source": "analysis/outputs/presentation_metrics.json",
+      "section": "sample and outcome",
+      "filters": "Entire apartment/condo/house/townhouse, 1–3 bedrooms; AUD30–1500 price; first review at least365days before collection;>=50 analysis listings per group."
+    },
+    {
+      "source": "analysis/reference/final_segment_summary.csv",
+      "note": "Observed proportions; 90% host-bootstrap intervals, overlapping. Not model-generated ranks."
+    },
+    {
+      "source": [
+        "analysis/scripts/14_simple_logistic.R",
+        "analysis/outputs/association_stability.json"
+      ],
+      "model": "binomial logistic regression, unpenalised R glm",
+      "inputs": [
+        "Council area",
+        "Apartment or house/townhouse",
+        "Bedrooms (1–3)",
+        "Current price relative to training-fold segment median",
+        "Accepts 1-night stays, yes/no",
+        "Listed amenity count"
+      ],
+      "scope": "Retrospective classification of held-out hosts; no prospective time validation for this model",
+      "interpretation": "Learned probabilities are used only as a historical ranking score. Associations are conditional and non-causal."
+    },
+    {
+      "source": "analysis/outputs/model_comparison.csv",
+      "baseline": {
+        "label": "Training-fold segment average (fixed smoothing weight 10)",
+        "auc": 0.581032353301949,
+        "brier_score": 0.186788923808794,
+        "top_quarter_precision": 0.280689613306624,
+        "top_quarter_precision_percent_1dp": 28.1,
+        "expected_screened_listings": 969,
+        "expected_true_positives": 271.988235294118,
+        "recall": 0.277256101217245,
+        "quota_method": "Exactly ceil(n/4) in expectation; fractional weight at tied boundary"
+      },
+      "full": {
+        "label": "Simple logistic model",
+        "auc": 0.705133885455748,
+        "brier_score": 0.171796162190414,
+        "top_quarter_precision": 0.436532507739938,
+        "top_quarter_precision_percent_1dp": 43.7,
+        "expected_screened_listings": 969,
+        "expected_true_positives": 423.0,
+        "recall": 0.431192660550459,
+        "quota_method": "Exactly ceil(n/4) in expectation; fractional weight at tied boundary",
+        "confusion": {
+          "true_positives": 423,
+          "false_positives": 546,
+          "false_negatives": 558,
+          "true_negatives": 2346
+        },
+        "accuracy": 0.714949651432998,
+        "all_negative_accuracy": 0.746707978311386,
+        "folds_beating_segment_mean_auc": 5,
+        "fold_auc": [
+          0.791535495939411,
+          0.708683830988248,
+          0.783128339839115,
+          0.598641524736415,
+          0.680537601396115
+        ]
+      },
+      "note": "Threshold30. Same expected screening quota969; fractional weights at tied boundary for baselines. All-listing mean is a context benchmark. Evaluation followed earlier exploration."
+    },
+    {
+      "source": "analysis/reference/temporal-validation/",
+      "details": {
+        "validated_object": "Persistence of the earlier top-three segment shortlist, NOT the simple logistic model",
+        "sample_listings": 2657,
+        "sample_hosts": 1208,
+        "segments": 10,
+        "threshold": 34,
+        "threshold_source": "Earlier-window reference-host P75; held fixed for both windows",
+        "windows": {
+          "earlier": "(last_scraped - 730 days, last_scraped - 365 days]",
+          "recent": "(last_scraped - 365 days, last_scraped]",
+          "basis": "per-listing last_scraped; both windows rebuilt from raw review dates"
+        },
+        "earlier_top_three_recent_share": 0.27121609798775154,
+        "others_recent_share": 0.14861294583883752,
+        "difference_percentage_points": 12.260315214891401,
+        "difference_ci95_percentage_points": [
+          5.1416538075964295,
+          20.056599335714765
+        ],
+        "overall_earlier_share": 0.2581859239744072,
+        "overall_recent_share": 0.20135491155438465,
+        "trend_wording": "Overall attainment fell; not every segment fell.",
+        "exact_top_three_set_bootstrap_recurrence": 0.515,
+        "limits": "Same surviving listings across two windows. Longer-history sample. No forecast of a new operator's profit. Copied validated project evidence; raw temporal pipeline is not rerun in this compact package."
+      }
+    },
+    {
+      "source": "Client decision framework",
+      "note": "No estimated-revenue-derived rent ceiling is used. Revenue inputs for any candidate require explicit scenarios and external verification."
+    },
+    {
+      "source": "Proposed implementation plan",
+      "note": "10 candidates and30days are planning choices; not model-derived optima. Actual work and approvals have not happened."
+    },
+    {
+      "source": "Group2 recommendations",
+      "note": "Established priced surviving listings; current details vs past reviews; review activity is not profit."
+    }
+  ]
+}

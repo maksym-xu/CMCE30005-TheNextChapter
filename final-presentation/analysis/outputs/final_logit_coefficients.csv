@@ -1,0 +1,13 @@
+term,plain_label,coefficient,odds_ratio,or_ci95_lo,or_ci95_hi,p_value,se_method
+(Intercept),"Baseline odds (Melbourne 1BR apartment, typical price, minimum stay 2+ nights, 0 amenities)",-2.60314032419796,0.0740407009458381,0.0365762059117596,0.149879553111016,4.65968226787348e-13,Host-clustered (sandwich::vcovCL)
+areaYarra,Area: Yarra (vs Melbourne),-0.162910153122574,0.849667524959207,0.547707675914212,1.3181025841299,0.467120333588138,Host-clustered (sandwich::vcovCL)
+areaYarra Ranges,Area: Yarra Ranges (vs Melbourne),0.247700193491276,1.28107579975126,0.62700981829208,2.61743142903041,0.496826249035564,Host-clustered (sandwich::vcovCL)
+areaPort Phillip,Area: Port Phillip (vs Melbourne),-0.649087504069323,0.522522358814461,0.328385253677562,0.831430803921279,0.00616263891315526,Host-clustered (sandwich::vcovCL)
+areaStonnington,Area: Stonnington (vs Melbourne),-0.744367868212772,0.475034489451062,0.295982850074354,0.762401490867946,0.00204289674435934,Host-clustered (sandwich::vcovCL)
+areaMerri-bek,Area: Merri-bek (vs Melbourne),-0.264288657216776,0.767751890544039,0.347211145381026,1.69764989769293,0.513895726366474,Host-clustered (sandwich::vcovCL)
+dwellingHouse/townhouse,House or townhouse (vs apartment),-0.26694477546389,0.765715356573135,0.381685694112429,1.5361330443766,0.452345171027967,Host-clustered (sandwich::vcovCL)
+bedrooms2,2 bedrooms (vs 1),0.155314925616394,1.16802574441742,0.840195008862472,1.62377082133462,0.355457524256414,Host-clustered (sandwich::vcovCL)
+bedrooms3,3 bedrooms (vs 1),0.297887424529255,1.34701013904324,0.820697151253587,2.21084758478059,0.238656755568588,Host-clustered (sandwich::vcovCL)
+price_vs_similar_10,Each 10% priced above similar listings,-0.128270584034025,0.879615337074609,0.821586951978647,0.941742245727616,0.000229751512302616,Host-clustered (sandwich::vcovCL)
+one_nightYes,Accepts 1-night stays (vs minimum of 2+ nights),1.16183405437472,3.19578915555547,2.19475860981767,4.65339025489204,1.3594799823325e-09,Host-clustered (sandwich::vcovCL)
+amenities_10,Each 10 extra listed amenities,0.224340189153296,1.25149669261977,1.09773372016768,1.42679772231008,0.000796020965411698,Host-clustered (sandwich::vcovCL)

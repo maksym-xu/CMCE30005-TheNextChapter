@@ -1,0 +1,4 @@
+model,listings,hosts,roc_auc,brier_score,observed_target_share,expected_top_quarter_n,expected_true_positives_top_quarter,precision_top_quarter,recall_top_quarter,quota_method
+simple_logistic,3873,1726,0.705133885455748,0.171796162190414,0.253292021688613,969,423,0.436532507739938,0.431192660550459,Exactly ceil(n/4) in expectation; fractional weight at tied boundary
+segment_mean,3873,1726,0.581032353301949,0.186788923808794,0.253292021688613,968.999999999998,271.988235294118,0.280689613306624,0.277256101217245,Exactly ceil(n/4) in expectation; fractional weight at tied boundary
+location_type_bedrooms_logistic,3873,1726,0.584766158674568,0.186502288212058,0.253292021688613,969.000000000001,282.09900990099,0.291123849227028,0.287562701224251,Exactly ceil(n/4) in expectation; fractional weight at tied boundary

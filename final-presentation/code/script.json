@@ -1,0 +1,307 @@
+{
+  "title": "Melbourne Airbnb final presentation speaking script 1 October 2026",
+  "language": "English spoken script with Chinese rehearsal cues",
+  "source_commit": "7ea295c50999472bc91b5f247e75a187b4171545",
+  "model_provenance": "The presentation uses an explainable logistic extension and retains the interim random forest as a benchmark. Evidence and code: repository final-presentation directory; exact files are listed in EVIDENCE_MAP.md.",
+  "target_seconds": 540,
+  "buffer_seconds": 60,
+  "slides": [
+    {
+      "slide": 1,
+      "title": "Where should we look first?",
+      "speaker": "Qihang Sun",
+      "seconds": 25,
+      "script": "Good morning. Where should our client look first for a Melbourne Airbnb property? We recommend two- and three-bedroom apartments in the City of Melbourne, with three-bedroom houses in Yarra Ranges as a backup. We will explain the evidence and the checks needed before any lease.",
+      "zh_cue": "先给搜索顺序。Melbourne指City of Melbourne市政辖区。3D示意图与淡入切换只是场景示意，不是实际房源。",
+      "source_files": [
+        "analysis/reference/final_segment_summary.csv"
+      ],
+      "word_count": 45
+    },
+    {
+      "slide": 2,
+      "title": "Choosing a property before costs begin",
+      "speaker": "Qihang Sun",
+      "seconds": 45,
+      "script": "Our client plans to lease homes and offer short stays. Rent is due even when guests do not arrive. Furnishing and operating costs also commit limited funds. Choosing where to investigate is therefore a business decision in its own right. Which property groups show stronger guest activity? Can listing features help rank eligible homes? Our analysis answers these questions using recorded reviews. The goal is to spend investigation time on stronger candidates before making financial commitments.",
+      "zh_cue": "客户计划租赁房源经营短住。主比较覆盖全部合资格样本，不把43.7%直接套用到三个推荐组。补算另提供探索性组内证据。",
+      "source_files": [
+        "analysis/reference/final_segment_summary.csv"
+      ],
+      "word_count": 76
+    },
+    {
+      "slide": 3,
+      "title": "A fair comparison starts with similar homes",
+      "speaker": "Qihang Sun",
+      "seconds": 65,
+      "script": "We used the subject's June 2026 Inside Airbnb data. We kept 3,873 comparable homes: entire properties with one to three bedrooms, usable prices, and at least one year since their first recorded review. Each group includes at least fifty homes. This selected sample leaves out many listings, including those with missing prices or limited review history. Our outcome is whether a home received thirty or more reviews in the previous 365 days. A separate reference group sets thirty as its upper-quarter threshold. About one in four analysed homes reached it. Reviews signal past guest activity, not occupied nights or profit. Maksym will explain how this evidence helps prioritise the search.",
+      "zh_cue": "口述保留关键样本3,873和30条目标，不逐个读完样本漏斗。资格是距首条记录评论至少一年。906参考组、房东隔离和25.3%非强制定额留问答。交给Maksym。",
+      "source_files": [
+        "analysis/outputs/presentation_metrics.json",
+        "analysis/config/review_analysis.json"
+      ],
+      "word_count": 110
+    },
+    {
+      "slide": 4,
+      "title": "City of Melbourne apartments lead the search",
+      "speaker": "Maksym Xu",
+      "seconds": 60,
+      "script": "These are the three leading groups among fourteen eligible groups. City of Melbourne three-bedroom apartments reached 36.6 percent attainment, and two-bedroom apartments reached 32.8 percent. Three-bedroom houses and townhouses in Yarra Ranges reached 30 percent. The city's higher observed rates and larger samples support our proposed city-first search. The uncertainty ranges overlap. We see these as promising options, not a precise first-to-third ranking. Actual quotes and permissions may change the search order. These percentages measure past review activity, not returns. A promising group can still contain unsuitable homes. We therefore tested whether listing features improve screening across all eligible homes.",
+      "zh_cue": "这是14个合资格组中的前三个观察领先组。城市公寓较高观察达标率和较大样本支持拟议搜索顺序；重叠区间不能当正式差异检验。强调有希望的选择，不声称精确1至3名；报价与许可可改变顺序。",
+      "source_files": [
+        "analysis/outputs/descriptive_segments.csv",
+        "analysis/reference/segment_ladder.csv"
+      ],
+      "word_count": 100
+    },
+    {
+      "slide": 5,
+      "title": "What the historical ranking score uses",
+      "speaker": "Maksym Xu",
+      "seconds": 75,
+      "script": "We changed from the interim random forest to logistic regression for easier explanation, keeping the forest as a benchmark. Our outcome, Y, is one for thirty or more reviews, and zero otherwise. The six inputs, X, are area, dwelling type, bedrooms, current price relative to similar homes, one-night acceptance, and amenity count. Similar homes share the same area, dwelling type and bedroom count. The model combines these features into a ranking score learned from past outcomes. Homes allowing one-night stays were more likely to have met the target. Higher prices relative to similar homes were associated with lower attainment. These relationships do not prove cause and effect or a reliable chance of future success. Eric will show how the score helps focus the search.",
+      "zh_cue": "承认RF改为logit是为易解释，RF仍为基准。讲清二元Y、六类X以及合成历史排名分数；一晚与价格方向是关联。公式、权重细节和五折方向检验留备查。交给Eric。",
+      "source_files": [
+        "analysis/scripts/14_simple_logistic.R",
+        "analysis/outputs/final_logit_coefficients.csv",
+        "analysis/reference/interim-model-selection/rq_extension_metrics.csv",
+        "analysis/reference/interim-model-selection/interim-report-methods-and-selection-excerpt.txt",
+        "analysis/outputs/matched_rf_comparison.json",
+        "analysis/outputs/association_stability.json"
+      ],
+      "word_count": 124,
+      "source_note": "The interim selected enhanced property-only random forest. The final presentation uses logistic regression for a simpler explanation and keeps a matched-input forest benchmark. One-night acceptance is positively associated with the historical review target and higher relative price negatively associated, with consistent directions across all five host training folds. These are not causal effects or proven future responses."
+    },
+    {
+      "slide": 6,
+      "title": "The model found more high-review homes",
+      "speaker": "Eric Huang",
+      "seconds": 75,
+      "script": "For the same historical search quota, selecting by property group averages gave 28.1 percent attainment. The model gave 43.7 percent, an increase of 15.6 percentage points. That means about sixteen more high-review homes per hundred selected. We scored each home without using its host's listings for training. Among 969 selected homes, 423 reached the target. More than half, 56.3 percent, did not. This main comparison covers all eligible homes. A further exploratory check also improved screening within our three priority groups. The score helps focus investigation but does not approve individual leases. These historical checks followed data exploration and do not establish future success rates. We next checked whether our leading groups stayed ahead in the later review window.",
+      "zh_cue": "核心改善15.6个百分点，约每100多16套；969中423达标，56.3%未达标。主结果仍为全部合资格样本；一句说明进一步探索检查在优先三组也改善筛选，49.4%与33.4%只留问答。",
+      "source_files": [
+        "analysis/outputs/model_comparison.csv",
+        "analysis/outputs/test_confusion.csv",
+        "analysis/outputs/fold_metrics.csv",
+        "analysis/outputs/shortlisted_group_validation.json"
+      ],
+      "source_note": "The segment benchmark is calculated from training hosts with fixed smoothing weight 10. Equal-quota comparison selects ceil(3873/4)=969 homes in expectation. At a tied boundary, each tied listing receives the same fractional selection weight. The logistic model has 969 actual selections. The older inclusive-quantile baseline selected 1,025 listings and is not used.",
+      "word_count": 119
+    },
+    {
+      "slide": 7,
+      "title": "The same three groups stayed ahead",
+      "speaker": "Eric Huang",
+      "seconds": 60,
+      "script": "For that check, we used dated reviews from the same supplied snapshot to form two annual review windows. We followed the same 2,657 surviving listings with longer histories, covering ten groups. Earlier reference data set a thirty-four-review threshold, fixed across both windows. The earlier leaders were these three priority groups. In the later window, 27.1 percent of their listings reached the target, compared with 14.9 percent elsewhere. This supports starting in those groups. It does not validate the logistic model as a future forecast, and surviving listings may differ from new entrants. Loc will explain the checks each candidate must pass.",
+      "zh_cue": "同一快照带日期评论重建两个年度窗口，不声称另取新快照。这里是长期存续样本、34条阈值；主模型用30。27.1%对14.9%支持分组搜索，非未来logit验证。交给Loc。",
+      "source_files": [
+        "analysis/reference/temporal-validation/validation_metrics.json",
+        "analysis/reference/temporal-validation/segment_cross_period.csv"
+      ],
+      "word_count": 101,
+      "source_note": "Both non-overlapping review windows are reconstructed from dated reviews in the same supplied snapshot. The analysis follows the same surviving long-history listings; it is not a prospective test using a newly collected later snapshot and does not validate future logistic predictions."
+    },
+    {
+      "slide": 8,
+      "title": "Two gates before any lease",
+      "speaker": "Loc Le",
+      "seconds": 55,
+      "script": "Every candidate must pass two gates before a lease. First, confirm that the intended short-stay use is permitted. Second, check conservative cash flow using actual quotes. Include rent, cleaning, fees, and an allowance for setup costs. Test cautious assumptions for paid nights and achieved nightly rates, with a buffer chosen by the client. Our dataset does not provide these verified numbers. Reject any property that fails permission checks or the client's cash-flow requirements. A high model score cannot override either gate. These checks connect the historical evidence to the actual commitment the client would make.",
+      "zh_cue": "两道门是许可与保守现金流。使用真实报价，包含启动成本及客户缓冲；任一道不通过就淘汰，分数不能推翻。",
+      "source_files": [],
+      "source_note": "Proposed client decision process. No financial threshold, legal rule, or investment payoff is estimated by the project.",
+      "word_count": 95
+    },
+    {
+      "slide": 9,
+      "title": "A 30-day search with clear stop rules",
+      "speaker": "Loc Le",
+      "seconds": 55,
+      "script": "The proposed thirty-day plan has three steps. In week one, the operator finds ten candidates, focusing on Melbourne apartments and keeping Yarra Ranges houses as a backup. In weeks two and three, the operator verifies permissions and cost quotes. The analyst tests conservative cash flow, with model scores as supporting evidence. Remove candidates that fail either gate. In week four, the owner compares those remaining and decides whether any small trial is justified. The owner can decide against proceeding. Ten properties and thirty days are proposed working limits, not an analysed optimum. If a trial proceeds, monitor paid nights, net cash flow, and cleaning workload before deciding whether to continue.",
+      "zh_cue": "三步时间轴：第1周operator找10套；第2至3周operator核实许可报价、analyst测现金流；第4周owner决定是否小试。若试行就看真实经营结果。",
+      "source_files": [],
+      "source_note": "Proposed action plan with illustrative responsibilities and timing; not an analysed optimum.",
+      "word_count": 110
+    },
+    {
+      "slide": 10,
+      "title": "Approve a focused search.",
+      "speaker": "Loc Le",
+      "seconds": 25,
+      "script": "Approve a focused thirty-day search of ten candidates. Reviews are not profit, current settings may differ from the past, and our evidence covers established listings. Before any lease, require permissions and conservative cash flow. Thank you. We welcome your questions.",
+      "zh_cue": "请求批准30天10套搜索。三条限制简短说完，最后回到签约前两道门。结束于9:00，留60秒缓冲。",
+      "source_files": [
+        "analysis/reference/final_segment_summary.csv",
+        "analysis/reference/temporal-validation/validation_metrics.json"
+      ],
+      "word_count": 40
+    }
+  ],
+  "qa": [
+    {
+      "question": "Is this prediction or a forecast of future business success",
+      "speaker": "Maksym Xu",
+      "answer": "The model predicts a historical target from current features. It tests hosts excluded from training, after exploring one snapshot. It does not forecast future bookings or profit. Among 43 homes scored above 60 percent, mean predicted attainment was 63.5 percent versus 51.2 percent observed. Individual probabilities need caution; future calibration is untested.",
+      "zh_cue": "历史房东隔离测试不等于未来预测。43套高分房源：预测63.5%、实际51.2%，个体概率不可靠。"
+    },
+    {
+      "question": "Why use reviews if the client cares about profit",
+      "speaker": "Qihang Sun",
+      "answer": "Dated reviews are directly recorded in the supplied data. The calendar cannot reliably separate booked dates from dates blocked by hosts. Reviews provide an imperfect signal of guest activity, but longer stays can produce fewer reviews. We therefore use them to focus research and obtain real financial information before any lease.",
+      "zh_cue": "评论是可核验的活动代理，不是入住率或利润；长住可能评论少。"
+    },
+    {
+      "question": "Why choose thirty reviews",
+      "speaker": "Qihang Sun",
+      "answer": "Thirty comes from the 75th percentile of a separate group of 906 reference listings. That percentile was 29.75, giving an integer target of 30. Reference hosts are excluded from model training and testing. The analysis sample then independently produced 25.3 percent attainment; it was not forced to equal one quarter.",
+      "zh_cue": "参考组定阈值，分析组得结果；25.3%不是人为设定。"
+    },
+    {
+      "question": "What is the segment average comparison",
+      "speaker": "Eric Huang",
+      "answer": "Each test listing receives its segment’s rate calculated from training hosts, with a fixed smoothing rule. A segment combines area, dwelling type, and bedrooms. We compare the same quota of 969 homes. At a tied boundary, tied homes receive equal fractional selection weights. The expected baseline rate is 28.1 percent, versus 43.7 percent for the model.",
+      "zh_cue": "同等搜索配额969套；基准只用训练房东的平滑细分市场均值。边界并列按相同比例计权，期望份额是969。不用旧版1,025套截断。"
+    },
+    {
+      "question": "Why change from the interim random forest to logistic regression",
+      "speaker": "Maksym Xu",
+      "answer": "The interim selected random forest after its property-only comparison. We now present logistic regression because its weighted inputs are easier to explain. A new check using the same inputs and host tests gave the forest 45.1 percent screening success, versus 43.7 percent for logistic, but that small advantage was uncertain. Logistic had better ranking and probability-error scores in this check. The forest remains a benchmark; neither model is proven best overall. Current price and stay rules also make the new model different from the interim model.",
+      "zh_cue": "不是老师反对机器学习。旧RF胜同输入旧logit；新同X补测RF筛选45.1%比LR43.7%，但差异区间跨0，LR排序和概率误差更好；都不能宣布全面最优。主讲LR为可解释性。"
+    },
+    {
+      "question": "How many mistakes does the model make",
+      "speaker": "Eric Huang",
+      "answer": "Of 969 selected homes, 423 reached the target and 546 did not. Among the 2,904 unselected homes, 558 reached it and 2,346 did not. The model therefore misses many successful listings and selects many unsuccessful ones by this review benchmark. Its value is a more concentrated search pool, not reliable approval of individual leases.",
+      "zh_cue": "完整混淆矩阵423、546、558、2346；高分仍需尽调。"
+    },
+    {
+      "question": "Do the price and one night associations justify changing policy",
+      "speaker": "Maksym Xu",
+      "answer": "No causal conclusion is established. After accounting for the recorded features, one-night acceptance is positively associated with the review target, and higher relative prices are negatively associated. Both directions held in all five training folds. Longer stays can mechanically produce fewer reviews, and current settings may differ from the review year. Any operating trial must measure paid nights, actual margin, and cleaning workload.",
+      "zh_cue": "允许一晚正相关、相对价格更高负相关，五折方向一致，不代表改规则或降价就改善经营。长住天然评论少，当前规则可能改变；试行要看实际利润和清洁负担。"
+    },
+    {
+      "question": "Why is there no revenue target or fixed affordability cutoff",
+      "speaker": "Loc Le",
+      "answer": "The dataset’s estimated revenue is partly constructed from reviews and other listing assumptions, so it cannot independently confirm commercial returns. We do not have verified rent, costs, permissions, or paid nights for a candidate. Financial thresholds must follow actual quotes, conservative scenarios, and the client’s required buffer. We do not infer them from the review target.",
+      "zh_cue": "不能用评论构成的估算收入循环证明赚钱；不用虚构租金或收入门槛。"
+    },
+    {
+      "question": "Why does the cross year check use thirty four reviews",
+      "speaker": "Eric Huang",
+      "answer": "It follows the same 2,657 surviving listings across two non-overlapping 365-day windows reconstructed from dated reviews in one supplied snapshot. Earlier reference data set the fixed 34-review target. The earlier three leaders later reached 27.1 percent, versus 14.9 percent elsewhere. Overall attainment fell from 25.8 to 20.1 percent, but not all groups declined. This checks segment persistence, not future logistic predictions.",
+      "zh_cue": "同一快照带日期评论还原两个不重叠365天窗口，并非新收集快照。长期存续样本、34条阈值；验证分组排序，不是未来个体模型。"
+    },
+    {
+      "question": "Does the model help within the three recommended groups",
+      "speaker": "Eric Huang",
+      "answer": "As a supplementary check, we kept the existing test predictions and fixed a search quota inside each recommended group. The model reached 49.4 percent attainment, versus 33.4 percent expected from random selection within those groups. A different quota check also stayed positive. These are exploratory results for established listings in groups chosen after analysis. They are not a new model or a future test.",
+      "zh_cue": "补充验证：推荐三组内固定名额，49.4%对组内随机期望33.4%；换配额方式仍为正。沿用原测试预测，不是新模型或未来检验；三组是探索后选定。",
+      "source_files": [
+        "analysis/outputs/shortlisted_group_validation.json",
+        "analysis/scripts/shortlisted_group_validation.py",
+        "analysis/scripts/verify_shortlisted_group_validation.R"
+      ]
+    }
+  ],
+  "technical_notes": {
+    "outcome": "Y = 1 when reviews in the exact previous 365 days are at least 30; otherwise Y = 0.",
+    "inputs": "Council area, dwelling type, bedrooms, current price relative to the median for the same segment, one-night-stay acceptance, and amenity count.",
+    "formula": "The model learns z = intercept + weighted inputs and returns p = 1 / (1 + exp(-z)). Use p to rank the historical target, not as a reliable individual success probability. Categorical inputs use reference levels. Test price medians come from training data only.",
+    "confusion_matrix": {
+      "selected_met": 423,
+      "selected_missed": 546,
+      "not_selected_met": 558,
+      "not_selected_missed": 2346
+    },
+    "ranking": "Pooled host-held-out AUC is 0.705 for the logistic model and 0.581 for the segment-average benchmark. AUC is ranking ability, not classification accuracy. The model improves AUC in each of the five host groups.",
+    "calibration": "AUC and shortlist precision measure ranking, not exact probability reliability. In the highest score bin (above 60%), 43 listings average 63.5% predicted versus 51.2% observed attainment. Other bins also differ. No future probability calibration has been established. Interpret individual percentages cautiously after exploratory model development.",
+    "uncertainty": "Slide 4 has 90% host-resampled ranges: Melbourne 3BR apartments 27.3–45.7%; Melbourne 2BR apartments 26.9–39.6%; Yarra Ranges 3BR houses or townhouses 21.9–39.0%. They overlap; overlap alone is not a formal test of pairwise differences, and these intervals do not establish a precise first-to-third ranking. Repeated host splits give mean AUC 0.708 and a central 90% split-sensitivity range 0.649–0.778; this is not a confidence interval.",
+    "temporal": "The separate temporal check has 2,657 surviving listings, 1,208 hosts, 10 segments and a reference-derived 34-review cutoff. Both non-overlapping 365-day windows are reconstructed from dated reviews in the same supplied snapshot. The earlier top three have a 12.3 percentage-point later-window lead, with a host-resampled 95% range of 5.1–20.1 points when the candidate set is fixed. Overall attainment is 25.8% then 20.1%. Not every segment declines. This is not a newly collected future snapshot and does not validate logistic predictions into the future.",
+    "sources": [
+      "analysis/outputs/presentation_metrics.json",
+      "analysis/outputs/model_comparison.csv",
+      "analysis/outputs/test_confusion.csv",
+      "analysis/outputs/calibration.csv",
+      "analysis/outputs/descriptive_segments.csv",
+      "analysis/reference/temporal-validation/validation_metrics.json",
+      "analysis/reference/source_provenance.json",
+      "analysis/outputs/matched_rf_comparison.json",
+      "analysis/reference/interim-model-selection/rq_extension_metrics.csv",
+      "analysis/reference/interim-model-selection/rq_nested_selection_summary.json",
+      "analysis/outputs/association_stability.json",
+      "analysis/outputs/shortlisted_group_validation.json",
+      "analysis/scripts/shortlisted_group_validation.py",
+      "analysis/scripts/verify_shortlisted_group_validation.R"
+    ],
+    "ai_acknowledgement": "OpenAI Codex assisted with evidence organisation, analysis-code checks, drafting, layout, and reproducibility checks. AI-generated residential 3D illustrations and fade transitions are illustrative, not actual listings or freely rotatable 3D models. Group members are responsible for reviewing and understanding the work and delivering the presentation. Retain any applicable acknowledgement of earlier tools used in the project.",
+    "baseline": "The benchmark is the training-fold segment mean with fixed smoothing weight 10. Both rankings use a quota of 969 in expectation. Tied boundary listings receive equal fractional weights. The model selects 969 actual listings; the segment baseline is a quota-matched expected result.",
+    "model_evolution": "The interim selected enhanced property-only random forest (AUC 0.640; Brier 0.1813), beating same-input logistic (0.607; 0.1869). The final model adds current price and stay rules, so old RF 0.640 versus new logistic 0.705 is not an algorithm comparison. We present logistic for interpretability and retain RF as a benchmark.",
+    "matched_rf": "A new comparison uses the same six inputs, five host folds and expected quota of 969. RF screening precision is 45.15% versus logistic 43.65%, a 1.49-point difference with a host-bootstrap 95% range of -2.35 to +7.31 points. Predictions are fixed; intervals omit refitting and tuning. This fixed R forest uses 250 trees, mtry 3 and nodesize 10 with no tuning. It is not a recreation of the interim Python forest. Neither family is established as best overall.",
+    "associations": "One-night acceptance has a positive coefficient in all five host training folds (1.067 to 1.343); relative price has a negative coefficient in all five (-0.141 to -0.119). All fold host-cluster 95% intervals exclude zero. Full-sample odds ratios are 3.196 and 0.880 per 10 percentage points above segment-median price. These are conditional associations with a historical review target, not causal or future policy effects.",
+    "shortlist_scope_check": "The supplementary scope check covers the three recommended groups: 1,631 listings and 625 hosts. Existing host-held-out predictions are frozen; no model is refitted. Fixed quotas of 309, 77 and 23 within the three groups give 409 selections. The model has 202/409 = 49.39% attainment. Uniform random selection within each group gives expected attainment of 136.415/409 = 33.353%, a 16.04-point difference. A sensitivity check fixes quotas within each group and host fold: 222/416 = 53.365% for the model versus random expected 138.700/416 = 33.341%. Results depend on the selection rule. The positive differences are exploratory evidence for established listings in groups chosen after seeing the data, not new-model or future validation.",
+    "shortlist_baseline_caution": "Training-fold segment-average scores vary between folds. Inside the three recommended groups, using these differences to order homes can depress the baseline: the pooled 408-quota comparison is 49.26% versus 22.02%; fixed group quotas total 409 and give 49.39% versus 19.92%. These are not clean comparisons with uninformed selection within a group, and the apparent gains should not be presented as business benefits. Use the uniform-random within-group expectation for the supplementary interpretation. The main slide 6 comparison remains the original full eligible sample of 3,873 listings.",
+    "shortlist_uncertainty": "A 1,000-replicate host bootstrap gives conditional 95% ranges of 33.6–65.5% for model attainment and +3.6 to +27.8 points for its difference from within-group random selection. Predictions and the three selected groups stay fixed. These ranges omit model refitting, past model selection and group-selection uncertainty. The 416-quota sensitivity has point estimates only.",
+    "publication_scope": "The evidence package contains public aggregate results, code and presentation deliverables. Raw source records and listing-level out-of-fold predictions are excluded."
+  },
+  "rehearsal_notes": [
+    "Read only the English script. Chinese cues, questions and technical notes are rehearsal support.",
+    "The main script takes 9 minutes, leaving a 60-second contingency inside the ten-minute limit.",
+    "Each member speaks for 135 seconds. Handoffs are at 2:15 from Qihang to Maksym, 4:30 to Eric, and 6:45 to Loc. Finish the scripted talk at 9:00.",
+    "Treat the audience as the client. Start with the decision and use each chart to explain what changes in the search.",
+    "Explain the binary outcome and six inputs in plain language. The model combines the inputs into a historical ranking score; keep formula and estimation detail for questions.",
+    "Keep the 30-review model test separate from the 34-review cross-year segment check.",
+    "Do not describe 25.3% as forced by design, AUC as accuracy, reviews as profit, or associations as causal effects.",
+    "Ten candidates, thirty days, responsibilities and financial stop rules are proposed actions, not optimised findings.",
+    "Explain why the final presentation uses logistic regression after the interim selected random forest. This is an interpretability choice; changed inputs prevent treating 0.705 versus 0.640 as an algorithm contest.",
+    "The main screening comparison covers all eligible listings. A separate exploratory check supports screening within the three priority groups. Keep its numerical results in Q&A. Both temporal review windows come from dated reviews in the same supplied snapshot."
+  ],
+  "spoken_word_count": 920,
+  "team_summary": [
+    {
+      "speaker": "Qihang Sun",
+      "slides": [
+        1,
+        2,
+        3
+      ],
+      "seconds": 135,
+      "words": 231
+    },
+    {
+      "speaker": "Maksym Xu",
+      "slides": [
+        4,
+        5
+      ],
+      "seconds": 135,
+      "words": 224
+    },
+    {
+      "speaker": "Eric Huang",
+      "slides": [
+        6,
+        7
+      ],
+      "seconds": 135,
+      "words": 220
+    },
+    {
+      "speaker": "Loc Le",
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "seconds": 135,
+      "words": 245
+    }
+  ],
+  "version_date": "2026-10-01",
+  "evidence_location": "Evidence and code: repository final-presentation directory; exact files are listed in EVIDENCE_MAP.md.",
+  "publication_url": "https://github.com/maksym-xu/CMCE30005-TheNextChapter/tree/final-presentation-release-2026-10-01/final-presentation",
+  "word_count_method": "Whitespace-separated English main-script tokens; excludes Chinese cues, notes and Q&A. May differ from Microsoft Word counting."
+}
