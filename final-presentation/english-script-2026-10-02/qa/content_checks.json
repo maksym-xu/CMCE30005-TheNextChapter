@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "spoken_words": 940,
+  "target_seconds": 540,
+  "contingency_seconds": 60,
+  "team_summary": [
+    {
+      "speaker": "Qihang Sun",
+      "slides": [
+        1,
+        2,
+        3
+      ],
+      "seconds": 135,
+      "words": 231
+    },
+    {
+      "speaker": "Maksym Xu",
+      "slides": [
+        4,
+        5
+      ],
+      "seconds": 135,
+      "words": 229
+    },
+    {
+      "speaker": "Eric Huang",
+      "slides": [
+        6,
+        7
+      ],
+      "seconds": 135,
+      "words": 235
+    },
+    {
+      "speaker": "Loc Le",
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "seconds": 135,
+      "words": 245
+    }
+  ],
+  "prepared_questions": 12,
+  "document_pages": 9,
+  "all_document_pages_visually_reviewed": true,
+  "english_only_content_and_metadata": true,
+  "document_matches_script_source": true,
+  "presentation_file_changed": false,
+  "evidence": "final-report/paired-analysis-2026-10-02/outputs/paired_summary.csv",
+  "word_count_method": "Whitespace-separated main-script tokens; excludes headings, Q&A and evidence notes.",
+  "document_sha256": "66aa75e4b55f131f34f9c56e384b3bcd9c5a8bfae7c9c77bd73bd48af96761e8"
+}

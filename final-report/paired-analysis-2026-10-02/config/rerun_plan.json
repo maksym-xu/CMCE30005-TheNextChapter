@@ -1,0 +1,23 @@
+{
+  "plan_date": "2026-10-02",
+  "source_release_commit": "2ac211dca5337f5b6d17ccf913d9d12ee668811e",
+  "scope": "Exploratory sensitivity of the previously chosen and now frozen six-input logistic specification. No feature or model selection is performed inside this run.",
+  "seed": 30005,
+  "repeats": 50,
+  "test_host_share": 0.3,
+  "host_sampling": "Sort character host IDs; set.seed(seed + split); sample round(0.3 * host_count) hosts without replacement, matching the published script.",
+  "outcome_threshold": 30,
+  "screening_fraction": 0.25,
+  "screening_quota": "ceil(test_listing_count / 4), identical for both scores within each split",
+  "tie_rule": "All scores above boundary receive weight 1; tied boundary scores share the remaining quota equally. No outcomes enter the weights.",
+  "minimum_stay_imputation": "Map observed minimum_nights <= 1 to Yes and > 1 to No. Keep missing values missing. Learn the most frequent observed binary category from training listings only, applying it to missing training and test rows.",
+  "mode_tie_rule": "No wins an exact tie; stop if no training value is observed.",
+  "price_preprocessing": "Within-training median by area/type/bedroom segment; unseen test segments use the overall training price median and are counted in the audit.",
+  "baseline": "Training segment rate smoothed toward training listing prevalence with fixed weight 10; unseen test segments use training prevalence.",
+  "baseline_smoothing_weight": 10,
+  "model": "Unpenalised binomial glm: busy ~ area + dwelling + bedrooms + price_vs_similar_10 + one_night + amenities_10",
+  "differences": "Logistic minus segment baseline; precision difference in percentage points, AUC and Brier differences in original units. Lower Brier is better.",
+  "summary": "Equal weight per split. Mean paired difference, median, empirical P05/P95, range, and better/tied/worse counts. The percentile range is sensitivity, not a confidence interval.",
+  "selection_history": "The binary one-night predictor was chosen after observing that the former 7+ night category contained no positive outcomes. This outcome-informed exploratory choice is fixed here, not reselected within training. Previous property-only nested selection does not validate this new specification.",
+  "interpretation": "Host separation prevents sharing a host across training and test within a split. Prior exploration and overlapping repeated splits prevent interpreting these results as an untouched external or prospective test. Reviews are not profit."
+}
