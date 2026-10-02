@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0",
+  "validator": "scripts/verify_rerun.py (Python standard library; independent metric implementation)",
+  "checked_at_utc": "2026-10-02T05:56:05.759670+00:00",
+  "status": "passed",
+  "scope": [
+    "Complete, disjoint host partitions and exact test-row membership against frozen private input",
+    "Original host-fold membership; repeated test-host counts and declared seeds",
+    "Training-only observed binary mode (No on a tie), exported test imputation and missingness",
+    "Training-only segment price medians; training-global median fallback for unseen segments",
+    "Training-only segment outcome baseline with smoothing weight 10 and prevalence fallback",
+    "Independent six-input feature/contrast reconstruction and logistic scoring from every split's exported coefficients",
+    "Same ceil(test listings / 4) expected quota; uniform fractional weights at each score boundary",
+    "Independent AUC with half credit for ties, Brier score, precision, positives and paired differences",
+    "Fifty within-split paired summaries with R type-7 quantiles and explicit better directions"
+  ],
+  "limits": [
+    "Recreates logistic scoring from exported coefficients, but does not refit or independently verify their estimation.",
+    "Does not replay R's random-number generator; verifies frozen memberships, counts and declared seeds.",
+    "Exported train-mode counts and test transformations are checked; training model-matrix internals are not exported.",
+    "The fifty repeated splits overlap and are correlated internal sensitivity checks, not independent tests.",
+    "The 5th and 95th percentiles describe split variation, not confidence intervals or external validation.",
+    "One-night binarisation was selected after earlier outcome exploration and then frozen; these checks do not undo that selection.",
+    "Earlier nested model selection does not validate this revised exploratory specification.",
+    "Current settings paired with prior-year outcomes establish retrospective discrimination, not future forecasts or causal effects."
+  ],
+  "numeric_tolerance": {
+    "absolute": 2e-10,
+    "relative": 2e-10,
+    "better_tie_epsilon": 1e-12
+  },
+  "units": {
+    "precision_model_means": "proportion",
+    "precision_differences": "percentage points",
+    "auc_and_brier_model_means_and_differences": "raw score units"
+  },
+  "file_sha256": {
+    "config/review_analysis.json": "1b32d38a989a9888560d04269f054275d7a953b6b33850858ddab41ed784ffde",
+    "config/rerun_plan.json": "188c09c5cf9efb71d5ac97ab63d2750ceb97cc0a905251db3349faf36150608d",
+    "private-inputs/analysis_input.csv": "bf286ed7bfb89a3e06f7a52e10c3913507296e62432a56596b24fef88a6dee20",
+    "working/split_membership_PRIVATE.csv": "287e8c86b723b13ea388b2f886458944fada7a20bb6c43f53b12fb14e234060f",
+    "working/test_predictions_PRIVATE.csv": "9262ff78e1dc93e8aa745ed4fcf510fb8e802e6c7c1eeb141458c3f653342a9e",
+    "outputs/split_metrics.csv": "74cc54c939026217adc09abd2b9c541ee688abfee43ca2c87a11d48c0b012bb6",
+    "outputs/preprocessing_audit.csv": "166fb0d469db030fec668685d765ac6bf67213d28f5548c14eed3728a505d4f2",
+    "outputs/paired_summary.csv": "2c4550ea9d230f9fe6c4a1130b66bd237056d394dac31cd8c09580a23f689daa",
+    "outputs/split_coefficients.csv": "d26d2245d6e89afb76caa53caebd20d4a7a488fddd8b35330f92310fbd7bf7a2"
+  },
+  "results": {
+    "input_listings": 3873,
+    "input_hosts": 1726,
+    "input_positive_listings": 981,
+    "input_missing_minimum_nights": 3,
+    "host_fold_splits": 5,
+    "repeated_host_splits": 50,
+    "test_prediction_rows": 63093,
+    "training_imputation_modes_by_split": {
+      "No": 55
+    },
+    "maximum_unseen_test_segments_per_split": 0,
+    "maximum_logistic_scoring_difference": 3.497202527569243e-15,
+    "independently_recomputed_paired_summary": [
+      {
+        "metric": "precision_difference_pp",
+        "logistic_mean": 0.4342133244108956,
+        "segment_mean": 0.3195774261262262,
+        "mean_difference": 11.463589828466946,
+        "median_difference": 11.610715382833355,
+        "p05_difference": 2.369765956177275,
+        "p95_difference": 19.715362160001842,
+        "min_difference": -0.22655067743962143,
+        "max_difference": 27.357020913358944,
+        "better_splits": 48,
+        "tied_splits": 0,
+        "worse_splits": 2,
+        "splits": 50,
+        "better_direction": "higher"
+      },
+      {
+        "metric": "auc_difference",
+        "logistic_mean": 0.7083920496618106,
+        "segment_mean": 0.6034947246975922,
+        "mean_difference": 0.10489732496421833,
+        "median_difference": 0.10465600956796361,
+        "p05_difference": 0.0595840551396862,
+        "p95_difference": 0.15233303770527887,
+        "min_difference": 0.05905670735645552,
+        "max_difference": 0.1673358558362369,
+        "better_splits": 50,
+        "tied_splits": 0,
+        "worse_splits": 0,
+        "splits": 50,
+        "better_direction": "higher"
+      },
+      {
+        "metric": "brier_difference",
+        "logistic_mean": 0.17150773892560564,
+        "segment_mean": 0.1840639600472641,
+        "mean_difference": -0.012556221121658462,
+        "median_difference": -0.01334690630108916,
+        "p05_difference": -0.025745881057198425,
+        "p95_difference": 0.005012642731385202,
+        "min_difference": -0.029541786351243077,
+        "max_difference": 0.015474889143075737,
+        "better_splits": 44,
+        "tied_splits": 0,
+        "worse_splits": 6,
+        "splits": 50,
+        "better_direction": "lower"
+      }
+    ]
+  },
+  "checks_by_category": {
+    "baseline": 63093,
+    "coefficients": 715,
+    "input": 29259,
+    "logistic_scoring": 63093,
+    "paired_summary": 40,
+    "partition": 270,
+    "plan": 5,
+    "preprocessing": 189664,
+    "quota": 126296,
+    "schema": 131,
+    "scores": 63093,
+    "split_coverage": 5,
+    "split_metrics": 880,
+    "test_rows": 126241
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "checks": ["Training majority Yes overrides the former fixed No fill", "Missing training value is imputed without dropping the row", "Known-segment price uses training median", "Unseen-segment price uses training overall median", "Missing test value receives the training fill", "Held-out labels cannot change preprocessing", "Held-out labels cannot change the fitted baseline", "Unseen-segment baseline is training prevalence", "Held-out feature distribution leaves fitted training rules unchanged", "Training mode tie is resolved by fixed No rule", "All-missing training values fail instead of reading test data", "Outcome columns are rejected by feature-only fitting helper", "Boundary ties preserve exact quota with equal weights", "Boundary-tie selection is invariant to row order"],
+  "count": 14
+}

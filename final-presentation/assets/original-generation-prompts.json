@@ -1,0 +1,12 @@
+{
+  "tool": "Built-in image_gen.imagegen",
+  "purpose": "Illustrative 3D renders for slides, not real properties or analytic evidence",
+  "prompts": [
+    "Use case: stylized-concept. Asset type: full-bleed widescreen cover background for a polished business analytics PowerPoint about choosing Melbourne Airbnb property segments. Create a premium high-end 3D architectural miniature render, 16:9 landscape. RIGHT HALF contains a beautifully detailed miniature apartment building with 3-4 storeys, balconies and warm windows beside a small modern house and townhouse, tiny eucalyptus-like trees, arranged on a subtle floating architectural plinth. They are generic illustrative homes, not identified real addresses or a geographic map. Material quality: matte ivory plaster, warm terracotta brick, smoked glass, dark forest green accents, soft realistic shadows, cinematic warm studio lighting, exquisite architectural model craftsmanship, editorial sophistication. BACKGROUND is solid very dark forest green #163B36 with gentle atmospheric falloff. Keep the LEFT 48 percent entirely empty and dark green for large editable slide text. Main buildings occupy x=55 to94 percent, y=15 to88 percent. No text, no letters, no labels, no symbols, no logo, no charts, no watermark. Restrained, professional, beautiful 3D rendering.",
+    "Use case: stylized-concept. Asset type: widescreen conclusion background for a premium business presentation about verifying an Airbnb property before signing a lease. High-end 3D studio product illustration, 16:9 landscape. RIGHT HALF has a single elegant architectural miniature of a warm ivory modern apartment building with glass balconies, resting beside an oversized refined brass key and two neat blank ivory paper sheets with a subtle folded corner. Architectural model and key signify careful property selection. A small warm terracotta house model and a delicate miniature eucalyptus tree add context. Not actual properties, no real addresses. BACKGROUND solid very dark forest green #163B36 with subtle gradient. LEFT 50 percent entirely clear dark forest green for editable closing message. Sculpture-like composition on a low dark green plinth, premium real materials, soft shadows, warm directional light, subtle depth of field. Imagery concentrated on right55–94percent and y20–85percent. No text or writing on paper, no checkmarks, no labels, no numbers, no logo, no watermark."
+  ],
+  "assets": [
+    "assets/residential-search-3d.png",
+    "assets/property-decision-3d.png"
+  ]
+}

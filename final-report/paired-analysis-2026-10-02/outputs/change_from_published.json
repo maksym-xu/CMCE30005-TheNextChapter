@@ -1,0 +1,7 @@
+{
+  "max_oof_probability_change": 6.106226635438361e-16,
+  "max_oof_baseline_change": 4.9960036108132044e-16,
+  "max_repeated_auc_change": 5.5511151231257827e-16,
+  "max_repeated_precision_change_pp": 5.5511151231257827e-14,
+  "note": "Comparison with stored published outputs; floating-point differences below 1e-12 are numerical tolerance. No equality to previous results is forced."
+}

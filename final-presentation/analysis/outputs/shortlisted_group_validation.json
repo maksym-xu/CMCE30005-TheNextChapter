@@ -1,0 +1,308 @@
+{
+  "schema_version": "1.0",
+  "units": "Shares are fractions in [0,1]; gains with _pp are percentage points.",
+  "source": {
+    "path": "working/oof_predictions_PRIVATE.csv",
+    "sha256": "97330f63b87ec994f457801fa7aab8ae4e8472b86344559b447c92dc459e7725",
+    "main_analysis_unchanged": true,
+    "retraining": false,
+    "tuning": false
+  },
+  "scope": {
+    "segments": [
+      "Melbourne 2BR Apartment/unit",
+      "Melbourne 3BR Apartment/unit",
+      "Yarra Ranges 3BR House/townhouse"
+    ],
+    "listings": 1631,
+    "distinct_hosts": 625,
+    "positive_listings": 544,
+    "observed_share": 0.33353770692826484,
+    "outcome": "30+ reviews in the preceding 365 days"
+  },
+  "quota_rule": "ceil(n/4); scores above the cutoff are selected; the remaining quota is shared equally across boundary ties, without using outcomes",
+  "comparisons": [
+    {
+      "design": "pooled_three_groups",
+      "listings": 1631,
+      "hosts": 625,
+      "quota": 408,
+      "model_expected_positive": 201.0,
+      "model_precision": 0.49264705882352944,
+      "segment_mean_expected_positive": 89.82857142857142,
+      "segment_mean_precision": 0.22016806722689075,
+      "random_expected_positive": 136.08338442673207,
+      "random_expected_precision": 0.33353770692826484,
+      "gain_model_minus_segment_mean_pp": 27.24789915966387,
+      "gain_model_minus_random_pp": 15.910935189526459
+    },
+    {
+      "design": "fixed_quota_within_each_group",
+      "listings": 1631,
+      "hosts": 625,
+      "quota": 409,
+      "model_expected_positive": 202.0,
+      "model_precision": 0.4938875305623472,
+      "segment_mean_expected_positive": 81.47426067907995,
+      "segment_mean_precision": 0.19920357134249375,
+      "random_expected_positive": 136.41499034161572,
+      "random_expected_precision": 0.33353298372033185,
+      "gain_model_minus_segment_mean_pp": 29.468395921985344,
+      "gain_model_minus_random_pp": 16.035454684201536
+    }
+  ],
+  "by_group": [
+    {
+      "segment": "Melbourne 2BR Apartment/unit",
+      "listings": 1235,
+      "hosts": 482,
+      "positive_listings": 405,
+      "observed_share": 0.32793522267206476,
+      "quota": 309,
+      "model_expected_positive": 145.0,
+      "model_precision": 0.4692556634304207,
+      "segment_mean_expected_positive": 61.74698795180723,
+      "segment_mean_precision": 0.19982843997348618,
+      "random_expected_positive": 101.33198380566802,
+      "random_expected_precision": 0.32793522267206476,
+      "gain_model_minus_segment_mean_pp": 26.942722345693447,
+      "gain_model_minus_random_pp": 14.132044075835593,
+      "model_boundary_tied_listings": 1,
+      "model_boundary_weight": 1.0,
+      "segment_mean_boundary_tied_listings": 249,
+      "segment_mean_boundary_weight": 0.21686746987951808
+    },
+    {
+      "segment": "Melbourne 3BR Apartment/unit",
+      "listings": 306,
+      "hosts": 139,
+      "positive_listings": 112,
+      "observed_share": 0.3660130718954248,
+      "quota": 77,
+      "model_expected_positive": 45.0,
+      "model_precision": 0.5844155844155844,
+      "segment_mean_expected_positive": 15.0,
+      "segment_mean_precision": 0.19480519480519481,
+      "random_expected_positive": 28.18300653594771,
+      "random_expected_precision": 0.3660130718954248,
+      "gain_model_minus_segment_mean_pp": 38.96103896103896,
+      "gain_model_minus_random_pp": 21.840251252015957,
+      "model_boundary_tied_listings": 1,
+      "model_boundary_weight": 1.0,
+      "segment_mean_boundary_tied_listings": 45,
+      "segment_mean_boundary_weight": 0.26666666666666666
+    },
+    {
+      "segment": "Yarra Ranges 3BR House/townhouse",
+      "listings": 90,
+      "hosts": 77,
+      "positive_listings": 27,
+      "observed_share": 0.3,
+      "quota": 23,
+      "model_expected_positive": 12.0,
+      "model_precision": 0.5217391304347826,
+      "segment_mean_expected_positive": 4.727272727272727,
+      "segment_mean_precision": 0.20553359683794464,
+      "random_expected_positive": 6.9,
+      "random_expected_precision": 0.3,
+      "gain_model_minus_segment_mean_pp": 31.620553359683797,
+      "gain_model_minus_random_pp": 22.17391304347826,
+      "model_boundary_tied_listings": 1,
+      "model_boundary_weight": 1.0,
+      "segment_mean_boundary_tied_listings": 22,
+      "segment_mean_boundary_weight": 0.45454545454545453
+    }
+  ],
+  "quota_difference_note": "Pooled top quarter has 408 places. Fixing a separate quarter in each group has 309+77+23=409 places because of ceiling rounding. Both methods have exactly the same quota within each design.",
+  "interpretation": {
+    "pooled_three_groups": "Scores can gain by allocating different numbers across the three groups, as well as by ranking inside them; not pure within-group evidence.",
+    "fixed_quota_within_each_group": "Both rules select the same number in each group; the pooled improvement cannot come from reallocating places between groups.",
+    "frozen_baseline_caution": "The stored segment-average score varies across held-out folds but is constant within each group/fold. High training rates often correspond here to lower held-out rates. Its 19.9% within-group result reflects an unfavorable fold-ranking artifact and is not a sensible estimate of random screening within a group. Do not present the full 29.5-point gap as a dependable operational gain.",
+    "implication_for_primary_comparison": "The full-sample 43.7% versus 28.1% remains the verified frozen OOF result for all 3,873 eligible listings. It is not a pure within-shortlist gain. Pooled OOF scores combine different fitted folds; fold-specific score levels and between-group allocation may affect the comparison. This limitation is not evidence that held-out labels or hosts leaked into training.",
+    "neutral_reference": "Random selection within each group at the same fixed quotas has an exact descriptive expected hit count of quota * observed group rate. It uses observed labels only to evaluate that no-ranking reference; it is not an independently fitted predictive model.",
+    "recommended_claim": "With the same screening quota in each recommended group, the frozen model identified 202 high-review listings among 409 selections (49.4%), versus about 136 expected under random selection within those groups (33.4%). This is an exploratory retrospective comparison."
+  },
+  "group_by_fold_sensitivity": {
+    "reason": "Targeted check prompted by fold-level score variation. It prevents reallocating places across either groups or held-out folds.",
+    "rule": "For each of the 15 group-by-held-out-fold cells, select ceil(cell_n/4) with the same tie-sharing rule, then combine results. The segment-average score is constant within every cell, so its expected selection equals uniform random sampling inside that cell.",
+    "overall": {
+      "quota": 416,
+      "model_expected_positive": 222.0,
+      "baseline_expected_positive": 138.70046247374145,
+      "model_precision": 0.5336538461538461,
+      "baseline_precision": 0.33341457325418616,
+      "gain_model_minus_baseline_pp": 20.023927289966
+    },
+    "by_group": [
+      {
+        "segment": "Melbourne 2BR Apartment/unit",
+        "listings": 1235,
+        "quota": 311,
+        "model_expected_positive": 161.0,
+        "baseline_expected_positive": 102.00316131774153,
+        "model_precision": 0.5176848874598071,
+        "baseline_precision": 0.3279844415361464,
+        "gain_model_minus_baseline_pp": 18.970044592366065
+      },
+      {
+        "segment": "Melbourne 3BR Apartment/unit",
+        "listings": 306,
+        "quota": 80,
+        "model_expected_positive": 48.0,
+        "baseline_expected_positive": 29.238513566777556,
+        "model_precision": 0.6,
+        "baseline_precision": 0.36548141958471947,
+        "gain_model_minus_baseline_pp": 23.451858041528055
+      },
+      {
+        "segment": "Yarra Ranges 3BR House/townhouse",
+        "listings": 90,
+        "quota": 25,
+        "model_expected_positive": 13.0,
+        "baseline_expected_positive": 7.458787589222371,
+        "model_precision": 0.52,
+        "baseline_precision": 0.29835150356889484,
+        "gain_model_minus_baseline_pp": 22.164849643110514
+      }
+    ],
+    "extra_places_vs_fixed_group_design": 7,
+    "extra_places_vs_pooled_design": 8,
+    "uncertainty": "No additional bootstrap run for this sensitivity; point estimates only.",
+    "limits": "Exploratory sensitivity using existing OOF scores; changing the allocation rule and rounding gives 416 places instead of 409 or 408. It is not a new external test, a tuned replacement rule or a causal business effect."
+  },
+  "host_bootstrap": {
+    "replicates": 1000,
+    "seed": 30005,
+    "unit": "Distinct hosts, with replacement; all their listings in these three groups are carried together",
+    "fixed": "OOF predictions and the chosen three groups",
+    "recomputed": "Score cutoff, boundary tie weights, per-group quota and observed reference share in each replicate",
+    "intervals": [
+      {
+        "scope": "pooled_three_groups",
+        "metric": "model_precision",
+        "ci95_lower": 0.33055347829421694,
+        "ci95_upper": 0.6593049327354259,
+        "host_replicates": 1000
+      },
+      {
+        "scope": "pooled_three_groups",
+        "metric": "segment_mean_precision",
+        "ci95_lower": 0.13236262199704427,
+        "ci95_upper": 0.3360745314206761,
+        "host_replicates": 1000
+      },
+      {
+        "scope": "pooled_three_groups",
+        "metric": "random_expected_precision",
+        "ci95_lower": 0.26422762915873377,
+        "ci95_upper": 0.4097360528492666,
+        "host_replicates": 1000
+      },
+      {
+        "scope": "pooled_three_groups",
+        "metric": "gain_model_minus_segment_mean_pp",
+        "ci95_lower": 9.456885939191878,
+        "ci95_upper": 43.1082529668738,
+        "host_replicates": 1000
+      },
+      {
+        "scope": "pooled_three_groups",
+        "metric": "gain_model_minus_random_pp",
+        "ci95_lower": 3.237925298765628,
+        "ci95_upper": 28.011234344358705,
+        "host_replicates": 1000
+      },
+      {
+        "scope": "fixed_quota_within_each_group",
+        "metric": "model_precision",
+        "ci95_lower": 0.33629380449362845,
+        "ci95_upper": 0.6545688427903192,
+        "host_replicates": 1000
+      },
+      {
+        "scope": "fixed_quota_within_each_group",
+        "metric": "segment_mean_precision",
+        "ci95_lower": 0.12483430275413362,
+        "ci95_upper": 0.2895877548608294,
+        "host_replicates": 1000
+      },
+      {
+        "scope": "fixed_quota_within_each_group",
+        "metric": "random_expected_precision",
+        "ci95_lower": 0.2642298579836308,
+        "ci95_upper": 0.4095531479365001,
+        "host_replicates": 1000
+      },
+      {
+        "scope": "fixed_quota_within_each_group",
+        "metric": "gain_model_minus_segment_mean_pp",
+        "ci95_lower": 12.796126874173906,
+        "ci95_upper": 44.76266698749692,
+        "host_replicates": 1000
+      },
+      {
+        "scope": "fixed_quota_within_each_group",
+        "metric": "gain_model_minus_random_pp",
+        "ci95_lower": 3.6189497197744553,
+        "ci95_upper": 27.834443953288055,
+        "host_replicates": 1000
+      },
+      {
+        "scope": "Melbourne 2BR Apartment/unit",
+        "metric": "model_precision",
+        "ci95_lower": 0.3050831097441267,
+        "ci95_upper": 0.6462110520781449,
+        "host_replicates": 1000
+      },
+      {
+        "scope": "Melbourne 2BR Apartment/unit",
+        "metric": "gain_model_minus_random_pp",
+        "ci95_lower": 0.7130128821728547,
+        "ci95_upper": 27.604429186393386,
+        "host_replicates": 1000
+      },
+      {
+        "scope": "Melbourne 3BR Apartment/unit",
+        "metric": "model_precision",
+        "ci95_lower": 0.2986899065846434,
+        "ci95_upper": 0.8111111111111111,
+        "host_replicates": 1000
+      },
+      {
+        "scope": "Melbourne 3BR Apartment/unit",
+        "metric": "gain_model_minus_random_pp",
+        "ci95_lower": -1.274000796059621,
+        "ci95_upper": 37.36360422194351,
+        "host_replicates": 1000
+      },
+      {
+        "scope": "Yarra Ranges 3BR House/townhouse",
+        "metric": "model_precision",
+        "ci95_lower": 0.3333333333333333,
+        "ci95_upper": 0.7368421052631579,
+        "host_replicates": 1000
+      },
+      {
+        "scope": "Yarra Ranges 3BR House/townhouse",
+        "metric": "gain_model_minus_random_pp",
+        "ci95_lower": 6.5706140350877185,
+        "ci95_upper": 40.32414754730043,
+        "host_replicates": 1000
+      }
+    ],
+    "limits": "Conditional descriptive intervals. They omit model refitting, past model selection and the data-driven choice of these three groups. They are not external validation or prospective uncertainty."
+  },
+  "association_stability": {
+    "present": true,
+    "path": "outputs/association_stability.json",
+    "sha256": "ac4b7a34ffe425ba342ab6af64b643559a12322818e1f61c1a3c0ed4f0759244",
+    "both_selected_directions_hold_in_five_training_folds": true
+  },
+  "limitations": [
+    "These three groups were chosen after examining the data. This is a post-exploration subgroup analysis, not a prespecified untouched test.",
+    "The same historical snapshot and exploratory host folds underlie the original and subgroup results.",
+    "Reviews are not occupancy, booking revenue or profit; the outcome may favor short-stay models.",
+    "Current price and stay rules may differ from those used during the preceding review year.",
+    "No future-period individual model validation, causal effect or guaranteed within-group business return is established."
+  ]
+}

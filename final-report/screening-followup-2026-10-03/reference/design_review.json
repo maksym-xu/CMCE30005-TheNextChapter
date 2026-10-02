@@ -1,0 +1,11 @@
+{
+  "review_date": "2026-10-03",
+  "design_changes_required": false,
+  "interpretation_rules": [
+    "Within a priority group, the baseline has no ranking information and its tie allocation equals expected uniform random selection.",
+    "Within a priority group, area, dwelling type and bedrooms are constant. The property-only model can distinguish listings only using recorded amenity count.",
+    "Fixed per-group quotas sum rounded group allocations and can exceed the rounded pooled quota. Compare models only within the same allocation design.",
+    "The ablation removes price and minimum-stay settings together and refits other coefficients. It does not identify separate effects or causal interventions.",
+    "The prior selection of groups and features remains outside this evaluation. Repeated host splits do not provide an untouched test of that selection process."
+  ]
+}

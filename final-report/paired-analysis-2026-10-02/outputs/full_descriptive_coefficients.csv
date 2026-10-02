@@ -1,0 +1,13 @@
+term,coefficient,host_clustered_se,odds_ratio,odds_ratio_ci95_lo,odds_ratio_ci95_hi,interpretation
+(Intercept),-2.60314032419796,0.359804610965131,0.0740407009458381,0.0365762059117596,0.149879553111016,"Descriptive, conditional on outcome-informed frozen specification; not selection-adjusted or causal"
+areaYarra,-0.162910153122574,0.224032356812769,0.849667524959207,0.547707675914212,1.3181025841299,"Descriptive, conditional on outcome-informed frozen specification; not selection-adjusted or causal"
+areaYarra Ranges,0.247700193491276,0.364537384084221,1.28107579975126,0.62700981829208,2.61743142903041,"Descriptive, conditional on outcome-informed frozen specification; not selection-adjusted or causal"
+areaPort Phillip,-0.649087504069323,0.236979745858386,0.522522358814461,0.328385253677562,0.831430803921279,"Descriptive, conditional on outcome-informed frozen specification; not selection-adjusted or causal"
+areaStonnington,-0.744367868212772,0.241370355643787,0.475034489451062,0.295982850074354,0.762401490867946,"Descriptive, conditional on outcome-informed frozen specification; not selection-adjusted or causal"
+areaMerri-bek,-0.264288657216776,0.404864050378867,0.767751890544039,0.347211145381026,1.69764989769293,"Descriptive, conditional on outcome-informed frozen specification; not selection-adjusted or causal"
+dwellingHouse/townhouse,-0.26694477546389,0.355210726464787,0.765715356573135,0.381685694112429,1.5361330443766,"Descriptive, conditional on outcome-informed frozen specification; not selection-adjusted or causal"
+bedrooms2,0.155314925616394,0.168079686886173,1.16802574441742,0.840195008862472,1.62377082133462,"Descriptive, conditional on outcome-informed frozen specification; not selection-adjusted or causal"
+bedrooms3,0.297887424529255,0.252800275509996,1.34701013904324,0.820697151253587,2.21084758478059,"Descriptive, conditional on outcome-informed frozen specification; not selection-adjusted or causal"
+price_vs_similar_10,-0.128270584034025,0.0348198559659499,0.879615337074609,0.821586951978647,0.941742245727616,"Descriptive, conditional on outcome-informed frozen specification; not selection-adjusted or causal"
+one_nightYes,1.16183405437472,0.191715299307777,3.19578915555547,2.19475860981767,4.65339025489204,"Descriptive, conditional on outcome-informed frozen specification; not selection-adjusted or causal"
+amenities_10,0.224340189153296,0.0668838719314282,1.25149669261977,1.09773372016768,1.42679772231008,"Descriptive, conditional on outcome-informed frozen specification; not selection-adjusted or causal"

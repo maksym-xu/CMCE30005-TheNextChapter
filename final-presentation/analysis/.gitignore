@@ -1,0 +1,4 @@
+# School-supplied row-level data and predictions stay local.
+/private-inputs/*
+!/private-inputs/README.txt
+/working/

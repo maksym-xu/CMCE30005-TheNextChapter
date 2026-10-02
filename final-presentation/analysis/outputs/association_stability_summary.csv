@@ -1,0 +1,3 @@
+term,expected_direction,training_folds,folds_with_expected_direction,min_coefficient,max_coefficient,folds_ci95_excludes_zero_in_expected_direction
+one_nightYes,positive,5,5,1.06725987421181,1.34348723738072,5
+price_vs_similar_10,negative,5,5,-0.14053117055301,-0.118719393656031,5

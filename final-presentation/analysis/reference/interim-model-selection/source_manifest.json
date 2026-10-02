@@ -1,0 +1,44 @@
+{
+  "source_commit_context": "7ea295c50999472bc91b5f247e75a187b4171545",
+  "files": [
+    {
+      "source_path": "reports/tables/rq_model_metrics.json",
+      "snapshot_file": "rq_model_metrics.json",
+      "sha256": "97943a452a65950b286ad9241bafc86ef3aad697d86120a3a9247697f80a0e38"
+    },
+    {
+      "source_path": "reports/tables/rq_extension_metrics.csv",
+      "snapshot_file": "rq_extension_metrics.csv",
+      "sha256": "fafe4830ed2c4ff922819e12746e14ab2bb8d1f56ad7f222509869984b43ea7d"
+    },
+    {
+      "source_path": "reports/tables/rq_baseline_comparison.csv",
+      "snapshot_file": "rq_baseline_comparison.csv",
+      "sha256": "3f07d6960fa8f3eae22c0612db533d8f0bfaa0a3839a79f1897354699d552e8d"
+    },
+    {
+      "source_path": "reports/tables/rq_nested_selection_summary.json",
+      "snapshot_file": "rq_nested_selection_summary.json",
+      "sha256": "a0c57766b0b76ada7451b11b83b3f9a6de439524af3678e4bcdc8e386b4eadeb"
+    },
+    {
+      "source_path": "reports/tables/rq_nested_selection_folds.csv",
+      "snapshot_file": "rq_nested_selection_folds.csv",
+      "sha256": "0ab11e4128a08fd4dfb4043257c7c66c47f9e8d4840a36b8d16a91c12cef2c8b"
+    },
+    {
+      "source_path": "reports/tables/rq_extension_provenance.json",
+      "snapshot_file": "rq_extension_provenance.json",
+      "sha256": "67bf1a6c5e77d5a1ff5f510180eee1ba20040d3de67b3169349167f008b9b4d9"
+    },
+    {
+      "source_path": "reports/interim-project-report.md",
+      "source_sha256": "f489451308304beb3eca83d2c7cf836865ddbafd338404179bacfc6f0c2647a2",
+      "excerpt_lines": [
+        55,
+        95
+      ]
+    }
+  ],
+  "note": "Earlier report and aggregate model-selection evidence. Paths are relative to the repository root."
+}

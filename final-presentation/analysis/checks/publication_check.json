@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "scope": "Public aggregate consistency only; not independent raw-data or model reproduction",
+  "check_count": 24,
+  "checks": [
+    "Published main scope is 3,873 listings in 14 groups",
+    "Published main share is 981/3873",
+    "Main reference percentile rounds upward to 30",
+    "Observed rate matches counts: Melbourne 3BR Apartment/unit",
+    "Observed rate matches counts: Melbourne 2BR Apartment/unit",
+    "Observed rate matches counts: Yarra Ranges 3BR House/townhouse",
+    "simple_logistic: expected quota is 969",
+    "simple_logistic: published precision matches expected counts",
+    "segment_mean: expected quota is 969",
+    "segment_mean: published precision matches expected counts",
+    "Model selected 423 target-reaching homes",
+    "Main absolute difference rounds to 15.6 percentage points",
+    "Published confusion matrix matches 423 / 546 / 558 / 2346",
+    "Recommended groups total 1,631 listings and 409 fixed places",
+    "Fixed-group model rate is 202/409",
+    "Within-group uniform-selection expectation is derived from group counts",
+    "Group-by-fold sensitivity has 15 aggregate cells",
+    "Sensitivity model rate is 222/416",
+    "one_nightYes: five published training-fold directions agree",
+    "price_vs_similar_10: five published training-fold directions agree",
+    "Separate historical check uses 2,657 listings and threshold 34",
+    "Temporal candidates match the three descriptive search groups",
+    "Temporal aggregate weighted rate reconciles: top3_recent_rate",
+    "Temporal aggregate weighted rate reconciles: rest_recent_rate"
+  ]
+}

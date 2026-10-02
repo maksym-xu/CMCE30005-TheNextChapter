@@ -1,0 +1,42 @@
+Melbourne Airbnb Final Presentation Script
+English edition 2 October 2026
+
+Slide 1  Where should we look first?
+Qihang Sun  25 seconds
+Good morning. Where should our client look first for a Melbourne Airbnb property? We recommend two- and three-bedroom apartments in the City of Melbourne, with three-bedroom houses in Yarra Ranges as a backup. We will explain the evidence and the checks needed before any lease.
+
+Slide 2  Choosing a property before costs begin
+Qihang Sun  45 seconds
+Our client plans to lease homes and offer short stays. Rent is due even when guests do not arrive. Furnishing and operating costs also commit limited funds. Choosing where to investigate is therefore a business decision in its own right. Which property groups show stronger guest activity? Can listing features help rank eligible homes? Our analysis answers these questions using recorded reviews. The goal is to spend investigation time on stronger candidates before making financial commitments.
+
+Slide 3  A fair comparison starts with similar homes
+Qihang Sun  65 seconds
+We used the subject's June 2026 Inside Airbnb data. We kept 3,873 comparable homes: entire properties with one to three bedrooms, usable prices, and at least one year since their first recorded review. Each group includes at least fifty homes. This selected sample leaves out many listings, including those with missing prices or limited review history. Our outcome is whether a home received thirty or more reviews in the previous 365 days. A separate reference group sets thirty as its upper-quarter threshold. About one in four analysed homes reached it. Reviews signal past guest activity, not occupied nights or profit. Maksym will explain how this evidence helps prioritise the search.
+
+Slide 4  City of Melbourne apartments lead the search
+Maksym Xu  60 seconds
+These are the three leading groups among fourteen eligible groups. City of Melbourne three-bedroom apartments reached 36.6 percent attainment, and two-bedroom apartments reached 32.8 percent. Three-bedroom houses and townhouses in Yarra Ranges reached 30 percent. The city's higher observed rates and larger samples support our proposed city-first search. The uncertainty ranges overlap. We see these as promising options, not a precise first-to-third ranking. Actual quotes and permissions may change the search order. These percentages measure past review activity, not returns. A promising group can still contain unsuitable homes. We therefore tested whether listing features improve screening across all eligible homes.
+
+Slide 5  What the historical ranking score uses
+Maksym Xu  75 seconds
+We changed from the interim random forest to logistic regression for easier explanation, keeping the forest as a benchmark. This specification followed earlier exploration. Our outcome, Y, is one for thirty or more reviews, and zero otherwise. The six inputs, X, are area, dwelling type, bedrooms, current price relative to similar homes, one-night acceptance, and amenity count. Similar homes share the same area, dwelling type and bedroom count. The model combines these features into a ranking score learned from past outcomes. Homes allowing one-night stays were more likely to have met the target. Higher prices relative to similar homes were associated with lower attainment. These relationships do not prove cause and effect or a reliable chance of future success. Eric will show how the score helps focus the search.
+
+Slide 6  The model found more high-review homes
+Eric Huang  75 seconds
+In our original five-fold check, selecting by property group averages gave 28.1 percent attainment. The model gave 43.7 percent, an increase of 15.6 percentage points. That means about sixteen more high-review homes per hundred selected. We scored each home without using its host's listings for training. Among 969 selected homes, 423 reached the target. More than half, 56.3 percent, did not. Across fifty repeated host splits, both methods used the same tests; the model screened better in forty-eight. This main comparison covers all eligible homes. An earlier exploratory check also improved screening within our three priority groups. The score helps focus investigation but does not approve individual leases. These checks followed data exploration and do not establish future success rates. We next checked whether our leading groups stayed ahead in the later review window.
+
+Slide 7  The same three groups stayed ahead
+Eric Huang  60 seconds
+For that check, we used dated reviews from the same supplied snapshot to form two annual review windows. We followed the same 2,657 surviving listings with longer histories, covering ten groups. Earlier reference data set a thirty-four-review threshold, fixed across both windows. The earlier leaders were these three priority groups. In the later window, 27.1 percent of their listings reached the target, compared with 14.9 percent elsewhere. This supports starting in those groups. It does not validate the logistic model as a future forecast, and surviving listings may differ from new entrants. Loc will explain the checks each candidate must pass.
+
+Slide 8  Two gates before any lease
+Loc Le  55 seconds
+Every candidate must pass two gates before a lease. First, confirm that the intended short-stay use is permitted. Second, check conservative cash flow using actual quotes. Include rent, cleaning, fees, and an allowance for setup costs. Test cautious assumptions for paid nights and achieved nightly rates, with a buffer chosen by the client. Our dataset does not provide these verified numbers. Reject any property that fails permission checks or the client's cash-flow requirements. A high model score cannot override either gate. These checks connect the historical evidence to the actual commitment the client would make.
+
+Slide 9  A 30-day search with clear stop rules
+Loc Le  55 seconds
+The proposed thirty-day plan has three steps. In week one, the operator finds ten candidates, focusing on Melbourne apartments and keeping Yarra Ranges houses as a backup. In weeks two and three, the operator verifies permissions and cost quotes. The analyst tests conservative cash flow, with model scores as supporting evidence. Remove candidates that fail either gate. In week four, the owner compares those remaining and decides whether any small trial is justified. The owner can decide against proceeding. Ten properties and thirty days are proposed working limits, not an analysed optimum. If a trial proceeds, monitor paid nights, net cash flow, and cleaning workload before deciding whether to continue.
+
+Slide 10  Approve a focused search.
+Loc Le  25 seconds
+Approve a focused thirty-day search of ten candidates. Reviews are not profit, current settings may differ from the past, and our evidence covers established listings. Before any lease, require permissions and conservative cash flow. Thank you. We welcome your questions.

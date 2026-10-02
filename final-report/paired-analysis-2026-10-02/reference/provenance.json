@@ -1,0 +1,8 @@
+{
+  "source_commit": "2ac211dca5337f5b6d17ccf913d9d12ee668811e",
+  "historical_analysis_base_commit": "7ea295c50999472bc91b5f247e75a187b4171545",
+  "source_package": "final-presentation-release-2026-10-01/analysis",
+  "input_sha256": "bf286ed7bfb89a3e06f7a52e10c3913507296e62432a56596b24fef88a6dee20",
+  "legacy_oof_sha256": "97330f63b87ec994f457801fa7aab8ae4e8472b86344559b447c92dc459e7725",
+  "scope": "Same authorised compact input and target. New run corrects training-only imputation and adds paired segment-baseline metrics. No new raw-review reconstruction or new feature/model selection."
+}

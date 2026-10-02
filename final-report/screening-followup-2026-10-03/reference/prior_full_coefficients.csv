@@ -1,0 +1,661 @@
+design,split,term,coefficient
+host_fold,0,(Intercept),-2.57991088990181
+host_fold,0,areaYarra,-0.199961640640596
+host_fold,0,areaYarra Ranges,0.141380554121464
+host_fold,0,areaPort Phillip,-0.518775740799161
+host_fold,0,areaStonnington,-0.659788700872135
+host_fold,0,areaMerri-bek,-0.0857425959933139
+host_fold,0,dwellingHouse/townhouse,-0.0292705294962558
+host_fold,0,bedrooms2,0.134821886019411
+host_fold,0,bedrooms3,0.201304091884475
+host_fold,0,price_vs_similar_10,-0.124115012432503
+host_fold,0,one_nightYes,1.06977198104884
+host_fold,0,amenities_10,0.23362485018452
+host_fold,1,(Intercept),-2.89547034930728
+host_fold,1,areaYarra,0.0881480270410365
+host_fold,1,areaYarra Ranges,0.608704684286181
+host_fold,1,areaPort Phillip,-0.800601047585661
+host_fold,1,areaStonnington,-0.725482686673522
+host_fold,1,areaMerri-bek,-0.225823906803833
+host_fold,1,dwellingHouse/townhouse,-0.308816165894849
+host_fold,1,bedrooms2,0.107098565734653
+host_fold,1,bedrooms3,0.23288025072777
+host_fold,1,price_vs_similar_10,-0.123437894466697
+host_fold,1,one_nightYes,1.20601425818585
+host_fold,1,amenities_10,0.254790441149064
+host_fold,2,(Intercept),-2.30749609255807
+host_fold,2,areaYarra,-0.266638065365737
+host_fold,2,areaYarra Ranges,0.0291560180697797
+host_fold,2,areaPort Phillip,-0.57030372637284
+host_fold,2,areaStonnington,-0.696462326898644
+host_fold,2,areaMerri-bek,-0.808776628608974
+host_fold,2,dwellingHouse/townhouse,-0.163285062321021
+host_fold,2,bedrooms2,0.0391806719416533
+host_fold,2,bedrooms3,0.214390618692494
+host_fold,2,price_vs_similar_10,-0.118719393656031
+host_fold,2,one_nightYes,1.06725987421181
+host_fold,2,amenities_10,0.182096082543645
+host_fold,3,(Intercept),-2.57975802657564
+host_fold,3,areaYarra,-0.287939890621536
+host_fold,3,areaYarra Ranges,0.267878258328934
+host_fold,3,areaPort Phillip,-0.78391869541177
+host_fold,3,areaStonnington,-0.882802656048691
+host_fold,3,areaMerri-bek,-0.22756299290796
+host_fold,3,dwellingHouse/townhouse,-0.241100031266279
+host_fold,3,bedrooms2,0.254493352776957
+host_fold,3,bedrooms3,0.232734686144486
+host_fold,3,price_vs_similar_10,-0.13119363512433
+host_fold,3,one_nightYes,1.34348723738072
+host_fold,3,amenities_10,0.216574672505758
+host_fold,4,(Intercept),-2.6947586593419
+host_fold,4,areaYarra,-0.113437901192725
+host_fold,4,areaYarra Ranges,0.209970809378032
+host_fold,4,areaPort Phillip,-0.612275445758156
+host_fold,4,areaStonnington,-0.714981083792512
+host_fold,4,areaMerri-bek,-0.0435033458700233
+host_fold,4,dwellingHouse/townhouse,-0.548977691384268
+host_fold,4,bedrooms2,0.263431692520264
+host_fold,4,bedrooms3,0.621446427258729
+host_fold,4,price_vs_similar_10,-0.14053117055301
+host_fold,4,one_nightYes,1.14847029767209
+host_fold,4,amenities_10,0.234101708821323
+repeated_host_split,1,(Intercept),-2.29106486133454
+repeated_host_split,1,areaYarra,-0.0874555728641382
+repeated_host_split,1,areaYarra Ranges,0.417339726512738
+repeated_host_split,1,areaPort Phillip,-0.655517658654653
+repeated_host_split,1,areaStonnington,-0.638283899466894
+repeated_host_split,1,areaMerri-bek,-0.131465342147191
+repeated_host_split,1,dwellingHouse/townhouse,-0.425399715245608
+repeated_host_split,1,bedrooms2,0.284705625891086
+repeated_host_split,1,bedrooms3,0.39860380315691
+repeated_host_split,1,price_vs_similar_10,-0.123053646693918
+repeated_host_split,1,one_nightYes,1.22209030845098
+repeated_host_split,1,amenities_10,0.145458897300694
+repeated_host_split,2,(Intercept),-2.66049949086257
+repeated_host_split,2,areaYarra,-0.177698521655934
+repeated_host_split,2,areaYarra Ranges,0.209751476693398
+repeated_host_split,2,areaPort Phillip,-0.507566473371308
+repeated_host_split,2,areaStonnington,-0.645130795462805
+repeated_host_split,2,areaMerri-bek,-0.504648618110356
+repeated_host_split,2,dwellingHouse/townhouse,-0.419679986087402
+repeated_host_split,2,bedrooms2,0.269738244643111
+repeated_host_split,2,bedrooms3,0.366512286875408
+repeated_host_split,2,price_vs_similar_10,-0.129146268166561
+repeated_host_split,2,one_nightYes,1.1122641075193
+repeated_host_split,2,amenities_10,0.222591983293742
+repeated_host_split,3,(Intercept),-2.87608923796642
+repeated_host_split,3,areaYarra,-0.165319704731396
+repeated_host_split,3,areaYarra Ranges,-0.0174198552380451
+repeated_host_split,3,areaPort Phillip,-0.412024608605113
+repeated_host_split,3,areaStonnington,-0.693608438105071
+repeated_host_split,3,areaMerri-bek,-0.27620125919918
+repeated_host_split,3,dwellingHouse/townhouse,-0.276308959519461
+repeated_host_split,3,bedrooms2,0.241499340098805
+repeated_host_split,3,bedrooms3,0.129495829163246
+repeated_host_split,3,price_vs_similar_10,-0.13152393419592
+repeated_host_split,3,one_nightYes,1.13326437944116
+repeated_host_split,3,amenities_10,0.312262859469197
+repeated_host_split,4,(Intercept),-2.3812955093206
+repeated_host_split,4,areaYarra,-0.00729810598562571
+repeated_host_split,4,areaYarra Ranges,0.386566177385889
+repeated_host_split,4,areaPort Phillip,-0.789239396952069
+repeated_host_split,4,areaStonnington,-0.896446729863613
+repeated_host_split,4,areaMerri-bek,-0.359743877199133
+repeated_host_split,4,dwellingHouse/townhouse,0.105776283669778
+repeated_host_split,4,bedrooms2,0.00823430761710714
+repeated_host_split,4,bedrooms3,-0.145539309315227
+repeated_host_split,4,price_vs_similar_10,-0.121867476460916
+repeated_host_split,4,one_nightYes,1.34809085945198
+repeated_host_split,4,amenities_10,0.156991711162593
+repeated_host_split,5,(Intercept),-2.77569498669725
+repeated_host_split,5,areaYarra,-0.203923089767817
+repeated_host_split,5,areaYarra Ranges,0.559821000058536
+repeated_host_split,5,areaPort Phillip,-0.596836577087559
+repeated_host_split,5,areaStonnington,-0.888430204317315
+repeated_host_split,5,areaMerri-bek,-0.0589207773028306
+repeated_host_split,5,dwellingHouse/townhouse,-0.462770316102933
+repeated_host_split,5,bedrooms2,0.133870887054952
+repeated_host_split,5,bedrooms3,0.0160627392706287
+repeated_host_split,5,price_vs_similar_10,-0.111895494413823
+repeated_host_split,5,one_nightYes,1.07783415297081
+repeated_host_split,5,amenities_10,0.293477940546903
+repeated_host_split,6,(Intercept),-2.9488605545244
+repeated_host_split,6,areaYarra,0.0544786711105756
+repeated_host_split,6,areaYarra Ranges,0.31023988871042
+repeated_host_split,6,areaPort Phillip,-0.460259983412459
+repeated_host_split,6,areaStonnington,-0.474853983127506
+repeated_host_split,6,areaMerri-bek,0.0580527358746804
+repeated_host_split,6,dwellingHouse/townhouse,-0.524141872676723
+repeated_host_split,6,bedrooms2,0.232694462699644
+repeated_host_split,6,bedrooms3,0.522547553120159
+repeated_host_split,6,price_vs_similar_10,-0.122337759841687
+repeated_host_split,6,one_nightYes,1.13991793969488
+repeated_host_split,6,amenities_10,0.275940151217825
+repeated_host_split,7,(Intercept),-2.77805502789097
+repeated_host_split,7,areaYarra,-0.0419343988689355
+repeated_host_split,7,areaYarra Ranges,0.259489615428252
+repeated_host_split,7,areaPort Phillip,-0.708306792188294
+repeated_host_split,7,areaStonnington,-1.34174370164333
+repeated_host_split,7,areaMerri-bek,-0.0353477849715997
+repeated_host_split,7,dwellingHouse/townhouse,-0.211567601817637
+repeated_host_split,7,bedrooms2,0.0656455345893988
+repeated_host_split,7,bedrooms3,0.217038117015331
+repeated_host_split,7,price_vs_similar_10,-0.160509015605275
+repeated_host_split,7,one_nightYes,1.19224748081385
+repeated_host_split,7,amenities_10,0.260950508729041
+repeated_host_split,8,(Intercept),-2.77712272455394
+repeated_host_split,8,areaYarra,-0.0685110626907485
+repeated_host_split,8,areaYarra Ranges,0.48315610754111
+repeated_host_split,8,areaPort Phillip,-0.476844530215463
+repeated_host_split,8,areaStonnington,-0.558419870958059
+repeated_host_split,8,areaMerri-bek,-0.540771331437082
+repeated_host_split,8,dwellingHouse/townhouse,-0.366380367512246
+repeated_host_split,8,bedrooms2,0.17237944609332
+repeated_host_split,8,bedrooms3,0.479123859798198
+repeated_host_split,8,price_vs_similar_10,-0.135034156794315
+repeated_host_split,8,one_nightYes,1.07192710875957
+repeated_host_split,8,amenities_10,0.259751466568013
+repeated_host_split,9,(Intercept),-2.56113766635033
+repeated_host_split,9,areaYarra,-0.171498891142392
+repeated_host_split,9,areaYarra Ranges,0.498212098618938
+repeated_host_split,9,areaPort Phillip,-0.727278117152876
+repeated_host_split,9,areaStonnington,-0.644899885638959
+repeated_host_split,9,areaMerri-bek,-0.174052163115184
+repeated_host_split,9,dwellingHouse/townhouse,-0.50854867278299
+repeated_host_split,9,bedrooms2,0.186765426385586
+repeated_host_split,9,bedrooms3,0.447146879293673
+repeated_host_split,9,price_vs_similar_10,-0.186489233611319
+repeated_host_split,9,one_nightYes,1.23620422338173
+repeated_host_split,9,amenities_10,0.219354784022603
+repeated_host_split,10,(Intercept),-2.60489267685647
+repeated_host_split,10,areaYarra,-0.298122636421509
+repeated_host_split,10,areaYarra Ranges,0.211251267251504
+repeated_host_split,10,areaPort Phillip,-0.545036325505125
+repeated_host_split,10,areaStonnington,-0.61298405473898
+repeated_host_split,10,areaMerri-bek,-0.24324668792021
+repeated_host_split,10,dwellingHouse/townhouse,-0.342216487487961
+repeated_host_split,10,bedrooms2,0.101635025944998
+repeated_host_split,10,bedrooms3,0.199388971690393
+repeated_host_split,10,price_vs_similar_10,-0.109997207994586
+repeated_host_split,10,one_nightYes,0.961073982197542
+repeated_host_split,10,amenities_10,0.255639303241765
+repeated_host_split,11,(Intercept),-2.71587767244969
+repeated_host_split,11,areaYarra,-0.232007060857842
+repeated_host_split,11,areaYarra Ranges,-0.157236276789457
+repeated_host_split,11,areaPort Phillip,-0.596400402333782
+repeated_host_split,11,areaStonnington,-0.460361580828739
+repeated_host_split,11,areaMerri-bek,-0.398089888068471
+repeated_host_split,11,dwellingHouse/townhouse,-0.114979254645528
+repeated_host_split,11,bedrooms2,0.340641225691851
+repeated_host_split,11,bedrooms3,0.444687348348291
+repeated_host_split,11,price_vs_similar_10,-0.12737583532478
+repeated_host_split,11,one_nightYes,1.18072648494948
+repeated_host_split,11,amenities_10,0.236184630603128
+repeated_host_split,12,(Intercept),-3.03847470332843
+repeated_host_split,12,areaYarra,-0.18123808572508
+repeated_host_split,12,areaYarra Ranges,0.398342933376755
+repeated_host_split,12,areaPort Phillip,-0.874471351926886
+repeated_host_split,12,areaStonnington,-0.707313544505224
+repeated_host_split,12,areaMerri-bek,-0.135345990636918
+repeated_host_split,12,dwellingHouse/townhouse,-0.101766417365412
+repeated_host_split,12,bedrooms2,0.0471513544821654
+repeated_host_split,12,bedrooms3,0.171577210120814
+repeated_host_split,12,price_vs_similar_10,-0.131684427831948
+repeated_host_split,12,one_nightYes,1.10414710137932
+repeated_host_split,12,amenities_10,0.311566907023641
+repeated_host_split,13,(Intercept),-2.55397225727749
+repeated_host_split,13,areaYarra,-0.330790214692456
+repeated_host_split,13,areaYarra Ranges,0.369875063521169
+repeated_host_split,13,areaPort Phillip,-0.568171506270893
+repeated_host_split,13,areaStonnington,-0.611535750701832
+repeated_host_split,13,areaMerri-bek,0.139316061491072
+repeated_host_split,13,dwellingHouse/townhouse,-0.495274263082329
+repeated_host_split,13,bedrooms2,0.30584505433315
+repeated_host_split,13,bedrooms3,0.415400117086689
+repeated_host_split,13,price_vs_similar_10,-0.12868575851243
+repeated_host_split,13,one_nightYes,1.28286591396645
+repeated_host_split,13,amenities_10,0.210147911121744
+repeated_host_split,14,(Intercept),-2.47205981493652
+repeated_host_split,14,areaYarra,-0.35804038495523
+repeated_host_split,14,areaYarra Ranges,0.21193219300416
+repeated_host_split,14,areaPort Phillip,-0.731684677423965
+repeated_host_split,14,areaStonnington,-0.855747316717923
+repeated_host_split,14,areaMerri-bek,-0.282919890873201
+repeated_host_split,14,dwellingHouse/townhouse,-0.470372895456003
+repeated_host_split,14,bedrooms2,0.23871194400631
+repeated_host_split,14,bedrooms3,0.499185849163706
+repeated_host_split,14,price_vs_similar_10,-0.190094662915732
+repeated_host_split,14,one_nightYes,1.36519184097265
+repeated_host_split,14,amenities_10,0.196379855286231
+repeated_host_split,15,(Intercept),-2.5660250973268
+repeated_host_split,15,areaYarra,-0.447018779040113
+repeated_host_split,15,areaYarra Ranges,0.263625562750067
+repeated_host_split,15,areaPort Phillip,-0.583068264381606
+repeated_host_split,15,areaStonnington,-0.607069946395537
+repeated_host_split,15,areaMerri-bek,-0.876029617481017
+repeated_host_split,15,dwellingHouse/townhouse,-0.177931082833425
+repeated_host_split,15,bedrooms2,0.12264868051243
+repeated_host_split,15,bedrooms3,0.0627855532202335
+repeated_host_split,15,price_vs_similar_10,-0.11793260588556
+repeated_host_split,15,one_nightYes,1.17383436338389
+repeated_host_split,15,amenities_10,0.24407436981836
+repeated_host_split,16,(Intercept),-2.89338018836937
+repeated_host_split,16,areaYarra,-0.173644688202413
+repeated_host_split,16,areaYarra Ranges,0.197547781078243
+repeated_host_split,16,areaPort Phillip,-0.718872006552629
+repeated_host_split,16,areaStonnington,-0.736895980857414
+repeated_host_split,16,areaMerri-bek,-0.349358037227182
+repeated_host_split,16,dwellingHouse/townhouse,-0.424251447732676
+repeated_host_split,16,bedrooms2,0.313849985546329
+repeated_host_split,16,bedrooms3,0.464160593986317
+repeated_host_split,16,price_vs_similar_10,-0.108935983021942
+repeated_host_split,16,one_nightYes,1.26166558418912
+repeated_host_split,16,amenities_10,0.29360126315268
+repeated_host_split,17,(Intercept),-2.91845652154247
+repeated_host_split,17,areaYarra,-0.205768957397961
+repeated_host_split,17,areaYarra Ranges,-0.107170213501173
+repeated_host_split,17,areaPort Phillip,-0.775187334347888
+repeated_host_split,17,areaStonnington,-0.901085539248483
+repeated_host_split,17,areaMerri-bek,-0.205400300996148
+repeated_host_split,17,dwellingHouse/townhouse,-0.0813753125691153
+repeated_host_split,17,bedrooms2,0.0888102478805339
+repeated_host_split,17,bedrooms3,0.346027360065098
+repeated_host_split,17,price_vs_similar_10,-0.119912022857708
+repeated_host_split,17,one_nightYes,1.25211273159021
+repeated_host_split,17,amenities_10,0.259435255090589
+repeated_host_split,18,(Intercept),-2.72623214333529
+repeated_host_split,18,areaYarra,-0.203994585508184
+repeated_host_split,18,areaYarra Ranges,0.0912378573344392
+repeated_host_split,18,areaPort Phillip,-0.543141003340811
+repeated_host_split,18,areaStonnington,-0.695086004036208
+repeated_host_split,18,areaMerri-bek,-0.656540932132506
+repeated_host_split,18,dwellingHouse/townhouse,-0.214557625365422
+repeated_host_split,18,bedrooms2,0.13360537599681
+repeated_host_split,18,bedrooms3,0.205973971679664
+repeated_host_split,18,price_vs_similar_10,-0.142843399464037
+repeated_host_split,18,one_nightYes,0.997048614817847
+repeated_host_split,18,amenities_10,0.265292694826328
+repeated_host_split,19,(Intercept),-2.28587056374804
+repeated_host_split,19,areaYarra,-0.524643741798441
+repeated_host_split,19,areaYarra Ranges,-0.0374754279145999
+repeated_host_split,19,areaPort Phillip,-0.756653998609306
+repeated_host_split,19,areaStonnington,-0.862946855906402
+repeated_host_split,19,areaMerri-bek,-0.20385223435809
+repeated_host_split,19,dwellingHouse/townhouse,-0.0514294821758621
+repeated_host_split,19,bedrooms2,0.151144787752466
+repeated_host_split,19,bedrooms3,0.138505622175656
+repeated_host_split,19,price_vs_similar_10,-0.100728199965169
+repeated_host_split,19,one_nightYes,1.0738564220522
+repeated_host_split,19,amenities_10,0.210063028488374
+repeated_host_split,20,(Intercept),-3.08572221344592
+repeated_host_split,20,areaYarra,-0.317599369197882
+repeated_host_split,20,areaYarra Ranges,0.377695143948079
+repeated_host_split,20,areaPort Phillip,-0.816180691994226
+repeated_host_split,20,areaStonnington,-0.740363207431634
+repeated_host_split,20,areaMerri-bek,-0.134918999062663
+repeated_host_split,20,dwellingHouse/townhouse,-0.0275621121222563
+repeated_host_split,20,bedrooms2,0.154156023381293
+repeated_host_split,20,bedrooms3,-0.133960306738872
+repeated_host_split,20,price_vs_similar_10,-0.0837279554489899
+repeated_host_split,20,one_nightYes,1.27427521789603
+repeated_host_split,20,amenities_10,0.324815059505133
+repeated_host_split,21,(Intercept),-2.55914694478777
+repeated_host_split,21,areaYarra,-0.0757723196237157
+repeated_host_split,21,areaYarra Ranges,0.13748286232619
+repeated_host_split,21,areaPort Phillip,-0.588130606175839
+repeated_host_split,21,areaStonnington,-0.742625268621682
+repeated_host_split,21,areaMerri-bek,-0.345093684895468
+repeated_host_split,21,dwellingHouse/townhouse,-0.459007143447486
+repeated_host_split,21,bedrooms2,0.188660332028949
+repeated_host_split,21,bedrooms3,0.425227385066223
+repeated_host_split,21,price_vs_similar_10,-0.0889985205818824
+repeated_host_split,21,one_nightYes,1.02531250699754
+repeated_host_split,21,amenities_10,0.21870914084861
+repeated_host_split,22,(Intercept),-2.57303262603659
+repeated_host_split,22,areaYarra,-0.0284146115278134
+repeated_host_split,22,areaYarra Ranges,0.513955274884553
+repeated_host_split,22,areaPort Phillip,-0.93236705098942
+repeated_host_split,22,areaStonnington,-0.620161173148584
+repeated_host_split,22,areaMerri-bek,0.00592921616740736
+repeated_host_split,22,dwellingHouse/townhouse,-0.354302277148677
+repeated_host_split,22,bedrooms2,0.0360663749855258
+repeated_host_split,22,bedrooms3,0.306662375652675
+repeated_host_split,22,price_vs_similar_10,-0.130985828834145
+repeated_host_split,22,one_nightYes,1.39825993794038
+repeated_host_split,22,amenities_10,0.206239065410372
+repeated_host_split,23,(Intercept),-3.19348385434186
+repeated_host_split,23,areaYarra,-0.220661077409414
+repeated_host_split,23,areaYarra Ranges,0.288385181680564
+repeated_host_split,23,areaPort Phillip,-1.12095120890469
+repeated_host_split,23,areaStonnington,-0.668114651344794
+repeated_host_split,23,areaMerri-bek,-0.7721013500914
+repeated_host_split,23,dwellingHouse/townhouse,-0.293401838194927
+repeated_host_split,23,bedrooms2,0.088191466902542
+repeated_host_split,23,bedrooms3,0.177643883061388
+repeated_host_split,23,price_vs_similar_10,-0.126644641954846
+repeated_host_split,23,one_nightYes,1.30000004156304
+repeated_host_split,23,amenities_10,0.342584710592056
+repeated_host_split,24,(Intercept),-2.73016147429339
+repeated_host_split,24,areaYarra,-0.248572987565312
+repeated_host_split,24,areaYarra Ranges,-0.2228204980996
+repeated_host_split,24,areaPort Phillip,-0.933805885675352
+repeated_host_split,24,areaStonnington,-0.627187574217952
+repeated_host_split,24,areaMerri-bek,-0.340833220981101
+repeated_host_split,24,dwellingHouse/townhouse,-0.00561188767051104
+repeated_host_split,24,bedrooms2,-0.0621470248820502
+repeated_host_split,24,bedrooms3,0.0397259800277972
+repeated_host_split,24,price_vs_similar_10,-0.116805854045815
+repeated_host_split,24,one_nightYes,1.15606900462825
+repeated_host_split,24,amenities_10,0.253647839780998
+repeated_host_split,25,(Intercept),-2.94332432300993
+repeated_host_split,25,areaYarra,-0.12315704290572
+repeated_host_split,25,areaYarra Ranges,0.0855634601862625
+repeated_host_split,25,areaPort Phillip,-0.871700479505794
+repeated_host_split,25,areaStonnington,-0.631284828437094
+repeated_host_split,25,areaMerri-bek,-0.259848013850523
+repeated_host_split,25,dwellingHouse/townhouse,-0.118758793992939
+repeated_host_split,25,bedrooms2,0.0275122870386471
+repeated_host_split,25,bedrooms3,0.147388297293934
+repeated_host_split,25,price_vs_similar_10,-0.139084687346424
+repeated_host_split,25,one_nightYes,1.33296949572177
+repeated_host_split,25,amenities_10,0.289980618792513
+repeated_host_split,26,(Intercept),-2.81867302591668
+repeated_host_split,26,areaYarra,0.0137665417505398
+repeated_host_split,26,areaYarra Ranges,0.175118166664802
+repeated_host_split,26,areaPort Phillip,-0.95255740997612
+repeated_host_split,26,areaStonnington,-0.391035220712438
+repeated_host_split,26,areaMerri-bek,-0.0400395627772661
+repeated_host_split,26,dwellingHouse/townhouse,-0.11871194284563
+repeated_host_split,26,bedrooms2,0.146298994617596
+repeated_host_split,26,bedrooms3,0.481939237264491
+repeated_host_split,26,price_vs_similar_10,-0.140885344354145
+repeated_host_split,26,one_nightYes,1.39181405728034
+repeated_host_split,26,amenities_10,0.223708656787793
+repeated_host_split,27,(Intercept),-2.62934140474134
+repeated_host_split,27,areaYarra,-0.48261339707307
+repeated_host_split,27,areaYarra Ranges,-0.188280226681721
+repeated_host_split,27,areaPort Phillip,-0.687461862288584
+repeated_host_split,27,areaStonnington,-0.649383779617082
+repeated_host_split,27,areaMerri-bek,-0.481208642548769
+repeated_host_split,27,dwellingHouse/townhouse,-0.109118367538481
+repeated_host_split,27,bedrooms2,0.276641690725394
+repeated_host_split,27,bedrooms3,0.296962624020455
+repeated_host_split,27,price_vs_similar_10,-0.12857113326642
+repeated_host_split,27,one_nightYes,1.38043621870137
+repeated_host_split,27,amenities_10,0.22840373179152
+repeated_host_split,28,(Intercept),-2.39589416176811
+repeated_host_split,28,areaYarra,-0.256178335089699
+repeated_host_split,28,areaYarra Ranges,0.0642077945982552
+repeated_host_split,28,areaPort Phillip,-0.802624961754311
+repeated_host_split,28,areaStonnington,-0.779233329968174
+repeated_host_split,28,areaMerri-bek,-0.108132922167252
+repeated_host_split,28,dwellingHouse/townhouse,-0.0628917146584504
+repeated_host_split,28,bedrooms2,0.173905185968201
+repeated_host_split,28,bedrooms3,0.0452777301527672
+repeated_host_split,28,price_vs_similar_10,-0.131816853333131
+repeated_host_split,28,one_nightYes,1.14289740789873
+repeated_host_split,28,amenities_10,0.194353754737008
+repeated_host_split,29,(Intercept),-2.39557328671507
+repeated_host_split,29,areaYarra,-0.248327405777034
+repeated_host_split,29,areaYarra Ranges,0.42157664690544
+repeated_host_split,29,areaPort Phillip,-0.72148367278152
+repeated_host_split,29,areaStonnington,-0.923673546344177
+repeated_host_split,29,areaMerri-bek,-0.121912047248838
+repeated_host_split,29,dwellingHouse/townhouse,-0.554508988182566
+repeated_host_split,29,bedrooms2,0.24645587428341
+repeated_host_split,29,bedrooms3,0.452049240619013
+repeated_host_split,29,price_vs_similar_10,-0.181619712104957
+repeated_host_split,29,one_nightYes,1.36198471295922
+repeated_host_split,29,amenities_10,0.181218940925055
+repeated_host_split,30,(Intercept),-2.63032718028277
+repeated_host_split,30,areaYarra,-0.116756420329466
+repeated_host_split,30,areaYarra Ranges,0.347385501621625
+repeated_host_split,30,areaPort Phillip,-0.435963713296287
+repeated_host_split,30,areaStonnington,-0.62610022618232
+repeated_host_split,30,areaMerri-bek,-0.275109246757556
+repeated_host_split,30,dwellingHouse/townhouse,-0.272030122379716
+repeated_host_split,30,bedrooms2,0.193428964616556
+repeated_host_split,30,bedrooms3,0.410281457738616
+repeated_host_split,30,price_vs_similar_10,-0.107049198260238
+repeated_host_split,30,one_nightYes,0.929545316241452
+repeated_host_split,30,amenities_10,0.236816692251196
+repeated_host_split,31,(Intercept),-2.43699254532438
+repeated_host_split,31,areaYarra,0.0830595110667807
+repeated_host_split,31,areaYarra Ranges,0.406483228665652
+repeated_host_split,31,areaPort Phillip,-0.791705007599423
+repeated_host_split,31,areaStonnington,-0.600749237291373
+repeated_host_split,31,areaMerri-bek,-0.266784877592695
+repeated_host_split,31,dwellingHouse/townhouse,-0.33199926287114
+repeated_host_split,31,bedrooms2,-0.0776740722329446
+repeated_host_split,31,bedrooms3,0.313228751361883
+repeated_host_split,31,price_vs_similar_10,-0.180541989792697
+repeated_host_split,31,one_nightYes,1.30695083206533
+repeated_host_split,31,amenities_10,0.169805537916393
+repeated_host_split,32,(Intercept),-2.41097404722918
+repeated_host_split,32,areaYarra,-0.190996427914301
+repeated_host_split,32,areaYarra Ranges,0.323089848757562
+repeated_host_split,32,areaPort Phillip,-0.569158516624594
+repeated_host_split,32,areaStonnington,-0.588428283128497
+repeated_host_split,32,areaMerri-bek,-0.0681756860750092
+repeated_host_split,32,dwellingHouse/townhouse,-0.269481352963509
+repeated_host_split,32,bedrooms2,0.253730112160822
+repeated_host_split,32,bedrooms3,0.229926648134431
+repeated_host_split,32,price_vs_similar_10,-0.0662596367700964
+repeated_host_split,32,one_nightYes,0.934790319347932
+repeated_host_split,32,amenities_10,0.192086356497394
+repeated_host_split,33,(Intercept),-2.84955671353665
+repeated_host_split,33,areaYarra,-0.303600821657753
+repeated_host_split,33,areaYarra Ranges,-0.0111713396271452
+repeated_host_split,33,areaPort Phillip,-0.524649753635275
+repeated_host_split,33,areaStonnington,-0.711556786048632
+repeated_host_split,33,areaMerri-bek,-0.757955434907585
+repeated_host_split,33,dwellingHouse/townhouse,-0.289221806663009
+repeated_host_split,33,bedrooms2,0.177553905759998
+repeated_host_split,33,bedrooms3,0.283382339013461
+repeated_host_split,33,price_vs_similar_10,-0.143303424680779
+repeated_host_split,33,one_nightYes,1.28973715891939
+repeated_host_split,33,amenities_10,0.282674936019258
+repeated_host_split,34,(Intercept),-2.65686082799382
+repeated_host_split,34,areaYarra,0.108260430615523
+repeated_host_split,34,areaYarra Ranges,0.18668827025698
+repeated_host_split,34,areaPort Phillip,-0.598022065546629
+repeated_host_split,34,areaStonnington,-0.533960320855139
+repeated_host_split,34,areaMerri-bek,0.0991726281696582
+repeated_host_split,34,dwellingHouse/townhouse,0.0124014289462578
+repeated_host_split,34,bedrooms2,0.0910029789103449
+repeated_host_split,34,bedrooms3,0.495997713650329
+repeated_host_split,34,price_vs_similar_10,-0.0620062118756803
+repeated_host_split,34,one_nightYes,1.30016223642842
+repeated_host_split,34,amenities_10,0.193963852552953
+repeated_host_split,35,(Intercept),-2.86326091748628
+repeated_host_split,35,areaYarra,-0.310689168603548
+repeated_host_split,35,areaYarra Ranges,0.413442493613367
+repeated_host_split,35,areaPort Phillip,-1.0515573715514
+repeated_host_split,35,areaStonnington,-0.733497030574614
+repeated_host_split,35,areaMerri-bek,-0.5200714595897
+repeated_host_split,35,dwellingHouse/townhouse,-0.0323073417376641
+repeated_host_split,35,bedrooms2,-0.113288252224992
+repeated_host_split,35,bedrooms3,-0.144401054302704
+repeated_host_split,35,price_vs_similar_10,-0.121926076683185
+repeated_host_split,35,one_nightYes,1.20552405140687
+repeated_host_split,35,amenities_10,0.303975788152256
+repeated_host_split,36,(Intercept),-2.57334491643205
+repeated_host_split,36,areaYarra,-0.0829796571257299
+repeated_host_split,36,areaYarra Ranges,0.391243399087576
+repeated_host_split,36,areaPort Phillip,-0.689822641462096
+repeated_host_split,36,areaStonnington,-0.762987238928436
+repeated_host_split,36,areaMerri-bek,0.0557886241248488
+repeated_host_split,36,dwellingHouse/townhouse,-0.437579837412668
+repeated_host_split,36,bedrooms2,0.165401376629961
+repeated_host_split,36,bedrooms3,0.465988846651164
+repeated_host_split,36,price_vs_similar_10,-0.12464022087806
+repeated_host_split,36,one_nightYes,1.06795439353528
+repeated_host_split,36,amenities_10,0.233818987333096
+repeated_host_split,37,(Intercept),-2.61477020476423
+repeated_host_split,37,areaYarra,-0.236888221228226
+repeated_host_split,37,areaYarra Ranges,-0.0167854766278295
+repeated_host_split,37,areaPort Phillip,-0.554307531151197
+repeated_host_split,37,areaStonnington,-0.720206461085377
+repeated_host_split,37,areaMerri-bek,-0.255772169727663
+repeated_host_split,37,dwellingHouse/townhouse,-0.433672283567595
+repeated_host_split,37,bedrooms2,0.265599055596576
+repeated_host_split,37,bedrooms3,0.611834764648217
+repeated_host_split,37,price_vs_similar_10,-0.145365665375768
+repeated_host_split,37,one_nightYes,0.987822527506813
+repeated_host_split,37,amenities_10,0.232506984700902
+repeated_host_split,38,(Intercept),-2.41769692734741
+repeated_host_split,38,areaYarra,-0.0750913600529339
+repeated_host_split,38,areaYarra Ranges,0.4887833499379
+repeated_host_split,38,areaPort Phillip,-0.533763537799652
+repeated_host_split,38,areaStonnington,-0.838905295111195
+repeated_host_split,38,areaMerri-bek,-0.0779860706295518
+repeated_host_split,38,dwellingHouse/townhouse,-0.560197564132826
+repeated_host_split,38,bedrooms2,0.218646191254861
+repeated_host_split,38,bedrooms3,0.391951803508003
+repeated_host_split,38,price_vs_similar_10,-0.139203945474579
+repeated_host_split,38,one_nightYes,1.12316322219591
+repeated_host_split,38,amenities_10,0.196512397359727
+repeated_host_split,39,(Intercept),-2.23277404068178
+repeated_host_split,39,areaYarra,-0.273051542533254
+repeated_host_split,39,areaYarra Ranges,0.677799278631455
+repeated_host_split,39,areaPort Phillip,-0.514406748610315
+repeated_host_split,39,areaStonnington,-0.746785344386578
+repeated_host_split,39,areaMerri-bek,-0.923809611478767
+repeated_host_split,39,dwellingHouse/townhouse,-0.553551085806182
+repeated_host_split,39,bedrooms2,0.184822012172253
+repeated_host_split,39,bedrooms3,0.323101690235028
+repeated_host_split,39,price_vs_similar_10,-0.129519548212369
+repeated_host_split,39,one_nightYes,1.04046592889607
+repeated_host_split,39,amenities_10,0.149192196374169
+repeated_host_split,40,(Intercept),-2.53975215042041
+repeated_host_split,40,areaYarra,-0.143094726550011
+repeated_host_split,40,areaYarra Ranges,0.267378953400027
+repeated_host_split,40,areaPort Phillip,-0.572551345820076
+repeated_host_split,40,areaStonnington,-0.528942254287906
+repeated_host_split,40,areaMerri-bek,-0.636998483096349
+repeated_host_split,40,dwellingHouse/townhouse,-0.107511834689597
+repeated_host_split,40,bedrooms2,0.284065774638373
+repeated_host_split,40,bedrooms3,0.139911588358576
+repeated_host_split,40,price_vs_similar_10,-0.0970408001886909
+repeated_host_split,40,one_nightYes,1.02859188537709
+repeated_host_split,40,amenities_10,0.204958560531901
+repeated_host_split,41,(Intercept),-2.38307046924557
+repeated_host_split,41,areaYarra,-0.434481344972339
+repeated_host_split,41,areaYarra Ranges,-0.107188807609041
+repeated_host_split,41,areaPort Phillip,-0.691694620764786
+repeated_host_split,41,areaStonnington,-0.740663507108502
+repeated_host_split,41,areaMerri-bek,-0.726002583510503
+repeated_host_split,41,dwellingHouse/townhouse,-0.147704983099336
+repeated_host_split,41,bedrooms2,0.176607565737632
+repeated_host_split,41,bedrooms3,0.348850638031053
+repeated_host_split,41,price_vs_similar_10,-0.151747655250811
+repeated_host_split,41,one_nightYes,1.1329078472275
+repeated_host_split,41,amenities_10,0.198798810479106
+repeated_host_split,42,(Intercept),-2.52216474390756
+repeated_host_split,42,areaYarra,-0.400279337243208
+repeated_host_split,42,areaYarra Ranges,-0.122058079922393
+repeated_host_split,42,areaPort Phillip,-0.700932095385392
+repeated_host_split,42,areaStonnington,-0.910259229053589
+repeated_host_split,42,areaMerri-bek,-0.0950355476259835
+repeated_host_split,42,dwellingHouse/townhouse,-0.00537906416576006
+repeated_host_split,42,bedrooms2,0.219545882405268
+repeated_host_split,42,bedrooms3,0.182276054035131
+repeated_host_split,42,price_vs_similar_10,-0.163662564527113
+repeated_host_split,42,one_nightYes,1.36164716191047
+repeated_host_split,42,amenities_10,0.221252595145564
+repeated_host_split,43,(Intercept),-2.76219678229216
+repeated_host_split,43,areaYarra,-0.253045668333344
+repeated_host_split,43,areaYarra Ranges,-0.279819634941073
+repeated_host_split,43,areaPort Phillip,-0.911114521461489
+repeated_host_split,43,areaStonnington,-0.943493252888816
+repeated_host_split,43,areaMerri-bek,0.023417335092133
+repeated_host_split,43,dwellingHouse/townhouse,0.259408384494941
+repeated_host_split,43,bedrooms2,0.00613662650101107
+repeated_host_split,43,bedrooms3,0.0398523668573835
+repeated_host_split,43,price_vs_similar_10,-0.124920742992312
+repeated_host_split,43,one_nightYes,1.34789385765919
+repeated_host_split,43,amenities_10,0.268825930326229
+repeated_host_split,44,(Intercept),-2.36459752612549
+repeated_host_split,44,areaYarra,-0.252177560883711
+repeated_host_split,44,areaYarra Ranges,0.114412321096921
+repeated_host_split,44,areaPort Phillip,-0.705682993919039
+repeated_host_split,44,areaStonnington,-1.03552822653328
+repeated_host_split,44,areaMerri-bek,-0.114875152685645
+repeated_host_split,44,dwellingHouse/townhouse,-0.290672924416794
+repeated_host_split,44,bedrooms2,0.143486440040671
+repeated_host_split,44,bedrooms3,0.311932402520762
+repeated_host_split,44,price_vs_similar_10,-0.143933233886813
+repeated_host_split,44,one_nightYes,1.17425997665078
+repeated_host_split,44,amenities_10,0.203386910582673
+repeated_host_split,45,(Intercept),-2.88762454038158
+repeated_host_split,45,areaYarra,-0.135112551221218
+repeated_host_split,45,areaYarra Ranges,-0.00615491999933577
+repeated_host_split,45,areaPort Phillip,-0.833536515910974
+repeated_host_split,45,areaStonnington,-0.830574338260766
+repeated_host_split,45,areaMerri-bek,-0.261344280172422
+repeated_host_split,45,dwellingHouse/townhouse,-0.0695625834760908
+repeated_host_split,45,bedrooms2,0.0755482512331169
+repeated_host_split,45,bedrooms3,0.356332242263475
+repeated_host_split,45,price_vs_similar_10,-0.116940395047535
+repeated_host_split,45,one_nightYes,1.25096650804623
+repeated_host_split,45,amenities_10,0.288969713502444
+repeated_host_split,46,(Intercept),-2.9059896948197
+repeated_host_split,46,areaYarra,0.0234566081475339
+repeated_host_split,46,areaYarra Ranges,-0.0239715167827198
+repeated_host_split,46,areaPort Phillip,-0.971452064994065
+repeated_host_split,46,areaStonnington,-0.725435602164693
+repeated_host_split,46,areaMerri-bek,-0.144808080001283
+repeated_host_split,46,dwellingHouse/townhouse,0.08128927573695
+repeated_host_split,46,bedrooms2,-0.0219559253903717
+repeated_host_split,46,bedrooms3,0.257109700167134
+repeated_host_split,46,price_vs_similar_10,-0.153420678240109
+repeated_host_split,46,one_nightYes,1.39421200804975
+repeated_host_split,46,amenities_10,0.27058326155192
+repeated_host_split,47,(Intercept),-2.52674546989084
+repeated_host_split,47,areaYarra,-0.354759071068291
+repeated_host_split,47,areaYarra Ranges,-0.0582985186828021
+repeated_host_split,47,areaPort Phillip,-0.589558619589222
+repeated_host_split,47,areaStonnington,-0.861908816537314
+repeated_host_split,47,areaMerri-bek,-1.01678621377828
+repeated_host_split,47,dwellingHouse/townhouse,-0.333664238091625
+repeated_host_split,47,bedrooms2,0.305723121410804
+repeated_host_split,47,bedrooms3,0.380386463266529
+repeated_host_split,47,price_vs_similar_10,-0.0665839034938338
+repeated_host_split,47,one_nightYes,1.0456020615762
+repeated_host_split,47,amenities_10,0.235227180795168
+repeated_host_split,48,(Intercept),-2.64366948510814
+repeated_host_split,48,areaYarra,-0.0322053224674179
+repeated_host_split,48,areaYarra Ranges,0.218406737751762
+repeated_host_split,48,areaPort Phillip,-0.489484069184876
+repeated_host_split,48,areaStonnington,-0.655553600563625
+repeated_host_split,48,areaMerri-bek,-0.407740734152115
+repeated_host_split,48,dwellingHouse/townhouse,-0.406196466331943
+repeated_host_split,48,bedrooms2,0.15509647884898
+repeated_host_split,48,bedrooms3,0.329902932434915
+repeated_host_split,48,price_vs_similar_10,-0.114142844883465
+repeated_host_split,48,one_nightYes,0.999303740645748
+repeated_host_split,48,amenities_10,0.246658016820388
+repeated_host_split,49,(Intercept),-2.20094274959334
+repeated_host_split,49,areaYarra,-0.138565788896253
+repeated_host_split,49,areaYarra Ranges,0.122016656348748
+repeated_host_split,49,areaPort Phillip,-0.575690169986603
+repeated_host_split,49,areaStonnington,-0.694561024213117
+repeated_host_split,49,areaMerri-bek,0.173738793602709
+repeated_host_split,49,dwellingHouse/townhouse,-0.0624901977463153
+repeated_host_split,49,bedrooms2,0.0309382529225056
+repeated_host_split,49,bedrooms3,0.05926478409826
+repeated_host_split,49,price_vs_similar_10,-0.124200140916472
+repeated_host_split,49,one_nightYes,1.08672910090183
+repeated_host_split,49,amenities_10,0.14014469745755
+repeated_host_split,50,(Intercept),-2.94128670335257
+repeated_host_split,50,areaYarra,-0.116391367661762
+repeated_host_split,50,areaYarra Ranges,0.381666097622637
+repeated_host_split,50,areaPort Phillip,-0.659748592902755
+repeated_host_split,50,areaStonnington,-0.860468155517127
+repeated_host_split,50,areaMerri-bek,-0.107386933522366
+repeated_host_split,50,dwellingHouse/townhouse,-0.44798727988613
+repeated_host_split,50,bedrooms2,0.0547121402495613
+repeated_host_split,50,bedrooms3,0.210828325940636
+repeated_host_split,50,price_vs_similar_10,-0.125446159637853
+repeated_host_split,50,one_nightYes,1.21584155614428
+repeated_host_split,50,amenities_10,0.295359777522081

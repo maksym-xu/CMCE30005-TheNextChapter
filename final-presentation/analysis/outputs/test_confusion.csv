@@ -1,0 +1,2 @@
+true_positives,false_positives,false_negatives,true_negatives,accuracy,all_negative_accuracy
+423,546,558,2346,0.714949651432998,0.746707978311386

@@ -1,0 +1,4 @@
+segment,listings,quota,model_expected_positive,baseline_expected_positive,model_precision,baseline_precision,gain_model_minus_baseline_pp
+Melbourne 2BR Apartment/unit,1235,311,161.0,102.00316131774153,0.5176848874598071,0.3279844415361464,18.970044592366065
+Melbourne 3BR Apartment/unit,306,80,48.0,29.238513566777556,0.6,0.36548141958471947,23.451858041528055
+Yarra Ranges 3BR House/townhouse,90,25,13.0,7.458787589222371,0.52,0.29835150356889484,22.164849643110514

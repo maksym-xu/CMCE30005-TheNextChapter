@@ -1,0 +1,2 @@
+quota,logistic_precision,segment_precision,precision_difference_pp,logistic_auc,segment_auc,auc_difference,logistic_brier,segment_brier,brier_difference,logistic_expected_positive,segment_expected_positive
+969,0.436532507739938,0.280689613306624,15.5842894433314,0.705133885455748,0.581032353301949,0.124101532153799,0.171796162190414,0.186788923808794,-0.0149927616183799,423,271.988235294118

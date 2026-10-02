@@ -1,0 +1,12 @@
+scenario,predicted_chance_busy,ci95_lo,ci95_hi,typical_amenities,note
+"Example listing: Melbourne 2BR apartment, priced like similar listings, accepts 1-night stays, median amenities",0.420352008867868,0.323800312890723,0.52340896353607,43,Model-based chance for one hypothetical listing; host-clustered 95% interval
+Requires a minimum of 2+ nights,0.18495020464214,0.130032546187742,0.256230424091148,43,Model-based chance for one hypothetical listing; host-clustered 95% interval
+Priced 20% above similar listings,0.359422923083128,0.274904733502104,0.453668057750627,43,Model-based chance for one hypothetical listing; host-clustered 95% interval
+Priced 20% below similar listings,0.483808822316245,0.367634069376253,0.601760379195973,43,Model-based chance for one hypothetical listing; host-clustered 95% interval
+10 more amenities,0.475771903879708,0.378913365614431,0.574488059863049,43,Model-based chance for one hypothetical listing; host-clustered 95% interval
+10 fewer amenities,0.366869881640326,0.265824751503502,0.481152198822882,43,Model-based chance for one hypothetical listing; host-clustered 95% interval
+3 bedrooms instead of 2,0.455429611331333,0.342904020224888,0.572697986374218,43,Model-based chance for one hypothetical listing; host-clustered 95% interval
+1 bedroom instead of 2,0.383045036743434,0.298845258149093,0.474900062622118,43,Model-based chance for one hypothetical listing; host-clustered 95% interval
+Same apartment in Yarra,0.381251722529767,0.282158547544614,0.491326425217979,43,Model-based chance for one hypothetical listing; host-clustered 95% interval
+Same apartment in Port Phillip,0.274797585393388,0.171094941633794,0.410246836550967,43,Model-based chance for one hypothetical listing; host-clustered 95% interval
+Same apartment in Stonnington,0.256222371227341,0.168097602664376,0.369998685252766,43,Model-based chance for one hypothetical listing; host-clustered 95% interval

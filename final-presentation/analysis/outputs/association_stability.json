@@ -1,0 +1,60 @@
+{
+  "purpose": "Targeted checks of two associations selected after the main analysis; no scenario probabilities are used",
+  "outcome": "At least 30 guest reviews in the preceding 365 days, yes/no",
+  "method": "Same simple logistic specification, full sample plus the five existing host-grouped training folds; no additional tuning or predictor selection",
+  "findings": {
+    "one_night": {
+      "plain_english": "Listings allowing one-night stays were more likely to have reached 30 reviews.",
+      "term": "one_nightYes",
+      "direction": "positive",
+      "full_sample_coefficient": 1.161834054374715,
+      "odds_ratio": 3.1957891555554676,
+      "host_clustered_or_ci95": [2.1947586098176664, 4.6533902548920389],
+      "training_folds_with_same_direction": 5,
+      "training_folds_checked": 5,
+      "training_fold_coefficient_range": [1.0672598742118071, 1.3434872373807225],
+      "training_folds_ci95_excludes_zero": 5
+    },
+    "relative_price": {
+      "plain_english": "Listings priced higher than similar homes were less likely to have reached 30 reviews.",
+      "term": "price_vs_similar_10",
+      "direction": "negative",
+      "full_sample_coefficient": -0.1282705840340245,
+      "odds_ratio": 0.87961533707460893,
+      "host_clustered_or_ci95": [0.82158695197864717, 0.94174224572761567],
+      "training_folds_with_same_direction": 5,
+      "training_folds_checked": 5,
+      "training_fold_coefficient_range": [-0.14053117055301018, -0.11871939365603074],
+      "training_folds_ci95_excludes_zero": 5
+    }
+  },
+  "suggested_slide_footnote": "Associations after adjusting for the recorded model inputs. Both directions held in all five training folds. Current settings may differ from the review year.",
+  "important_limits": ["This checks coefficient direction across the existing overlapping training subsets, not external validation or five independent studies.", "The fold directions are not a causal effect, a calibrated individual probability, or a forecast for a new operator.", "Longer stays can naturally generate fewer reviewed stays. A one-night rule could increase turnover costs; any trial must track actual margin.", "Current prices and settings may have changed during the outcome year or responded to past demand.", "Price is measured relative to the same area/type/bedroom segment median. Its coefficient unit is ten percentage points of that relative-price measure.", "The full-data odds ratios are available for backup questions; odds ratios are not risk ratios or causal percentage gains."],
+  "validation": {
+    "full_coefficients_and_host_clustered_intervals_match_verified_output": true,
+    "no_host_overlap_with_each_omitted_fold": true,
+    "folds_checked": 5,
+    "extra_repeated_splits_run": 0,
+    "note": "Five existing host training folds were sufficient for this directional check; no additional split search was run."
+  },
+  "temporal_link": {
+    "same_three_segments_as_descriptive_shortlist": true,
+    "primary_descriptive_top_three": [
+      "Melbourne | 3BR Apartment/unit",
+      "Melbourne | 2BR Apartment/unit",
+      "Yarra Ranges | 3BR House/townhouse"
+    ],
+    "earlier_temporal_top_three": [
+      "Melbourne | 3BR Apartment/unit",
+      "Melbourne | 2BR Apartment/unit",
+      "Yarra Ranges | 3BR House/townhouse"
+    ],
+    "temporal_threshold": 34,
+    "threshold_source": "ceil of the linear-interpolation P75 of EARLIER-window reviews among benchmark-development listings in the retained segments; fixed for both windows and every later step",
+    "earlier_reference_p75": 34,
+    "sample_listings": 2657,
+    "segments": 10,
+    "validated_object": "Historical persistence of the segment shortlist, not the simple logistic model",
+    "source_files": ["outputs/descriptive_segments.csv", "reference/temporal-validation/validation_metrics.json", "reference/temporal-validation/method-note.md", "reference/temporal-validation/segment_cross_period.csv"]
+  }
+}

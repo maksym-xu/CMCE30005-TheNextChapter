@@ -1,0 +1,35 @@
+{
+  "source_commit": "7ea295c50999472bc91b5f247e75a187b4171545",
+  "scope": "Source provenance for the school-data analysis. This public package includes aggregate evidence and code, not the private row-level inputs.",
+  "files": [
+    {
+      "source_path": "data/processed/rq_analysis_main_manifest.csv",
+      "sha256": "b236304538a321060ab6712788891abb0a0189245afd956a07d9d98c82c6ddf6",
+      "source_note": "Historical frozen processed-input/model snapshot; row-level input itself is not published."
+    },
+    {
+      "source_path": "data/processed/listings_clean.rds",
+      "sha256": "e8bb9eb16cfe48e28b39cd98c2c4dc2f0533bf7e803910f18d35528d398fdda9",
+      "source_note": "Historical frozen processed-input/model snapshot; row-level input itself is not published."
+    },
+    {
+      "source_path": "scripts/14_simple_logistic.R",
+      "sha256": "b9dc0c716af547eb19ce4974a94409ca3bfcbd870e23a0777fc2edf33372bbdb",
+      "source_note": "Historical frozen processed-input/model snapshot; row-level input itself is not published."
+    },
+    {
+      "source_path": "config/review_analysis.json",
+      "sha256": "1b32d38a989a9888560d04269f054275d7a953b6b33850858ddab41ed784ffde",
+      "source_note": "Historical frozen processed-input/model snapshot; row-level input itself is not published."
+    },
+    {
+      "source_path": "reports/tables/segment_ladder.csv",
+      "sha256": "acfea72ef3b744e6ab75713f2e46aea34ab8be4cb3f5e340cdf0e71e4c5bd7db",
+      "source_note": "Historical frozen processed-input/model snapshot; row-level input itself is not published."
+    },
+    {
+      "source_path": "reports/validation/temporal-holdout/validation_metrics.json",
+      "sha256": "3de1820eb757ce67d83427647bf3fc2c0f882680173ac7604a1255f24aa2d49a"
+    }
+  ]
+}

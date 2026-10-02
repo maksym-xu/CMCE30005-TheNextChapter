@@ -1,0 +1,22 @@
+R version 4.5.3 (2026-03-11)
+Platform: aarch64-apple-darwin20
+Running under: macOS Tahoe 26.6.1
+
+Matrix products: default
+BLAS: libRblas.0.dylib (installation path omitted)
+LAPACK: libRlapack.dylib; LAPACK version 3.12.1 (installation path omitted)
+
+locale:
+[1] C.UTF-8/C.UTF-8/C.UTF-8/C/C.UTF-8/C.UTF-8
+
+time zone: Australia/Melbourne
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base
+
+other attached packages:
+[1] sandwich_3.1-1    jsonlite_2.0.0    data.table_1.17.8
+
+loaded via a namespace (and not attached):
+[1] zoo_1.8-14     compiler_4.5.3 grid_4.5.3     lattice_0.22-9
