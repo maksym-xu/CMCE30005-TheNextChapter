@@ -1,0 +1,1351 @@
+split,segment,fraction,n_listings,n_hosts,target_count,quota,pair,left_model,right_model,precision_difference_pp,recall_difference_pp,expected_target_selected_difference
+1,Melbourne 2BR Apartment/unit,0.1,374,150,103,38,full_vs_baseline,full,baseline,19.8283141007599,7.31530034785318,7.53475935828877
+1,Melbourne 3BR Apartment/unit,0.1,82,39,27,9,full_vs_baseline,full,baseline,67.0731707317073,22.3577235772358,6.03658536585366
+1,Yarra Ranges 3BR House/townhouse,0.1,19,17,6,2,full_vs_baseline,full,baseline,18.421052631579,6.14035087719298,0.368421052631579
+1,Melbourne 2BR Apartment/unit,0.25,374,150,103,94,full_vs_baseline,full,baseline,16.0769143247241,14.6721354031463,15.1122994652407
+1,Melbourne 3BR Apartment/unit,0.25,82,39,27,21,full_vs_baseline,full,baseline,43.2636469221835,33.6495031616983,9.08536585365854
+1,Yarra Ranges 3BR House/townhouse,0.25,19,17,6,5,full_vs_baseline,full,baseline,8.42105263157895,7.01754385964912,0.421052631578948
+1,Melbourne 2BR Apartment/unit,0.5,374,150,103,187,full_vs_baseline,full,baseline,14.7058823529412,26.6990291262136,27.5
+1,Melbourne 3BR Apartment/unit,0.5,82,39,27,41,full_vs_baseline,full,baseline,23.1707317073171,35.1851851851852,9.5
+1,Yarra Ranges 3BR House/townhouse,0.5,19,17,6,10,full_vs_baseline,full,baseline,8.42105263157895,14.0350877192982,0.842105263157895
+2,Melbourne 2BR Apartment/unit,0.1,294,145,87,30,full_vs_baseline,full,baseline,23.7414965986395,8.1867229650481,7.12244897959184
+2,Melbourne 3BR Apartment/unit,0.1,68,42,23,7,full_vs_baseline,full,baseline,23.3193277310924,7.09718670076726,1.63235294117647
+2,Yarra Ranges 3BR House/townhouse,0.1,35,28,13,4,full_vs_baseline,full,baseline,37.8571428571428,11.6483516483516,1.51428571428571
+2,Melbourne 2BR Apartment/unit,0.25,294,145,87,74,full_vs_baseline,full,baseline,17.7054605626035,15.0598170302604,13.1020408163266
+2,Melbourne 3BR Apartment/unit,0.25,68,42,23,17,full_vs_baseline,full,baseline,19.1176470588235,14.1304347826087,3.25
+2,Yarra Ranges 3BR House/townhouse,0.25,35,28,13,9,full_vs_baseline,full,baseline,18.4126984126984,12.7472527472528,1.65714285714286
+2,Melbourne 2BR Apartment/unit,0.5,294,145,87,147,full_vs_baseline,full,baseline,11.9047619047619,20.1149425287356,17.5
+2,Melbourne 3BR Apartment/unit,0.5,68,42,23,34,full_vs_baseline,full,baseline,13.2352941176471,19.5652173913043,4.5
+2,Yarra Ranges 3BR House/townhouse,0.5,35,28,13,18,full_vs_baseline,full,baseline,7.3015873015873,10.1098901098901,1.31428571428572
+3,Melbourne 2BR Apartment/unit,0.1,392,161,106,40,full_vs_baseline,full,baseline,12.9591836734694,4.89025798998846,5.18367346938777
+3,Melbourne 3BR Apartment/unit,0.1,79,45,28,8,full_vs_baseline,full,baseline,27.0569620253164,7.73056057866184,2.16455696202531
+3,Yarra Ranges 3BR House/townhouse,0.1,25,22,12,3,full_vs_baseline,full,baseline,52,13,1.56
+3,Melbourne 2BR Apartment/unit,0.25,392,161,106,98,full_vs_baseline,full,baseline,10.7142857142857,9.90566037735849,10.5
+3,Melbourne 3BR Apartment/unit,0.25,79,45,28,20,full_vs_baseline,full,baseline,14.5569620253165,10.3978300180832,2.9113924050633
+3,Yarra Ranges 3BR House/townhouse,0.25,25,22,12,7,full_vs_baseline,full,baseline,37.7142857142857,22,2.64
+3,Melbourne 2BR Apartment/unit,0.5,392,161,106,196,full_vs_baseline,full,baseline,10.7142857142857,19.811320754717,21
+3,Melbourne 3BR Apartment/unit,0.5,79,45,28,40,full_vs_baseline,full,baseline,7.05696202531648,10.0813743218807,2.82278481012659
+3,Yarra Ranges 3BR House/townhouse,0.5,25,22,12,13,full_vs_baseline,full,baseline,28.9230769230769,31.3333333333333,3.76
+4,Melbourne 2BR Apartment/unit,0.1,475,133,174,48,full_vs_baseline,full,baseline,25.8684210526317,7.13611615245011,12.4168421052632
+4,Melbourne 3BR Apartment/unit,0.1,122,50,68,13,full_vs_baseline,full,baseline,36.5699873896596,6.9913211186114,4.75409836065575
+4,Yarra Ranges 3BR House/townhouse,0.1,25,21,4,3,full_vs_baseline,full,baseline,84,63,2.52
+4,Melbourne 2BR Apartment/unit,0.25,475,133,174,119,full_vs_baseline,full,baseline,15.469261388766,10.5795523290986,18.4084210526316
+4,Melbourne 3BR Apartment/unit,0.25,122,50,68,31,full_vs_baseline,full,baseline,34.5848757271285,15.7666345226615,10.7213114754098
+4,Yarra Ranges 3BR House/townhouse,0.25,25,21,4,7,full_vs_baseline,full,baseline,26.8571428571429,47,1.88
+4,Melbourne 2BR Apartment/unit,0.5,475,133,174,238,full_vs_baseline,full,baseline,11.2675807164971,15.4119782214156,26.8168421052632
+4,Melbourne 3BR Apartment/unit,0.5,122,50,68,61,full_vs_baseline,full,baseline,11.4754098360656,10.2941176470588,7
+4,Yarra Ranges 3BR House/townhouse,0.5,25,21,4,13,full_vs_baseline,full,baseline,7.07692307692308,23,0.92
+5,Melbourne 2BR Apartment/unit,0.1,306,154,99,31,full_vs_baseline,full,baseline,25.7115749525617,8.05109922756983,7.97058823529414
+5,Melbourne 3BR Apartment/unit,0.1,104,42,46,11,full_vs_baseline,full,baseline,46.6783216783217,11.1622073578595,5.13461538461538
+5,Yarra Ranges 3BR House/townhouse,0.1,26,19,6,3,full_vs_baseline,full,baseline,43.5897435897436,21.7948717948718,1.30769230769231
+5,Melbourne 2BR Apartment/unit,0.25,306,154,99,77,full_vs_baseline,full,baseline,14.4003055767761,11.2002376708258,11.0882352941176
+5,Melbourne 3BR Apartment/unit,0.25,104,42,46,26,full_vs_baseline,full,baseline,40.3846153846154,22.8260869565217,10.5
+5,Yarra Ranges 3BR House/townhouse,0.25,26,19,6,7,full_vs_baseline,full,baseline,19.7802197802198,23.0769230769231,1.38461538461538
+5,Melbourne 2BR Apartment/unit,0.5,306,154,99,153,full_vs_baseline,full,baseline,14.7058823529412,22.7272727272727,22.5
+5,Melbourne 3BR Apartment/unit,0.5,104,42,46,52,full_vs_baseline,full,baseline,15.3846153846154,17.3913043478261,8
+5,Yarra Ranges 3BR House/townhouse,0.5,26,19,6,13,full_vs_baseline,full,baseline,0,0,0
+6,Melbourne 2BR Apartment/unit,0.1,347,131,141,35,full_vs_baseline,full,baseline,10.7945656648826,2.67950211539639,3.77809798270891
+6,Melbourne 3BR Apartment/unit,0.1,72,36,22,8,full_vs_baseline,full,baseline,19.4444444444444,7.07070707070707,1.55555555555556
+6,Yarra Ranges 3BR House/townhouse,0.1,34,27,10,4,full_vs_baseline,full,baseline,70.5882352941176,28.2352941176471,2.82352941176471
+6,Melbourne 2BR Apartment/unit,0.25,347,131,141,87,full_vs_baseline,full,baseline,17.9866838914838,11.0981666564474,15.6484149855909
+6,Melbourne 3BR Apartment/unit,0.25,72,36,22,18,full_vs_baseline,full,baseline,19.4444444444444,15.9090909090909,3.5
+6,Yarra Ranges 3BR House/townhouse,0.25,34,27,10,9,full_vs_baseline,full,baseline,37.2549019607843,33.5294117647059,3.35294117647059
+6,Melbourne 2BR Apartment/unit,0.5,347,131,141,174,full_vs_baseline,full,baseline,11.664844811024,14.3949148731786,20.2968299711818
+6,Melbourne 3BR Apartment/unit,0.5,72,36,22,36,full_vs_baseline,full,baseline,0,0,0
+6,Yarra Ranges 3BR House/townhouse,0.5,34,27,10,17,full_vs_baseline,full,baseline,11.7647058823529,20,2
+7,Melbourne 2BR Apartment/unit,0.1,433,165,135,44,full_vs_baseline,full,baseline,9.73126180978367,3.17167051578134,4.28175519630481
+7,Melbourne 3BR Apartment/unit,0.1,100,36,39,10,full_vs_baseline,full,baseline,21,5.38461538461538,2.1
+7,Yarra Ranges 3BR House/townhouse,0.1,24,22,6,3,full_vs_baseline,full,baseline,8.33333333333333,4.16666666666667,0.25
+7,Melbourne 2BR Apartment/unit,0.25,433,165,135,109,full_vs_baseline,full,baseline,11.0240057630782,8.90086391241125,12.0161662817552
+7,Melbourne 3BR Apartment/unit,0.25,100,36,39,25,full_vs_baseline,full,baseline,17,10.8974358974359,4.25
+7,Yarra Ranges 3BR House/townhouse,0.25,24,22,6,6,full_vs_baseline,full,baseline,25,25,1.5
+7,Melbourne 2BR Apartment/unit,0.5,433,165,135,217,full_vs_baseline,full,baseline,10.7576547716605,17.2919339662987,23.3441108545033
+7,Melbourne 3BR Apartment/unit,0.5,100,36,39,50,full_vs_baseline,full,baseline,3,3.84615384615384,1.5
+7,Yarra Ranges 3BR House/townhouse,0.5,24,22,6,12,full_vs_baseline,full,baseline,0,0,0
+8,Melbourne 2BR Apartment/unit,0.1,385,150,143,39,full_vs_baseline,full,baseline,32.0879120879121,8.75124875124877,12.5142857142857
+8,Melbourne 3BR Apartment/unit,0.1,132,46,51,14,full_vs_baseline,full,baseline,54.2207792207792,14.8841354723708,7.59090909090909
+8,Yarra Ranges 3BR House/townhouse,0.1,32,24,6,4,full_vs_baseline,full,baseline,56.25,37.5,2.25
+8,Melbourne 2BR Apartment/unit,0.25,385,150,143,97,full_vs_baseline,full,baseline,14.4035346097201,9.77022977022975,13.9714285714285
+8,Melbourne 3BR Apartment/unit,0.25,132,46,51,33,full_vs_baseline,full,baseline,28.030303030303,18.1372549019608,9.25
+8,Yarra Ranges 3BR House/townhouse,0.25,32,24,6,8,full_vs_baseline,full,baseline,43.75,58.3333333333333,3.5
+8,Melbourne 2BR Apartment/unit,0.5,385,150,143,193,full_vs_baseline,full,baseline,9.48926720947441,12.8071928071927,18.3142857142856
+8,Melbourne 3BR Apartment/unit,0.5,132,46,51,66,full_vs_baseline,full,baseline,11.3636363636364,14.7058823529412,7.5
+8,Yarra Ranges 3BR House/townhouse,0.5,32,24,6,16,full_vs_baseline,full,baseline,18.75,50,3
+9,Melbourne 2BR Apartment/unit,0.1,363,162,101,37,full_vs_baseline,full,baseline,-14.3101779465416,-5.24234241605978,-5.29476584022038
+9,Melbourne 3BR Apartment/unit,0.1,82,43,20,9,full_vs_baseline,full,baseline,20.0542005420054,9.02439024390243,1.80487804878049
+9,Yarra Ranges 3BR House/townhouse,0.1,31,23,5,4,full_vs_baseline,full,baseline,33.8709677419355,27.0967741935484,1.35483870967742
+9,Melbourne 2BR Apartment/unit,0.25,363,162,101,91,full_vs_baseline,full,baseline,-6.94457058093424,-6.25698933529719,-6.31955922865016
+9,Melbourne 3BR Apartment/unit,0.25,82,43,20,21,full_vs_baseline,full,baseline,18.4668989547038,19.390243902439,3.87804878048781
+9,Yarra Ranges 3BR House/townhouse,0.25,31,23,5,8,full_vs_baseline,full,baseline,21.3709677419355,34.1935483870968,1.70967741935484
+9,Melbourne 2BR Apartment/unit,0.5,363,162,101,182,full_vs_baseline,full,baseline,7.89059425423059,14.2186945967324,14.3608815426997
+9,Melbourne 3BR Apartment/unit,0.5,82,43,20,41,full_vs_baseline,full,baseline,-2.4390243902439,-5,-1
+9,Yarra Ranges 3BR House/townhouse,0.5,31,23,5,16,full_vs_baseline,full,baseline,2.62096774193548,8.38709677419355,0.419354838709678
+10,Melbourne 2BR Apartment/unit,0.1,431,142,154,44,full_vs_baseline,full,baseline,36.9964142585951,10.5704040738843,16.2784222737818
+10,Melbourne 3BR Apartment/unit,0.1,121,49,51,13,full_vs_baseline,full,baseline,42.4666242848061,10.8248257980878,5.52066115702479
+10,Yarra Ranges 3BR House/townhouse,0.1,30,23,7,3,full_vs_baseline,full,baseline,43.3333333333333,18.5714285714286,1.3
+10,Melbourne 2BR Apartment/unit,0.25,431,142,154,108,full_vs_baseline,full,baseline,31.8617341239151,22.3445927622262,34.4106728538283
+10,Melbourne 3BR Apartment/unit,0.25,121,49,51,31,full_vs_baseline,full,baseline,32.0447880565183,19.4782045049425,9.93388429752067
+10,Yarra Ranges 3BR House/townhouse,0.25,30,23,7,8,full_vs_baseline,full,baseline,14.1666666666667,16.1904761904762,1.13333333333333
+10,Melbourne 2BR Apartment/unit,0.5,431,142,154,216,full_vs_baseline,full,baseline,17.9728452350262,25.2086660439329,38.8213457076566
+10,Melbourne 3BR Apartment/unit,0.5,121,49,51,61,full_vs_baseline,full,baseline,20.1463216366346,24.0965807810727,12.2892561983471
+10,Yarra Ranges 3BR House/townhouse,0.5,30,23,7,15,full_vs_baseline,full,baseline,3.33333333333333,7.14285714285714,0.5
+11,Melbourne 2BR Apartment/unit,0.1,361,137,95,37,full_vs_baseline,full,baseline,25.0355618776671,9.75069252077562,9.26315789473684
+11,Melbourne 3BR Apartment/unit,0.1,115,48,34,12,full_vs_baseline,full,baseline,28.768115942029,10.153452685422,3.45217391304348
+11,Yarra Ranges 3BR House/townhouse,0.1,30,23,10,3,full_vs_baseline,full,baseline,33.3333333333333,10,1
+11,Melbourne 2BR Apartment/unit,0.25,361,137,95,91,full_vs_baseline,full,baseline,15.4424522845575,14.792243767313,14.0526315789473
+11,Melbourne 3BR Apartment/unit,0.25,115,48,34,29,full_vs_baseline,full,baseline,11.8140929535232,10.076726342711,3.42608695652174
+11,Yarra Ranges 3BR House/townhouse,0.25,30,23,10,8,full_vs_baseline,full,baseline,29.1666666666667,23.3333333333333,2.33333333333333
+11,Melbourne 2BR Apartment/unit,0.5,361,137,95,181,full_vs_baseline,full,baseline,14.5681884268683,27.7562326869807,26.3684210526317
+11,Melbourne 3BR Apartment/unit,0.5,115,48,34,58,full_vs_baseline,full,baseline,4.91754122938532,8.38874680306907,2.85217391304348
+11,Yarra Ranges 3BR House/townhouse,0.5,30,23,10,15,full_vs_baseline,full,baseline,13.3333333333333,20,2
+12,Melbourne 2BR Apartment/unit,0.1,333,151,133,34,full_vs_baseline,full,baseline,7.11888358947193,1.81986497775974,2.42042042042045
+12,Melbourne 3BR Apartment/unit,0.1,89,40,41,9,full_vs_baseline,full,baseline,20.5992509363296,4.52178679090162,1.85393258426966
+12,Yarra Ranges 3BR House/townhouse,0.1,25,18,6,3,full_vs_baseline,full,baseline,42.6666666666667,21.3333333333333,1.28
+12,Melbourne 2BR Apartment/unit,0.25,333,151,133,84,full_vs_baseline,full,baseline,13.6314886314887,8.60936124094023,11.4504504504505
+12,Melbourne 3BR Apartment/unit,0.25,89,40,41,23,full_vs_baseline,full,baseline,6.10649731314117,3.42559605371334,1.40449438202247
+12,Yarra Ranges 3BR House/townhouse,0.25,25,18,6,7,full_vs_baseline,full,baseline,18.8571428571429,22,1.32
+12,Melbourne 2BR Apartment/unit,0.5,333,151,133,167,full_vs_baseline,full,baseline,6.76664688640738,8.49646639120325,11.3003003003003
+12,Melbourne 3BR Apartment/unit,0.5,89,40,41,45,full_vs_baseline,full,baseline,9.4881398252185,10.4138120032886,4.26966292134832
+12,Yarra Ranges 3BR House/townhouse,0.5,25,18,6,13,full_vs_baseline,full,baseline,14.4615384615385,31.3333333333333,1.88
+13,Melbourne 2BR Apartment/unit,0.1,376,135,82,38,full_vs_baseline,full,baseline,7.13885778275474,3.30825116761805,2.7127659574468
+13,Melbourne 3BR Apartment/unit,0.1,101,44,25,11,full_vs_baseline,full,baseline,-6.57065706570658,-2.8910891089109,-0.722772277227724
+13,Yarra Ranges 3BR House/townhouse,0.1,26,22,7,3,full_vs_baseline,full,baseline,73.0769230769231,31.3186813186813,2.19230769230769
+13,Melbourne 2BR Apartment/unit,0.25,376,135,82,94,full_vs_baseline,full,baseline,9.04255319148936,10.3658536585366,8.5
+13,Melbourne 3BR Apartment/unit,0.25,101,44,25,26,full_vs_baseline,full,baseline,-5.52170601675554,-5.74257425742576,-1.43564356435644
+13,Yarra Ranges 3BR House/townhouse,0.25,26,22,7,7,full_vs_baseline,full,baseline,44.5054945054945,44.5054945054945,3.11538461538462
+13,Melbourne 2BR Apartment/unit,0.5,376,135,82,188,full_vs_baseline,full,baseline,7.97872340425532,18.2926829268293,15
+13,Melbourne 3BR Apartment/unit,0.5,101,44,25,51,full_vs_baseline,full,baseline,6.62007377208311,13.5049504950495,3.37623762376238
+13,Yarra Ranges 3BR House/townhouse,0.5,26,22,7,13,full_vs_baseline,full,baseline,26.9230769230769,50,3.5
+14,Melbourne 2BR Apartment/unit,0.1,351,133,70,36,full_vs_baseline,full,baseline,-8.83190883190881,-4.54212454212453,-3.17948717948717
+14,Melbourne 3BR Apartment/unit,0.1,93,37,19,10,full_vs_baseline,full,baseline,-10.4301075268817,-5.48953027730616,-1.04301075268817
+14,Yarra Ranges 3BR House/townhouse,0.1,27,21,6,3,full_vs_baseline,full,baseline,44.4444444444444,22.2222222222222,1.33333333333333
+14,Melbourne 2BR Apartment/unit,0.25,351,133,70,88,full_vs_baseline,full,baseline,-4.03392903392905,-5.07122507122509,-3.54985754985756
+14,Melbourne 3BR Apartment/unit,0.25,93,37,19,24,full_vs_baseline,full,baseline,-3.76344086021505,-4.75382003395585,-0.90322580645161
+14,Yarra Ranges 3BR House/townhouse,0.25,27,21,6,7,full_vs_baseline,full,baseline,34.9206349206349,40.7407407407407,2.44444444444444
+14,Melbourne 2BR Apartment/unit,0.5,351,133,70,176,full_vs_baseline,full,baseline,5.62516187516186,14.1432641432641,9.90028490028487
+14,Melbourne 3BR Apartment/unit,0.5,93,37,19,47,full_vs_baseline,full,baseline,-1.28117135666896,-3.1692133559706,-0.602150537634413
+14,Yarra Ranges 3BR House/townhouse,0.5,27,21,6,14,full_vs_baseline,full,baseline,13.4920634920635,31.4814814814815,1.88888888888889
+15,Melbourne 2BR Apartment/unit,0.1,378,154,109,38,full_vs_baseline,full,baseline,15.9008632692843,5.54342022231929,6.04232804232802
+15,Melbourne 3BR Apartment/unit,0.1,80,38,34,8,full_vs_baseline,full,baseline,32.5,7.64705882352941,2.6
+15,Yarra Ranges 3BR House/townhouse,0.1,24,24,7,3,full_vs_baseline,full,baseline,4.16666666666666,1.78571428571429,0.125
+15,Melbourne 2BR Apartment/unit,0.25,378,154,109,95,full_vs_baseline,full,baseline,21.6903369534949,18.9044221154313,20.6058201058202
+15,Melbourne 3BR Apartment/unit,0.25,80,38,34,20,full_vs_baseline,full,baseline,7.5,4.41176470588235,1.5
+15,Yarra Ranges 3BR House/townhouse,0.25,24,24,7,6,full_vs_baseline,full,baseline,-12.5,-10.7142857142857,-0.75
+15,Melbourne 2BR Apartment/unit,0.5,378,154,109,189,full_vs_baseline,full,baseline,11.9047619047619,20.6422018348624,22.5
+15,Melbourne 3BR Apartment/unit,0.5,80,38,34,40,full_vs_baseline,full,baseline,7.5,8.82352941176471,3
+15,Yarra Ranges 3BR House/townhouse,0.5,24,24,7,12,full_vs_baseline,full,baseline,4.16666666666666,7.14285714285714,0.5
+16,Melbourne 2BR Apartment/unit,0.1,402,156,96,41,full_vs_baseline,full,baseline,27.3389151801966,11.6759950248756,11.2089552238806
+16,Melbourne 3BR Apartment/unit,0.1,111,43,31,12,full_vs_baseline,full,baseline,5.40540540540542,2.09241499564081,0.648648648648651
+16,Yarra Ranges 3BR House/townhouse,0.1,22,19,6,3,full_vs_baseline,full,baseline,39.3939393939394,19.6969696969697,1.18181818181818
+16,Melbourne 2BR Apartment/unit,0.25,402,156,96,101,full_vs_baseline,full,baseline,19.6837594207182,20.7089552238807,19.8805970149254
+16,Melbourne 3BR Apartment/unit,0.25,111,43,31,28,full_vs_baseline,full,baseline,9.57207207207206,8.64574251671025,2.68018018018018
+16,Yarra Ranges 3BR House/townhouse,0.25,22,19,6,6,full_vs_baseline,full,baseline,39.3939393939394,39.3939393939394,2.36363636363636
+16,Melbourne 2BR Apartment/unit,0.5,402,156,96,201,full_vs_baseline,full,baseline,7.96019900497513,16.6666666666667,16
+16,Melbourne 3BR Apartment/unit,0.5,111,43,31,56,full_vs_baseline,full,baseline,0.643500643500633,1.16245277535599,0.360360360360357
+16,Yarra Ranges 3BR House/townhouse,0.5,22,19,6,11,full_vs_baseline,full,baseline,18.1818181818182,33.3333333333333,2
+17,Melbourne 2BR Apartment/unit,0.1,301,149,113,31,full_vs_baseline,full,baseline,20.5229878898297,5.63020021756389,6.3621262458472
+17,Melbourne 3BR Apartment/unit,0.1,68,35,24,7,full_vs_baseline,full,baseline,-21.0084033613446,-6.12745098039216,-1.47058823529412
+17,Yarra Ranges 3BR House/townhouse,0.1,23,21,8,3,full_vs_baseline,full,baseline,-1.44927536231884,-0.543478260869565,-0.0434782608695652
+17,Melbourne 2BR Apartment/unit,0.25,301,149,113,76,full_vs_baseline,full,baseline,25.6163664976395,17.2287066709788,19.468438538206
+17,Melbourne 3BR Apartment/unit,0.25,68,35,24,17,full_vs_baseline,full,baseline,-5.88235294117647,-4.16666666666667,-1
+17,Yarra Ranges 3BR House/townhouse,0.25,23,21,8,6,full_vs_baseline,full,baseline,15.2173913043478,11.4130434782609,0.91304347826087
+17,Melbourne 2BR Apartment/unit,0.5,301,149,113,151,full_vs_baseline,full,baseline,12.1273459329828,16.2055684591186,18.312292358804
+17,Melbourne 3BR Apartment/unit,0.5,68,35,24,34,full_vs_baseline,full,baseline,5.88235294117647,8.33333333333334,2
+17,Yarra Ranges 3BR House/townhouse,0.5,23,21,8,12,full_vs_baseline,full,baseline,15.2173913043478,22.8260869565217,1.82608695652174
+18,Melbourne 2BR Apartment/unit,0.1,328,135,120,33,full_vs_baseline,full,baseline,42.2025129342202,11.6056910569105,13.9268292682926
+18,Melbourne 3BR Apartment/unit,0.1,86,38,41,9,full_vs_baseline,full,baseline,52.3255813953488,11.4861032331253,4.70930232558139
+18,Yarra Ranges 3BR House/townhouse,0.1,34,29,13,4,full_vs_baseline,full,baseline,36.7647058823529,11.3122171945701,1.47058823529412
+18,Melbourne 2BR Apartment/unit,0.25,328,135,120,82,full_vs_baseline,full,baseline,21.9512195121951,15,18
+18,Melbourne 3BR Apartment/unit,0.25,86,38,41,22,full_vs_baseline,full,baseline,38.6892177589852,20.7600680657969,8.51162790697673
+18,Yarra Ranges 3BR House/townhouse,0.25,34,29,13,9,full_vs_baseline,full,baseline,17.3202614379085,11.9909502262443,1.55882352941177
+18,Melbourne 2BR Apartment/unit,0.5,328,135,120,164,full_vs_baseline,full,baseline,12.1951219512195,16.6666666666667,20
+18,Melbourne 3BR Apartment/unit,0.5,86,38,41,43,full_vs_baseline,full,baseline,12.7906976744186,13.4146341463415,5.5
+18,Yarra Ranges 3BR House/townhouse,0.5,34,29,13,17,full_vs_baseline,full,baseline,14.7058823529412,19.2307692307692,2.5
+19,Melbourne 2BR Apartment/unit,0.1,402,158,96,41,full_vs_baseline,full,baseline,34.6559883509283,14.8009950248756,14.2089552238806
+19,Melbourne 3BR Apartment/unit,0.1,85,46,27,9,full_vs_baseline,full,baseline,23.7908496732026,7.93028322440087,2.14117647058823
+19,Yarra Ranges 3BR House/townhouse,0.1,26,22,7,3,full_vs_baseline,full,baseline,39.7435897435897,17.032967032967,1.19230769230769
+19,Melbourne 2BR Apartment/unit,0.25,402,158,96,101,full_vs_baseline,full,baseline,31.5649475395301,33.2089552238807,31.8805970149254
+19,Melbourne 3BR Apartment/unit,0.25,85,46,27,22,full_vs_baseline,full,baseline,18.2352941176471,14.8583877995643,4.01176470588235
+19,Yarra Ranges 3BR House/townhouse,0.25,26,22,7,7,full_vs_baseline,full,baseline,15.9340659340659,15.9340659340659,1.11538461538462
+19,Melbourne 2BR Apartment/unit,0.5,402,158,96,201,full_vs_baseline,full,baseline,12.9353233830846,27.0833333333333,26
+19,Melbourne 3BR Apartment/unit,0.5,85,46,27,43,full_vs_baseline,full,baseline,10.0957592339261,16.078431372549,4.34117647058824
+19,Yarra Ranges 3BR House/townhouse,0.5,26,22,7,13,full_vs_baseline,full,baseline,11.5384615384615,21.4285714285714,1.5
+20,Melbourne 2BR Apartment/unit,0.1,430,136,125,43,full_vs_baseline,full,baseline,36.046511627907,12.4,15.5
+20,Melbourne 3BR Apartment/unit,0.1,132,53,63,14,full_vs_baseline,full,baseline,45.1298701298701,10.02886002886,6.31818181818181
+20,Yarra Ranges 3BR House/townhouse,0.1,29,26,7,3,full_vs_baseline,full,baseline,42.5287356321839,18.2266009852217,1.27586206896552
+20,Melbourne 2BR Apartment/unit,0.25,430,136,125,108,full_vs_baseline,full,baseline,21.8561584840655,18.8837209302326,23.6046511627907
+20,Melbourne 3BR Apartment/unit,0.25,132,53,63,33,full_vs_baseline,full,baseline,21.969696969697,11.5079365079365,7.25
+20,Yarra Ranges 3BR House/townhouse,0.25,29,26,7,8,full_vs_baseline,full,baseline,25.8620689655172,29.5566502463054,2.06896551724138
+20,Melbourne 2BR Apartment/unit,0.5,430,136,125,215,full_vs_baseline,full,baseline,3.48837209302326,6.00000000000001,7.5
+20,Melbourne 3BR Apartment/unit,0.5,132,53,63,66,full_vs_baseline,full,baseline,3.78787878787878,3.96825396825397,2.5
+20,Yarra Ranges 3BR House/townhouse,0.5,29,26,7,15,full_vs_baseline,full,baseline,2.52873563218391,5.41871921182265,0.379310344827586
+21,Melbourne 2BR Apartment/unit,0.1,311,127,112,32,full_vs_baseline,full,baseline,38.9871382636655,11.1391823610473,12.475884244373
+21,Melbourne 3BR Apartment/unit,0.1,65,43,18,7,full_vs_baseline,full,baseline,43.7362637362637,17.008547008547,3.06153846153846
+21,Yarra Ranges 3BR House/townhouse,0.1,25,23,11,3,full_vs_baseline,full,baseline,56,15.2727272727273,1.68
+21,Melbourne 2BR Apartment/unit,0.25,311,127,112,78,full_vs_baseline,full,baseline,30.6538049303323,21.3481855764814,23.9099678456592
+21,Melbourne 3BR Apartment/unit,0.25,65,43,18,17,full_vs_baseline,full,baseline,25.2488687782805,23.8461538461538,4.29230769230769
+21,Yarra Ranges 3BR House/townhouse,0.25,25,23,11,7,full_vs_baseline,full,baseline,27.4285714285714,17.4545454545454,1.92
+21,Melbourne 2BR Apartment/unit,0.5,311,127,112,156,full_vs_baseline,full,baseline,19.7563690328964,27.5177997243914,30.8199356913184
+21,Melbourne 3BR Apartment/unit,0.5,65,43,18,33,full_vs_baseline,full,baseline,8.67132867132868,15.8974358974359,2.86153846153846
+21,Yarra Ranges 3BR House/townhouse,0.5,25,23,11,13,full_vs_baseline,full,baseline,17.5384615384616,20.7272727272727,2.28
+22,Melbourne 2BR Apartment/unit,0.1,435,132,140,44,full_vs_baseline,full,baseline,33.7251828631139,10.5993431855501,14.8390804597701
+22,Melbourne 3BR Apartment/unit,0.1,98,34,30,10,full_vs_baseline,full,baseline,-0.612244897959163,-0.204081632653054,-0.0612244897959164
+22,Yarra Ranges 3BR House/townhouse,0.1,35,31,9,4,full_vs_baseline,full,baseline,24.2857142857143,10.7936507936508,0.971428571428571
+22,Melbourne 2BR Apartment/unit,0.25,435,132,140,109,full_vs_baseline,full,baseline,24.6968258989771,19.2282430213464,26.919540229885
+22,Melbourne 3BR Apartment/unit,0.25,98,34,30,25,full_vs_baseline,full,baseline,5.38775510204083,4.48979591836736,1.34693877551021
+22,Yarra Ranges 3BR House/townhouse,0.25,35,31,9,9,full_vs_baseline,full,baseline,29.8412698412698,29.8412698412698,2.68571428571429
+22,Melbourne 2BR Apartment/unit,0.5,435,132,140,218,full_vs_baseline,full,baseline,10.4766424127386,16.3136288998357,22.83908045977
+22,Melbourne 3BR Apartment/unit,0.5,98,34,30,49,full_vs_baseline,full,baseline,2.04081632653061,3.33333333333333,1
+22,Yarra Ranges 3BR House/townhouse,0.5,35,31,9,18,full_vs_baseline,full,baseline,13.1746031746032,26.3492063492064,2.37142857142857
+23,Melbourne 2BR Apartment/unit,0.1,355,140,124,36,full_vs_baseline,full,baseline,-4.37402190923314,-1.26987732848704,-1.57464788732393
+23,Melbourne 3BR Apartment/unit,0.1,84,42,35,9,full_vs_baseline,full,baseline,25,6.42857142857143,2.25
+23,Yarra Ranges 3BR House/townhouse,0.1,28,21,7,3,full_vs_baseline,full,baseline,41.6666666666667,17.8571428571429,1.25
+23,Melbourne 2BR Apartment/unit,0.25,355,140,124,89,full_vs_baseline,full,baseline,8.89064725431238,6.38119036801453,7.91267605633802
+23,Melbourne 3BR Apartment/unit,0.25,84,42,35,21,full_vs_baseline,full,baseline,10.7142857142857,6.42857142857143,2.25
+23,Yarra Ranges 3BR House/townhouse,0.25,28,21,7,7,full_vs_baseline,full,baseline,17.8571428571429,17.8571428571429,1.25
+23,Melbourne 2BR Apartment/unit,0.5,355,140,124,178,full_vs_baseline,full,baseline,4.39626523184047,6.31076783280327,7.82535211267604
+23,Melbourne 3BR Apartment/unit,0.5,84,42,35,42,full_vs_baseline,full,baseline,10.7142857142857,12.8571428571429,4.5
+23,Yarra Ranges 3BR House/townhouse,0.5,28,21,7,14,full_vs_baseline,full,baseline,17.8571428571429,35.7142857142857,2.5
+24,Melbourne 2BR Apartment/unit,0.1,407,141,164,41,full_vs_baseline,full,baseline,20.6807694612572,5.1701923653143,8.47911547911546
+24,Melbourne 3BR Apartment/unit,0.1,115,42,54,12,full_vs_baseline,full,baseline,44.7101449275362,9.93558776167471,5.36521739130435
+24,Yarra Ranges 3BR House/townhouse,0.1,30,24,14,3,full_vs_baseline,full,baseline,53.3333333333333,11.4285714285714,1.6
+24,Melbourne 2BR Apartment/unit,0.25,407,141,164,102,full_vs_baseline,full,baseline,21.4698655875127,13.3532090849164,21.8992628992629
+24,Melbourne 3BR Apartment/unit,0.25,115,42,54,29,full_vs_baseline,full,baseline,32.3538230884558,17.3752012882448,9.38260869565218
+24,Yarra Ranges 3BR House/townhouse,0.25,30,24,14,8,full_vs_baseline,full,baseline,28.3333333333333,16.1904761904762,2.26666666666667
+24,Melbourne 2BR Apartment/unit,0.5,407,141,164,204,full_vs_baseline,full,baseline,14.1169244110421,17.5600767064182,28.7985257985259
+24,Melbourne 3BR Apartment/unit,0.5,115,42,54,58,full_vs_baseline,full,baseline,13.3883058470765,14.3800322061192,7.76521739130436
+24,Yarra Ranges 3BR House/townhouse,0.5,30,24,14,15,full_vs_baseline,full,baseline,6.66666666666667,7.14285714285714,1
+25,Melbourne 2BR Apartment/unit,0.1,371,140,117,38,full_vs_baseline,full,baseline,5.30571712299613,1.72322436473379,2.01617250673853
+25,Melbourne 3BR Apartment/unit,0.1,90,42,33,9,full_vs_baseline,full,baseline,18.8888888888889,5.15151515151515,1.7
+25,Yarra Ranges 3BR House/townhouse,0.1,24,23,9,3,full_vs_baseline,full,baseline,62.5,20.8333333333333,1.875
+25,Melbourne 2BR Apartment/unit,0.25,371,140,117,93,full_vs_baseline,full,baseline,9.32382691360178,7.4112470338886,8.67115902964966
+25,Melbourne 3BR Apartment/unit,0.25,90,42,33,23,full_vs_baseline,full,baseline,15.5072463768116,10.8080808080808,3.56666666666667
+25,Yarra Ranges 3BR House/townhouse,0.25,24,23,9,6,full_vs_baseline,full,baseline,45.8333333333333,30.5555555555556,2.75
+25,Melbourne 2BR Apartment/unit,0.5,371,140,117,186,full_vs_baseline,full,baseline,5.02275164478457,7.98488723017036,9.34231805929931
+25,Melbourne 3BR Apartment/unit,0.5,90,42,33,45,full_vs_baseline,full,baseline,10,13.6363636363636,4.5
+25,Yarra Ranges 3BR House/townhouse,0.5,24,23,9,12,full_vs_baseline,full,baseline,29.1666666666667,38.8888888888889,3.5
+26,Melbourne 2BR Apartment/unit,0.1,379,138,128,38,full_vs_baseline,full,baseline,8.33217608665467,2.47361477572561,3.16622691292877
+26,Melbourne 3BR Apartment/unit,0.1,113,45,35,12,full_vs_baseline,full,baseline,2.35988200589969,0.80910240202275,0.283185840707963
+26,Yarra Ranges 3BR House/townhouse,0.1,32,30,10,4,full_vs_baseline,full,baseline,43.75,17.5,1.75
+26,Melbourne 2BR Apartment/unit,0.25,379,138,128,95,full_vs_baseline,full,baseline,6.22691292875981,4.62153693931393,5.91556728232182
+26,Melbourne 3BR Apartment/unit,0.25,113,45,35,29,full_vs_baseline,full,baseline,10.405859017394,8.621997471555,3.01769911504425
+26,Yarra Ranges 3BR House/townhouse,0.25,32,30,10,8,full_vs_baseline,full,baseline,43.75,35,3.5
+26,Melbourne 2BR Apartment/unit,0.5,379,138,128,190,full_vs_baseline,full,baseline,4.64796556033876,6.89932387862785,8.83113456464365
+26,Melbourne 3BR Apartment/unit,0.5,113,45,35,57,full_vs_baseline,full,baseline,4.114267970812,6.70037926675097,2.34513274336284
+26,Yarra Ranges 3BR House/townhouse,0.5,32,30,10,16,full_vs_baseline,full,baseline,12.5,20,2
+27,Melbourne 2BR Apartment/unit,0.1,397,152,92,40,full_vs_baseline,full,baseline,16.8261964735517,7.31573759719638,6.73047858942067
+27,Melbourne 3BR Apartment/unit,0.1,103,48,33,11,full_vs_baseline,full,baseline,31.5975286849073,10.5325095616358,3.47572815533981
+27,Yarra Ranges 3BR House/townhouse,0.1,28,23,9,3,full_vs_baseline,full,baseline,1.1904761904762,0.396825396825398,0.0357142857142859
+27,Melbourne 2BR Apartment/unit,0.25,397,152,92,100,full_vs_baseline,full,baseline,6.82619647355164,7.41977877559961,6.82619647355164
+27,Melbourne 3BR Apartment/unit,0.25,103,48,33,26,full_vs_baseline,full,baseline,10.268857356236,8.0906148867314,2.66990291262136
+27,Yarra Ranges 3BR House/townhouse,0.25,28,23,9,7,full_vs_baseline,full,baseline,-3.57142857142858,-2.77777777777778,-0.25
+27,Melbourne 2BR Apartment/unit,0.5,397,152,92,199,full_vs_baseline,full,baseline,8.48448793083807,18.3523162851823,16.8841309823678
+27,Melbourne 3BR Apartment/unit,0.5,103,48,33,52,full_vs_baseline,full,baseline,2.57654966392831,4.06001765225067,1.33980582524272
+27,Yarra Ranges 3BR House/townhouse,0.5,28,23,9,14,full_vs_baseline,full,baseline,3.57142857142857,5.55555555555556,0.5
+28,Melbourne 2BR Apartment/unit,0.1,388,153,122,39,full_vs_baseline,full,baseline,24.9669574411842,7.98124049349332,9.73711340206184
+28,Melbourne 3BR Apartment/unit,0.1,99,47,51,10,full_vs_baseline,full,baseline,48.4848484848484,9.50683303624479,4.84848484848484
+28,Yarra Ranges 3BR House/townhouse,0.1,24,22,7,3,full_vs_baseline,full,baseline,70.8333333333333,30.3571428571429,2.125
+28,Melbourne 2BR Apartment/unit,0.25,388,153,122,97,full_vs_baseline,full,baseline,14.9484536082474,11.8852459016393,14.5
+28,Melbourne 3BR Apartment/unit,0.25,99,47,51,25,full_vs_baseline,full,baseline,24.4848484848485,12.0023767082591,6.12121212121212
+28,Yarra Ranges 3BR House/townhouse,0.25,24,22,7,6,full_vs_baseline,full,baseline,37.5,32.1428571428571,2.25
+28,Melbourne 2BR Apartment/unit,0.5,388,153,122,194,full_vs_baseline,full,baseline,14.4329896907216,22.9508196721312,28
+28,Melbourne 3BR Apartment/unit,0.5,99,47,51,50,full_vs_baseline,full,baseline,10.4848484848485,10.2792632204397,5.24242424242424
+28,Yarra Ranges 3BR House/townhouse,0.5,24,22,7,12,full_vs_baseline,full,baseline,20.8333333333333,35.7142857142857,2.5
+29,Melbourne 2BR Apartment/unit,0.1,391,139,90,40,full_vs_baseline,full,baseline,-3.01790281329926,-1.34129013924411,-1.2071611253197
+29,Melbourne 3BR Apartment/unit,0.1,95,33,23,10,full_vs_baseline,full,baseline,-4.21052631578946,-1.83066361556063,-0.421052631578946
+29,Yarra Ranges 3BR House/townhouse,0.1,32,29,9,4,full_vs_baseline,full,baseline,21.875,9.72222222222222,0.875
+29,Melbourne 2BR Apartment/unit,0.25,391,139,90,98,full_vs_baseline,full,baseline,-5.67096403778905,-6.17504973003697,-5.55754475703327
+29,Melbourne 3BR Apartment/unit,0.25,95,33,23,24,full_vs_baseline,full,baseline,-3.37719298245613,-3.52402745995423,-0.810526315789472
+29,Yarra Ranges 3BR House/townhouse,0.25,32,29,9,8,full_vs_baseline,full,baseline,34.375,30.5555555555556,2.75
+29,Melbourne 2BR Apartment/unit,0.5,391,139,90,196,full_vs_baseline,full,baseline,3.00250534996605,6.53878942881495,5.88491048593346
+29,Melbourne 3BR Apartment/unit,0.5,95,33,23,48,full_vs_baseline,full,baseline,-1.2938596491228,-2.70022883295193,-0.621052631578944
+29,Yarra Ranges 3BR House/townhouse,0.5,32,29,9,16,full_vs_baseline,full,baseline,9.375,16.6666666666667,1.5
+30,Melbourne 2BR Apartment/unit,0.1,347,146,134,35,full_vs_baseline,full,baseline,41.3832853025936,10.8090670566476,14.4841498559078
+30,Melbourne 3BR Apartment/unit,0.1,109,41,35,11,full_vs_baseline,full,baseline,13.3444537114262,4.19397116644823,1.46788990825688
+30,Yarra Ranges 3BR House/townhouse,0.1,27,22,8,3,full_vs_baseline,full,baseline,70.3703703703704,26.3888888888889,2.11111111111111
+30,Melbourne 2BR Apartment/unit,0.25,347,146,134,87,full_vs_baseline,full,baseline,32.6476531186857,21.1966106069079,28.4034582132566
+30,Melbourne 3BR Apartment/unit,0.25,109,41,35,28,full_vs_baseline,full,baseline,3.60419397116644,2.88335517693314,1.0091743119266
+30,Yarra Ranges 3BR House/townhouse,0.25,27,22,8,7,full_vs_baseline,full,baseline,41.7989417989418,36.5740740740741,2.92592592592593
+30,Melbourne 2BR Apartment/unit,0.5,347,146,134,174,full_vs_baseline,full,baseline,18.8545496704099,24.4827734526218,32.8069164265132
+30,Melbourne 3BR Apartment/unit,0.5,109,41,35,55,full_vs_baseline,full,baseline,6.07172643869889,9.54128440366969,3.33944954128439
+30,Yarra Ranges 3BR House/townhouse,0.5,27,22,8,14,full_vs_baseline,full,baseline,20.3703703703704,35.6481481481482,2.85185185185185
+31,Melbourne 2BR Apartment/unit,0.1,486,146,182,49,full_vs_baseline,full,baseline,8.46980767615697,2.28033283588841,4.15020576131691
+31,Melbourne 3BR Apartment/unit,0.1,106,48,35,11,full_vs_baseline,full,baseline,12.4356775300172,3.90835579514825,1.36792452830189
+31,Yarra Ranges 3BR House/townhouse,0.1,26,23,9,3,full_vs_baseline,full,baseline,32.051282051282,10.6837606837607,0.961538461538461
+31,Melbourne 2BR Apartment/unit,0.25,486,146,182,122,full_vs_baseline,full,baseline,6.81373541118521,4.56744901189338,8.31275720164596
+31,Melbourne 3BR Apartment/unit,0.25,106,48,35,27,full_vs_baseline,full,baseline,11.4255765199162,8.81401617250675,3.08490566037736
+31,Yarra Ranges 3BR House/townhouse,0.25,26,23,9,7,full_vs_baseline,full,baseline,8.24175824175824,6.41025641025641,0.576923076923077
+31,Melbourne 2BR Apartment/unit,0.5,486,146,182,243,full_vs_baseline,full,baseline,10.2880658436214,13.7362637362637,25
+31,Melbourne 3BR Apartment/unit,0.5,106,48,35,53,full_vs_baseline,full,baseline,4.71698113207548,7.14285714285714,2.5
+31,Yarra Ranges 3BR House/townhouse,0.5,26,23,9,13,full_vs_baseline,full,baseline,-3.84615384615384,-5.55555555555556,-0.5
+32,Melbourne 2BR Apartment/unit,0.1,388,138,138,39,full_vs_baseline,full,baseline,41.3560666137985,11.68758404303,16.1288659793814
+32,Melbourne 3BR Apartment/unit,0.1,86,38,44,9,full_vs_baseline,full,baseline,37.7260981912144,7.71670190274841,3.3953488372093
+32,Yarra Ranges 3BR House/townhouse,0.1,24,21,5,3,full_vs_baseline,full,baseline,45.8333333333333,27.5,1.375
+32,Melbourne 2BR Apartment/unit,0.25,388,138,138,97,full_vs_baseline,full,baseline,39.6907216494845,27.8985507246377,38.5
+32,Melbourne 3BR Apartment/unit,0.25,86,38,44,22,full_vs_baseline,full,baseline,35.2008456659619,17.6004228329809,7.74418604651162
+32,Yarra Ranges 3BR House/townhouse,0.25,24,21,5,6,full_vs_baseline,full,baseline,29.1666666666667,35,1.75
+32,Melbourne 2BR Apartment/unit,0.5,388,138,138,194,full_vs_baseline,full,baseline,22.680412371134,31.8840579710145,44
+32,Melbourne 3BR Apartment/unit,0.5,86,38,44,43,full_vs_baseline,full,baseline,25.5813953488372,25,11
+32,Yarra Ranges 3BR House/townhouse,0.5,24,21,5,12,full_vs_baseline,full,baseline,20.8333333333333,50,2.5
+33,Melbourne 2BR Apartment/unit,0.1,364,146,107,37,full_vs_baseline,full,baseline,19.2530442530443,6.65759474170689,7.12362637362637
+33,Melbourne 3BR Apartment/unit,0.1,69,40,20,7,full_vs_baseline,full,baseline,13.871635610766,4.85507246376811,0.971014492753623
+33,Yarra Ranges 3BR House/townhouse,0.1,32,30,13,4,full_vs_baseline,full,baseline,34.375,10.5769230769231,1.375
+33,Melbourne 2BR Apartment/unit,0.25,364,146,107,91,full_vs_baseline,full,baseline,12.3626373626374,10.5140186915888,11.25
+33,Melbourne 3BR Apartment/unit,0.25,69,40,20,18,full_vs_baseline,full,baseline,9.90338164251208,8.91304347826087,1.78260869565217
+33,Yarra Ranges 3BR House/townhouse,0.25,32,30,13,8,full_vs_baseline,full,baseline,34.375,21.1538461538462,2.75
+33,Melbourne 2BR Apartment/unit,0.5,364,146,107,182,full_vs_baseline,full,baseline,7.41758241758242,12.6168224299065,13.5
+33,Melbourne 3BR Apartment/unit,0.5,69,40,20,35,full_vs_baseline,full,baseline,-6.12836438923394,-10.7246376811594,-2.14492753623188
+33,Yarra Ranges 3BR House/townhouse,0.5,32,30,13,16,full_vs_baseline,full,baseline,15.625,19.2307692307692,2.5
+34,Melbourne 2BR Apartment/unit,0.1,490,149,179,49,full_vs_baseline,full,baseline,34.8979591836735,9.55307262569833,17.1
+34,Melbourne 3BR Apartment/unit,0.1,104,44,34,11,full_vs_baseline,full,baseline,30.9440559440559,10.0113122171946,3.40384615384615
+34,Yarra Ranges 3BR House/townhouse,0.1,24,20,4,3,full_vs_baseline,full,baseline,16.6666666666667,12.5,0.5
+34,Melbourne 2BR Apartment/unit,0.25,490,149,179,123,full_vs_baseline,full,baseline,34.2010950721754,23.5013111389808,42.0673469387757
+34,Melbourne 3BR Apartment/unit,0.25,104,44,34,26,full_vs_baseline,full,baseline,17.3076923076923,13.2352941176471,4.5
+34,Yarra Ranges 3BR House/townhouse,0.25,24,20,4,6,full_vs_baseline,full,baseline,0,0,0
+34,Melbourne 2BR Apartment/unit,0.5,490,149,179,245,full_vs_baseline,full,baseline,15.7142857142857,21.5083798882682,38.5
+34,Melbourne 3BR Apartment/unit,0.5,104,44,34,52,full_vs_baseline,full,baseline,1.92307692307692,2.94117647058824,1
+34,Yarra Ranges 3BR House/townhouse,0.5,24,20,4,12,full_vs_baseline,full,baseline,0,0,0
+35,Melbourne 2BR Apartment/unit,0.1,411,140,151,42,full_vs_baseline,full,baseline,18.0222453945083,5.01280997728045,7.56934306569348
+35,Melbourne 3BR Apartment/unit,0.1,105,45,53,11,full_vs_baseline,full,baseline,40.4329004329005,8.39173405211142,4.44761904761905
+35,Yarra Ranges 3BR House/townhouse,0.1,32,24,8,4,full_vs_baseline,full,baseline,50,25,2
+35,Melbourne 2BR Apartment/unit,0.25,411,140,151,103,full_vs_baseline,full,baseline,13.7457775258073,9.37625884210697,14.1581508515815
+35,Melbourne 3BR Apartment/unit,0.25,105,45,53,27,full_vs_baseline,full,baseline,27.3015873015874,13.9083557951483,7.37142857142859
+35,Yarra Ranges 3BR House/townhouse,0.25,32,24,8,8,full_vs_baseline,full,baseline,25,25,2
+35,Melbourne 2BR Apartment/unit,0.5,411,140,151,206,full_vs_baseline,full,baseline,9.37684548697235,12.7922527835517,19.316301703163
+35,Melbourne 3BR Apartment/unit,0.5,105,45,53,53,full_vs_baseline,full,baseline,15.5615453728661,15.5615453728661,8.24761904761901
+35,Yarra Ranges 3BR House/townhouse,0.5,32,24,8,16,full_vs_baseline,full,baseline,0,0,0
+36,Melbourne 2BR Apartment/unit,0.1,308,136,95,31,full_vs_baseline,full,baseline,14.3171344784249,4.67190704032812,4.43831168831171
+36,Melbourne 3BR Apartment/unit,0.1,92,39,25,10,full_vs_baseline,full,baseline,2.82608695652173,1.13043478260869,0.282608695652173
+36,Yarra Ranges 3BR House/townhouse,0.1,33,30,9,4,full_vs_baseline,full,baseline,22.7272727272727,10.1010101010101,0.909090909090909
+36,Melbourne 2BR Apartment/unit,0.25,308,136,95,77,full_vs_baseline,full,baseline,21.1038961038961,17.1052631578947,16.25
+36,Melbourne 3BR Apartment/unit,0.25,92,39,25,23,full_vs_baseline,full,baseline,11.9565217391304,11,2.75
+36,Yarra Ranges 3BR House/townhouse,0.25,33,30,9,9,full_vs_baseline,full,baseline,28.2828282828283,28.2828282828283,2.54545454545455
+36,Melbourne 2BR Apartment/unit,0.5,308,136,95,154,full_vs_baseline,full,baseline,18.5064935064935,30,28.5
+36,Melbourne 3BR Apartment/unit,0.5,92,39,25,46,full_vs_baseline,full,baseline,7.60869565217391,14,3.5
+36,Yarra Ranges 3BR House/townhouse,0.5,33,30,9,17,full_vs_baseline,full,baseline,13.903743315508,26.2626262626263,2.36363636363636
+37,Melbourne 2BR Apartment/unit,0.1,415,143,148,42,full_vs_baseline,full,baseline,23.8611589214,6.77140996418109,10.021686746988
+37,Melbourne 3BR Apartment/unit,0.1,102,51,25,11,full_vs_baseline,full,baseline,20.9447415329768,9.2156862745098,2.30392156862745
+37,Yarra Ranges 3BR House/townhouse,0.1,23,16,7,3,full_vs_baseline,full,baseline,36.231884057971,15.527950310559,1.08695652173913
+37,Melbourne 2BR Apartment/unit,0.25,415,143,148,104,full_vs_baseline,full,baseline,21.0681186283597,14.8046239010095,21.9108433734941
+37,Melbourne 3BR Apartment/unit,0.25,102,51,25,26,full_vs_baseline,full,baseline,2.4132730015083,2.50980392156863,0.627450980392157
+37,Yarra Ranges 3BR House/townhouse,0.25,23,16,7,6,full_vs_baseline,full,baseline,19.5652173913043,16.7701863354037,1.17391304347826
+37,Melbourne 2BR Apartment/unit,0.5,415,143,148,208,full_vs_baseline,full,baseline,14.3373493975904,20.1497883425595,29.8216867469881
+37,Melbourne 3BR Apartment/unit,0.5,102,51,25,51,full_vs_baseline,full,baseline,2.94117647058824,6.00000000000001,1.5
+37,Yarra Ranges 3BR House/townhouse,0.5,23,16,7,12,full_vs_baseline,full,baseline,2.89855072463768,4.96894409937888,0.347826086956522
+38,Melbourne 2BR Apartment/unit,0.1,456,153,129,46,full_vs_baseline,full,baseline,36.9279176201374,13.1680946552428,16.9868421052632
+38,Melbourne 3BR Apartment/unit,0.1,101,43,26,11,full_vs_baseline,full,baseline,19.7119711971197,8.33968012185834,2.16831683168317
+38,Yarra Ranges 3BR House/townhouse,0.1,30,27,8,3,full_vs_baseline,full,baseline,40,15,1.2
+38,Melbourne 2BR Apartment/unit,0.25,456,153,129,114,full_vs_baseline,full,baseline,25.219298245614,22.2868217054264,28.75
+38,Melbourne 3BR Apartment/unit,0.25,101,43,26,26,full_vs_baseline,full,baseline,8.87281035795886,8.87281035795886,2.3069306930693
+38,Yarra Ranges 3BR House/townhouse,0.25,30,27,8,8,full_vs_baseline,full,baseline,23.3333333333333,23.3333333333333,1.86666666666667
+38,Melbourne 2BR Apartment/unit,0.5,456,153,129,228,full_vs_baseline,full,baseline,14.6929824561404,25.968992248062,33.5
+38,Melbourne 3BR Apartment/unit,0.5,101,43,26,51,full_vs_baseline,full,baseline,3.66919044845663,7.19725818735723,1.87128712871288
+38,Yarra Ranges 3BR House/townhouse,0.5,30,27,8,15,full_vs_baseline,full,baseline,13.3333333333333,25,2
+39,Melbourne 2BR Apartment/unit,0.1,396,147,134,40,full_vs_baseline,full,baseline,38.6616161616162,11.540780943766,15.4646464646465
+39,Melbourne 3BR Apartment/unit,0.1,68,37,26,7,full_vs_baseline,full,baseline,47.4789915966386,12.7828054298642,3.3235294117647
+39,Yarra Ranges 3BR House/townhouse,0.1,27,23,8,3,full_vs_baseline,full,baseline,70.3703703703704,26.3888888888889,2.11111111111111
+39,Melbourne 2BR Apartment/unit,0.25,396,147,134,99,full_vs_baseline,full,baseline,25.7575757575758,19.0298507462687,25.5
+39,Melbourne 3BR Apartment/unit,0.25,68,37,26,17,full_vs_baseline,full,baseline,20.5882352941177,13.4615384615385,3.5
+39,Yarra Ranges 3BR House/townhouse,0.25,27,23,8,7,full_vs_baseline,full,baseline,27.5132275132275,24.0740740740741,1.92592592592593
+39,Melbourne 2BR Apartment/unit,0.5,396,147,134,198,full_vs_baseline,full,baseline,13.1313131313131,19.4029850746269,26
+39,Melbourne 3BR Apartment/unit,0.5,68,37,26,34,full_vs_baseline,full,baseline,8.82352941176471,11.5384615384615,3
+39,Yarra Ranges 3BR House/townhouse,0.5,27,23,8,14,full_vs_baseline,full,baseline,13.2275132275132,23.1481481481482,1.85185185185185
+40,Melbourne 2BR Apartment/unit,0.1,355,140,114,36,full_vs_baseline,full,baseline,28.9984350547731,9.15740054361256,10.4394366197183
+40,Melbourne 3BR Apartment/unit,0.1,92,40,45,10,full_vs_baseline,full,baseline,41.0869565217391,9.13043478260869,4.10869565217391
+40,Yarra Ranges 3BR House/townhouse,0.1,22,20,7,3,full_vs_baseline,full,baseline,68.1818181818182,29.2207792207792,2.04545454545455
+40,Melbourne 2BR Apartment/unit,0.25,355,140,114,89,full_vs_baseline,full,baseline,27.4378857414148,21.4208055349642,24.4197183098592
+40,Melbourne 3BR Apartment/unit,0.25,92,40,45,23,full_vs_baseline,full,baseline,46.7391304347826,23.8888888888889,10.75
+40,Yarra Ranges 3BR House/townhouse,0.25,22,20,7,6,full_vs_baseline,full,baseline,51.5151515151515,44.1558441558442,3.09090909090909
+40,Melbourne 2BR Apartment/unit,0.5,355,140,114,178,full_vs_baseline,full,baseline,15.640132932426,24.4205584383494,27.8394366197183
+40,Melbourne 3BR Apartment/unit,0.5,92,40,45,46,full_vs_baseline,full,baseline,29.3478260869565,30,13.5
+40,Yarra Ranges 3BR House/townhouse,0.5,22,20,7,11,full_vs_baseline,full,baseline,22.7272727272727,35.7142857142857,2.5
+41,Melbourne 2BR Apartment/unit,0.1,260,135,68,26,full_vs_baseline,full,baseline,0.7692307692308,0.294117647058835,0.200000000000008
+41,Melbourne 3BR Apartment/unit,0.1,74,40,20,8,full_vs_baseline,full,baseline,10.472972972973,4.18918918918919,0.837837837837838
+41,Yarra Ranges 3BR House/townhouse,0.1,22,21,8,3,full_vs_baseline,full,baseline,30.3030303030303,11.3636363636364,0.909090909090909
+41,Melbourne 2BR Apartment/unit,0.25,260,135,68,65,full_vs_baseline,full,baseline,1.53846153846154,1.47058823529412,1
+41,Melbourne 3BR Apartment/unit,0.25,74,40,20,19,full_vs_baseline,full,baseline,20.3413940256046,19.3243243243243,3.86486486486487
+41,Yarra Ranges 3BR House/townhouse,0.25,22,21,8,6,full_vs_baseline,full,baseline,13.6363636363636,10.2272727272727,0.818181818181818
+41,Melbourne 2BR Apartment/unit,0.5,260,135,68,130,full_vs_baseline,full,baseline,13.8461538461538,26.4705882352941,18
+41,Melbourne 3BR Apartment/unit,0.5,74,40,20,37,full_vs_baseline,full,baseline,10.8108108108108,20,4
+41,Yarra Ranges 3BR House/townhouse,0.5,22,21,8,11,full_vs_baseline,full,baseline,9.09090909090909,12.5,1
+42,Melbourne 2BR Apartment/unit,0.1,370,132,78,37,full_vs_baseline,full,baseline,5.94594594594598,2.82051282051283,2.20000000000001
+42,Melbourne 3BR Apartment/unit,0.1,71,41,22,8,full_vs_baseline,full,baseline,19.0140845070423,6.91421254801537,1.52112676056338
+42,Yarra Ranges 3BR House/townhouse,0.1,21,20,5,3,full_vs_baseline,full,baseline,42.8571428571429,25.7142857142857,1.28571428571429
+42,Melbourne 2BR Apartment/unit,0.25,370,132,78,93,full_vs_baseline,full,baseline,1.49956408020922,1.78794178794176,1.39459459459458
+42,Melbourne 3BR Apartment/unit,0.25,71,41,22,18,full_vs_baseline,full,baseline,13.4585289514867,11.01152368758,2.42253521126761
+42,Yarra Ranges 3BR House/townhouse,0.25,21,20,5,6,full_vs_baseline,full,baseline,42.8571428571429,51.4285714285714,2.57142857142857
+42,Melbourne 2BR Apartment/unit,0.5,370,132,78,185,full_vs_baseline,full,baseline,7.56756756756757,17.948717948718,14
+42,Melbourne 3BR Apartment/unit,0.5,71,41,22,36,full_vs_baseline,full,baseline,2.34741784037559,3.84122919334188,0.845070422535214
+42,Yarra Ranges 3BR House/townhouse,0.5,21,20,5,11,full_vs_baseline,full,baseline,21.6450216450216,47.6190476190476,2.38095238095238
+43,Melbourne 2BR Apartment/unit,0.1,418,148,128,42,full_vs_baseline,full,baseline,9.85418090681254,3.23340311004787,4.13875598086127
+43,Melbourne 3BR Apartment/unit,0.1,94,40,38,10,full_vs_baseline,full,baseline,9.57446808510641,2.51959686450169,0.957446808510641
+43,Yarra Ranges 3BR House/townhouse,0.1,23,22,10,3,full_vs_baseline,full,baseline,23.1884057971015,6.95652173913044,0.695652173913044
+43,Melbourne 2BR Apartment/unit,0.25,418,148,128,105,full_vs_baseline,full,baseline,5.5684666210982,4.56788277511962,5.84688995215311
+43,Melbourne 3BR Apartment/unit,0.25,94,40,38,24,full_vs_baseline,full,baseline,22.0744680851064,13.9417693169093,5.29787234042553
+43,Yarra Ranges 3BR House/townhouse,0.25,23,22,10,6,full_vs_baseline,full,baseline,23.1884057971015,13.9130434782609,1.39130434782609
+43,Melbourne 2BR Apartment/unit,0.5,418,148,128,209,full_vs_baseline,full,baseline,2.39234449760766,3.90625,5
+43,Melbourne 3BR Apartment/unit,0.5,94,40,38,47,full_vs_baseline,full,baseline,8.51063829787234,10.5263157894737,4
+43,Yarra Ranges 3BR House/townhouse,0.5,23,22,10,12,full_vs_baseline,full,baseline,6.52173913043479,7.82608695652175,0.782608695652175
+44,Melbourne 2BR Apartment/unit,0.1,381,142,104,39,full_vs_baseline,full,baseline,18.857258227337,7.07147183525138,7.35433070866143
+44,Melbourne 3BR Apartment/unit,0.1,70,37,15,7,full_vs_baseline,full,baseline,50,23.3333333333333,3.5
+44,Yarra Ranges 3BR House/townhouse,0.1,31,28,11,4,full_vs_baseline,full,baseline,14.5161290322581,5.27859237536657,0.580645161290323
+44,Melbourne 2BR Apartment/unit,0.25,381,142,104,96,full_vs_baseline,full,baseline,10.2034120734909,9.41853422168387,9.79527559055122
+44,Melbourne 3BR Apartment/unit,0.25,70,37,15,18,full_vs_baseline,full,baseline,11.9047619047619,14.2857142857143,2.14285714285714
+44,Yarra Ranges 3BR House/townhouse,0.25,31,28,11,8,full_vs_baseline,full,baseline,27.0161290322581,19.6480938416422,2.16129032258065
+44,Melbourne 2BR Apartment/unit,0.5,381,142,104,191,full_vs_baseline,full,baseline,11.446867570873,21.0226125580457,21.8635170603675
+44,Melbourne 3BR Apartment/unit,0.5,70,37,15,35,full_vs_baseline,full,baseline,4.28571428571428,10,1.5
+44,Yarra Ranges 3BR House/townhouse,0.5,31,28,11,16,full_vs_baseline,full,baseline,8.26612903225808,12.0234604105572,1.32258064516129
+45,Melbourne 2BR Apartment/unit,0.1,399,140,125,40,full_vs_baseline,full,baseline,3.67167919799508,1.17493734335843,1.46867167919803
+45,Melbourne 3BR Apartment/unit,0.1,100,45,28,10,full_vs_baseline,full,baseline,12,4.28571428571428,1.2
+45,Yarra Ranges 3BR House/townhouse,0.1,34,25,11,4,full_vs_baseline,full,baseline,42.6470588235294,15.5080213903743,1.70588235294118
+45,Melbourne 2BR Apartment/unit,0.25,399,140,125,100,full_vs_baseline,full,baseline,14.6716791979949,11.7373433583959,14.6716791979949
+45,Melbourne 3BR Apartment/unit,0.25,100,45,28,25,full_vs_baseline,full,baseline,4,3.57142857142857,1
+45,Yarra Ranges 3BR House/townhouse,0.25,34,25,11,9,full_vs_baseline,full,baseline,34.3137254901961,28.0748663101604,3.08823529411765
+45,Melbourne 2BR Apartment/unit,0.5,399,140,125,200,full_vs_baseline,full,baseline,7.17167919799491,11.4746867167918,14.3433583959898
+45,Melbourne 3BR Apartment/unit,0.5,100,45,28,50,full_vs_baseline,full,baseline,8,14.2857142857143,4
+45,Yarra Ranges 3BR House/townhouse,0.5,34,25,11,17,full_vs_baseline,full,baseline,14.7058823529412,22.7272727272727,2.5
+46,Melbourne 2BR Apartment/unit,0.1,325,136,114,33,full_vs_baseline,full,baseline,-7.80419580419585,-2.2591093117409,-2.57538461538463
+46,Melbourne 3BR Apartment/unit,0.1,89,37,33,9,full_vs_baseline,full,baseline,-3.74531835205993,-1.02145045965271,-0.337078651685394
+46,Yarra Ranges 3BR House/townhouse,0.1,28,21,6,3,full_vs_baseline,full,baseline,11.9047619047619,5.95238095238095,0.357142857142857
+46,Melbourne 2BR Apartment/unit,0.25,325,136,114,82,full_vs_baseline,full,baseline,-5.80863039399623,-4.17813765182185,-4.76307692307691
+46,Melbourne 3BR Apartment/unit,0.25,89,37,33,23,full_vs_baseline,full,baseline,10.7474352711285,7.49063670411983,2.47191011235955
+46,Yarra Ranges 3BR House/townhouse,0.25,28,21,6,7,full_vs_baseline,full,baseline,21.4285714285714,25,1.5
+46,Melbourne 2BR Apartment/unit,0.5,325,136,114,163,full_vs_baseline,full,baseline,-1.33459178857946,-1.90823211875835,-2.17538461538452
+46,Melbourne 3BR Apartment/unit,0.5,89,37,33,45,full_vs_baseline,full,baseline,0.699126092384533,0.953353762342546,0.314606741573041
+46,Yarra Ranges 3BR House/townhouse,0.5,28,21,6,14,full_vs_baseline,full,baseline,7.14285714285714,16.6666666666667,1
+47,Melbourne 2BR Apartment/unit,0.1,452,143,121,46,full_vs_baseline,full,baseline,31.9257406694883,12.1370584363344,14.6858407079646
+47,Melbourne 3BR Apartment/unit,0.1,134,49,47,14,full_vs_baseline,full,baseline,50.6396588486141,15.0841536995872,7.08955223880597
+47,Yarra Ranges 3BR House/townhouse,0.1,25,22,10,3,full_vs_baseline,full,baseline,26.6666666666667,8,0.8
+47,Melbourne 2BR Apartment/unit,0.25,452,143,121,113,full_vs_baseline,full,baseline,34.2920353982301,32.0247933884298,38.75
+47,Melbourne 3BR Apartment/unit,0.25,134,49,47,34,full_vs_baseline,full,baseline,41.3959613696225,29.946014607812,14.0746268656717
+47,Yarra Ranges 3BR House/townhouse,0.25,25,22,10,7,full_vs_baseline,full,baseline,2.85714285714285,1.99999999999999,0.199999999999999
+47,Melbourne 2BR Apartment/unit,0.5,452,143,121,226,full_vs_baseline,full,baseline,13.4955752212389,25.2066115702479,30.5
+47,Melbourne 3BR Apartment/unit,0.5,134,49,47,67,full_vs_baseline,full,baseline,18.6567164179104,26.5957446808511,12.5
+47,Yarra Ranges 3BR House/townhouse,0.5,25,22,10,13,full_vs_baseline,full,baseline,13.8461538461538,18,1.8
+48,Melbourne 2BR Apartment/unit,0.1,322,140,115,33,full_vs_baseline,full,baseline,30.952380952381,8.88198757763977,10.2142857142857
+48,Melbourne 3BR Apartment/unit,0.1,89,43,34,9,full_vs_baseline,full,baseline,61.7977528089888,16.3582286847323,5.56179775280899
+48,Yarra Ranges 3BR House/townhouse,0.1,23,21,10,3,full_vs_baseline,full,baseline,-10.1449275362319,-3.04347826086956,-0.304347826086956
+48,Melbourne 2BR Apartment/unit,0.25,322,140,115,81,full_vs_baseline,full,baseline,19.8412698412698,13.9751552795031,16.0714285714285
+48,Melbourne 3BR Apartment/unit,0.25,89,43,34,23,full_vs_baseline,full,baseline,40.0586223742061,27.0984798413747,9.21348314606741
+48,Yarra Ranges 3BR House/townhouse,0.25,23,21,10,6,full_vs_baseline,full,baseline,6.52173913043479,3.91304347826087,0.391304347826087
+48,Melbourne 2BR Apartment/unit,0.5,322,140,115,161,full_vs_baseline,full,baseline,14.5962732919255,20.4347826086957,23.5
+48,Melbourne 3BR Apartment/unit,0.5,89,43,34,45,full_vs_baseline,full,baseline,15.1310861423221,20.0264375413087,6.80898876404495
+48,Yarra Ranges 3BR House/townhouse,0.5,23,21,10,12,full_vs_baseline,full,baseline,6.52173913043479,7.82608695652175,0.782608695652175
+49,Melbourne 2BR Apartment/unit,0.1,387,169,158,39,full_vs_baseline,full,baseline,36.096203538064,8.90982239230692,14.0775193798449
+49,Melbourne 3BR Apartment/unit,0.1,84,39,46,9,full_vs_baseline,full,baseline,45.2380952380953,8.85093167701864,4.07142857142857
+49,Yarra Ranges 3BR House/townhouse,0.1,29,28,12,3,full_vs_baseline,full,baseline,25.2873563218391,6.32183908045977,0.758620689655172
+49,Melbourne 2BR Apartment/unit,0.25,387,169,158,97,full_vs_baseline,full,baseline,23.090652388183,14.1759068459098,22.3979328165375
+49,Melbourne 3BR Apartment/unit,0.25,84,39,46,21,full_vs_baseline,full,baseline,26.1904761904762,11.9565217391304,5.5
+49,Yarra Ranges 3BR House/townhouse,0.25,29,28,12,8,full_vs_baseline,full,baseline,21.1206896551724,14.0804597701149,1.68965517241379
+49,Melbourne 2BR Apartment/unit,0.5,387,169,158,194,full_vs_baseline,full,baseline,16.9050853778737,20.7568769829588,32.795865633075
+49,Melbourne 3BR Apartment/unit,0.5,84,39,46,42,full_vs_baseline,full,baseline,9.52380952380952,8.69565217391305,4
+49,Yarra Ranges 3BR House/townhouse,0.5,29,28,12,15,full_vs_baseline,full,baseline,11.9540229885057,14.9425287356322,1.79310344827586
+50,Melbourne 2BR Apartment/unit,0.1,364,140,122,37,full_vs_baseline,full,baseline,20.5375705375705,6.22860745811564,7.59890109890109
+50,Melbourne 3BR Apartment/unit,0.1,92,46,34,10,full_vs_baseline,full,baseline,-6.95652173913044,-2.0460358056266,-0.695652173913044
+50,Yarra Ranges 3BR House/townhouse,0.1,28,26,9,3,full_vs_baseline,full,baseline,34.5238095238095,11.5079365079365,1.03571428571429
+50,Melbourne 2BR Apartment/unit,0.25,364,140,122,91,full_vs_baseline,full,baseline,17.032967032967,12.7049180327869,15.5
+50,Melbourne 3BR Apartment/unit,0.25,92,46,34,23,full_vs_baseline,full,baseline,-2.17391304347826,-1.47058823529412,-0.5
+50,Yarra Ranges 3BR House/townhouse,0.25,28,26,9,7,full_vs_baseline,full,baseline,25,19.4444444444444,1.75
+50,Melbourne 2BR Apartment/unit,0.5,364,140,122,182,full_vs_baseline,full,baseline,9.89010989010989,14.7540983606557,18
+50,Melbourne 3BR Apartment/unit,0.5,92,46,34,46,full_vs_baseline,full,baseline,8.69565217391304,11.7647058823529,4
+50,Yarra Ranges 3BR House/townhouse,0.5,28,26,9,14,full_vs_baseline,full,baseline,10.7142857142857,16.6666666666667,1.5
+1,Melbourne 2BR Apartment/unit,0.1,374,150,103,38,property_only_vs_baseline,property_only,baseline,14.189216356399,5.23485651983653,5.39190221543163
+1,Melbourne 3BR Apartment/unit,0.1,82,39,27,9,property_only_vs_baseline,property_only,baseline,-18.1120144534779,-6.0373381511593,-1.63008130081301
+1,Yarra Ranges 3BR House/townhouse,0.1,19,17,6,2,property_only_vs_baseline,property_only,baseline,-31.5789473684211,-10.5263157894737,-0.631578947368421
+1,Melbourne 2BR Apartment/unit,0.25,374,150,103,94,property_only_vs_baseline,property_only,baseline,20.3322334736603,18.5556305487774,19.1122994652407
+1,Melbourne 3BR Apartment/unit,0.25,82,39,27,21,property_only_vs_baseline,property_only,baseline,10.4594141179507,8.13509986951723,2.19647696476965
+1,Yarra Ranges 3BR House/townhouse,0.25,19,17,6,5,property_only_vs_baseline,property_only,baseline,18.421052631579,15.3508771929825,0.921052631578948
+1,Melbourne 2BR Apartment/unit,0.5,374,150,103,187,property_only_vs_baseline,property_only,baseline,11.0898905016552,20.1340730466944,20.7380952380952
+1,Melbourne 3BR Apartment/unit,0.5,82,39,27,41,property_only_vs_baseline,property_only,baseline,19.1056910569106,29.0123456790123,7.83333333333333
+1,Yarra Ranges 3BR House/townhouse,0.5,19,17,6,10,property_only_vs_baseline,property_only,baseline,8.42105263157895,14.0350877192982,0.842105263157895
+2,Melbourne 2BR Apartment/unit,0.1,294,145,87,30,property_only_vs_baseline,property_only,baseline,15.9637188208617,5.50473062788335,4.78911564625851
+2,Melbourne 3BR Apartment/unit,0.1,68,42,23,7,property_only_vs_baseline,property_only,baseline,-5.25210084033615,-1.59846547314578,-0.36764705882353
+2,Yarra Ranges 3BR House/townhouse,0.1,35,28,13,4,property_only_vs_baseline,property_only,baseline,-12.1428571428571,-3.73626373626374,-0.485714285714286
+2,Melbourne 2BR Apartment/unit,0.25,294,145,87,74,property_only_vs_baseline,property_only,baseline,10.8258536829966,9.20819738553732,8.01113172541747
+2,Melbourne 3BR Apartment/unit,0.25,68,42,23,17,property_only_vs_baseline,property_only,baseline,-10.2941176470588,-7.60869565217391,-1.75
+2,Yarra Ranges 3BR House/townhouse,0.25,35,28,13,9,property_only_vs_baseline,property_only,baseline,7.3015873015873,5.05494505494506,0.657142857142858
+2,Melbourne 2BR Apartment/unit,0.5,294,145,87,147,property_only_vs_baseline,property_only,baseline,6.567242281528,11.0963748894783,9.65384615384616
+2,Melbourne 3BR Apartment/unit,0.5,68,42,23,34,property_only_vs_baseline,property_only,baseline,0,0,0
+2,Yarra Ranges 3BR House/townhouse,0.5,35,28,13,18,property_only_vs_baseline,property_only,baseline,1.74603174603175,2.41758241758242,0.314285714285715
+3,Melbourne 2BR Apartment/unit,0.1,392,161,106,40,property_only_vs_baseline,property_only,baseline,5.10204081632656,1.9252984212553,2.04081632653062
+3,Melbourne 3BR Apartment/unit,0.1,79,45,28,8,property_only_vs_baseline,property_only,baseline,22.8902953586498,6.54008438818565,1.83122362869198
+3,Yarra Ranges 3BR House/townhouse,0.1,25,22,12,3,property_only_vs_baseline,property_only,baseline,18.6666666666666,4.66666666666666,0.56
+3,Melbourne 2BR Apartment/unit,0.25,392,161,106,98,property_only_vs_baseline,property_only,baseline,7.36151603498542,6.80592991913747,7.21428571428572
+3,Melbourne 3BR Apartment/unit,0.25,79,45,28,20,property_only_vs_baseline,property_only,baseline,11.2236286919831,8.01687763713082,2.24472573839663
+3,Yarra Ranges 3BR House/townhouse,0.25,25,22,12,7,property_only_vs_baseline,property_only,baseline,23.4285714285714,13.6666666666667,1.64
+3,Melbourne 2BR Apartment/unit,0.5,392,161,106,196,property_only_vs_baseline,property_only,baseline,1.23049219687875,2.27524972253053,2.41176470588236
+3,Melbourne 3BR Apartment/unit,0.5,79,45,28,40,property_only_vs_baseline,property_only,baseline,-0.443037974683524,-0.632911392405033,-0.177215189873408
+3,Yarra Ranges 3BR House/townhouse,0.5,25,22,12,13,property_only_vs_baseline,property_only,baseline,13.5384615384616,14.6666666666667,1.76
+4,Melbourne 2BR Apartment/unit,0.1,475,133,174,48,property_only_vs_baseline,property_only,baseline,12.326754385965,3.40048396854206,5.91684210526319
+4,Melbourne 3BR Apartment/unit,0.1,122,50,68,13,property_only_vs_baseline,property_only,baseline,5.80075662042886,1.10896817743493,0.754098360655751
+4,Yarra Ranges 3BR House/townhouse,0.1,25,21,4,3,property_only_vs_baseline,property_only,baseline,17.3333333333333,13,0.52
+4,Melbourne 2BR Apartment/unit,0.25,475,133,174,119,property_only_vs_baseline,property_only,baseline,19.0173472897931,13.0061168246286,22.6306432748538
+4,Melbourne 3BR Apartment/unit,0.25,122,50,68,31,property_only_vs_baseline,property_only,baseline,12.4650600589257,5.68260090921616,3.86416861826698
+4,Yarra Ranges 3BR House/townhouse,0.25,25,21,4,7,property_only_vs_baseline,property_only,baseline,12.5714285714286,22,0.88
+4,Melbourne 2BR Apartment/unit,0.5,475,133,174,238,property_only_vs_baseline,property_only,baseline,11.1275246940882,15.2204073401896,26.4835087719298
+4,Melbourne 3BR Apartment/unit,0.5,122,50,68,61,property_only_vs_baseline,property_only,baseline,14.207650273224,12.7450980392157,8.66666666666666
+4,Yarra Ranges 3BR House/townhouse,0.5,25,21,4,13,property_only_vs_baseline,property_only,baseline,-0.615384615384615,-2,-0.0800000000000001
+5,Melbourne 2BR Apartment/unit,0.1,306,154,99,31,property_only_vs_baseline,property_only,baseline,-9.77229601518021,-3.06001188354128,-3.02941176470586
+5,Melbourne 3BR Apartment/unit,0.1,104,42,46,11,property_only_vs_baseline,property_only,baseline,-16.958041958042,-4.0551839464883,-1.86538461538462
+5,Yarra Ranges 3BR House/townhouse,0.1,26,19,6,3,property_only_vs_baseline,property_only,baseline,21.3675213675214,10.6837606837607,0.641025641025641
+5,Melbourne 2BR Apartment/unit,0.25,306,154,99,77,property_only_vs_baseline,property_only,baseline,-6.93550147331667,-5.39427892369075,-5.34033613445384
+5,Melbourne 3BR Apartment/unit,0.25,104,42,46,26,property_only_vs_baseline,property_only,baseline,-13.4615384615385,-7.60869565217391,-3.5
+5,Yarra Ranges 3BR House/townhouse,0.25,26,19,6,7,property_only_vs_baseline,property_only,baseline,5.4945054945055,6.41025641025641,0.384615384615385
+5,Melbourne 2BR Apartment/unit,0.5,306,154,99,153,property_only_vs_baseline,property_only,baseline,6.33986928104574,9.79797979797978,9.69999999999999
+5,Melbourne 3BR Apartment/unit,0.5,104,42,46,52,property_only_vs_baseline,property_only,baseline,8.46153846153847,9.56521739130435,4.4
+5,Yarra Ranges 3BR House/townhouse,0.5,26,19,6,13,property_only_vs_baseline,property_only,baseline,7.69230769230769,16.6666666666667,1
+6,Melbourne 2BR Apartment/unit,0.1,347,131,141,35,property_only_vs_baseline,property_only,baseline,-4.91972004940311,-1.22120710446177,-1.72190201729109
+6,Melbourne 3BR Apartment/unit,0.1,72,36,22,8,property_only_vs_baseline,property_only,baseline,6.94444444444444,2.52525252525252,0.555555555555555
+6,Yarra Ranges 3BR House/townhouse,0.1,34,27,10,4,property_only_vs_baseline,property_only,baseline,33.0882352941176,13.2352941176471,1.32352941176471
+6,Melbourne 2BR Apartment/unit,0.25,347,131,141,87,property_only_vs_baseline,property_only,baseline,-1.22513876861475,-0.755936687017608,-1.06587072869483
+6,Melbourne 3BR Apartment/unit,0.25,72,36,22,18,property_only_vs_baseline,property_only,baseline,5.55555555555555,4.54545454545455,1
+6,Yarra Ranges 3BR House/townhouse,0.25,34,27,10,9,property_only_vs_baseline,property_only,baseline,26.1437908496732,23.5294117647059,2.35294117647059
+6,Melbourne 2BR Apartment/unit,0.5,347,131,141,174,property_only_vs_baseline,property_only,baseline,2.28657939827585,2.82173627872339,3.97864815299998
+6,Melbourne 3BR Apartment/unit,0.5,72,36,22,36,property_only_vs_baseline,property_only,baseline,-3.47222222222223,-5.68181818181818,-1.25
+6,Yarra Ranges 3BR House/townhouse,0.5,34,27,10,17,property_only_vs_baseline,property_only,baseline,11.7647058823529,20,2
+7,Melbourne 2BR Apartment/unit,0.1,433,165,135,44,property_only_vs_baseline,property_only,baseline,3.82217090069276,1.24574458985542,1.68175519630482
+7,Melbourne 3BR Apartment/unit,0.1,100,36,39,10,property_only_vs_baseline,property_only,baseline,0.999999999999979,0.25641025641025,0.0999999999999979
+7,Yarra Ranges 3BR House/townhouse,0.1,24,22,6,3,property_only_vs_baseline,property_only,baseline,41.6666666666667,20.8333333333333,1.25
+7,Melbourne 2BR Apartment/unit,0.25,433,165,135,109,property_only_vs_baseline,property_only,baseline,0.993424723322794,0.802098480312474,1.08283294842185
+7,Melbourne 3BR Apartment/unit,0.25,100,36,39,25,property_only_vs_baseline,property_only,baseline,-10.2,-6.53846153846154,-2.55
+7,Yarra Ranges 3BR House/townhouse,0.25,24,22,6,6,property_only_vs_baseline,property_only,baseline,33.3333333333333,33.3333333333333,2
+7,Melbourne 2BR Apartment/unit,0.5,433,165,135,217,property_only_vs_baseline,property_only,baseline,-0.697249770801633,-1.12076444639967,-1.51303200263955
+7,Melbourne 3BR Apartment/unit,0.5,100,36,39,50,property_only_vs_baseline,property_only,baseline,-7,-8.97435897435898,-3.5
+7,Yarra Ranges 3BR House/townhouse,0.5,24,22,6,12,property_only_vs_baseline,property_only,baseline,13.8888888888889,27.7777777777778,1.66666666666667
+8,Melbourne 2BR Apartment/unit,0.1,385,150,143,39,property_only_vs_baseline,property_only,baseline,-10.2197802197802,-2.78721278721277,-3.98571428571426
+8,Melbourne 3BR Apartment/unit,0.1,132,46,51,14,property_only_vs_baseline,property_only,baseline,9.57792207792206,2.62923351158645,1.34090909090909
+8,Yarra Ranges 3BR House/townhouse,0.1,32,24,6,4,property_only_vs_baseline,property_only,baseline,6.25,4.16666666666667,0.25
+8,Melbourne 2BR Apartment/unit,0.25,385,150,143,97,property_only_vs_baseline,property_only,baseline,-0.441826215022112,-0.299700299700317,-0.428571428571452
+8,Melbourne 3BR Apartment/unit,0.25,132,46,51,33,property_only_vs_baseline,property_only,baseline,8.33333333333334,5.3921568627451,2.75
+8,Yarra Ranges 3BR House/townhouse,0.25,32,24,6,8,property_only_vs_baseline,property_only,baseline,18.75,25,1.5
+8,Melbourne 2BR Apartment/unit,0.5,385,150,143,193,property_only_vs_baseline,property_only,baseline,0.920116153276729,1.24183508798886,1.77582417582408
+8,Melbourne 3BR Apartment/unit,0.5,132,46,51,66,property_only_vs_baseline,property_only,baseline,11.2258953168044,14.5276292335116,7.40909090909091
+8,Yarra Ranges 3BR House/townhouse,0.5,32,24,6,16,property_only_vs_baseline,property_only,baseline,12.5,33.3333333333333,2
+9,Melbourne 2BR Apartment/unit,0.1,363,162,101,37,property_only_vs_baseline,property_only,baseline,8.6627950264314,3.17349916809863,3.20523415977962
+9,Melbourne 3BR Apartment/unit,0.1,82,43,20,9,property_only_vs_baseline,property_only,baseline,-4.94579945799459,-2.22560975609757,-0.445121951219513
+9,Yarra Ranges 3BR House/townhouse,0.1,31,23,5,4,property_only_vs_baseline,property_only,baseline,8.87096774193548,7.09677419354839,0.354838709677419
+9,Melbourne 2BR Apartment/unit,0.25,363,162,101,91,property_only_vs_baseline,property_only,baseline,8.94722992625089,8.06136557711713,8.1419792328883
+9,Melbourne 3BR Apartment/unit,0.25,82,43,20,21,property_only_vs_baseline,property_only,baseline,-3.98208063713289,-4.18118466898954,-0.836236933797907
+9,Yarra Ranges 3BR House/townhouse,0.25,31,23,5,8,property_only_vs_baseline,property_only,baseline,21.3709677419355,34.1935483870968,1.70967741935484
+9,Melbourne 2BR Apartment/unit,0.5,363,162,101,182,property_only_vs_baseline,property_only,baseline,4.96019132382766,8.93816654392707,9.02754820936634
+9,Melbourne 3BR Apartment/unit,0.5,82,43,20,41,property_only_vs_baseline,property_only,baseline,-4.8780487804878,-10,-2
+9,Yarra Ranges 3BR House/townhouse,0.5,31,23,5,16,property_only_vs_baseline,property_only,baseline,2.62096774193548,8.38709677419355,0.419354838709678
+10,Melbourne 2BR Apartment/unit,0.1,431,142,154,44,property_only_vs_baseline,property_only,baseline,-5.42782816564733,-1.55080804732781,-2.38824439288482
+10,Melbourne 3BR Apartment/unit,0.1,121,49,51,13,property_only_vs_baseline,property_only,baseline,-8.8154269972452,-2.24706962674878,-1.14600550964188
+10,Yarra Ranges 3BR House/townhouse,0.1,30,23,7,3,property_only_vs_baseline,property_only,baseline,-23.3333333333333,-10,-0.7
+10,Melbourne 2BR Apartment/unit,0.25,431,142,154,108,property_only_vs_baseline,property_only,baseline,9.28338654556753,6.51042692806034,10.0260574692129
+10,Melbourne 3BR Apartment/unit,0.25,121,49,51,31,property_only_vs_baseline,property_only,baseline,-13.1165022660624,-7.97277588721437,-4.06611570247933
+10,Yarra Ranges 3BR House/townhouse,0.25,30,23,7,8,property_only_vs_baseline,property_only,baseline,1.66666666666667,1.9047619047619,0.133333333333334
+10,Melbourne 2BR Apartment/unit,0.5,431,142,154,216,property_only_vs_baseline,property_only,baseline,11.9702909566099,16.7894990040762,25.8558284662773
+10,Melbourne 3BR Apartment/unit,0.5,121,49,51,61,property_only_vs_baseline,property_only,baseline,6.21189540712636,7.42991411440606,3.78925619834708
+10,Yarra Ranges 3BR House/townhouse,0.5,30,23,7,15,property_only_vs_baseline,property_only,baseline,10,21.4285714285714,1.5
+11,Melbourne 2BR Apartment/unit,0.1,361,137,95,37,property_only_vs_baseline,property_only,baseline,18.5490753911807,7.22437673130194,6.86315789473684
+11,Melbourne 3BR Apartment/unit,0.1,115,48,34,12,property_only_vs_baseline,property_only,baseline,3.768115942029,1.32992327365729,0.45217391304348
+11,Yarra Ranges 3BR House/townhouse,0.1,30,23,10,3,property_only_vs_baseline,property_only,baseline,0,1.38777878078145e-15,1.11022302462516e-16
+11,Melbourne 2BR Apartment/unit,0.25,361,137,95,91,property_only_vs_baseline,property_only,baseline,16.8710237131289,16.1606648199446,15.3526315789473
+11,Melbourne 3BR Apartment/unit,0.25,115,48,34,29,property_only_vs_baseline,property_only,baseline,-3.7031484257871,-3.15856777493606,-1.07391304347826
+11,Yarra Ranges 3BR House/townhouse,0.25,30,23,10,8,property_only_vs_baseline,property_only,baseline,29.1666666666667,23.3333333333333,2.33333333333333
+11,Melbourne 2BR Apartment/unit,0.5,361,137,95,181,property_only_vs_baseline,property_only,baseline,4.29194533294567,8.17728531855966,7.76842105263167
+11,Melbourne 3BR Apartment/unit,0.5,115,48,34,58,property_only_vs_baseline,property_only,baseline,-2.55372313843077,-4.35635123614662,-1.48115942028985
+11,Yarra Ranges 3BR House/townhouse,0.5,30,23,10,15,property_only_vs_baseline,property_only,baseline,13.3333333333333,20,2
+12,Melbourne 2BR Apartment/unit,0.1,333,151,133,34,property_only_vs_baseline,property_only,baseline,-4.64582229288101,-1.18765381923274,-1.57957957957955
+12,Melbourne 3BR Apartment/unit,0.1,89,40,41,9,property_only_vs_baseline,property_only,baseline,-1.62297128589263,-0.356261989586187,-0.146067415730337
+12,Yarra Ranges 3BR House/townhouse,0.1,25,18,6,3,property_only_vs_baseline,property_only,baseline,26,13,0.78
+12,Melbourne 2BR Apartment/unit,0.25,333,151,133,84,property_only_vs_baseline,property_only,baseline,-1.84470184470179,-1.16507484928534,-1.5495495495495
+12,Melbourne 3BR Apartment/unit,0.25,89,40,41,23,property_only_vs_baseline,property_only,baseline,-4.03843022309071,-2.26546085685576,-0.928838951310864
+12,Yarra Ranges 3BR House/townhouse,0.25,25,18,6,7,property_only_vs_baseline,property_only,baseline,33.1428571428571,38.6666666666667,2.32
+12,Melbourne 2BR Apartment/unit,0.5,333,151,133,167,property_only_vs_baseline,property_only,baseline,-1.17746489003973,-1.47847095215514,-1.96636636636634
+12,Melbourne 3BR Apartment/unit,0.5,89,40,41,45,property_only_vs_baseline,property_only,baseline,-3.84519350811484,-4.22033433817482,-1.73033707865168
+12,Yarra Ranges 3BR House/townhouse,0.5,25,18,6,13,property_only_vs_baseline,property_only,baseline,14.4615384615385,31.3333333333333,1.88
+13,Melbourne 2BR Apartment/unit,0.1,376,135,82,38,property_only_vs_baseline,property_only,baseline,12.4020156774916,5.74727555786195,4.7127659574468
+13,Melbourne 3BR Apartment/unit,0.1,101,44,25,11,property_only_vs_baseline,property_only,baseline,11.6111611161116,5.1089108910891,1.27722772277228
+13,Yarra Ranges 3BR House/townhouse,0.1,26,22,7,3,property_only_vs_baseline,property_only,baseline,6.4102564102564,2.74725274725274,0.192307692307692
+13,Melbourne 2BR Apartment/unit,0.25,376,135,82,94,property_only_vs_baseline,property_only,baseline,11.8794326241135,13.6178861788618,11.1666666666667
+13,Melbourne 3BR Apartment/unit,0.25,101,44,25,26,property_only_vs_baseline,property_only,baseline,-0.39350088855041,-0.40924092409243,-0.102310231023107
+13,Yarra Ranges 3BR House/townhouse,0.25,26,22,7,7,property_only_vs_baseline,property_only,baseline,15.9340659340659,15.9340659340659,1.11538461538462
+13,Melbourne 2BR Apartment/unit,0.5,376,135,82,188,property_only_vs_baseline,property_only,baseline,3.46901017576318,7.95334040296924,6.52173913043478
+13,Melbourne 3BR Apartment/unit,0.5,101,44,25,51,property_only_vs_baseline,property_only,baseline,0.737720830906632,1.50495049504954,0.376237623762384
+13,Yarra Ranges 3BR House/townhouse,0.5,26,22,7,13,property_only_vs_baseline,property_only,baseline,7.69230769230769,14.2857142857143,1
+14,Melbourne 2BR Apartment/unit,0.1,351,133,70,36,property_only_vs_baseline,property_only,baseline,16.1680911680912,8.31501831501833,5.82051282051283
+14,Melbourne 3BR Apartment/unit,0.1,93,37,19,10,property_only_vs_baseline,property_only,baseline,19.5698924731183,10.2999434069044,1.95698924731183
+14,Yarra Ranges 3BR House/townhouse,0.1,27,21,6,3,property_only_vs_baseline,property_only,baseline,44.4444444444444,22.2222222222222,1.33333333333333
+14,Melbourne 2BR Apartment/unit,0.25,351,133,70,88,property_only_vs_baseline,property_only,baseline,7.8167203167203,9.82673411244838,6.87871387871386
+14,Melbourne 3BR Apartment/unit,0.25,93,37,19,24,property_only_vs_baseline,property_only,baseline,10.8198924731183,13.6672325976231,2.59677419354839
+14,Yarra Ranges 3BR House/townhouse,0.25,27,21,6,7,property_only_vs_baseline,property_only,baseline,20.6349206349206,24.0740740740741,1.44444444444444
+14,Melbourne 2BR Apartment/unit,0.5,351,133,70,176,property_only_vs_baseline,property_only,baseline,4.09107096607095,10.2861212861213,7.20028490028488
+14,Melbourne 3BR Apartment/unit,0.5,93,37,19,47,property_only_vs_baseline,property_only,baseline,2.97414779226721,7.35710243350309,1.39784946236559
+14,Yarra Ranges 3BR House/townhouse,0.5,27,21,6,14,property_only_vs_baseline,property_only,baseline,-0.793650793650796,-1.85185185185185,-0.111111111111111
+15,Melbourne 2BR Apartment/unit,0.1,378,154,109,38,property_only_vs_baseline,property_only,baseline,18.2692843219158,6.36910829571378,6.94232804232802
+15,Melbourne 3BR Apartment/unit,0.1,80,38,34,8,property_only_vs_baseline,property_only,baseline,7.49999999999998,1.76470588235294,0.599999999999998
+15,Yarra Ranges 3BR House/townhouse,0.1,24,24,7,3,property_only_vs_baseline,property_only,baseline,4.16666666666666,1.78571428571429,0.125
+15,Melbourne 2BR Apartment/unit,0.25,378,154,109,95,property_only_vs_baseline,property_only,baseline,12.801448064606,11.1572253774089,12.1613756613757
+15,Melbourne 3BR Apartment/unit,0.25,80,38,34,20,property_only_vs_baseline,property_only,baseline,-17.5,-10.2941176470588,-3.5
+15,Yarra Ranges 3BR House/townhouse,0.25,24,24,7,6,property_only_vs_baseline,property_only,baseline,20.8333333333333,17.8571428571429,1.25
+15,Melbourne 2BR Apartment/unit,0.5,378,154,109,189,property_only_vs_baseline,property_only,baseline,6.65154950869236,11.5334207077326,12.5714285714286
+15,Melbourne 3BR Apartment/unit,0.5,80,38,34,40,property_only_vs_baseline,property_only,baseline,-7.5,-8.82352941176471,-3
+15,Yarra Ranges 3BR House/townhouse,0.5,24,24,7,12,property_only_vs_baseline,property_only,baseline,12.5,21.4285714285714,1.5
+16,Melbourne 2BR Apartment/unit,0.1,402,156,96,41,property_only_vs_baseline,property_only,baseline,20.8348501395462,8.89821724709784,8.54228855721393
+16,Melbourne 3BR Apartment/unit,0.1,111,43,31,12,property_only_vs_baseline,property_only,baseline,13.7387387387388,5.31822144725371,1.64864864864865
+16,Yarra Ranges 3BR House/townhouse,0.1,22,19,6,3,property_only_vs_baseline,property_only,baseline,22.7272727272727,11.3636363636364,0.681818181818182
+16,Melbourne 2BR Apartment/unit,0.25,402,156,96,101,property_only_vs_baseline,property_only,baseline,11.5649475395301,12.167288557214,11.6805970149254
+16,Melbourne 3BR Apartment/unit,0.25,111,43,31,28,property_only_vs_baseline,property_only,baseline,-0.0707850707850788,-0.0639349026445857,-0.0198198198198218
+16,Yarra Ranges 3BR House/townhouse,0.25,22,19,6,6,property_only_vs_baseline,property_only,baseline,14.3939393939394,14.3939393939394,0.863636363636364
+16,Melbourne 2BR Apartment/unit,0.5,402,156,96,201,property_only_vs_baseline,property_only,baseline,4.05117270788913,8.48214285714285,8.14285714285714
+16,Melbourne 3BR Apartment/unit,0.5,111,43,31,56,property_only_vs_baseline,property_only,baseline,1.35778635778634,2.45277535600115,0.760360360360355
+16,Yarra Ranges 3BR House/townhouse,0.5,22,19,6,11,property_only_vs_baseline,property_only,baseline,9.09090909090909,16.6666666666667,1
+17,Melbourne 2BR Apartment/unit,0.1,301,149,113,31,property_only_vs_baseline,property_only,baseline,4.39395563176516,1.20542145650195,1.3621262458472
+17,Melbourne 3BR Apartment/unit,0.1,68,35,24,7,property_only_vs_baseline,property_only,baseline,-1.9607843137255,-0.571895424836605,-0.137254901960785
+17,Yarra Ranges 3BR House/townhouse,0.1,23,21,8,3,property_only_vs_baseline,property_only,baseline,31.8840579710145,11.9565217391304,0.956521739130435
+17,Melbourne 2BR Apartment/unit,0.25,301,149,113,76,property_only_vs_baseline,property_only,baseline,5.87952439237635,3.95437038779294,4.46843853820602
+17,Melbourne 3BR Apartment/unit,0.25,68,35,24,17,property_only_vs_baseline,property_only,baseline,-8.82352941176471,-6.25,-1.5
+17,Yarra Ranges 3BR House/townhouse,0.25,23,21,8,6,property_only_vs_baseline,property_only,baseline,40.2173913043478,30.1630434782609,2.41304347826087
+17,Melbourne 2BR Apartment/unit,0.5,301,149,113,151,property_only_vs_baseline,property_only,baseline,-0.786561351785414,-1.051068709023,-1.18770764119598
+17,Melbourne 3BR Apartment/unit,0.5,68,35,24,34,property_only_vs_baseline,property_only,baseline,-7.56302521008403,-10.7142857142857,-2.57142857142857
+17,Yarra Ranges 3BR House/townhouse,0.5,23,21,8,12,property_only_vs_baseline,property_only,baseline,6.8840579710145,10.3260869565217,0.826086956521739
+18,Melbourne 2BR Apartment/unit,0.1,328,135,120,33,property_only_vs_baseline,property_only,baseline,0.990391722098938,0.272357723577207,0.326829268292649
+18,Melbourne 3BR Apartment/unit,0.1,86,38,41,9,property_only_vs_baseline,property_only,baseline,-10.6373815676142,-2.33503497825677,-0.957364341085275
+18,Yarra Ranges 3BR House/townhouse,0.1,34,29,13,4,property_only_vs_baseline,property_only,baseline,49.2647058823529,15.158371040724,1.97058823529412
+18,Melbourne 2BR Apartment/unit,0.25,328,135,120,82,property_only_vs_baseline,property_only,baseline,10.5110336817654,7.18253968253969,8.61904761904762
+18,Melbourne 3BR Apartment/unit,0.25,86,38,41,22,property_only_vs_baseline,property_only,baseline,11.4164904862579,6.12592172433349,2.51162790697673
+18,Yarra Ranges 3BR House/townhouse,0.25,34,29,13,9,property_only_vs_baseline,property_only,baseline,28.4313725490196,19.683257918552,2.55882352941177
+18,Melbourne 2BR Apartment/unit,0.5,328,135,120,164,property_only_vs_baseline,property_only,baseline,1.52439024390244,2.08333333333334,2.5
+18,Melbourne 3BR Apartment/unit,0.5,86,38,41,43,property_only_vs_baseline,property_only,baseline,5.03875968992248,5.28455284552846,2.16666666666667
+18,Yarra Ranges 3BR House/townhouse,0.5,34,29,13,17,property_only_vs_baseline,property_only,baseline,8.82352941176471,11.5384615384615,1.5
+19,Melbourne 2BR Apartment/unit,0.1,402,158,96,41,property_only_vs_baseline,property_only,baseline,20.0218420094649,8.55099502487562,8.2089552238806
+19,Melbourne 3BR Apartment/unit,0.1,85,46,27,9,property_only_vs_baseline,property_only,baseline,12.6797385620915,4.22657952069716,1.14117647058823
+19,Yarra Ranges 3BR House/townhouse,0.1,26,22,7,3,property_only_vs_baseline,property_only,baseline,39.7435897435897,17.032967032967,1.19230769230769
+19,Melbourne 2BR Apartment/unit,0.25,402,158,96,101,property_only_vs_baseline,property_only,baseline,20.2495302835188,21.3041933191187,20.452025586354
+19,Melbourne 3BR Apartment/unit,0.25,85,46,27,22,property_only_vs_baseline,property_only,baseline,9.14438502673797,7.45098039215686,2.01176470588235
+19,Yarra Ranges 3BR House/townhouse,0.25,26,22,7,7,property_only_vs_baseline,property_only,baseline,15.9340659340659,15.9340659340659,1.11538461538462
+19,Melbourne 2BR Apartment/unit,0.5,402,158,96,201,property_only_vs_baseline,property_only,baseline,10.6286748077793,22.2537878787879,21.3636363636364
+19,Melbourne 3BR Apartment/unit,0.5,85,46,27,43,property_only_vs_baseline,property_only,baseline,3.11901504787962,4.96732026143791,1.34117647058824
+19,Yarra Ranges 3BR House/townhouse,0.5,26,22,7,13,property_only_vs_baseline,property_only,baseline,3.84615384615385,7.14285714285714,0.5
+20,Melbourne 2BR Apartment/unit,0.1,430,136,125,43,property_only_vs_baseline,property_only,baseline,12.7906976744187,4.40000000000002,5.50000000000003
+20,Melbourne 3BR Apartment/unit,0.1,132,53,63,14,property_only_vs_baseline,property_only,baseline,-12.0129870129871,-2.66955266955268,-1.68181818181819
+20,Yarra Ranges 3BR House/townhouse,0.1,29,26,7,3,property_only_vs_baseline,property_only,baseline,42.5287356321839,18.2266009852217,1.27586206896552
+20,Melbourne 2BR Apartment/unit,0.25,430,136,125,108,property_only_vs_baseline,property_only,baseline,9.54905971863339,8.25038759689925,10.3129844961241
+20,Melbourne 3BR Apartment/unit,0.25,132,53,63,33,property_only_vs_baseline,property_only,baseline,8.54978354978354,4.47845804988662,2.82142857142857
+20,Yarra Ranges 3BR House/townhouse,0.25,29,26,7,8,property_only_vs_baseline,property_only,baseline,13.3620689655172,15.2709359605911,1.06896551724138
+20,Melbourne 2BR Apartment/unit,0.5,430,136,125,215,property_only_vs_baseline,property_only,baseline,-1.88630490956073,-3.24444444444445,-4.05555555555556
+20,Melbourne 3BR Apartment/unit,0.5,132,53,63,66,property_only_vs_baseline,property_only,baseline,-1.76767676767677,-1.85185185185185,-1.16666666666667
+20,Yarra Ranges 3BR House/townhouse,0.5,29,26,7,15,property_only_vs_baseline,property_only,baseline,2.52873563218391,5.41871921182265,0.379310344827586
+21,Melbourne 2BR Apartment/unit,0.1,311,127,112,32,property_only_vs_baseline,property_only,baseline,-11.0128617363345,-3.14653192466699,-3.52411575562703
+21,Melbourne 3BR Apartment/unit,0.1,65,43,18,7,property_only_vs_baseline,property_only,baseline,29.4505494505494,11.4529914529914,2.06153846153846
+21,Yarra Ranges 3BR House/townhouse,0.1,25,23,11,3,property_only_vs_baseline,property_only,baseline,39.3333333333333,10.7272727272727,1.18
+21,Melbourne 2BR Apartment/unit,0.25,311,127,112,78,property_only_vs_baseline,property_only,baseline,-0.25037860543019,-0.174370814496028,-0.195295312235551
+21,Melbourne 3BR Apartment/unit,0.25,65,43,18,17,property_only_vs_baseline,property_only,baseline,1.71945701357466,1.62393162393162,0.292307692307692
+21,Yarra Ranges 3BR House/townhouse,0.25,25,23,11,7,property_only_vs_baseline,property_only,baseline,27.4285714285714,17.4545454545454,1.92
+21,Melbourne 2BR Apartment/unit,0.5,311,127,112,156,property_only_vs_baseline,property_only,baseline,10.324134600662,14.3800446223506,16.1056499770327
+21,Melbourne 3BR Apartment/unit,0.5,65,43,18,33,property_only_vs_baseline,property_only,baseline,2.61072261072262,4.78632478632479,0.861538461538462
+21,Yarra Ranges 3BR House/townhouse,0.5,25,23,11,13,property_only_vs_baseline,property_only,baseline,9.84615384615385,11.6363636363636,1.28
+22,Melbourne 2BR Apartment/unit,0.1,435,132,140,44,property_only_vs_baseline,property_only,baseline,1.90700104493204,0.599343185550069,0.839080459770099
+22,Melbourne 3BR Apartment/unit,0.1,98,34,30,10,property_only_vs_baseline,property_only,baseline,-0.612244897959163,-0.204081632653054,-0.0612244897959164
+22,Yarra Ranges 3BR House/townhouse,0.1,35,31,9,4,property_only_vs_baseline,property_only,baseline,24.2857142857143,10.7936507936508,0.971428571428571
+22,Melbourne 2BR Apartment/unit,0.25,435,132,140,109,property_only_vs_baseline,property_only,baseline,1.45523568490981,1.13300492610835,1.58620689655169
+22,Melbourne 3BR Apartment/unit,0.25,98,34,30,25,property_only_vs_baseline,property_only,baseline,-10.6122448979592,-8.84353741496598,-2.65306122448979
+22,Yarra Ranges 3BR House/townhouse,0.25,35,31,9,9,property_only_vs_baseline,property_only,baseline,18.7301587301587,18.7301587301587,1.68571428571429
+22,Melbourne 2BR Apartment/unit,0.5,435,132,140,218,property_only_vs_baseline,property_only,baseline,5.7671622904144,8.98029556650242,12.5724137931034
+22,Melbourne 3BR Apartment/unit,0.5,98,34,30,49,property_only_vs_baseline,property_only,baseline,-8.84353741496599,-14.4444444444444,-4.33333333333333
+22,Yarra Ranges 3BR House/townhouse,0.5,35,31,9,18,property_only_vs_baseline,property_only,baseline,7.61904761904762,15.2380952380952,1.37142857142857
+23,Melbourne 2BR Apartment/unit,0.1,355,140,124,36,property_only_vs_baseline,property_only,baseline,1.18153364632241,0.343025897319411,0.42535211267607
+23,Melbourne 3BR Apartment/unit,0.1,84,42,35,9,property_only_vs_baseline,property_only,baseline,-19.4444444444445,-5,-1.75
+23,Yarra Ranges 3BR House/townhouse,0.1,28,21,7,3,property_only_vs_baseline,property_only,baseline,41.6666666666667,17.8571428571429,1.25
+23,Melbourne 2BR Apartment/unit,0.25,355,140,124,89,property_only_vs_baseline,property_only,baseline,0.151571099505887,0.108788934322779,0.13489827856024
+23,Melbourne 3BR Apartment/unit,0.25,84,42,35,21,property_only_vs_baseline,property_only,baseline,-21.4285714285714,-12.8571428571429,-4.5
+23,Yarra Ranges 3BR House/townhouse,0.25,28,21,7,7,property_only_vs_baseline,property_only,baseline,32.1428571428571,32.1428571428571,2.25
+23,Melbourne 2BR Apartment/unit,0.5,355,140,124,178,property_only_vs_baseline,property_only,baseline,-4.96703064830934,-7.1300923822505,-8.84131455399063
+23,Melbourne 3BR Apartment/unit,0.5,84,42,35,42,property_only_vs_baseline,property_only,baseline,-1.19047619047619,-1.42857142857143,-0.5
+23,Yarra Ranges 3BR House/townhouse,0.5,28,21,7,14,property_only_vs_baseline,property_only,baseline,3.57142857142857,7.14285714285714,0.5
+24,Melbourne 2BR Apartment/unit,0.1,407,141,164,41,property_only_vs_baseline,property_only,baseline,1.91904338245796,0.47976084561449,0.786807786807763
+24,Melbourne 3BR Apartment/unit,0.1,115,42,54,12,property_only_vs_baseline,property_only,baseline,-5.28985507246378,-1.1755233494364,-0.634782608695654
+24,Yarra Ranges 3BR House/townhouse,0.1,30,24,14,3,property_only_vs_baseline,property_only,baseline,20,4.28571428571428,0.6
+24,Melbourne 2BR Apartment/unit,0.25,407,141,164,102,property_only_vs_baseline,property_only,baseline,3.3771739654093,2.10043746629114,3.44471744471748
+24,Melbourne 3BR Apartment/unit,0.25,115,42,54,29,property_only_vs_baseline,property_only,baseline,-17.8924823302634,-9.60892569588221,-5.18881987577639
+24,Yarra Ranges 3BR House/townhouse,0.25,30,24,14,8,property_only_vs_baseline,property_only,baseline,11.6666666666667,6.66666666666667,0.933333333333333
+24,Melbourne 2BR Apartment/unit,0.5,407,141,164,204,property_only_vs_baseline,property_only,baseline,1.41267604502903,1.75723117796294,2.88185913185922
+24,Melbourne 3BR Apartment/unit,0.5,115,42,54,58,property_only_vs_baseline,property_only,baseline,-3.05731749509859,-3.28378545769849,-1.77324414715718
+24,Yarra Ranges 3BR House/townhouse,0.5,30,24,14,15,property_only_vs_baseline,property_only,baseline,13.3333333333333,14.2857142857143,2
+25,Melbourne 2BR Apartment/unit,0.1,371,140,117,38,property_only_vs_baseline,property_only,baseline,6.80947652149238,2.21162485313428,2.5876010781671
+25,Melbourne 3BR Apartment/unit,0.1,90,42,33,9,property_only_vs_baseline,property_only,baseline,-3.33333333333336,-0.909090909090914,-0.300000000000002
+25,Yarra Ranges 3BR House/townhouse,0.1,24,23,9,3,property_only_vs_baseline,property_only,baseline,29.1666666666667,9.72222222222222,0.875
+25,Melbourne 2BR Apartment/unit,0.25,371,140,117,93,property_only_vs_baseline,property_only,baseline,2.87221401037597,2.28304190568347,2.67115902964965
+25,Melbourne 3BR Apartment/unit,0.25,90,42,33,23,property_only_vs_baseline,property_only,baseline,-5.14492753623189,-3.58585858585858,-1.18333333333333
+25,Yarra Ranges 3BR House/townhouse,0.25,24,23,9,6,property_only_vs_baseline,property_only,baseline,29.1666666666667,19.4444444444444,1.75
+25,Melbourne 2BR Apartment/unit,0.5,371,140,117,186,property_only_vs_baseline,property_only,baseline,-0.25871578089538,-0.411291754243931,-0.481211352465401
+25,Melbourne 3BR Apartment/unit,0.5,90,42,33,45,property_only_vs_baseline,property_only,baseline,-7.77777777777778,-10.6060606060606,-3.5
+25,Yarra Ranges 3BR House/townhouse,0.5,24,23,9,12,property_only_vs_baseline,property_only,baseline,16.6666666666667,22.2222222222222,2
+26,Melbourne 2BR Apartment/unit,0.1,379,138,128,38,property_only_vs_baseline,property_only,baseline,4.82340415683011,1.43194810905894,1.83289357959544
+26,Melbourne 3BR Apartment/unit,0.1,113,45,35,12,property_only_vs_baseline,property_only,baseline,-5.97345132743364,-2.04804045512011,-0.716814159292037
+26,Yarra Ranges 3BR House/townhouse,0.1,32,30,10,4,property_only_vs_baseline,property_only,baseline,18.75,7.5,0.75
+26,Melbourne 2BR Apartment/unit,0.25,379,138,128,95,property_only_vs_baseline,property_only,baseline,-1.69878366566744,-1.26081600186255,-1.61384448238406
+26,Melbourne 3BR Apartment/unit,0.25,113,45,35,29,property_only_vs_baseline,property_only,baseline,-6.83552029295086,-5.66371681415928,-1.98230088495575
+26,Yarra Ranges 3BR House/townhouse,0.25,32,30,10,8,property_only_vs_baseline,property_only,baseline,31.25,25,2.5
+26,Melbourne 2BR Apartment/unit,0.5,379,138,128,190,property_only_vs_baseline,property_only,baseline,-1.3717712817665,-2.03622299637215,-2.60636543535635
+26,Melbourne 3BR Apartment/unit,0.5,113,45,35,57,property_only_vs_baseline,property_only,baseline,-3.95590746778449,-6.44247787610617,-2.25486725663716
+26,Yarra Ranges 3BR House/townhouse,0.5,32,30,10,16,property_only_vs_baseline,property_only,baseline,9.375,15,1.5
+27,Melbourne 2BR Apartment/unit,0.1,397,152,92,40,property_only_vs_baseline,property_only,baseline,15.9928631402184,6.95341875661668,6.39714525608734
+27,Melbourne 3BR Apartment/unit,0.1,103,48,33,11,property_only_vs_baseline,property_only,baseline,31.5975286849073,10.5325095616358,3.47572815533981
+27,Yarra Ranges 3BR House/townhouse,0.1,28,23,9,3,property_only_vs_baseline,property_only,baseline,1.1904761904762,0.396825396825398,0.0357142857142859
+27,Melbourne 2BR Apartment/unit,0.25,397,152,92,100,property_only_vs_baseline,property_only,baseline,7.82619647355164,8.50673529733874,7.82619647355164
+27,Melbourne 3BR Apartment/unit,0.25,103,48,33,26,property_only_vs_baseline,property_only,baseline,9.49962658700523,7.48455428067079,2.46990291262136
+27,Yarra Ranges 3BR House/townhouse,0.25,28,23,9,7,property_only_vs_baseline,property_only,baseline,39.2857142857143,30.5555555555556,2.75
+27,Melbourne 2BR Apartment/unit,0.5,397,152,92,199,property_only_vs_baseline,property_only,baseline,2.91497369298212,6.30521483590698,5.80079764903443
+27,Melbourne 3BR Apartment/unit,0.5,103,48,33,52,property_only_vs_baseline,property_only,baseline,5.14065222803088,8.10042169265472,2.67313915857606
+27,Yarra Ranges 3BR House/townhouse,0.5,28,23,9,14,property_only_vs_baseline,property_only,baseline,17.8571428571429,27.7777777777778,2.5
+28,Melbourne 2BR Apartment/unit,0.1,388,153,122,39,property_only_vs_baseline,property_only,baseline,21.1208035950304,6.751732296772,8.23711340206184
+28,Melbourne 3BR Apartment/unit,0.1,99,47,51,10,property_only_vs_baseline,property_only,baseline,8.48484848484842,1.66369578134283,0.848484848484842
+28,Yarra Ranges 3BR House/townhouse,0.1,24,22,7,3,property_only_vs_baseline,property_only,baseline,37.5,16.0714285714286,1.125
+28,Melbourne 2BR Apartment/unit,0.25,388,153,122,97,property_only_vs_baseline,property_only,baseline,17.0790378006873,13.5792349726776,16.5666666666667
+28,Melbourne 3BR Apartment/unit,0.25,99,47,51,25,property_only_vs_baseline,property_only,baseline,-9.51515151515153,-4.66428995840761,-2.37878787878788
+28,Yarra Ranges 3BR House/townhouse,0.25,24,22,7,6,property_only_vs_baseline,property_only,baseline,20.8333333333333,17.8571428571429,1.25
+28,Melbourne 2BR Apartment/unit,0.5,388,153,122,194,property_only_vs_baseline,property_only,baseline,9.52251763429192,15.1423641069888,18.4736842105263
+28,Melbourne 3BR Apartment/unit,0.5,99,47,51,50,property_only_vs_baseline,property_only,baseline,8.98484848484847,8.80867498514557,4.49242424242424
+28,Yarra Ranges 3BR House/townhouse,0.5,24,22,7,12,property_only_vs_baseline,property_only,baseline,6.94444444444444,11.9047619047619,0.833333333333333
+29,Melbourne 2BR Apartment/unit,0.1,391,139,90,40,property_only_vs_baseline,property_only,baseline,1.35709718670074,0.603154305200331,0.542838874680298
+29,Melbourne 3BR Apartment/unit,0.1,95,33,23,10,property_only_vs_baseline,property_only,baseline,9.12280701754388,3.96643783371473,0.912280701754387
+29,Yarra Ranges 3BR House/townhouse,0.1,32,29,9,4,property_only_vs_baseline,property_only,baseline,21.875,9.72222222222222,0.875
+29,Melbourne 2BR Apartment/unit,0.25,391,139,90,98,property_only_vs_baseline,property_only,baseline,5.43347773892163,5.91645353793688,5.3248081841432
+29,Melbourne 3BR Apartment/unit,0.25,95,33,23,24,property_only_vs_baseline,property_only,baseline,2.87280701754386,2.99771167048055,0.689473684210528
+29,Yarra Ranges 3BR House/townhouse,0.25,32,29,9,8,property_only_vs_baseline,property_only,baseline,-3.125,-2.77777777777778,-0.25
+29,Melbourne 2BR Apartment/unit,0.5,391,139,90,196,property_only_vs_baseline,property_only,baseline,1.72699514588442,3.76101165103717,3.38491048593346
+29,Melbourne 3BR Apartment/unit,0.5,95,33,23,48,property_only_vs_baseline,property_only,baseline,-0.252192982456134,-0.526315789473675,-0.121052631578944
+29,Yarra Ranges 3BR House/townhouse,0.5,32,29,9,16,property_only_vs_baseline,property_only,baseline,3.125,5.55555555555556,0.5
+30,Melbourne 2BR Apartment/unit,0.1,347,146,134,35,property_only_vs_baseline,property_only,baseline,1.3832853025936,0.361305862617729,0.484149855907758
+30,Melbourne 3BR Apartment/unit,0.1,109,41,35,11,property_only_vs_baseline,property_only,baseline,-4.83736447039201,-1.52031454783749,-0.532110091743121
+30,Yarra Ranges 3BR House/townhouse,0.1,27,22,8,3,property_only_vs_baseline,property_only,baseline,37.037037037037,13.8888888888889,1.11111111111111
+30,Melbourne 2BR Apartment/unit,0.25,347,146,134,87,property_only_vs_baseline,property_only,baseline,7.82006691178918,5.07720762183327,6.80345821325658
+30,Melbourne 3BR Apartment/unit,0.25,109,41,35,28,property_only_vs_baseline,property_only,baseline,-10.6815203145479,-8.54521625163828,-2.9908256880734
+30,Yarra Ranges 3BR House/townhouse,0.25,27,22,8,7,property_only_vs_baseline,property_only,baseline,27.5132275132275,24.0740740740741,1.92592592592593
+30,Melbourne 2BR Apartment/unit,0.5,347,146,134,174,property_only_vs_baseline,property_only,baseline,6.46074657195908,8.38932763821553,11.2416990352088
+30,Melbourne 3BR Apartment/unit,0.5,109,41,35,55,property_only_vs_baseline,property_only,baseline,-11.3828190158466,-17.8872870249017,-6.26055045871561
+30,Yarra Ranges 3BR House/townhouse,0.5,27,22,8,14,property_only_vs_baseline,property_only,baseline,20.3703703703704,35.6481481481482,2.85185185185185
+31,Melbourne 2BR Apartment/unit,0.1,486,146,182,49,property_only_vs_baseline,property_only,baseline,7.44939951289166,2.00560756116314,3.65020576131691
+31,Melbourne 3BR Apartment/unit,0.1,106,48,35,11,property_only_vs_baseline,property_only,baseline,-10.2915951972556,-3.23450134770889,-1.13207547169811
+31,Yarra Ranges 3BR House/townhouse,0.1,26,23,9,3,property_only_vs_baseline,property_only,baseline,32.051282051282,10.6837606837607,0.961538461538461
+31,Melbourne 2BR Apartment/unit,0.25,486,146,182,122,property_only_vs_baseline,property_only,baseline,7.6706653664758,5.14187458631894,9.35821174710048
+31,Melbourne 3BR Apartment/unit,0.25,106,48,35,27,property_only_vs_baseline,property_only,baseline,-7.09294199860237,-5.47169811320754,-1.91509433962264
+31,Yarra Ranges 3BR House/townhouse,0.25,26,23,9,7,property_only_vs_baseline,property_only,baseline,8.24175824175824,6.41025641025641,0.576923076923077
+31,Melbourne 2BR Apartment/unit,0.5,486,146,182,243,property_only_vs_baseline,property_only,baseline,9.30041152263373,12.4175824175824,22.6
+31,Melbourne 3BR Apartment/unit,0.5,106,48,35,53,property_only_vs_baseline,property_only,baseline,-2.83018867924528,-4.28571428571429,-1.5
+31,Yarra Ranges 3BR House/townhouse,0.5,26,23,9,13,property_only_vs_baseline,property_only,baseline,11.5384615384615,16.6666666666667,1.5
+32,Melbourne 2BR Apartment/unit,0.1,388,138,138,39,property_only_vs_baseline,property_only,baseline,2.89452815226006,0.818018825638712,1.12886597938142
+32,Melbourne 3BR Apartment/unit,0.1,86,38,44,9,property_only_vs_baseline,property_only,baseline,4.39276485788109,0.898520084566587,0.395348837209299
+32,Yarra Ranges 3BR House/townhouse,0.1,24,21,5,3,property_only_vs_baseline,property_only,baseline,12.5,7.5,0.375
+32,Melbourne 2BR Apartment/unit,0.25,388,138,138,97,property_only_vs_baseline,property_only,baseline,8.95032802249297,6.29117259552042,8.68181818181818
+32,Melbourne 3BR Apartment/unit,0.25,86,38,44,22,property_only_vs_baseline,property_only,baseline,16.4508456659619,8.22542283298095,3.61918604651162
+32,Yarra Ranges 3BR House/townhouse,0.25,24,21,5,6,property_only_vs_baseline,property_only,baseline,20.8333333333333,25,1.25
+32,Melbourne 2BR Apartment/unit,0.5,388,138,138,194,property_only_vs_baseline,property_only,baseline,14.2857142857143,20.0828157349896,27.7142857142857
+32,Melbourne 3BR Apartment/unit,0.5,86,38,44,43,property_only_vs_baseline,property_only,baseline,14.2857142857143,13.961038961039,6.14285714285715
+32,Yarra Ranges 3BR House/townhouse,0.5,24,21,5,12,property_only_vs_baseline,property_only,baseline,17.5,42,2.1
+33,Melbourne 2BR Apartment/unit,0.1,364,146,107,37,property_only_vs_baseline,property_only,baseline,12.4962874962875,4.32114614357605,4.62362637362637
+33,Melbourne 3BR Apartment/unit,0.1,69,40,20,7,property_only_vs_baseline,property_only,baseline,13.871635610766,4.85507246376811,0.971014492753623
+33,Yarra Ranges 3BR House/townhouse,0.1,32,30,13,4,property_only_vs_baseline,property_only,baseline,-15.625,-4.80769230769231,-0.625
+33,Melbourne 2BR Apartment/unit,0.25,364,146,107,91,property_only_vs_baseline,property_only,baseline,7.88250211327135,6.70381020848311,7.17307692307693
+33,Melbourne 3BR Apartment/unit,0.25,69,40,20,18,property_only_vs_baseline,property_only,baseline,9.90338164251207,8.91304347826087,1.78260869565217
+33,Yarra Ranges 3BR House/townhouse,0.25,32,30,13,8,property_only_vs_baseline,property_only,baseline,9.375,5.76923076923077,0.75
+33,Melbourne 2BR Apartment/unit,0.5,364,146,107,182,property_only_vs_baseline,property_only,baseline,3.68131868131869,6.26168224299067,6.70000000000002
+33,Melbourne 3BR Apartment/unit,0.5,69,40,20,35,property_only_vs_baseline,property_only,baseline,2.44306418219463,4.2753623188406,0.855072463768121
+33,Yarra Ranges 3BR House/townhouse,0.5,32,30,13,16,property_only_vs_baseline,property_only,baseline,3.125,3.84615384615384,0.5
+34,Melbourne 2BR Apartment/unit,0.1,490,149,179,49,property_only_vs_baseline,property_only,baseline,6.32653061224493,1.731843575419,3.10000000000002
+34,Melbourne 3BR Apartment/unit,0.1,104,44,34,11,property_only_vs_baseline,property_only,baseline,6.70163170163169,2.1681749622926,0.737179487179485
+34,Yarra Ranges 3BR House/townhouse,0.1,24,20,4,3,property_only_vs_baseline,property_only,baseline,16.6666666666667,12.5,0.5
+34,Melbourne 2BR Apartment/unit,0.25,490,149,179,123,property_only_vs_baseline,property_only,baseline,9.62323390894833,6.61261324469634,11.8365777080064
+34,Melbourne 3BR Apartment/unit,0.25,104,44,34,26,property_only_vs_baseline,property_only,baseline,-0.274725274725274,-0.210084033613445,-0.0714285714285712
+34,Yarra Ranges 3BR House/townhouse,0.25,24,20,4,6,property_only_vs_baseline,property_only,baseline,0,0,0
+34,Melbourne 2BR Apartment/unit,0.5,490,149,179,245,property_only_vs_baseline,property_only,baseline,5.2276295133438,7.15513536742587,12.8076923076923
+34,Melbourne 3BR Apartment/unit,0.5,104,44,34,52,property_only_vs_baseline,property_only,baseline,-0.961538461538464,-1.47058823529412,-0.5
+34,Yarra Ranges 3BR House/townhouse,0.5,24,20,4,12,property_only_vs_baseline,property_only,baseline,-8.33333333333333,-25,-1
+35,Melbourne 2BR Apartment/unit,0.1,411,140,151,42,property_only_vs_baseline,property_only,baseline,5.58838296064586,1.5543846645505,2.34712084347126
+35,Melbourne 3BR Apartment/unit,0.1,105,45,53,11,property_only_vs_baseline,property_only,baseline,-41.3852813852813,-8.58939802336028,-4.55238095238095
+35,Yarra Ranges 3BR House/townhouse,0.1,32,24,8,4,property_only_vs_baseline,property_only,baseline,0,0,0
+35,Melbourne 2BR Apartment/unit,0.25,411,140,151,103,property_only_vs_baseline,property_only,baseline,11.2492449321873,7.67332601334633,11.5867222801529
+35,Melbourne 3BR Apartment/unit,0.25,105,45,53,27,property_only_vs_baseline,property_only,baseline,-13.4391534391534,-6.84636118598379,-3.62857142857141
+35,Yarra Ranges 3BR House/townhouse,0.25,32,24,8,8,property_only_vs_baseline,property_only,baseline,12.5,12.5,1
+35,Melbourne 2BR Apartment/unit,0.5,411,140,151,206,property_only_vs_baseline,property_only,baseline,4.10638778933017,5.60209195100674,8.45915884602016
+35,Melbourne 3BR Apartment/unit,0.5,105,45,53,53,property_only_vs_baseline,property_only,baseline,7.54267744833777,7.54267744833777,3.99761904761901
+35,Yarra Ranges 3BR House/townhouse,0.5,32,24,8,16,property_only_vs_baseline,property_only,baseline,10.4166666666667,20.8333333333333,1.66666666666667
+36,Melbourne 2BR Apartment/unit,0.1,308,136,95,31,property_only_vs_baseline,property_only,baseline,6.87296574393357,2.24275724275727,2.13061938061941
+36,Melbourne 3BR Apartment/unit,0.1,92,39,25,10,property_only_vs_baseline,property_only,baseline,22.8260869565217,9.13043478260869,2.28260869565217
+36,Yarra Ranges 3BR House/townhouse,0.1,33,30,9,4,property_only_vs_baseline,property_only,baseline,47.7272727272727,21.2121212121212,1.90909090909091
+36,Melbourne 2BR Apartment/unit,0.25,308,136,95,77,property_only_vs_baseline,property_only,baseline,9.23005565862709,7.4812030075188,7.10714285714286
+36,Melbourne 3BR Apartment/unit,0.25,92,39,25,23,property_only_vs_baseline,property_only,baseline,10.5072463768116,9.66666666666667,2.41666666666667
+36,Yarra Ranges 3BR House/townhouse,0.25,33,30,9,9,property_only_vs_baseline,property_only,baseline,33.8383838383839,33.8383838383839,3.04545454545455
+36,Melbourne 2BR Apartment/unit,0.5,308,136,95,154,property_only_vs_baseline,property_only,baseline,3.57142857142857,5.78947368421052,5.5
+36,Melbourne 3BR Apartment/unit,0.5,92,39,25,46,property_only_vs_baseline,property_only,baseline,1.08695652173913,2,0.5
+36,Yarra Ranges 3BR House/townhouse,0.5,33,30,9,17,property_only_vs_baseline,property_only,baseline,8.02139037433155,15.1515151515152,1.36363636363636
+37,Melbourne 2BR Apartment/unit,0.1,415,143,148,42,property_only_vs_baseline,property_only,baseline,-4.11503155479045,-1.1677792250081,-1.72831325301199
+37,Melbourne 3BR Apartment/unit,0.1,102,51,25,11,property_only_vs_baseline,property_only,baseline,2.76292335115863,1.2156862745098,0.30392156862745
+37,Yarra Ranges 3BR House/townhouse,0.1,23,16,7,3,property_only_vs_baseline,property_only,baseline,36.231884057971,15.527950310559,1.08695652173913
+37,Melbourne 2BR Apartment/unit,0.25,415,143,148,104,property_only_vs_baseline,property_only,baseline,-3.93188137164033,-2.76294366655807,-4.08915662650595
+37,Melbourne 3BR Apartment/unit,0.25,102,51,25,26,property_only_vs_baseline,property_only,baseline,-4.50980392156863,-4.69019607843137,-1.17254901960784
+37,Yarra Ranges 3BR House/townhouse,0.25,23,16,7,6,property_only_vs_baseline,property_only,baseline,36.231884057971,31.055900621118,2.17391304347826
+37,Melbourne 2BR Apartment/unit,0.5,415,143,148,208,property_only_vs_baseline,property_only,baseline,2.35016991041095,3.30294149571269,4.88835341365477
+37,Melbourne 3BR Apartment/unit,0.5,102,51,25,51,property_only_vs_baseline,property_only,baseline,-5.29411764705882,-10.8,-2.7
+37,Yarra Ranges 3BR House/townhouse,0.5,23,16,7,12,property_only_vs_baseline,property_only,baseline,19.5652173913043,33.5403726708075,2.34782608695652
+38,Melbourne 2BR Apartment/unit,0.1,456,153,129,46,property_only_vs_baseline,property_only,baseline,3.59458428680401,1.28178974568205,1.65350877192985
+38,Melbourne 3BR Apartment/unit,0.1,101,43,26,11,property_only_vs_baseline,property_only,baseline,-7.56075607560758,-3.19878141660321,-0.831683168316833
+38,Yarra Ranges 3BR House/townhouse,0.1,30,27,8,3,property_only_vs_baseline,property_only,baseline,6.66666666666667,2.5,0.2
+38,Melbourne 2BR Apartment/unit,0.25,456,153,129,114,property_only_vs_baseline,property_only,baseline,11.5454076367389,10.202918376653,13.1617647058823
+38,Melbourne 3BR Apartment/unit,0.25,101,43,26,26,property_only_vs_baseline,property_only,baseline,-5.74257425742576,-5.74257425742576,-1.4930693069307
+38,Yarra Ranges 3BR House/townhouse,0.25,30,27,8,8,property_only_vs_baseline,property_only,baseline,19.1666666666667,19.1666666666667,1.53333333333333
+38,Melbourne 2BR Apartment/unit,0.5,456,153,129,228,property_only_vs_baseline,property_only,baseline,8.66581777023202,15.3163290822706,19.758064516129
+38,Melbourne 3BR Apartment/unit,0.5,101,43,26,51,property_only_vs_baseline,property_only,baseline,1.70840613473114,3.35110434120338,0.871287128712879
+38,Yarra Ranges 3BR House/townhouse,0.5,30,27,8,15,property_only_vs_baseline,property_only,baseline,10,18.75,1.5
+39,Melbourne 2BR Apartment/unit,0.1,396,147,134,40,property_only_vs_baseline,property_only,baseline,2.2330447330448,0.666580517326808,0.893217893217921
+39,Melbourne 3BR Apartment/unit,0.1,68,37,26,7,property_only_vs_baseline,property_only,baseline,18.9075630252101,5.09049773755656,1.3235294117647
+39,Yarra Ranges 3BR House/townhouse,0.1,27,23,8,3,property_only_vs_baseline,property_only,baseline,37.037037037037,13.8888888888889,1.11111111111111
+39,Melbourne 2BR Apartment/unit,0.25,396,147,134,99,property_only_vs_baseline,property_only,baseline,9.93265993265993,7.33830845771145,9.83333333333334
+39,Melbourne 3BR Apartment/unit,0.25,68,37,26,17,property_only_vs_baseline,property_only,baseline,2.94117647058824,1.92307692307692,0.5
+39,Yarra Ranges 3BR House/townhouse,0.25,27,23,8,7,property_only_vs_baseline,property_only,baseline,13.2275132275132,11.5740740740741,0.925925925925926
+39,Melbourne 2BR Apartment/unit,0.5,396,147,134,198,property_only_vs_baseline,property_only,baseline,16.0353535353535,23.6940298507463,31.75
+39,Melbourne 3BR Apartment/unit,0.5,68,37,26,34,property_only_vs_baseline,property_only,baseline,-3.67647058823529,-4.80769230769231,-1.25
+39,Yarra Ranges 3BR House/townhouse,0.5,27,23,8,14,property_only_vs_baseline,property_only,baseline,6.08465608465609,10.6481481481482,0.851851851851852
+40,Melbourne 2BR Apartment/unit,0.1,355,140,114,36,property_only_vs_baseline,property_only,baseline,11.904417960756,3.75928988234401,4.28559046587217
+40,Melbourne 3BR Apartment/unit,0.1,92,40,45,10,property_only_vs_baseline,property_only,baseline,1.08695652173912,0.241545893719804,0.108695652173912
+40,Yarra Ranges 3BR House/townhouse,0.1,22,20,7,3,property_only_vs_baseline,property_only,baseline,23.7373737373737,10.1731601731602,0.712121212121212
+40,Melbourne 2BR Apartment/unit,0.25,355,140,114,89,property_only_vs_baseline,property_only,baseline,13.4731987430199,10.5185498958664,11.9911468812877
+40,Melbourne 3BR Apartment/unit,0.25,92,40,45,23,property_only_vs_baseline,property_only,baseline,-14.1304347826087,-7.22222222222222,-3.25
+40,Yarra Ranges 3BR House/townhouse,0.25,22,20,7,6,property_only_vs_baseline,property_only,baseline,18.1818181818182,15.5844155844156,1.09090909090909
+40,Melbourne 2BR Apartment/unit,0.5,355,140,114,178,property_only_vs_baseline,property_only,baseline,9.02820553398175,14.0966717986733,16.0702058504875
+40,Melbourne 3BR Apartment/unit,0.5,92,40,45,46,property_only_vs_baseline,property_only,baseline,1.08695652173913,1.11111111111111,0.5
+40,Yarra Ranges 3BR House/townhouse,0.5,22,20,7,11,property_only_vs_baseline,property_only,baseline,4.54545454545455,7.14285714285714,0.5
+41,Melbourne 2BR Apartment/unit,0.1,260,135,68,26,property_only_vs_baseline,property_only,baseline,6.26373626373629,2.39495798319329,1.62857142857144
+41,Melbourne 3BR Apartment/unit,0.1,74,40,20,8,property_only_vs_baseline,property_only,baseline,10.472972972973,4.18918918918919,0.837837837837838
+41,Yarra Ranges 3BR House/townhouse,0.1,22,21,8,3,property_only_vs_baseline,property_only,baseline,30.3030303030303,11.3636363636364,0.909090909090909
+41,Melbourne 2BR Apartment/unit,0.25,260,135,68,65,property_only_vs_baseline,property_only,baseline,16.2393162393162,15.5228758169935,10.5555555555556
+41,Melbourne 3BR Apartment/unit,0.25,74,40,20,19,property_only_vs_baseline,property_only,baseline,-5.97439544807966,-5.67567567567567,-1.13513513513514
+41,Yarra Ranges 3BR House/townhouse,0.25,22,21,8,6,property_only_vs_baseline,property_only,baseline,13.6363636363636,10.2272727272727,0.818181818181818
+41,Melbourne 2BR Apartment/unit,0.5,260,135,68,130,property_only_vs_baseline,property_only,baseline,14.6853146853147,28.0748663101604,19.0909090909091
+41,Melbourne 3BR Apartment/unit,0.5,74,40,20,37,property_only_vs_baseline,property_only,baseline,-2.7027027027027,-5,-1
+41,Yarra Ranges 3BR House/townhouse,0.5,22,21,8,11,property_only_vs_baseline,property_only,baseline,-9.09090909090909,-12.5,-1
+42,Melbourne 2BR Apartment/unit,0.1,370,132,78,37,property_only_vs_baseline,property_only,baseline,7.74774774774778,3.67521367521369,2.86666666666668
+42,Melbourne 3BR Apartment/unit,0.1,71,41,22,8,property_only_vs_baseline,property_only,baseline,6.51408450704226,2.36875800256082,0.521126760563381
+42,Yarra Ranges 3BR House/townhouse,0.1,21,20,5,3,property_only_vs_baseline,property_only,baseline,42.8571428571429,25.7142857142857,1.28571428571429
+42,Melbourne 2BR Apartment/unit,0.25,370,132,78,93,property_only_vs_baseline,property_only,baseline,10.8185604959798,12.8990528990529,10.0612612612612
+42,Melbourne 3BR Apartment/unit,0.25,71,41,22,18,property_only_vs_baseline,property_only,baseline,0.495565988523744,0.405463081519425,0.0892018779342738
+42,Yarra Ranges 3BR House/townhouse,0.25,21,20,5,6,property_only_vs_baseline,property_only,baseline,26.1904761904762,31.4285714285714,1.57142857142857
+42,Melbourne 2BR Apartment/unit,0.5,370,132,78,185,property_only_vs_baseline,property_only,baseline,6.22908622908623,14.7741147741148,11.5238095238095
+42,Melbourne 3BR Apartment/unit,0.5,71,41,22,36,property_only_vs_baseline,property_only,baseline,-0.430359937402181,-0.704225352112664,-0.154929577464786
+42,Yarra Ranges 3BR House/townhouse,0.5,21,20,5,11,property_only_vs_baseline,property_only,baseline,21.6450216450216,47.6190476190476,2.38095238095238
+43,Melbourne 2BR Apartment/unit,0.1,418,148,128,42,property_only_vs_baseline,property_only,baseline,9.85418090681254,3.23340311004787,4.13875598086127
+43,Melbourne 3BR Apartment/unit,0.1,94,40,38,10,property_only_vs_baseline,property_only,baseline,9.57446808510641,2.51959686450169,0.957446808510641
+43,Yarra Ranges 3BR House/townhouse,0.1,23,22,10,3,property_only_vs_baseline,property_only,baseline,6.52173913043479,1.95652173913044,0.195652173913044
+43,Melbourne 2BR Apartment/unit,0.25,418,148,128,105,property_only_vs_baseline,property_only,baseline,11.4732285258601,9.41163277511962,12.0468899521531
+43,Melbourne 3BR Apartment/unit,0.25,94,40,38,24,property_only_vs_baseline,property_only,baseline,-14.0366430260047,-8.86524822695035,-3.36879432624113
+43,Yarra Ranges 3BR House/townhouse,0.25,23,22,10,6,property_only_vs_baseline,property_only,baseline,0.966183574879231,0.579710144927542,0.0579710144927539
+43,Melbourne 2BR Apartment/unit,0.5,418,148,128,209,property_only_vs_baseline,property_only,baseline,1.60939538929969,2.62784090909091,3.36363636363636
+43,Melbourne 3BR Apartment/unit,0.5,94,40,38,47,property_only_vs_baseline,property_only,baseline,-13.8297872340426,-17.1052631578947,-6.5
+43,Yarra Ranges 3BR House/townhouse,0.5,23,22,10,12,property_only_vs_baseline,property_only,baseline,2.35507246376812,2.82608695652176,0.282608695652175
+44,Melbourne 2BR Apartment/unit,0.1,381,142,104,39,property_only_vs_baseline,property_only,baseline,23.1307625008413,8.67403593781548,9.0209973753281
+44,Melbourne 3BR Apartment/unit,0.1,70,37,15,7,property_only_vs_baseline,property_only,baseline,21.4285714285714,10,1.5
+44,Yarra Ranges 3BR House/townhouse,0.1,31,28,11,4,property_only_vs_baseline,property_only,baseline,39.5161290322581,14.3695014662757,1.58064516129032
+44,Melbourne 2BR Apartment/unit,0.25,381,142,104,96,property_only_vs_baseline,property_only,baseline,16.8700787401575,15.57238037553,16.1952755905512
+44,Melbourne 3BR Apartment/unit,0.25,70,37,15,18,property_only_vs_baseline,property_only,baseline,17.4603174603175,20.952380952381,3.14285714285714
+44,Yarra Ranges 3BR House/townhouse,0.25,31,28,11,8,property_only_vs_baseline,property_only,baseline,14.5161290322581,10.5571847507331,1.16129032258065
+44,Melbourne 2BR Apartment/unit,0.5,381,142,104,191,property_only_vs_baseline,property_only,baseline,8.86178903684161,16.2750164041995,16.9260170603675
+44,Melbourne 3BR Apartment/unit,0.5,70,37,15,35,property_only_vs_baseline,property_only,baseline,5.71428571428571,13.3333333333333,2
+44,Yarra Ranges 3BR House/townhouse,0.5,31,28,11,16,property_only_vs_baseline,property_only,baseline,-4.23387096774193,-6.15835777126099,-0.677419354838708
+45,Melbourne 2BR Apartment/unit,0.1,399,140,125,40,property_only_vs_baseline,property_only,baseline,-3.82832080200491,-1.22506265664157,-1.53132832080197
+45,Melbourne 3BR Apartment/unit,0.1,100,45,28,10,property_only_vs_baseline,property_only,baseline,1.99999999999999,0.714285714285709,0.199999999999999
+45,Yarra Ranges 3BR House/townhouse,0.1,34,25,11,4,property_only_vs_baseline,property_only,baseline,17.6470588235294,6.41711229946524,0.705882352941176
+45,Melbourne 2BR Apartment/unit,0.25,399,140,125,100,property_only_vs_baseline,property_only,baseline,-5.32832080200509,-4.26265664160408,-5.3283208020051
+45,Melbourne 3BR Apartment/unit,0.25,100,45,28,25,property_only_vs_baseline,property_only,baseline,-8,-7.14285714285714,-2
+45,Yarra Ranges 3BR House/townhouse,0.25,34,25,11,9,property_only_vs_baseline,property_only,baseline,15.7952069716776,12.9233511586453,1.42156862745098
+45,Melbourne 2BR Apartment/unit,0.5,399,140,125,200,property_only_vs_baseline,property_only,baseline,-7.61403508771938,-12.182456140351,-15.2280701754388
+45,Melbourne 3BR Apartment/unit,0.5,100,45,28,50,property_only_vs_baseline,property_only,baseline,-6,-10.7142857142857,-3
+45,Yarra Ranges 3BR House/townhouse,0.5,34,25,11,17,property_only_vs_baseline,property_only,baseline,8.8235294117647,13.6363636363636,1.5
+46,Melbourne 2BR Apartment/unit,0.1,325,136,114,33,property_only_vs_baseline,property_only,baseline,-10.8344988344989,-3.13630229419704,-3.57538461538463
+46,Melbourne 3BR Apartment/unit,0.1,89,37,33,9,property_only_vs_baseline,property_only,baseline,-7.44902205576363,-2.03155146975372,-0.670411985018727
+46,Yarra Ranges 3BR House/townhouse,0.1,28,21,6,3,property_only_vs_baseline,property_only,baseline,11.9047619047619,5.95238095238095,0.357142857142857
+46,Melbourne 2BR Apartment/unit,0.25,325,136,114,82,property_only_vs_baseline,property_only,baseline,-5.94413174900977,-4.27560353876142,-4.87418803418801
+46,Melbourne 3BR Apartment/unit,0.25,89,37,33,23,property_only_vs_baseline,property_only,baseline,-3.74531835205995,-2.61037339689027,-0.861423220973788
+46,Yarra Ranges 3BR House/townhouse,0.25,28,21,6,7,property_only_vs_baseline,property_only,baseline,21.4285714285714,25,1.5
+46,Melbourne 2BR Apartment/unit,0.5,325,136,114,163,property_only_vs_baseline,property_only,baseline,1.97829164700336,2.82860998650479,3.22461538461548
+46,Melbourne 3BR Apartment/unit,0.5,89,37,33,45,property_only_vs_baseline,property_only,baseline,-0.041614648356203,-0.0567472477584596,-0.0187265917602915
+46,Yarra Ranges 3BR House/townhouse,0.5,28,21,6,14,property_only_vs_baseline,property_only,baseline,7.14285714285714,16.6666666666667,1
+47,Melbourne 2BR Apartment/unit,0.1,452,143,121,46,property_only_vs_baseline,property_only,baseline,0.404001539053472,0.153587361954213,0.185840707964598
+47,Melbourne 3BR Apartment/unit,0.1,134,49,47,14,property_only_vs_baseline,property_only,baseline,-8.88415067519547,-2.64634275431355,-1.24378109452737
+47,Yarra Ranges 3BR House/townhouse,0.1,25,22,10,3,property_only_vs_baseline,property_only,baseline,-40,-12,-1.2
+47,Melbourne 2BR Apartment/unit,0.25,452,143,121,113,property_only_vs_baseline,property_only,baseline,4.83565107458913,4.5159386068477,5.46428571428572
+47,Melbourne 3BR Apartment/unit,0.25,134,49,47,34,property_only_vs_baseline,property_only,baseline,-5.66286215978925,-4.09653858367733,-1.92537313432835
+47,Yarra Ranges 3BR House/townhouse,0.25,25,22,10,7,property_only_vs_baseline,property_only,baseline,-11.4285714285714,-8.00000000000001,-0.800000000000001
+47,Melbourne 2BR Apartment/unit,0.5,452,143,121,226,property_only_vs_baseline,property_only,baseline,9.15929203539824,17.1074380165289,20.7
+47,Melbourne 3BR Apartment/unit,0.5,134,49,47,67,property_only_vs_baseline,property_only,baseline,9.02306648575306,12.862669245648,6.04545454545455
+47,Yarra Ranges 3BR House/townhouse,0.5,25,22,10,13,property_only_vs_baseline,property_only,baseline,1.02564102564103,1.33333333333334,0.133333333333334
+48,Melbourne 2BR Apartment/unit,0.1,322,140,115,33,property_only_vs_baseline,property_only,baseline,-2.38095238095232,-0.683229813664578,-0.785714285714265
+48,Melbourne 3BR Apartment/unit,0.1,89,43,34,9,property_only_vs_baseline,property_only,baseline,-4.86891385767791,-1.28883013879709,-0.438202247191012
+48,Yarra Ranges 3BR House/townhouse,0.1,23,21,10,3,property_only_vs_baseline,property_only,baseline,23.1884057971015,6.95652173913044,0.695652173913044
+48,Melbourne 2BR Apartment/unit,0.25,322,140,115,81,property_only_vs_baseline,property_only,baseline,0.814399834007623,0.573620752648846,0.659663865546175
+48,Melbourne 3BR Apartment/unit,0.25,89,43,34,23,property_only_vs_baseline,property_only,baseline,-2.79852048293672,-1.89311679728072,-0.643659711075445
+48,Yarra Ranges 3BR House/townhouse,0.25,23,21,10,6,property_only_vs_baseline,property_only,baseline,6.52173913043479,3.91304347826087,0.391304347826087
+48,Melbourne 2BR Apartment/unit,0.5,322,140,115,161,property_only_vs_baseline,property_only,baseline,1.34575569358178,1.88405797101449,2.16666666666666
+48,Melbourne 3BR Apartment/unit,0.5,89,43,34,45,property_only_vs_baseline,property_only,baseline,4.90886392009989,6.49702577660279,2.20898876404495
+48,Yarra Ranges 3BR House/townhouse,0.5,23,21,10,12,property_only_vs_baseline,property_only,baseline,-1.81159420289854,-2.17391304347825,-0.217391304347825
+49,Melbourne 2BR Apartment/unit,0.1,387,169,158,39,property_only_vs_baseline,property_only,baseline,-1.08328364142324,-0.267392797566496,-0.422480620155062
+49,Melbourne 3BR Apartment/unit,0.1,84,39,46,9,property_only_vs_baseline,property_only,baseline,-29.7619047619047,-5.82298136645962,-2.67857142857143
+49,Yarra Ranges 3BR House/townhouse,0.1,29,28,12,3,property_only_vs_baseline,property_only,baseline,58.6206896551724,14.6551724137931,1.75862068965517
+49,Melbourne 2BR Apartment/unit,0.25,387,169,158,97,property_only_vs_baseline,property_only,baseline,3.79757433221832,2.33142221661504,3.68364710225177
+49,Melbourne 3BR Apartment/unit,0.25,84,39,46,21,property_only_vs_baseline,property_only,baseline,-7.14285714285715,-3.26086956521739,-1.5
+49,Yarra Ranges 3BR House/townhouse,0.25,29,28,12,8,property_only_vs_baseline,property_only,baseline,33.6206896551724,22.4137931034483,2.68965517241379
+49,Melbourne 2BR Apartment/unit,0.5,387,169,158,194,property_only_vs_baseline,property_only,baseline,14.4750411952522,17.773151847335,28.0815799187893
+49,Melbourne 3BR Apartment/unit,0.5,84,39,46,42,property_only_vs_baseline,property_only,baseline,9.52380952380952,8.69565217391305,4
+49,Yarra Ranges 3BR House/townhouse,0.5,29,28,12,15,property_only_vs_baseline,property_only,baseline,28.6206896551724,35.7758620689655,4.29310344827586
+50,Melbourne 2BR Apartment/unit,0.1,364,140,122,37,property_only_vs_baseline,property_only,baseline,-2.24235224235227,-0.680057647270771,-0.829670329670339
+50,Melbourne 3BR Apartment/unit,0.1,92,46,34,10,property_only_vs_baseline,property_only,baseline,-6.95652173913044,-2.0460358056266,-0.695652173913044
+50,Yarra Ranges 3BR House/townhouse,0.1,28,26,9,3,property_only_vs_baseline,property_only,baseline,34.5238095238095,11.5079365079365,1.03571428571429
+50,Melbourne 2BR Apartment/unit,0.25,364,140,122,91,property_only_vs_baseline,property_only,baseline,3.93068469991548,2.93190416141236,3.57692307692308
+50,Melbourne 3BR Apartment/unit,0.25,92,46,34,23,property_only_vs_baseline,property_only,baseline,-2.17391304347826,-1.47058823529412,-0.5
+50,Yarra Ranges 3BR House/townhouse,0.25,28,26,9,7,property_only_vs_baseline,property_only,baseline,39.2857142857143,30.5555555555556,2.75
+50,Melbourne 2BR Apartment/unit,0.5,364,140,122,182,property_only_vs_baseline,property_only,baseline,-1.28205128205128,-1.91256830601093,-2.33333333333333
+50,Melbourne 3BR Apartment/unit,0.5,92,46,34,46,property_only_vs_baseline,property_only,baseline,-8.69565217391304,-11.7647058823529,-4
+50,Yarra Ranges 3BR House/townhouse,0.5,28,26,9,14,property_only_vs_baseline,property_only,baseline,22.6190476190476,35.1851851851852,3.16666666666667
+1,Melbourne 2BR Apartment/unit,0.1,374,150,103,38,full_vs_property_only,full,property_only,5.63909774436091,2.08044382801665,2.14285714285714
+1,Melbourne 3BR Apartment/unit,0.1,82,39,27,9,full_vs_property_only,full,property_only,85.1851851851852,28.3950617283951,7.66666666666667
+1,Yarra Ranges 3BR House/townhouse,0.1,19,17,6,2,full_vs_property_only,full,property_only,50,16.6666666666667,1
+1,Melbourne 2BR Apartment/unit,0.25,374,150,103,94,full_vs_property_only,full,property_only,-4.25531914893617,-3.88349514563107,-4
+1,Melbourne 3BR Apartment/unit,0.25,82,39,27,21,full_vs_property_only,full,property_only,32.8042328042328,25.5144032921811,6.88888888888889
+1,Yarra Ranges 3BR House/townhouse,0.25,19,17,6,5,full_vs_property_only,full,property_only,-10,-8.33333333333334,-0.5
+1,Melbourne 2BR Apartment/unit,0.5,374,150,103,187,full_vs_property_only,full,property_only,3.61599185128597,6.56495607951918,6.76190476190476
+1,Melbourne 3BR Apartment/unit,0.5,82,39,27,41,full_vs_property_only,full,property_only,4.06504065040652,6.17283950617285,1.66666666666667
+1,Yarra Ranges 3BR House/townhouse,0.5,19,17,6,10,full_vs_property_only,full,property_only,0,0,0
+2,Melbourne 2BR Apartment/unit,0.1,294,145,87,30,full_vs_property_only,full,property_only,7.77777777777777,2.68199233716475,2.33333333333333
+2,Melbourne 3BR Apartment/unit,0.1,68,42,23,7,full_vs_property_only,full,property_only,28.5714285714286,8.69565217391304,2
+2,Yarra Ranges 3BR House/townhouse,0.1,35,28,13,4,full_vs_property_only,full,property_only,50,15.3846153846154,2
+2,Melbourne 2BR Apartment/unit,0.25,294,145,87,74,full_vs_property_only,full,property_only,6.87960687960688,5.85161964472309,5.09090909090909
+2,Melbourne 3BR Apartment/unit,0.25,68,42,23,17,full_vs_property_only,full,property_only,29.4117647058824,21.7391304347826,5
+2,Yarra Ranges 3BR House/townhouse,0.25,35,28,13,9,full_vs_property_only,full,property_only,11.1111111111111,7.69230769230769,1
+2,Melbourne 2BR Apartment/unit,0.5,294,145,87,147,full_vs_property_only,full,property_only,5.33751962323391,9.01856763925729,7.84615384615384
+2,Melbourne 3BR Apartment/unit,0.5,68,42,23,34,full_vs_property_only,full,property_only,13.2352941176471,19.5652173913043,4.5
+2,Yarra Ranges 3BR House/townhouse,0.5,35,28,13,18,full_vs_property_only,full,property_only,5.55555555555555,7.6923076923077,1
+3,Melbourne 2BR Apartment/unit,0.1,392,161,106,40,full_vs_property_only,full,property_only,7.85714285714286,2.96495956873315,3.14285714285714
+3,Melbourne 3BR Apartment/unit,0.1,79,45,28,8,full_vs_property_only,full,property_only,4.16666666666667,1.19047619047619,0.333333333333334
+3,Yarra Ranges 3BR House/townhouse,0.1,25,22,12,3,full_vs_property_only,full,property_only,33.3333333333333,8.33333333333333,1
+3,Melbourne 2BR Apartment/unit,0.25,392,161,106,98,full_vs_property_only,full,property_only,3.35276967930029,3.09973045822102,3.28571428571428
+3,Melbourne 3BR Apartment/unit,0.25,79,45,28,20,full_vs_property_only,full,property_only,3.33333333333334,2.38095238095238,0.666666666666668
+3,Yarra Ranges 3BR House/townhouse,0.25,25,22,12,7,full_vs_property_only,full,property_only,14.2857142857143,8.33333333333333,1
+3,Melbourne 2BR Apartment/unit,0.5,392,161,106,196,full_vs_property_only,full,property_only,9.48379351740696,17.5360710321865,18.5882352941176
+3,Melbourne 3BR Apartment/unit,0.5,79,45,28,40,full_vs_property_only,full,property_only,7.5,10.7142857142857,3
+3,Yarra Ranges 3BR House/townhouse,0.5,25,22,12,13,full_vs_property_only,full,property_only,15.3846153846154,16.6666666666667,2
+4,Melbourne 2BR Apartment/unit,0.1,475,133,174,48,full_vs_property_only,full,property_only,13.5416666666667,3.73563218390805,6.5
+4,Melbourne 3BR Apartment/unit,0.1,122,50,68,13,full_vs_property_only,full,property_only,30.7692307692308,5.88235294117647,4
+4,Yarra Ranges 3BR House/townhouse,0.1,25,21,4,3,full_vs_property_only,full,property_only,66.6666666666667,50,2
+4,Melbourne 2BR Apartment/unit,0.25,475,133,174,119,full_vs_property_only,full,property_only,-3.54808590102707,-2.42656449553001,-4.22222222222221
+4,Melbourne 3BR Apartment/unit,0.25,122,50,68,31,full_vs_property_only,full,property_only,22.1198156682028,10.0840336134454,6.85714285714285
+4,Yarra Ranges 3BR House/townhouse,0.25,25,21,4,7,full_vs_property_only,full,property_only,14.2857142857143,25,1
+4,Melbourne 2BR Apartment/unit,0.5,475,133,174,238,full_vs_property_only,full,property_only,0.140056022408969,0.191570881226055,0.333333333333343
+4,Melbourne 3BR Apartment/unit,0.5,122,50,68,61,full_vs_property_only,full,property_only,-2.73224043715847,-2.45098039215687,-1.66666666666666
+4,Yarra Ranges 3BR House/townhouse,0.5,25,21,4,13,full_vs_property_only,full,property_only,7.69230769230769,25,1
+5,Melbourne 2BR Apartment/unit,0.1,306,154,99,31,full_vs_property_only,full,property_only,35.4838709677419,11.1111111111111,11
+5,Melbourne 3BR Apartment/unit,0.1,104,42,46,11,full_vs_property_only,full,property_only,63.6363636363636,15.2173913043478,7
+5,Yarra Ranges 3BR House/townhouse,0.1,26,19,6,3,full_vs_property_only,full,property_only,22.2222222222222,11.1111111111111,0.666666666666667
+5,Melbourne 2BR Apartment/unit,0.25,306,154,99,77,full_vs_property_only,full,property_only,21.3358070500928,16.5945165945166,16.4285714285714
+5,Melbourne 3BR Apartment/unit,0.25,104,42,46,26,full_vs_property_only,full,property_only,53.8461538461539,30.4347826086957,14
+5,Yarra Ranges 3BR House/townhouse,0.25,26,19,6,7,full_vs_property_only,full,property_only,14.2857142857143,16.6666666666667,1
+5,Melbourne 2BR Apartment/unit,0.5,306,154,99,153,full_vs_property_only,full,property_only,8.36601307189543,12.9292929292929,12.8
+5,Melbourne 3BR Apartment/unit,0.5,104,42,46,52,full_vs_property_only,full,property_only,6.92307692307692,7.82608695652174,3.6
+5,Yarra Ranges 3BR House/townhouse,0.5,26,19,6,13,full_vs_property_only,full,property_only,-7.69230769230769,-16.6666666666667,-1
+6,Melbourne 2BR Apartment/unit,0.1,347,131,141,35,full_vs_property_only,full,property_only,15.7142857142857,3.90070921985816,5.5
+6,Melbourne 3BR Apartment/unit,0.1,72,36,22,8,full_vs_property_only,full,property_only,12.5,4.54545454545455,1
+6,Yarra Ranges 3BR House/townhouse,0.1,34,27,10,4,full_vs_property_only,full,property_only,37.5,15,1.5
+6,Melbourne 2BR Apartment/unit,0.25,347,131,141,87,full_vs_property_only,full,property_only,19.2118226600985,11.854103343465,16.7142857142857
+6,Melbourne 3BR Apartment/unit,0.25,72,36,22,18,full_vs_property_only,full,property_only,13.8888888888889,11.3636363636364,2.5
+6,Yarra Ranges 3BR House/townhouse,0.25,34,27,10,9,full_vs_property_only,full,property_only,11.1111111111111,10,1
+6,Melbourne 2BR Apartment/unit,0.5,347,131,141,174,full_vs_property_only,full,property_only,9.37826541274816,11.5731785944552,16.3181818181818
+6,Melbourne 3BR Apartment/unit,0.5,72,36,22,36,full_vs_property_only,full,property_only,3.47222222222223,5.68181818181818,1.25
+6,Yarra Ranges 3BR House/townhouse,0.5,34,27,10,17,full_vs_property_only,full,property_only,0,0,0
+7,Melbourne 2BR Apartment/unit,0.1,433,165,135,44,full_vs_property_only,full,property_only,5.90909090909091,1.92592592592592,2.6
+7,Melbourne 3BR Apartment/unit,0.1,100,36,39,10,full_vs_property_only,full,property_only,20,5.12820512820513,2
+7,Yarra Ranges 3BR House/townhouse,0.1,24,22,6,3,full_vs_property_only,full,property_only,-33.3333333333333,-16.6666666666667,-1
+7,Melbourne 2BR Apartment/unit,0.25,433,165,135,109,full_vs_property_only,full,property_only,10.0305810397554,8.09876543209877,10.9333333333333
+7,Melbourne 3BR Apartment/unit,0.25,100,36,39,25,full_vs_property_only,full,property_only,27.2,17.4358974358974,6.8
+7,Yarra Ranges 3BR House/townhouse,0.25,24,22,6,6,full_vs_property_only,full,property_only,-8.33333333333334,-8.33333333333334,-0.5
+7,Melbourne 2BR Apartment/unit,0.5,433,165,135,217,full_vs_property_only,full,property_only,11.4549045424621,18.4126984126984,24.8571428571429
+7,Melbourne 3BR Apartment/unit,0.5,100,36,39,50,full_vs_property_only,full,property_only,10,12.8205128205128,5
+7,Yarra Ranges 3BR House/townhouse,0.5,24,22,6,12,full_vs_property_only,full,property_only,-13.8888888888889,-27.7777777777778,-1.66666666666667
+8,Melbourne 2BR Apartment/unit,0.1,385,150,143,39,full_vs_property_only,full,property_only,42.3076923076923,11.5384615384615,16.5
+8,Melbourne 3BR Apartment/unit,0.1,132,46,51,14,full_vs_property_only,full,property_only,44.6428571428571,12.2549019607843,6.25
+8,Yarra Ranges 3BR House/townhouse,0.1,32,24,6,4,full_vs_property_only,full,property_only,50,33.3333333333333,2
+8,Melbourne 2BR Apartment/unit,0.25,385,150,143,97,full_vs_property_only,full,property_only,14.8453608247423,10.0699300699301,14.4
+8,Melbourne 3BR Apartment/unit,0.25,132,46,51,33,full_vs_property_only,full,property_only,19.6969696969697,12.7450980392157,6.5
+8,Yarra Ranges 3BR House/townhouse,0.25,32,24,6,8,full_vs_property_only,full,property_only,25,33.3333333333333,2
+8,Melbourne 2BR Apartment/unit,0.5,385,150,143,193,full_vs_property_only,full,property_only,8.56915105619768,11.5653577192039,16.5384615384615
+8,Melbourne 3BR Apartment/unit,0.5,132,46,51,66,full_vs_property_only,full,property_only,0.137741046831957,0.178253119429594,0.0909090909090935
+8,Yarra Ranges 3BR House/townhouse,0.5,32,24,6,16,full_vs_property_only,full,property_only,6.25,16.6666666666667,1
+9,Melbourne 2BR Apartment/unit,0.1,363,162,101,37,full_vs_property_only,full,property_only,-22.972972972973,-8.41584158415842,-8.5
+9,Melbourne 3BR Apartment/unit,0.1,82,43,20,9,full_vs_property_only,full,property_only,25,11.25,2.25
+9,Yarra Ranges 3BR House/townhouse,0.1,31,23,5,4,full_vs_property_only,full,property_only,25,20,1
+9,Melbourne 2BR Apartment/unit,0.25,363,162,101,91,full_vs_property_only,full,property_only,-15.8918005071851,-14.3183549124143,-14.4615384615385
+9,Melbourne 3BR Apartment/unit,0.25,82,43,20,21,full_vs_property_only,full,property_only,22.4489795918367,23.5714285714286,4.71428571428571
+9,Yarra Ranges 3BR House/townhouse,0.25,31,23,5,8,full_vs_property_only,full,property_only,0,0,0
+9,Melbourne 2BR Apartment/unit,0.5,363,162,101,182,full_vs_property_only,full,property_only,2.93040293040293,5.28052805280528,5.33333333333333
+9,Melbourne 3BR Apartment/unit,0.5,82,43,20,41,full_vs_property_only,full,property_only,2.4390243902439,5,1
+9,Yarra Ranges 3BR House/townhouse,0.5,31,23,5,16,full_vs_property_only,full,property_only,0,0,0
+10,Melbourne 2BR Apartment/unit,0.1,431,142,154,44,full_vs_property_only,full,property_only,42.4242424242424,12.1212121212121,18.6666666666667
+10,Melbourne 3BR Apartment/unit,0.1,121,49,51,13,full_vs_property_only,full,property_only,51.2820512820513,13.0718954248366,6.66666666666667
+10,Yarra Ranges 3BR House/townhouse,0.1,30,23,7,3,full_vs_property_only,full,property_only,66.6666666666667,28.5714285714286,2
+10,Melbourne 2BR Apartment/unit,0.25,431,142,154,108,full_vs_property_only,full,property_only,22.5783475783476,15.8341658341658,24.3846153846154
+10,Melbourne 3BR Apartment/unit,0.25,121,49,51,31,full_vs_property_only,full,property_only,45.1612903225806,27.4509803921569,14
+10,Yarra Ranges 3BR House/townhouse,0.25,30,23,7,8,full_vs_property_only,full,property_only,12.5,14.2857142857143,1
+10,Melbourne 2BR Apartment/unit,0.5,431,142,154,216,full_vs_property_only,full,property_only,6.00255427841635,8.41916703985669,12.9655172413793
+10,Melbourne 3BR Apartment/unit,0.5,121,49,51,61,full_vs_property_only,full,property_only,13.9344262295082,16.6666666666667,8.5
+10,Yarra Ranges 3BR House/townhouse,0.5,30,23,7,15,full_vs_property_only,full,property_only,-6.66666666666667,-14.2857142857143,-1
+11,Melbourne 2BR Apartment/unit,0.1,361,137,95,37,full_vs_property_only,full,property_only,6.48648648648648,2.52631578947369,2.4
+11,Melbourne 3BR Apartment/unit,0.1,115,48,34,12,full_vs_property_only,full,property_only,25,8.82352941176471,3
+11,Yarra Ranges 3BR House/townhouse,0.1,30,23,10,3,full_vs_property_only,full,property_only,33.3333333333333,10,1
+11,Melbourne 2BR Apartment/unit,0.25,361,137,95,91,full_vs_property_only,full,property_only,-1.42857142857142,-1.36842105263157,-1.3
+11,Melbourne 3BR Apartment/unit,0.25,115,48,34,29,full_vs_property_only,full,property_only,15.5172413793103,13.2352941176471,4.5
+11,Yarra Ranges 3BR House/townhouse,0.25,30,23,10,8,full_vs_property_only,full,property_only,0,0,0
+11,Melbourne 2BR Apartment/unit,0.5,361,137,95,181,full_vs_property_only,full,property_only,10.2762430939226,19.578947368421,18.6
+11,Melbourne 3BR Apartment/unit,0.5,115,48,34,58,full_vs_property_only,full,property_only,7.47126436781609,12.7450980392157,4.33333333333333
+11,Yarra Ranges 3BR House/townhouse,0.5,30,23,10,15,full_vs_property_only,full,property_only,0,0,0
+12,Melbourne 2BR Apartment/unit,0.1,333,151,133,34,full_vs_property_only,full,property_only,11.7647058823529,3.00751879699248,4
+12,Melbourne 3BR Apartment/unit,0.1,89,40,41,9,full_vs_property_only,full,property_only,22.2222222222222,4.8780487804878,2
+12,Yarra Ranges 3BR House/townhouse,0.1,25,18,6,3,full_vs_property_only,full,property_only,16.6666666666667,8.33333333333333,0.5
+12,Melbourne 2BR Apartment/unit,0.25,333,151,133,84,full_vs_property_only,full,property_only,15.4761904761905,9.77443609022556,13
+12,Melbourne 3BR Apartment/unit,0.25,89,40,41,23,full_vs_property_only,full,property_only,10.1449275362319,5.69105691056911,2.33333333333333
+12,Yarra Ranges 3BR House/townhouse,0.25,25,18,6,7,full_vs_property_only,full,property_only,-14.2857142857143,-16.6666666666667,-1
+12,Melbourne 2BR Apartment/unit,0.5,333,151,133,167,full_vs_property_only,full,property_only,7.94411177644711,9.97493734335839,13.2666666666667
+12,Melbourne 3BR Apartment/unit,0.5,89,40,41,45,full_vs_property_only,full,property_only,13.3333333333333,14.6341463414634,6
+12,Yarra Ranges 3BR House/townhouse,0.5,25,18,6,13,full_vs_property_only,full,property_only,0,0,0
+13,Melbourne 2BR Apartment/unit,0.1,376,135,82,38,full_vs_property_only,full,property_only,-5.26315789473684,-2.4390243902439,-2
+13,Melbourne 3BR Apartment/unit,0.1,101,44,25,11,full_vs_property_only,full,property_only,-18.1818181818182,-8,-2
+13,Yarra Ranges 3BR House/townhouse,0.1,26,22,7,3,full_vs_property_only,full,property_only,66.6666666666667,28.5714285714286,2
+13,Melbourne 2BR Apartment/unit,0.25,376,135,82,94,full_vs_property_only,full,property_only,-2.83687943262411,-3.2520325203252,-2.66666666666666
+13,Melbourne 3BR Apartment/unit,0.25,101,44,25,26,full_vs_property_only,full,property_only,-5.12820512820513,-5.33333333333333,-1.33333333333333
+13,Yarra Ranges 3BR House/townhouse,0.25,26,22,7,7,full_vs_property_only,full,property_only,28.5714285714286,28.5714285714286,2
+13,Melbourne 2BR Apartment/unit,0.5,376,135,82,188,full_vs_property_only,full,property_only,4.50971322849214,10.33934252386,8.47826086956522
+13,Melbourne 3BR Apartment/unit,0.5,101,44,25,51,full_vs_property_only,full,property_only,5.88235294117647,12,3
+13,Yarra Ranges 3BR House/townhouse,0.5,26,22,7,13,full_vs_property_only,full,property_only,19.2307692307692,35.7142857142857,2.5
+14,Melbourne 2BR Apartment/unit,0.1,351,133,70,36,full_vs_property_only,full,property_only,-25,-12.8571428571429,-9
+14,Melbourne 3BR Apartment/unit,0.1,93,37,19,10,full_vs_property_only,full,property_only,-30,-15.7894736842105,-3
+14,Yarra Ranges 3BR House/townhouse,0.1,27,21,6,3,full_vs_property_only,full,property_only,0,0,0
+14,Melbourne 2BR Apartment/unit,0.25,351,133,70,88,full_vs_property_only,full,property_only,-11.8506493506494,-14.8979591836735,-10.4285714285714
+14,Melbourne 3BR Apartment/unit,0.25,93,37,19,24,full_vs_property_only,full,property_only,-14.5833333333333,-18.421052631579,-3.5
+14,Yarra Ranges 3BR House/townhouse,0.25,27,21,6,7,full_vs_property_only,full,property_only,14.2857142857143,16.6666666666667,1
+14,Melbourne 2BR Apartment/unit,0.5,351,133,70,176,full_vs_property_only,full,property_only,1.53409090909091,3.85714285714286,2.7
+14,Melbourne 3BR Apartment/unit,0.5,93,37,19,47,full_vs_property_only,full,property_only,-4.25531914893617,-10.5263157894737,-2
+14,Yarra Ranges 3BR House/townhouse,0.5,27,21,6,14,full_vs_property_only,full,property_only,14.2857142857143,33.3333333333333,2
+15,Melbourne 2BR Apartment/unit,0.1,378,154,109,38,full_vs_property_only,full,property_only,-2.36842105263158,-0.825688073394493,-0.899999999999999
+15,Melbourne 3BR Apartment/unit,0.1,80,38,34,8,full_vs_property_only,full,property_only,25,5.88235294117647,2
+15,Yarra Ranges 3BR House/townhouse,0.1,24,24,7,3,full_vs_property_only,full,property_only,0,0,0
+15,Melbourne 2BR Apartment/unit,0.25,378,154,109,95,full_vs_property_only,full,property_only,8.88888888888889,7.74719673802243,8.44444444444444
+15,Melbourne 3BR Apartment/unit,0.25,80,38,34,20,full_vs_property_only,full,property_only,25,14.7058823529412,5
+15,Yarra Ranges 3BR House/townhouse,0.25,24,24,7,6,full_vs_property_only,full,property_only,-33.3333333333333,-28.5714285714286,-2
+15,Melbourne 2BR Apartment/unit,0.5,378,154,109,189,full_vs_property_only,full,property_only,5.25321239606955,9.10878112712976,9.92857142857144
+15,Melbourne 3BR Apartment/unit,0.5,80,38,34,40,full_vs_property_only,full,property_only,15,17.6470588235294,6
+15,Yarra Ranges 3BR House/townhouse,0.5,24,24,7,12,full_vs_property_only,full,property_only,-8.33333333333334,-14.2857142857143,-1
+16,Melbourne 2BR Apartment/unit,0.1,402,156,96,41,full_vs_property_only,full,property_only,6.50406504065041,2.77777777777778,2.66666666666667
+16,Melbourne 3BR Apartment/unit,0.1,111,43,31,12,full_vs_property_only,full,property_only,-8.33333333333334,-3.2258064516129,-1
+16,Yarra Ranges 3BR House/townhouse,0.1,22,19,6,3,full_vs_property_only,full,property_only,16.6666666666667,8.33333333333333,0.5
+16,Melbourne 2BR Apartment/unit,0.25,402,156,96,101,full_vs_property_only,full,property_only,8.11881188118812,8.54166666666667,8.2
+16,Melbourne 3BR Apartment/unit,0.25,111,43,31,28,full_vs_property_only,full,property_only,9.64285714285714,8.70967741935484,2.7
+16,Yarra Ranges 3BR House/townhouse,0.25,22,19,6,6,full_vs_property_only,full,property_only,25,25,1.5
+16,Melbourne 2BR Apartment/unit,0.5,402,156,96,201,full_vs_property_only,full,property_only,3.909026297086,8.18452380952381,7.85714285714286
+16,Melbourne 3BR Apartment/unit,0.5,111,43,31,56,full_vs_property_only,full,property_only,-0.714285714285712,-1.29032258064515,-0.399999999999999
+16,Yarra Ranges 3BR House/townhouse,0.5,22,19,6,11,full_vs_property_only,full,property_only,9.09090909090909,16.6666666666667,1
+17,Melbourne 2BR Apartment/unit,0.1,301,149,113,31,full_vs_property_only,full,property_only,16.1290322580645,4.42477876106195,5
+17,Melbourne 3BR Apartment/unit,0.1,68,35,24,7,full_vs_property_only,full,property_only,-19.0476190476191,-5.55555555555556,-1.33333333333333
+17,Yarra Ranges 3BR House/townhouse,0.1,23,21,8,3,full_vs_property_only,full,property_only,-33.3333333333333,-12.5,-1
+17,Melbourne 2BR Apartment/unit,0.25,301,149,113,76,full_vs_property_only,full,property_only,19.7368421052632,13.2743362831858,15
+17,Melbourne 3BR Apartment/unit,0.25,68,35,24,17,full_vs_property_only,full,property_only,2.94117647058824,2.08333333333333,0.5
+17,Yarra Ranges 3BR House/townhouse,0.25,23,21,8,6,full_vs_property_only,full,property_only,-25,-18.75,-1.5
+17,Melbourne 2BR Apartment/unit,0.5,301,149,113,151,full_vs_property_only,full,property_only,12.9139072847682,17.2566371681416,19.5
+17,Melbourne 3BR Apartment/unit,0.5,68,35,24,34,full_vs_property_only,full,property_only,13.4453781512605,19.0476190476191,4.57142857142857
+17,Yarra Ranges 3BR House/townhouse,0.5,23,21,8,12,full_vs_property_only,full,property_only,8.33333333333333,12.5,1
+18,Melbourne 2BR Apartment/unit,0.1,328,135,120,33,full_vs_property_only,full,property_only,41.2121212121212,11.3333333333333,13.6
+18,Melbourne 3BR Apartment/unit,0.1,86,38,41,9,full_vs_property_only,full,property_only,62.962962962963,13.8211382113821,5.66666666666667
+18,Yarra Ranges 3BR House/townhouse,0.1,34,29,13,4,full_vs_property_only,full,property_only,-12.5,-3.84615384615384,-0.5
+18,Melbourne 2BR Apartment/unit,0.25,328,135,120,82,full_vs_property_only,full,property_only,11.4401858304297,7.81746031746032,9.38095238095238
+18,Melbourne 3BR Apartment/unit,0.25,86,38,41,22,full_vs_property_only,full,property_only,27.2727272727273,14.6341463414634,6
+18,Yarra Ranges 3BR House/townhouse,0.25,34,29,13,9,full_vs_property_only,full,property_only,-11.1111111111111,-7.69230769230769,-1
+18,Melbourne 2BR Apartment/unit,0.5,328,135,120,164,full_vs_property_only,full,property_only,10.6707317073171,14.5833333333333,17.5
+18,Melbourne 3BR Apartment/unit,0.5,86,38,41,43,full_vs_property_only,full,property_only,7.75193798449612,8.13008130081301,3.33333333333333
+18,Yarra Ranges 3BR House/townhouse,0.5,34,29,13,17,full_vs_property_only,full,property_only,5.88235294117647,7.69230769230769,1
+19,Melbourne 2BR Apartment/unit,0.1,402,158,96,41,full_vs_property_only,full,property_only,14.6341463414634,6.25,6
+19,Melbourne 3BR Apartment/unit,0.1,85,46,27,9,full_vs_property_only,full,property_only,11.1111111111111,3.7037037037037,1
+19,Yarra Ranges 3BR House/townhouse,0.1,26,22,7,3,full_vs_property_only,full,property_only,0,0,0
+19,Melbourne 2BR Apartment/unit,0.25,402,158,96,101,full_vs_property_only,full,property_only,11.3154172560113,11.9047619047619,11.4285714285714
+19,Melbourne 3BR Apartment/unit,0.25,85,46,27,22,full_vs_property_only,full,property_only,9.09090909090909,7.40740740740741,2
+19,Yarra Ranges 3BR House/townhouse,0.25,26,22,7,7,full_vs_property_only,full,property_only,0,0,0
+19,Melbourne 2BR Apartment/unit,0.5,402,158,96,201,full_vs_property_only,full,property_only,2.30664857530529,4.82954545454545,4.63636363636363
+19,Melbourne 3BR Apartment/unit,0.5,85,46,27,43,full_vs_property_only,full,property_only,6.97674418604651,11.1111111111111,3
+19,Yarra Ranges 3BR House/townhouse,0.5,26,22,7,13,full_vs_property_only,full,property_only,7.69230769230769,14.2857142857143,1
+20,Melbourne 2BR Apartment/unit,0.1,430,136,125,43,full_vs_property_only,full,property_only,23.2558139534884,8,10
+20,Melbourne 3BR Apartment/unit,0.1,132,53,63,14,full_vs_property_only,full,property_only,57.1428571428571,12.6984126984127,8
+20,Yarra Ranges 3BR House/townhouse,0.1,29,26,7,3,full_vs_property_only,full,property_only,0,0,0
+20,Melbourne 2BR Apartment/unit,0.25,430,136,125,108,full_vs_property_only,full,property_only,12.3070987654321,10.6333333333333,13.2916666666667
+20,Melbourne 3BR Apartment/unit,0.25,132,53,63,33,full_vs_property_only,full,property_only,13.4199134199134,7.02947845804989,4.42857142857143
+20,Yarra Ranges 3BR House/townhouse,0.25,29,26,7,8,full_vs_property_only,full,property_only,12.5,14.2857142857143,1
+20,Melbourne 2BR Apartment/unit,0.5,430,136,125,215,full_vs_property_only,full,property_only,5.37467700258398,9.24444444444445,11.5555555555556
+20,Melbourne 3BR Apartment/unit,0.5,132,53,63,66,full_vs_property_only,full,property_only,5.55555555555556,5.82010582010582,3.66666666666667
+20,Yarra Ranges 3BR House/townhouse,0.5,29,26,7,15,full_vs_property_only,full,property_only,0,0,0
+21,Melbourne 2BR Apartment/unit,0.1,311,127,112,32,full_vs_property_only,full,property_only,50,14.2857142857143,16
+21,Melbourne 3BR Apartment/unit,0.1,65,43,18,7,full_vs_property_only,full,property_only,14.2857142857143,5.55555555555556,1
+21,Yarra Ranges 3BR House/townhouse,0.1,25,23,11,3,full_vs_property_only,full,property_only,16.6666666666667,4.54545454545454,0.5
+21,Melbourne 2BR Apartment/unit,0.25,311,127,112,78,full_vs_property_only,full,property_only,30.9041835357625,21.5225563909775,24.1052631578947
+21,Melbourne 3BR Apartment/unit,0.25,65,43,18,17,full_vs_property_only,full,property_only,23.5294117647059,22.2222222222222,4
+21,Yarra Ranges 3BR House/townhouse,0.25,25,23,11,7,full_vs_property_only,full,property_only,0,0,0
+21,Melbourne 2BR Apartment/unit,0.5,311,127,112,156,full_vs_property_only,full,property_only,9.43223443223444,13.1377551020408,14.7142857142857
+21,Melbourne 3BR Apartment/unit,0.5,65,43,18,33,full_vs_property_only,full,property_only,6.06060606060606,11.1111111111111,2
+21,Yarra Ranges 3BR House/townhouse,0.5,25,23,11,13,full_vs_property_only,full,property_only,7.6923076923077,9.09090909090909,1
+22,Melbourne 2BR Apartment/unit,0.1,435,132,140,44,full_vs_property_only,full,property_only,31.8181818181818,10,14
+22,Melbourne 3BR Apartment/unit,0.1,98,34,30,10,full_vs_property_only,full,property_only,0,0,0
+22,Yarra Ranges 3BR House/townhouse,0.1,35,31,9,4,full_vs_property_only,full,property_only,0,0,0
+22,Melbourne 2BR Apartment/unit,0.25,435,132,140,109,full_vs_property_only,full,property_only,23.2415902140673,18.0952380952381,25.3333333333333
+22,Melbourne 3BR Apartment/unit,0.25,98,34,30,25,full_vs_property_only,full,property_only,16,13.3333333333333,4
+22,Yarra Ranges 3BR House/townhouse,0.25,35,31,9,9,full_vs_property_only,full,property_only,11.1111111111111,11.1111111111111,1
+22,Melbourne 2BR Apartment/unit,0.5,435,132,140,218,full_vs_property_only,full,property_only,4.70948012232415,7.33333333333333,10.2666666666667
+22,Melbourne 3BR Apartment/unit,0.5,98,34,30,49,full_vs_property_only,full,property_only,10.8843537414966,17.7777777777778,5.33333333333333
+22,Yarra Ranges 3BR House/townhouse,0.5,35,31,9,18,full_vs_property_only,full,property_only,5.55555555555556,11.1111111111111,1
+23,Melbourne 2BR Apartment/unit,0.1,355,140,124,36,full_vs_property_only,full,property_only,-5.55555555555555,-1.61290322580645,-2
+23,Melbourne 3BR Apartment/unit,0.1,84,42,35,9,full_vs_property_only,full,property_only,44.4444444444444,11.4285714285714,4
+23,Yarra Ranges 3BR House/townhouse,0.1,28,21,7,3,full_vs_property_only,full,property_only,0,0,0
+23,Melbourne 2BR Apartment/unit,0.25,355,140,124,89,full_vs_property_only,full,property_only,8.7390761548065,6.27240143369176,7.77777777777778
+23,Melbourne 3BR Apartment/unit,0.25,84,42,35,21,full_vs_property_only,full,property_only,32.1428571428572,19.2857142857143,6.75
+23,Yarra Ranges 3BR House/townhouse,0.25,28,21,7,7,full_vs_property_only,full,property_only,-14.2857142857143,-14.2857142857143,-1
+23,Melbourne 2BR Apartment/unit,0.5,355,140,124,178,full_vs_property_only,full,property_only,9.36329588014981,13.4408602150538,16.6666666666667
+23,Melbourne 3BR Apartment/unit,0.5,84,42,35,42,full_vs_property_only,full,property_only,11.9047619047619,14.2857142857143,5
+23,Yarra Ranges 3BR House/townhouse,0.5,28,21,7,14,full_vs_property_only,full,property_only,14.2857142857143,28.5714285714286,2
+24,Melbourne 2BR Apartment/unit,0.1,407,141,164,41,full_vs_property_only,full,property_only,18.7617260787993,4.69043151969981,7.69230769230769
+24,Melbourne 3BR Apartment/unit,0.1,115,42,54,12,full_vs_property_only,full,property_only,50,11.1111111111111,6
+24,Yarra Ranges 3BR House/townhouse,0.1,30,24,14,3,full_vs_property_only,full,property_only,33.3333333333333,7.14285714285714,1
+24,Melbourne 2BR Apartment/unit,0.25,407,141,164,102,full_vs_property_only,full,property_only,18.0926916221034,11.2527716186253,18.4545454545455
+24,Melbourne 3BR Apartment/unit,0.25,115,42,54,29,full_vs_property_only,full,property_only,50.2463054187192,26.984126984127,14.5714285714286
+24,Yarra Ranges 3BR House/townhouse,0.25,30,24,14,8,full_vs_property_only,full,property_only,16.6666666666667,9.52380952380952,1.33333333333333
+24,Melbourne 2BR Apartment/unit,0.5,407,141,164,204,full_vs_property_only,full,property_only,12.7042483660131,15.8028455284553,25.9166666666667
+24,Melbourne 3BR Apartment/unit,0.5,115,42,54,58,full_vs_property_only,full,property_only,16.4456233421751,17.6638176638177,9.53846153846154
+24,Yarra Ranges 3BR House/townhouse,0.5,30,24,14,15,full_vs_property_only,full,property_only,-6.66666666666667,-7.14285714285715,-1
+25,Melbourne 2BR Apartment/unit,0.1,371,140,117,38,full_vs_property_only,full,property_only,-1.50375939849625,-0.488400488400489,-0.571428571428573
+25,Melbourne 3BR Apartment/unit,0.1,90,42,33,9,full_vs_property_only,full,property_only,22.2222222222222,6.06060606060606,2
+25,Yarra Ranges 3BR House/townhouse,0.1,24,23,9,3,full_vs_property_only,full,property_only,33.3333333333333,11.1111111111111,1
+25,Melbourne 2BR Apartment/unit,0.25,371,140,117,93,full_vs_property_only,full,property_only,6.45161290322581,5.12820512820513,6
+25,Melbourne 3BR Apartment/unit,0.25,90,42,33,23,full_vs_property_only,full,property_only,20.6521739130435,14.3939393939394,4.75
+25,Yarra Ranges 3BR House/townhouse,0.25,24,23,9,6,full_vs_property_only,full,property_only,16.6666666666667,11.1111111111111,1
+25,Melbourne 2BR Apartment/unit,0.5,371,140,117,186,full_vs_property_only,full,property_only,5.28146742567995,8.39617898441429,9.82352941176471
+25,Melbourne 3BR Apartment/unit,0.5,90,42,33,45,full_vs_property_only,full,property_only,17.7777777777778,24.2424242424242,8
+25,Yarra Ranges 3BR House/townhouse,0.5,24,23,9,12,full_vs_property_only,full,property_only,12.5,16.6666666666667,1.5
+26,Melbourne 2BR Apartment/unit,0.1,379,138,128,38,full_vs_property_only,full,property_only,3.50877192982456,1.04166666666667,1.33333333333333
+26,Melbourne 3BR Apartment/unit,0.1,113,45,35,12,full_vs_property_only,full,property_only,8.33333333333333,2.85714285714286,1
+26,Yarra Ranges 3BR House/townhouse,0.1,32,30,10,4,full_vs_property_only,full,property_only,25,10,1
+26,Melbourne 2BR Apartment/unit,0.25,379,138,128,95,full_vs_property_only,full,property_only,7.92569659442725,5.88235294117647,7.52941176470588
+26,Melbourne 3BR Apartment/unit,0.25,113,45,35,29,full_vs_property_only,full,property_only,17.2413793103448,14.2857142857143,5
+26,Yarra Ranges 3BR House/townhouse,0.25,32,30,10,8,full_vs_property_only,full,property_only,12.5,10,1
+26,Melbourne 2BR Apartment/unit,0.5,379,138,128,190,full_vs_property_only,full,property_only,6.01973684210526,8.935546875,11.4375
+26,Melbourne 3BR Apartment/unit,0.5,113,45,35,57,full_vs_property_only,full,property_only,8.07017543859649,13.1428571428571,4.6
+26,Yarra Ranges 3BR House/townhouse,0.5,32,30,10,16,full_vs_property_only,full,property_only,3.125,4.99999999999999,0.5
+27,Melbourne 2BR Apartment/unit,0.1,397,152,92,40,full_vs_property_only,full,property_only,0.83333333333333,0.362318840579709,0.333333333333332
+27,Melbourne 3BR Apartment/unit,0.1,103,48,33,11,full_vs_property_only,full,property_only,0,0,0
+27,Yarra Ranges 3BR House/townhouse,0.1,28,23,9,3,full_vs_property_only,full,property_only,0,0,0
+27,Melbourne 2BR Apartment/unit,0.25,397,152,92,100,full_vs_property_only,full,property_only,-1,-1.08695652173913,-1
+27,Melbourne 3BR Apartment/unit,0.25,103,48,33,26,full_vs_property_only,full,property_only,0.769230769230767,0.606060606060605,0.199999999999999
+27,Yarra Ranges 3BR House/townhouse,0.25,28,23,9,7,full_vs_property_only,full,property_only,-42.8571428571429,-33.3333333333333,-3
+27,Melbourne 2BR Apartment/unit,0.5,397,152,92,199,full_vs_property_only,full,property_only,5.56951423785594,12.0471014492754,11.0833333333333
+27,Melbourne 3BR Apartment/unit,0.5,103,48,33,52,full_vs_property_only,full,property_only,-2.56410256410257,-4.04040404040406,-1.33333333333334
+27,Yarra Ranges 3BR House/townhouse,0.5,28,23,9,14,full_vs_property_only,full,property_only,-14.2857142857143,-22.2222222222222,-2
+28,Melbourne 2BR Apartment/unit,0.1,388,153,122,39,full_vs_property_only,full,property_only,3.84615384615384,1.22950819672131,1.5
+28,Melbourne 3BR Apartment/unit,0.1,99,47,51,10,full_vs_property_only,full,property_only,40,7.84313725490196,4
+28,Yarra Ranges 3BR House/townhouse,0.1,24,22,7,3,full_vs_property_only,full,property_only,33.3333333333333,14.2857142857143,1
+28,Melbourne 2BR Apartment/unit,0.25,388,153,122,97,full_vs_property_only,full,property_only,-2.13058419243987,-1.69398907103825,-2.06666666666667
+28,Melbourne 3BR Apartment/unit,0.25,99,47,51,25,full_vs_property_only,full,property_only,34,16.6666666666667,8.5
+28,Yarra Ranges 3BR House/townhouse,0.25,24,22,7,6,full_vs_property_only,full,property_only,16.6666666666667,14.2857142857143,1
+28,Melbourne 2BR Apartment/unit,0.5,388,153,122,194,full_vs_property_only,full,property_only,4.91047205642973,7.80845556514237,9.52631578947368
+28,Melbourne 3BR Apartment/unit,0.5,99,47,51,50,full_vs_property_only,full,property_only,1.5,1.47058823529411,0.75
+28,Yarra Ranges 3BR House/townhouse,0.5,24,22,7,12,full_vs_property_only,full,property_only,13.8888888888889,23.8095238095238,1.66666666666667
+29,Melbourne 2BR Apartment/unit,0.1,391,139,90,40,full_vs_property_only,full,property_only,-4.375,-1.94444444444444,-1.75
+29,Melbourne 3BR Apartment/unit,0.1,95,33,23,10,full_vs_property_only,full,property_only,-13.3333333333333,-5.79710144927536,-1.33333333333333
+29,Yarra Ranges 3BR House/townhouse,0.1,32,29,9,4,full_vs_property_only,full,property_only,0,0,0
+29,Melbourne 2BR Apartment/unit,0.25,391,139,90,98,full_vs_property_only,full,property_only,-11.1044417767107,-12.0915032679739,-10.8823529411765
+29,Melbourne 3BR Apartment/unit,0.25,95,33,23,24,full_vs_property_only,full,property_only,-6.25,-6.52173913043478,-1.5
+29,Yarra Ranges 3BR House/townhouse,0.25,32,29,9,8,full_vs_property_only,full,property_only,37.5,33.3333333333333,3
+29,Melbourne 2BR Apartment/unit,0.5,391,139,90,196,full_vs_property_only,full,property_only,1.27551020408163,2.77777777777778,2.5
+29,Melbourne 3BR Apartment/unit,0.5,95,33,23,48,full_vs_property_only,full,property_only,-1.04166666666667,-2.17391304347826,-0.5
+29,Yarra Ranges 3BR House/townhouse,0.5,32,29,9,16,full_vs_property_only,full,property_only,6.25,11.1111111111111,1
+30,Melbourne 2BR Apartment/unit,0.1,347,146,134,35,full_vs_property_only,full,property_only,40,10.4477611940299,14
+30,Melbourne 3BR Apartment/unit,0.1,109,41,35,11,full_vs_property_only,full,property_only,18.1818181818182,5.71428571428571,2
+30,Yarra Ranges 3BR House/townhouse,0.1,27,22,8,3,full_vs_property_only,full,property_only,33.3333333333333,12.5,1
+30,Melbourne 2BR Apartment/unit,0.25,347,146,134,87,full_vs_property_only,full,property_only,24.8275862068966,16.1194029850746,21.6
+30,Melbourne 3BR Apartment/unit,0.25,109,41,35,28,full_vs_property_only,full,property_only,14.2857142857143,11.4285714285714,4
+30,Yarra Ranges 3BR House/townhouse,0.25,27,22,8,7,full_vs_property_only,full,property_only,14.2857142857143,12.5,1
+30,Melbourne 2BR Apartment/unit,0.5,347,146,134,174,full_vs_property_only,full,property_only,12.3938030984508,16.0934458144062,21.5652173913044
+30,Melbourne 3BR Apartment/unit,0.5,109,41,35,55,full_vs_property_only,full,property_only,17.4545454545455,27.4285714285714,9.6
+30,Yarra Ranges 3BR House/townhouse,0.5,27,22,8,14,full_vs_property_only,full,property_only,0,0,0
+31,Melbourne 2BR Apartment/unit,0.1,486,146,182,49,full_vs_property_only,full,property_only,1.02040816326531,0.274725274725275,0.5
+31,Melbourne 3BR Apartment/unit,0.1,106,48,35,11,full_vs_property_only,full,property_only,22.7272727272727,7.14285714285714,2.5
+31,Yarra Ranges 3BR House/townhouse,0.1,26,23,9,3,full_vs_property_only,full,property_only,0,0,0
+31,Melbourne 2BR Apartment/unit,0.25,486,146,182,122,full_vs_property_only,full,property_only,-0.856929955290592,-0.574425574425558,-1.04545454545452
+31,Melbourne 3BR Apartment/unit,0.25,106,48,35,27,full_vs_property_only,full,property_only,18.5185185185185,14.2857142857143,5
+31,Yarra Ranges 3BR House/townhouse,0.25,26,23,9,7,full_vs_property_only,full,property_only,0,0,0
+31,Melbourne 2BR Apartment/unit,0.5,486,146,182,243,full_vs_property_only,full,property_only,0.987654320987663,1.31868131868133,2.40000000000002
+31,Melbourne 3BR Apartment/unit,0.5,106,48,35,53,full_vs_property_only,full,property_only,7.54716981132076,11.4285714285714,4
+31,Yarra Ranges 3BR House/townhouse,0.5,26,23,9,13,full_vs_property_only,full,property_only,-15.3846153846154,-22.2222222222222,-2
+32,Melbourne 2BR Apartment/unit,0.1,388,138,138,39,full_vs_property_only,full,property_only,38.4615384615385,10.8695652173913,15
+32,Melbourne 3BR Apartment/unit,0.1,86,38,44,9,full_vs_property_only,full,property_only,33.3333333333333,6.81818181818182,3
+32,Yarra Ranges 3BR House/townhouse,0.1,24,21,5,3,full_vs_property_only,full,property_only,33.3333333333333,20,1
+32,Melbourne 2BR Apartment/unit,0.25,388,138,138,97,full_vs_property_only,full,property_only,30.7403936269916,21.6073781291173,29.8181818181818
+32,Melbourne 3BR Apartment/unit,0.25,86,38,44,22,full_vs_property_only,full,property_only,18.75,9.375,4.125
+32,Yarra Ranges 3BR House/townhouse,0.25,24,21,5,6,full_vs_property_only,full,property_only,8.33333333333333,10,0.5
+32,Melbourne 2BR Apartment/unit,0.5,388,138,138,194,full_vs_property_only,full,property_only,8.39469808541974,11.8012422360248,16.2857142857143
+32,Melbourne 3BR Apartment/unit,0.5,86,38,44,43,full_vs_property_only,full,property_only,11.2956810631229,11.038961038961,4.85714285714285
+32,Yarra Ranges 3BR House/townhouse,0.5,24,21,5,12,full_vs_property_only,full,property_only,3.33333333333334,8.00000000000001,0.4
+33,Melbourne 2BR Apartment/unit,0.1,364,146,107,37,full_vs_property_only,full,property_only,6.75675675675676,2.33644859813084,2.5
+33,Melbourne 3BR Apartment/unit,0.1,69,40,20,7,full_vs_property_only,full,property_only,0,0,0
+33,Yarra Ranges 3BR House/townhouse,0.1,32,30,13,4,full_vs_property_only,full,property_only,50,15.3846153846154,2
+33,Melbourne 2BR Apartment/unit,0.25,364,146,107,91,full_vs_property_only,full,property_only,4.48013524936602,3.81020848310568,4.07692307692307
+33,Melbourne 3BR Apartment/unit,0.25,69,40,20,18,full_vs_property_only,full,property_only,5.55111512312578e-15,0,8.88178419700125e-16
+33,Yarra Ranges 3BR House/townhouse,0.25,32,30,13,8,full_vs_property_only,full,property_only,25,15.3846153846154,2
+33,Melbourne 2BR Apartment/unit,0.5,364,146,107,182,full_vs_property_only,full,property_only,3.73626373626373,6.35514018691587,6.79999999999998
+33,Melbourne 3BR Apartment/unit,0.5,69,40,20,35,full_vs_property_only,full,property_only,-8.57142857142857,-15,-3
+33,Yarra Ranges 3BR House/townhouse,0.5,32,30,13,16,full_vs_property_only,full,property_only,12.5,15.3846153846154,2
+34,Melbourne 2BR Apartment/unit,0.1,490,149,179,49,full_vs_property_only,full,property_only,28.5714285714286,7.82122905027933,14
+34,Melbourne 3BR Apartment/unit,0.1,104,44,34,11,full_vs_property_only,full,property_only,24.2424242424242,7.84313725490196,2.66666666666667
+34,Yarra Ranges 3BR House/townhouse,0.1,24,20,4,3,full_vs_property_only,full,property_only,0,0,0
+34,Melbourne 2BR Apartment/unit,0.25,490,149,179,123,full_vs_property_only,full,property_only,24.577861163227,16.8886978942845,30.2307692307693
+34,Melbourne 3BR Apartment/unit,0.25,104,44,34,26,full_vs_property_only,full,property_only,17.5824175824176,13.4453781512605,4.57142857142857
+34,Yarra Ranges 3BR House/townhouse,0.25,24,20,4,6,full_vs_property_only,full,property_only,0,0,0
+34,Melbourne 2BR Apartment/unit,0.5,490,149,179,245,full_vs_property_only,full,property_only,10.4866562009419,14.3532445208423,25.6923076923077
+34,Melbourne 3BR Apartment/unit,0.5,104,44,34,52,full_vs_property_only,full,property_only,2.88461538461539,4.41176470588235,1.5
+34,Yarra Ranges 3BR House/townhouse,0.5,24,20,4,12,full_vs_property_only,full,property_only,8.33333333333333,25,1
+35,Melbourne 2BR Apartment/unit,0.1,411,140,151,42,full_vs_property_only,full,property_only,12.4338624338624,3.45842531272995,5.22222222222222
+35,Melbourne 3BR Apartment/unit,0.1,105,45,53,11,full_vs_property_only,full,property_only,81.8181818181818,16.9811320754717,9
+35,Yarra Ranges 3BR House/townhouse,0.1,32,24,8,4,full_vs_property_only,full,property_only,50,25,2
+35,Melbourne 2BR Apartment/unit,0.25,411,140,151,103,full_vs_property_only,full,property_only,2.49653259361997,1.70293282876064,2.57142857142857
+35,Melbourne 3BR Apartment/unit,0.25,105,45,53,27,full_vs_property_only,full,property_only,40.7407407407408,20.7547169811321,11
+35,Yarra Ranges 3BR House/townhouse,0.25,32,24,8,8,full_vs_property_only,full,property_only,12.5,12.5,1
+35,Melbourne 2BR Apartment/unit,0.5,411,140,151,206,full_vs_property_only,full,property_only,5.27045769764217,7.19016083254495,10.8571428571429
+35,Melbourne 3BR Apartment/unit,0.5,105,45,53,53,full_vs_property_only,full,property_only,8.01886792452829,8.01886792452829,4.25
+35,Yarra Ranges 3BR House/townhouse,0.5,32,24,8,16,full_vs_property_only,full,property_only,-10.4166666666667,-20.8333333333333,-1.66666666666667
+36,Melbourne 2BR Apartment/unit,0.1,308,136,95,31,full_vs_property_only,full,property_only,7.44416873449131,2.42914979757085,2.30769230769231
+36,Melbourne 3BR Apartment/unit,0.1,92,39,25,10,full_vs_property_only,full,property_only,-20,-8,-2
+36,Yarra Ranges 3BR House/townhouse,0.1,33,30,9,4,full_vs_property_only,full,property_only,-25,-11.1111111111111,-1
+36,Melbourne 2BR Apartment/unit,0.25,308,136,95,77,full_vs_property_only,full,property_only,11.873840445269,9.62406015037594,9.14285714285714
+36,Melbourne 3BR Apartment/unit,0.25,92,39,25,23,full_vs_property_only,full,property_only,1.44927536231884,1.33333333333333,0.333333333333332
+36,Yarra Ranges 3BR House/townhouse,0.25,33,30,9,9,full_vs_property_only,full,property_only,-5.55555555555556,-5.55555555555556,-0.5
+36,Melbourne 2BR Apartment/unit,0.5,308,136,95,154,full_vs_property_only,full,property_only,14.9350649350649,24.2105263157895,23
+36,Melbourne 3BR Apartment/unit,0.5,92,39,25,46,full_vs_property_only,full,property_only,6.52173913043478,12,3
+36,Yarra Ranges 3BR House/townhouse,0.5,33,30,9,17,full_vs_property_only,full,property_only,5.88235294117647,11.1111111111111,1
+37,Melbourne 2BR Apartment/unit,0.1,415,143,148,42,full_vs_property_only,full,property_only,27.9761904761905,7.93918918918919,11.75
+37,Melbourne 3BR Apartment/unit,0.1,102,51,25,11,full_vs_property_only,full,property_only,18.1818181818182,8,2
+37,Yarra Ranges 3BR House/townhouse,0.1,23,16,7,3,full_vs_property_only,full,property_only,0,0,0
+37,Melbourne 2BR Apartment/unit,0.25,415,143,148,104,full_vs_property_only,full,property_only,25,17.5675675675676,26
+37,Melbourne 3BR Apartment/unit,0.25,102,51,25,26,full_vs_property_only,full,property_only,6.92307692307692,7.2,1.8
+37,Yarra Ranges 3BR House/townhouse,0.25,23,16,7,6,full_vs_property_only,full,property_only,-16.6666666666667,-14.2857142857143,-1
+37,Melbourne 2BR Apartment/unit,0.5,415,143,148,208,full_vs_property_only,full,property_only,11.9871794871795,16.8468468468469,24.9333333333333
+37,Melbourne 3BR Apartment/unit,0.5,102,51,25,51,full_vs_property_only,full,property_only,8.23529411764706,16.8,4.2
+37,Yarra Ranges 3BR House/townhouse,0.5,23,16,7,12,full_vs_property_only,full,property_only,-16.6666666666667,-28.5714285714286,-2
+38,Melbourne 2BR Apartment/unit,0.1,456,153,129,46,full_vs_property_only,full,property_only,33.3333333333333,11.8863049095607,15.3333333333333
+38,Melbourne 3BR Apartment/unit,0.1,101,43,26,11,full_vs_property_only,full,property_only,27.2727272727273,11.5384615384615,3
+38,Yarra Ranges 3BR House/townhouse,0.1,30,27,8,3,full_vs_property_only,full,property_only,33.3333333333333,12.5,1
+38,Melbourne 2BR Apartment/unit,0.25,456,153,129,114,full_vs_property_only,full,property_only,13.6738906088751,12.0839033287734,15.5882352941177
+38,Melbourne 3BR Apartment/unit,0.25,101,43,26,26,full_vs_property_only,full,property_only,14.6153846153846,14.6153846153846,3.8
+38,Yarra Ranges 3BR House/townhouse,0.25,30,27,8,8,full_vs_property_only,full,property_only,4.16666666666667,4.16666666666667,0.333333333333334
+38,Melbourne 2BR Apartment/unit,0.5,456,153,129,228,full_vs_property_only,full,property_only,6.02716468590833,10.6526631657915,13.741935483871
+38,Melbourne 3BR Apartment/unit,0.5,101,43,26,51,full_vs_property_only,full,property_only,1.96078431372549,3.84615384615384,1
+38,Yarra Ranges 3BR House/townhouse,0.5,30,27,8,15,full_vs_property_only,full,property_only,3.33333333333334,6.25,0.5
+39,Melbourne 2BR Apartment/unit,0.1,396,147,134,40,full_vs_property_only,full,property_only,36.4285714285714,10.8742004264392,14.5714285714286
+39,Melbourne 3BR Apartment/unit,0.1,68,37,26,7,full_vs_property_only,full,property_only,28.5714285714286,7.69230769230769,2
+39,Yarra Ranges 3BR House/townhouse,0.1,27,23,8,3,full_vs_property_only,full,property_only,33.3333333333333,12.5,1
+39,Melbourne 2BR Apartment/unit,0.25,396,147,134,99,full_vs_property_only,full,property_only,15.8249158249158,11.6915422885572,15.6666666666667
+39,Melbourne 3BR Apartment/unit,0.25,68,37,26,17,full_vs_property_only,full,property_only,17.6470588235294,11.5384615384615,3
+39,Yarra Ranges 3BR House/townhouse,0.25,27,23,8,7,full_vs_property_only,full,property_only,14.2857142857143,12.5,1
+39,Melbourne 2BR Apartment/unit,0.5,396,147,134,198,full_vs_property_only,full,property_only,-2.9040404040404,-4.2910447761194,-5.75
+39,Melbourne 3BR Apartment/unit,0.5,68,37,26,34,full_vs_property_only,full,property_only,12.5,16.3461538461539,4.25
+39,Yarra Ranges 3BR House/townhouse,0.5,27,23,8,14,full_vs_property_only,full,property_only,7.14285714285714,12.5,1
+40,Melbourne 2BR Apartment/unit,0.1,355,140,114,36,full_vs_property_only,full,property_only,17.0940170940171,5.39811066126856,6.15384615384615
+40,Melbourne 3BR Apartment/unit,0.1,92,40,45,10,full_vs_property_only,full,property_only,40,8.88888888888889,4
+40,Yarra Ranges 3BR House/townhouse,0.1,22,20,7,3,full_vs_property_only,full,property_only,44.4444444444445,19.0476190476191,1.33333333333333
+40,Melbourne 2BR Apartment/unit,0.25,355,140,114,89,full_vs_property_only,full,property_only,13.9646869983949,10.9022556390977,12.4285714285714
+40,Melbourne 3BR Apartment/unit,0.25,92,40,45,23,full_vs_property_only,full,property_only,60.8695652173913,31.1111111111111,14
+40,Yarra Ranges 3BR House/townhouse,0.25,22,20,7,6,full_vs_property_only,full,property_only,33.3333333333333,28.5714285714286,2
+40,Melbourne 2BR Apartment/unit,0.5,355,140,114,178,full_vs_property_only,full,property_only,6.61192739844426,10.3238866396761,11.7692307692308
+40,Melbourne 3BR Apartment/unit,0.5,92,40,45,46,full_vs_property_only,full,property_only,28.2608695652174,28.8888888888889,13
+40,Yarra Ranges 3BR House/townhouse,0.5,22,20,7,11,full_vs_property_only,full,property_only,18.1818181818182,28.5714285714286,2
+41,Melbourne 2BR Apartment/unit,0.1,260,135,68,26,full_vs_property_only,full,property_only,-5.49450549450549,-2.10084033613445,-1.42857142857143
+41,Melbourne 3BR Apartment/unit,0.1,74,40,20,8,full_vs_property_only,full,property_only,0,0,0
+41,Yarra Ranges 3BR House/townhouse,0.1,22,21,8,3,full_vs_property_only,full,property_only,0,0,0
+41,Melbourne 2BR Apartment/unit,0.25,260,135,68,65,full_vs_property_only,full,property_only,-14.7008547008547,-14.0522875816993,-9.55555555555556
+41,Melbourne 3BR Apartment/unit,0.25,74,40,20,19,full_vs_property_only,full,property_only,26.3157894736842,25,5
+41,Yarra Ranges 3BR House/townhouse,0.25,22,21,8,6,full_vs_property_only,full,property_only,0,0,0
+41,Melbourne 2BR Apartment/unit,0.5,260,135,68,130,full_vs_property_only,full,property_only,-0.839160839160841,-1.60427807486632,-1.09090909090909
+41,Melbourne 3BR Apartment/unit,0.5,74,40,20,37,full_vs_property_only,full,property_only,13.5135135135135,25,5
+41,Yarra Ranges 3BR House/townhouse,0.5,22,21,8,11,full_vs_property_only,full,property_only,18.1818181818182,25,2
+42,Melbourne 2BR Apartment/unit,0.1,370,132,78,37,full_vs_property_only,full,property_only,-1.8018018018018,-0.854700854700855,-0.666666666666666
+42,Melbourne 3BR Apartment/unit,0.1,71,41,22,8,full_vs_property_only,full,property_only,12.5,4.54545454545455,1
+42,Yarra Ranges 3BR House/townhouse,0.1,21,20,5,3,full_vs_property_only,full,property_only,0,0,0
+42,Melbourne 2BR Apartment/unit,0.25,370,132,78,93,full_vs_property_only,full,property_only,-9.31899641577061,-11.1111111111111,-8.66666666666667
+42,Melbourne 3BR Apartment/unit,0.25,71,41,22,18,full_vs_property_only,full,property_only,12.962962962963,10.6060606060606,2.33333333333333
+42,Yarra Ranges 3BR House/townhouse,0.25,21,20,5,6,full_vs_property_only,full,property_only,16.6666666666667,20,1
+42,Melbourne 2BR Apartment/unit,0.5,370,132,78,185,full_vs_property_only,full,property_only,1.33848133848134,3.17460317460317,2.47619047619047
+42,Melbourne 3BR Apartment/unit,0.5,71,41,22,36,full_vs_property_only,full,property_only,2.77777777777777,4.54545454545454,1
+42,Yarra Ranges 3BR House/townhouse,0.5,21,20,5,11,full_vs_property_only,full,property_only,0,0,0
+43,Melbourne 2BR Apartment/unit,0.1,418,148,128,42,full_vs_property_only,full,property_only,0,0,0
+43,Melbourne 3BR Apartment/unit,0.1,94,40,38,10,full_vs_property_only,full,property_only,0,0,0
+43,Yarra Ranges 3BR House/townhouse,0.1,23,22,10,3,full_vs_property_only,full,property_only,16.6666666666667,5,0.5
+43,Melbourne 2BR Apartment/unit,0.25,418,148,128,105,full_vs_property_only,full,property_only,-5.90476190476191,-4.84375,-6.2
+43,Melbourne 3BR Apartment/unit,0.25,94,40,38,24,full_vs_property_only,full,property_only,36.1111111111111,22.8070175438597,8.66666666666667
+43,Yarra Ranges 3BR House/townhouse,0.25,23,22,10,6,full_vs_property_only,full,property_only,22.2222222222222,13.3333333333333,1.33333333333333
+43,Melbourne 2BR Apartment/unit,0.5,418,148,128,209,full_vs_property_only,full,property_only,0.782949108307962,1.27840909090909,1.63636363636364
+43,Melbourne 3BR Apartment/unit,0.5,94,40,38,47,full_vs_property_only,full,property_only,22.3404255319149,27.6315789473684,10.5
+43,Yarra Ranges 3BR House/townhouse,0.5,23,22,10,12,full_vs_property_only,full,property_only,4.16666666666667,4.99999999999999,0.5
+44,Melbourne 2BR Apartment/unit,0.1,381,142,104,39,full_vs_property_only,full,property_only,-4.27350427350427,-1.60256410256411,-1.66666666666667
+44,Melbourne 3BR Apartment/unit,0.1,70,37,15,7,full_vs_property_only,full,property_only,28.5714285714286,13.3333333333333,2
+44,Yarra Ranges 3BR House/townhouse,0.1,31,28,11,4,full_vs_property_only,full,property_only,-25,-9.09090909090909,-1
+44,Melbourne 2BR Apartment/unit,0.25,381,142,104,96,full_vs_property_only,full,property_only,-6.66666666666667,-6.15384615384615,-6.4
+44,Melbourne 3BR Apartment/unit,0.25,70,37,15,18,full_vs_property_only,full,property_only,-5.55555555555556,-6.66666666666667,-1
+44,Yarra Ranges 3BR House/townhouse,0.25,31,28,11,8,full_vs_property_only,full,property_only,12.5,9.09090909090909,1
+44,Melbourne 2BR Apartment/unit,0.5,381,142,104,191,full_vs_property_only,full,property_only,2.58507853403142,4.74759615384616,4.9375
+44,Melbourne 3BR Apartment/unit,0.5,70,37,15,35,full_vs_property_only,full,property_only,-1.42857142857143,-3.33333333333333,-0.5
+44,Yarra Ranges 3BR House/townhouse,0.5,31,28,11,16,full_vs_property_only,full,property_only,12.5,18.1818181818182,2
+45,Melbourne 2BR Apartment/unit,0.1,399,140,125,40,full_vs_property_only,full,property_only,7.5,2.4,3
+45,Melbourne 3BR Apartment/unit,0.1,100,45,28,10,full_vs_property_only,full,property_only,10,3.57142857142857,1
+45,Yarra Ranges 3BR House/townhouse,0.1,34,25,11,4,full_vs_property_only,full,property_only,25,9.09090909090909,1
+45,Melbourne 2BR Apartment/unit,0.25,399,140,125,100,full_vs_property_only,full,property_only,20,16,20
+45,Melbourne 3BR Apartment/unit,0.25,100,45,28,25,full_vs_property_only,full,property_only,12,10.7142857142857,3
+45,Yarra Ranges 3BR House/townhouse,0.25,34,25,11,9,full_vs_property_only,full,property_only,18.5185185185185,15.1515151515152,1.66666666666667
+45,Melbourne 2BR Apartment/unit,0.5,399,140,125,200,full_vs_property_only,full,property_only,14.7857142857143,23.6571428571429,29.5714285714286
+45,Melbourne 3BR Apartment/unit,0.5,100,45,28,50,full_vs_property_only,full,property_only,14,25,7
+45,Yarra Ranges 3BR House/townhouse,0.5,34,25,11,17,full_vs_property_only,full,property_only,5.88235294117647,9.09090909090909,1
+46,Melbourne 2BR Apartment/unit,0.1,325,136,114,33,full_vs_property_only,full,property_only,3.03030303030303,0.87719298245614,1
+46,Melbourne 3BR Apartment/unit,0.1,89,37,33,9,full_vs_property_only,full,property_only,3.7037037037037,1.01010101010101,0.333333333333334
+46,Yarra Ranges 3BR House/townhouse,0.1,28,21,6,3,full_vs_property_only,full,property_only,0,0,0
+46,Melbourne 2BR Apartment/unit,0.25,325,136,114,82,full_vs_property_only,full,property_only,0.135501355013545,0.0974658869395656,0.111111111111107
+46,Melbourne 3BR Apartment/unit,0.25,89,37,33,23,full_vs_property_only,full,property_only,14.4927536231884,10.1010101010101,3.33333333333333
+46,Yarra Ranges 3BR House/townhouse,0.25,28,21,6,7,full_vs_property_only,full,property_only,0,0,0
+46,Melbourne 2BR Apartment/unit,0.5,325,136,114,163,full_vs_property_only,full,property_only,-3.31288343558282,-4.73684210526315,-5.39999999999999
+46,Melbourne 3BR Apartment/unit,0.5,89,37,33,45,full_vs_property_only,full,property_only,0.740740740740736,1.01010101010101,0.333333333333332
+46,Yarra Ranges 3BR House/townhouse,0.5,28,21,6,14,full_vs_property_only,full,property_only,0,0,0
+47,Melbourne 2BR Apartment/unit,0.1,452,143,121,46,full_vs_property_only,full,property_only,31.5217391304348,11.9834710743802,14.5
+47,Melbourne 3BR Apartment/unit,0.1,134,49,47,14,full_vs_property_only,full,property_only,59.5238095238095,17.7304964539007,8.33333333333333
+47,Yarra Ranges 3BR House/townhouse,0.1,25,22,10,3,full_vs_property_only,full,property_only,66.6666666666667,20,2
+47,Melbourne 2BR Apartment/unit,0.25,452,143,121,113,full_vs_property_only,full,property_only,29.456384323641,27.5088547815821,33.2857142857143
+47,Melbourne 3BR Apartment/unit,0.25,134,49,47,34,full_vs_property_only,full,property_only,47.0588235294118,34.0425531914894,16
+47,Yarra Ranges 3BR House/townhouse,0.25,25,22,10,7,full_vs_property_only,full,property_only,14.2857142857143,10,1
+47,Melbourne 2BR Apartment/unit,0.5,452,143,121,226,full_vs_property_only,full,property_only,4.3362831858407,8.099173553719,9.79999999999998
+47,Melbourne 3BR Apartment/unit,0.5,134,49,47,67,full_vs_property_only,full,property_only,9.63364993215739,13.7330754352031,6.45454545454545
+47,Yarra Ranges 3BR House/townhouse,0.5,25,22,10,13,full_vs_property_only,full,property_only,12.8205128205128,16.6666666666667,1.66666666666667
+48,Melbourne 2BR Apartment/unit,0.1,322,140,115,33,full_vs_property_only,full,property_only,33.3333333333333,9.56521739130435,11
+48,Melbourne 3BR Apartment/unit,0.1,89,43,34,9,full_vs_property_only,full,property_only,66.6666666666667,17.6470588235294,6
+48,Yarra Ranges 3BR House/townhouse,0.1,23,21,10,3,full_vs_property_only,full,property_only,-33.3333333333333,-10,-1
+48,Melbourne 2BR Apartment/unit,0.25,322,140,115,81,full_vs_property_only,full,property_only,19.0268700072622,13.4015345268542,15.4117647058824
+48,Melbourne 3BR Apartment/unit,0.25,89,43,34,23,full_vs_property_only,full,property_only,42.8571428571429,28.9915966386555,9.85714285714286
+48,Yarra Ranges 3BR House/townhouse,0.25,23,21,10,6,full_vs_property_only,full,property_only,0,0,0
+48,Melbourne 2BR Apartment/unit,0.5,322,140,115,161,full_vs_property_only,full,property_only,13.2505175983437,18.5507246376812,21.3333333333333
+48,Melbourne 3BR Apartment/unit,0.5,89,43,34,45,full_vs_property_only,full,property_only,10.2222222222222,13.5294117647059,4.6
+48,Yarra Ranges 3BR House/townhouse,0.5,23,21,10,12,full_vs_property_only,full,property_only,8.33333333333333,10,1
+49,Melbourne 2BR Apartment/unit,0.1,387,169,158,39,full_vs_property_only,full,property_only,37.1794871794872,9.17721518987342,14.5
+49,Melbourne 3BR Apartment/unit,0.1,84,39,46,9,full_vs_property_only,full,property_only,75,14.6739130434783,6.75
+49,Yarra Ranges 3BR House/townhouse,0.1,29,28,12,3,full_vs_property_only,full,property_only,-33.3333333333333,-8.33333333333333,-1
+49,Melbourne 2BR Apartment/unit,0.25,387,169,158,97,full_vs_property_only,full,property_only,19.2930780559647,11.8444846292948,18.7142857142857
+49,Melbourne 3BR Apartment/unit,0.25,84,39,46,21,full_vs_property_only,full,property_only,33.3333333333333,15.2173913043478,7
+49,Yarra Ranges 3BR House/townhouse,0.25,29,28,12,8,full_vs_property_only,full,property_only,-12.5,-8.33333333333333,-1
+49,Melbourne 2BR Apartment/unit,0.5,387,169,158,194,full_vs_property_only,full,property_only,2.43004418262148,2.98372513562385,4.71428571428568
+49,Melbourne 3BR Apartment/unit,0.5,84,39,46,42,full_vs_property_only,full,property_only,0,0,0
+49,Yarra Ranges 3BR House/townhouse,0.5,29,28,12,15,full_vs_property_only,full,property_only,-16.6666666666667,-20.8333333333333,-2.5
+50,Melbourne 2BR Apartment/unit,0.1,364,140,122,37,full_vs_property_only,full,property_only,22.7799227799228,6.90866510538642,8.42857142857143
+50,Melbourne 3BR Apartment/unit,0.1,92,46,34,10,full_vs_property_only,full,property_only,0,0,0
+50,Yarra Ranges 3BR House/townhouse,0.1,28,26,9,3,full_vs_property_only,full,property_only,0,0,0
+50,Melbourne 2BR Apartment/unit,0.25,364,140,122,91,full_vs_property_only,full,property_only,13.1022823330516,9.77301387137452,11.9230769230769
+50,Melbourne 3BR Apartment/unit,0.25,92,46,34,23,full_vs_property_only,full,property_only,0,0,0
+50,Yarra Ranges 3BR House/townhouse,0.25,28,26,9,7,full_vs_property_only,full,property_only,-14.2857142857143,-11.1111111111111,-1
+50,Melbourne 2BR Apartment/unit,0.5,364,140,122,182,full_vs_property_only,full,property_only,11.1721611721612,16.6666666666667,20.3333333333333
+50,Melbourne 3BR Apartment/unit,0.5,92,46,34,46,full_vs_property_only,full,property_only,17.3913043478261,23.5294117647059,8
+50,Yarra Ranges 3BR House/townhouse,0.5,28,26,9,14,full_vs_property_only,full,property_only,-11.9047619047619,-18.5185185185185,-1.66666666666667

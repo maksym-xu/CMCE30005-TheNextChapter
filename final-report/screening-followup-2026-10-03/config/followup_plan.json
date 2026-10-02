@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-03",
+  "scope": "Exploratory follow-up of previously selected groups and a frozen logistic specification. No new algorithm or outcome is selected.",
+  "input_rows": 3873,
+  "input_hosts": 1726,
+  "outcome": "30 or more dated reviews in the preceding 365 days",
+  "splits": 50,
+  "split_source": "Reuse exact repeated_host_split memberships from the completed paired analysis. No fresh random sampling.",
+  "priority_groups": [
+    "Melbourne 2BR Apartment/unit",
+    "Melbourne 3BR Apartment/unit",
+    "Yarra Ranges 3BR House/townhouse"
+  ],
+  "models": {
+    "baseline": "Existing training segment-rate score, fixed smoothing weight 10",
+    "property_only": "Refit unpenalised binomial logistic regression: busy ~ area + dwelling + bedrooms + amenities_10",
+    "full": "Reuse existing six-input logistic scores; no new fitting or tuning"
+  },
+  "training_scope": "Both logistic models use all eligible training hosts. Restrict the evaluation candidate pool after scoring. Do not train a new three-group-only model.",
+  "fractions": [
+    0.1,
+    0.25,
+    0.5
+  ],
+  "primary_fraction": 0.25,
+  "scopes": {
+    "all_eligible": "Select ceil(fraction * n) across each full test set",
+    "priority_pool": "Restrict test listings to the three fixed priority groups, then select ceil(fraction * n) from that pool",
+    "priority_fixed_quota": "Restrict to priority groups and select ceil(fraction * group_n) separately inside each group, then combine"
+  },
+  "tie_rule": "Share remaining quota equally among boundary ties without using outcomes. Compute expected target counts. Use the same quota for all models in each comparison.",
+  "primary_business_check": "Full versus baseline precision gain with fixed quotas within each priority group, at 25%. Also report pooled priority-candidate results.",
+  "ablation": "Property-only versus baseline and full versus property-only on matched tests. Removing price and minimum stay estimates their joint predictive contribution, not separate effects or causal policy impacts.",
+  "metrics": "Precision and expected target count at each quota, recall of target-reaching listings, AUC and Brier separately by evaluation population. AUC/Brier do not change when only the shortlist quota changes.",
+  "aggregation": "Equal-weight mean of within-split metrics and paired differences. Empirical 5th/95th percentiles and better/tied/worse split counts. Never pool overlapping test observations. Percentiles describe split sensitivity, not confidence intervals.",
+  "limitations": [
+    "The priority groups and full-model specification followed prior outcome exploration.",
+    "No independent test of the complete process for selecting groups or features.",
+    "Current listing features may differ from conditions during the historical review window.",
+    "The property-only model assumes listed amenities are known at screening time.",
+    "Reviews do not measure occupancy, revenue or profit.",
+    "The 50 repeated host test sets overlap.",
+    "Small per-group shortlists at 10% can produce unstable proportions."
+  ]
+}

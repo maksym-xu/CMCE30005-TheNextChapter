@@ -1,0 +1,32 @@
+{
+  "private-inputs/analysis_input.csv": {
+    "sha256": "bf286ed7bfb89a3e06f7a52e10c3913507296e62432a56596b24fef88a6dee20",
+    "source_package": "paired-analysis-2026-10-02",
+    "source_file": "private-inputs/analysis_input.csv"
+  },
+  "private-inputs/prior_test_predictions_PRIVATE.csv": {
+    "sha256": "9262ff78e1dc93e8aa745ed4fcf510fb8e802e6c7c1eeb141458c3f653342a9e",
+    "source_package": "paired-analysis-2026-10-02",
+    "source_file": "working/test_predictions_PRIVATE.csv"
+  },
+  "private-inputs/prior_split_membership_PRIVATE.csv": {
+    "sha256": "287e8c86b723b13ea388b2f886458944fada7a20bb6c43f53b12fb14e234060f",
+    "source_package": "paired-analysis-2026-10-02",
+    "source_file": "working/split_membership_PRIVATE.csv"
+  },
+  "reference/prior_full_coefficients.csv": {
+    "sha256": "d26d2245d6e89afb76caa53caebd20d4a7a488fddd8b35330f92310fbd7bf7a2",
+    "source_package": "paired-analysis-2026-10-02",
+    "source_file": "outputs/split_coefficients.csv"
+  },
+  "reference/prior_split_metrics.csv": {
+    "sha256": "74cc54c939026217adc09abd2b9c541ee688abfee43ca2c87a11d48c0b012bb6",
+    "source_package": "paired-analysis-2026-10-02",
+    "source_file": "outputs/split_metrics.csv"
+  },
+  "reference/prior_model_helpers.R": {
+    "sha256": "57466c732b38c6dac44335fbd75f6ae5d5daa8ae200c077363dc1fb0b2478202",
+    "source_package": "paired-analysis-2026-10-02",
+    "source_file": "scripts/model_helpers.R"
+  }
+}

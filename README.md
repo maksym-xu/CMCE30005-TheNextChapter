@@ -6,6 +6,12 @@ The [final presentation package](final-presentation/README.md) contains the 10-s
 
 The final main model is logistic regression for clearer explanation; random forest remains a benchmark. The client is framed as planning to lease homes. The interim report below is retained as the historical version, including its earlier model selection and wording.
 
+## Final report screening evidence updated 3 October 2026
+
+The [final report evidence guide](final-report/README.md) links the paired model comparison and the new [screening follow-up](final-report/screening-followup-2026-10-03/README.md). The follow-up tests selection within the three priority groups, the joint contribution of price and minimum-stay information, and 10%, 25% and 50% shortlist quotas on the same 50 host splits.
+
+With a separate 25% quota inside each priority group, the full model averaged 49.62% historical review-target attainment against 32.43% for the group-rate baseline, a 17.19-point gain. It was better in 46 splits and worse in four. The package includes an English findings brief, figures, aggregate results, reproducible code and independent score and metric checks. These exploratory historical results remain distinct from the original five-fold presentation result and do not establish future profit.
+
 ## Archived interim report
 
 Interim Project Report

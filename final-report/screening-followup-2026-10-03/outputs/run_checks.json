@@ -1,0 +1,107 @@
+{
+  "plan": {
+    "date": "2026-10-03",
+    "scope": "Exploratory follow-up of previously selected groups and a frozen logistic specification. No new algorithm or outcome is selected.",
+    "input_rows": 3873,
+    "input_hosts": 1726,
+    "outcome": "30 or more dated reviews in the preceding 365 days",
+    "splits": 50,
+    "split_source": "Reuse exact repeated_host_split memberships from the completed paired analysis. No fresh random sampling.",
+    "priority_groups": ["Melbourne 2BR Apartment/unit", "Melbourne 3BR Apartment/unit", "Yarra Ranges 3BR House/townhouse"],
+    "models": {
+      "baseline": "Existing training segment-rate score, fixed smoothing weight 10",
+      "property_only": "Refit unpenalised binomial logistic regression: busy ~ area + dwelling + bedrooms + amenities_10",
+      "full": "Reuse existing six-input logistic scores; no new fitting or tuning"
+    },
+    "training_scope": "Both logistic models use all eligible training hosts. Restrict the evaluation candidate pool after scoring. Do not train a new three-group-only model.",
+    "fractions": [0.10000000000000001, 0.25, 0.5],
+    "primary_fraction": 0.25,
+    "scopes": {
+      "all_eligible": "Select ceil(fraction * n) across each full test set",
+      "priority_pool": "Restrict test listings to the three fixed priority groups, then select ceil(fraction * n) from that pool",
+      "priority_fixed_quota": "Restrict to priority groups and select ceil(fraction * group_n) separately inside each group, then combine"
+    },
+    "tie_rule": "Share remaining quota equally among boundary ties without using outcomes. Compute expected target counts. Use the same quota for all models in each comparison.",
+    "primary_business_check": "Full versus baseline precision gain with fixed quotas within each priority group, at 25%. Also report pooled priority-candidate results.",
+    "ablation": "Property-only versus baseline and full versus property-only on matched tests. Removing price and minimum stay estimates their joint predictive contribution, not separate effects or causal policy impacts.",
+    "metrics": "Precision and expected target count at each quota, recall of target-reaching listings, AUC and Brier separately by evaluation population. AUC/Brier do not change when only the shortlist quota changes.",
+    "aggregation": "Equal-weight mean of within-split metrics and paired differences. Empirical 5th/95th percentiles and better/tied/worse split counts. Never pool overlapping test observations. Percentiles describe split sensitivity, not confidence intervals.",
+    "limitations": ["The priority groups and full-model specification followed prior outcome exploration.", "No independent test of the complete process for selecting groups or features.", "Current listing features may differ from conditions during the historical review window.", "The property-only model assumes listed amenities are known at screening time.", "Reviews do not measure occupancy, revenue or profit.", "The 50 repeated host test sets overlap.", "Small per-group shortlists at 10% can produce unstable proportions."]
+  },
+  "fingerprint_checks_passed": 6,
+  "input_fingerprints": {
+    "private-inputs/analysis_input.csv": {
+      "sha256": "bf286ed7bfb89a3e06f7a52e10c3913507296e62432a56596b24fef88a6dee20",
+      "source_package": "paired-analysis-2026-10-02",
+      "source_file": "private-inputs/analysis_input.csv"
+    },
+    "private-inputs/prior_test_predictions_PRIVATE.csv": {
+      "sha256": "9262ff78e1dc93e8aa745ed4fcf510fb8e802e6c7c1eeb141458c3f653342a9e",
+      "source_package": "paired-analysis-2026-10-02",
+      "source_file": "working/test_predictions_PRIVATE.csv"
+    },
+    "private-inputs/prior_split_membership_PRIVATE.csv": {
+      "sha256": "287e8c86b723b13ea388b2f886458944fada7a20bb6c43f53b12fb14e234060f",
+      "source_package": "paired-analysis-2026-10-02",
+      "source_file": "working/split_membership_PRIVATE.csv"
+    },
+    "reference/prior_full_coefficients.csv": {
+      "sha256": "d26d2245d6e89afb76caa53caebd20d4a7a488fddd8b35330f92310fbd7bf7a2",
+      "source_package": "paired-analysis-2026-10-02",
+      "source_file": "outputs/split_coefficients.csv"
+    },
+    "reference/prior_split_metrics.csv": {
+      "sha256": "74cc54c939026217adc09abd2b9c541ee688abfee43ca2c87a11d48c0b012bb6",
+      "source_package": "paired-analysis-2026-10-02",
+      "source_file": "outputs/split_metrics.csv"
+    },
+    "reference/prior_model_helpers.R": {
+      "sha256": "57466c732b38c6dac44335fbd75f6ae5d5daa8ae200c077363dc1fb0b2478202",
+      "source_package": "paired-analysis-2026-10-02",
+      "source_file": "scripts/model_helpers.R"
+    }
+  },
+  "rows": 3873,
+  "hosts": 1726,
+  "target_count": 981,
+  "splits": 50,
+  "property_only_fits": 50,
+  "all_property_only_fits_converged": true,
+  "total_fit_warnings": 0,
+  "maximum_baseline_reconstruction_difference": 5.2735593669694936e-16,
+  "maximum_full_reconstruction_difference": 3.4972025275692431e-15,
+  "prior_all_eligible_25_percent_checks": {
+    "baseline": {
+      "max_precision_difference": 4.3298697960381105e-15,
+      "max_expected_positive_difference": 5.1159076974727213e-13,
+      "max_auc_difference": 5.5511151231257827e-16,
+      "max_brier_difference": 7.2164496600635175e-16
+    },
+    "full": {
+      "max_precision_difference": 5.5511151231257827e-16,
+      "max_expected_positive_difference": 0,
+      "max_auc_difference": 5.5511151231257827e-16,
+      "max_brier_difference": 5.2735593669694936e-16
+    }
+  },
+  "baseline_constant_within_every_segment_and_split": true,
+  "within_segment_reduced_model_note": "Area, dwelling and bedrooms are constant within a segment; the reduced model can rank listings within a segment only through amenity count.",
+  "summary_method": "Equal weight for each split; finite values only for undefined metrics; empirical type-7 P05/P95, not confidence intervals; better/tie tolerance 1e-12.",
+  "no_new_full_or_baseline_fit": true,
+  "output_csv_rows": {
+    "split_screening_metrics": 1350,
+    "paired_screening_differences": 1350,
+    "screening_summary": 108,
+    "paired_screening_summary": 81,
+    "priority_group_metrics": 1350,
+    "priority_group_summary": 108,
+    "paired_priority_group_differences": 1350,
+    "paired_priority_group_summary": 81,
+    "discrimination_metrics": 300,
+    "discrimination_summary": 12,
+    "paired_discrimination_differences": 300,
+    "paired_discrimination_summary": 12,
+    "property_only_coefficients": 500,
+    "property_only_fit_diagnostics": 50
+  }
+}
