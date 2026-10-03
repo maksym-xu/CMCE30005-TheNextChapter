@@ -1,4 +1,12 @@
-# Final report evidence
+# Final report and evidence
+
+## Current final report reviewed 4 October 2026
+
+The [current report package](report-2026-10-04/README.md) contains the [PDF](report-2026-10-04/Final_Report.pdf), [Word](report-2026-10-04/Final_Report.docx), matching [report text](report-2026-10-04/Final_Report.md), print-sized charts and publication checks. The root [README](../README.md) includes the complete report.
+
+The report uses logistic regression and the within-group screening comparison: 49.6% for the complete model, 38.6% without price and minimum-stay inputs, and 32.4% for group rates. Each method selects a separate 25% quota within each of three fixed priority groups. Figures from other evaluation designs remain separate in Appendix A.
+
+## Analysis packages
 
 The [3 October screening follow-up](screening-followup-2026-10-03/README.md) tests whether the model adds value within the three previously selected property groups, how much it depends on recorded price and minimum-stay information, and how results change at 10%, 25% and 50% screening quotas. It reuses the same 50 host splits and the saved full-model and baseline scores, fitting only a reduced property model on each training set.
 
