@@ -1,14 +1,14 @@
 {
-  "approx_body_words": 2136,
-  "approx_total_words": 2758,
+  "approx_body_words": 2238,
+  "approx_total_words": 2877,
   "figures": 4,
   "source_commit": "e4c68cae863e35bd1e7df0af4738c41b589f0bad",
-  "word_count_full_document": 2689,
+  "word_count_full_document": 2803,
   "pdf_pages": 8,
   "docx_md_ordered_text_match": true,
   "pdf_key_numbers_present": true,
   "pdf_repository_link_present": true,
-  "visual_qa": "All eight rendered pages inspected",
+  "visual_qa": "All eight final rendered pages inspected; action table intact; no isolated acknowledgement or appendix continuation pages",
   "render_method": "Microsoft Word PDF export and Poppler page rendering; LibreOffice unavailable",
   "verification_boundary": "Published aggregate arithmetic independently recalculated, methods and source inspection; no private data rebuild or independent model refit",
   "coefficient_direction_checks": {
@@ -30,8 +30,11 @@
   "followup_paired_summary_rows_checked": 54,
   "main_result_scope": "Separate 25 percent selection quota within each fixed priority group; equal mean of 50 host allocations",
   "sha256": {
-    "Final_Report.md": "e514364bdf28bab94a67d6a8d0e52d59de96e8ed4ae8380799ab22705f99fd7f",
-    "Final_Report.docx": "ba3e5235ba05b36aa0f3b60a093bca3347d5277d0f37478400f46711186ed90e",
-    "Final_Report.pdf": "0b0783425756d6ec9788ff7924f18dae9400770f58c3d349415e373a48e31429"
-  }
+    "Final_Report.md": "2c15a9b6d94cec2551cd692e0ffb6d4d7e7c437b9b7991c2203dcff7c9882cb0",
+    "Final_Report.docx": "5ecd987bed541bfc4ed77c0eb73dbc204fc5e98f0f8a456a0b91b04cdfb81987",
+    "Final_Report.pdf": "7c44a8381ebefb8739a9d38628412d0909dc8d23cf603b3cc0c77b475ec20500"
+  },
+  "revision": "Four targeted refinements to model use, investigation workflow, variability and data preparation",
+  "model_refitted_this_revision": false,
+  "numerical_findings_unchanged": true
 }

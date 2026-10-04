@@ -52,7 +52,9 @@ We set aside reference hosts before modelling, dividing the 6,891 eligible homes
 
 The final comparison uses 3,873 homes from 1,726 hosts across six council areas. About 64% are in the City of Melbourne. The median home has 15 annual reviews, and 334 homes, or 8.6%, have none. Keeping these zero-review homes makes quieter listings part of the comparison.
 
-The 906 reference homes give an upper-quarter cutoff of 29.75 reviews, rounded up to 30. Their hosts stay outside model training and testing. Missing-value treatment and category coding use training data only. Three homes lack minimum-stay values, so their derived one-night acceptance category uses the most common training category. Appendix A gives the preparation details.
+A separate full-snapshot price check excludes 6,801 listings with missing or out-of-range prices. The supplied recent-review count is zero for 82% of these listings, compared with 23.7% of retained listings. Price screening therefore favours more active homes. Our comparison focuses on established, priced homes.
+
+The 906 reference homes give an upper-quarter cutoff of 29.75 reviews, rounded up to 30. Their hosts stay outside model training and testing. Category definitions were fixed after earlier exploration. Each training sample supplies missing-value replacements and comparable-price medians. Three homes lack minimum-stay values; we fill their one-night acceptance category with the most common training category. Appendix A gives the preparation details.
 
 ## 4. Methodology
 
@@ -92,7 +94,7 @@ The complete model's gain is 17.2 percentage points. In practical terms, a list 
 
 **Figure 2.** Average historical target rates over 50 tests. Each method selects 25% within each priority group. The reduced model leaves out price and minimum-stay information.
 
-The complete model beats the baseline in 46 of the 50 tests and falls behind in four. This is a strong reason to use it as an additional screening tool once the client has chosen the search groups.
+The complete model beats the baseline in 46 of the 50 tests and falls behind in four. This supports using it to prioritise investigations within the chosen groups. Gains vary across the overlapping test samples, so use the average improvement as a planning reference.
 
 Price and minimum-stay information make a substantial difference. Including them raises the average selected rate by 11.0 percentage points over the reduced model. Within a fixed group, the reduced model can distinguish homes only by amenity count. In City of Melbourne three-bedroom apartments, its rate is 33.9%, below the baseline's 35.9%. Our recommendation is therefore to use the complete model for homes with comparable operating information. Group comparisons provide the starting point when that information is unavailable.
 
@@ -110,7 +112,7 @@ A smaller list concentrates attention on homes with stronger historical activity
 
 Values are averages over the 50 tests. At 10% capacity, more than half the selected homes reach the target, but the list finds only 17.1% of all qualifying homes in these groups. At 50%, it finds about two-thirds. The model improves on the baseline at every tested capacity on average, by 22.0, 17.2 and 10.7 percentage points respectively.
 
-We recommend a 25% list as a starting point for planning. Widen it if too few homes meet the client's practical requirements. The right list size depends on the time available for inspections and checks.
+Use the 25% results to assess investigation capacity. Begin the practical search with ten candidates, then prioritise detailed checks according to available operating information. Widen the pool when too few homes meet the client's requirements.
 
 ### 5.4 Earlier leading groups stay ahead in the following year
 
@@ -126,7 +128,7 @@ The earlier leaders stay ahead as activity falls. Keep them on the search list a
 
 Search City of Melbourne two- and three-bedroom apartments first. Consider Yarra Ranges three-bedroom houses and townhouses when city homes have unsuitable lease terms or limited availability.
 
-Rank comparable established homes with the complete model using consistent price, minimum-stay and amenity information. For new rental candidates, label proposed settings and confirm them during investigation.
+Use the complete model to rank established homes with comparable price, minimum-stay and amenity information. For new rental candidates, use the priority groups to organise the search and compare permissions, rent and operating costs. Scores from proposed settings serve as scenario comparisons. Test these rankings on new openings before using them to choose properties.
 
 Before signing, confirm permitted short-stay use in writing and obtain rent, setup and operating cost quotes. Assess achievable nightly rates and paid nights. Proceed when the expected and downside cash flows meet the client's agreed return and cash-buffer requirements.
 
@@ -134,12 +136,12 @@ Before signing, confirm permitted short-stay use in writing and obtain rent, set
 
 | Timing and owner | Action | Decision condition |
 |---|---|---|
-| Week 1 operator | Find ten candidates across the priority groups | Confirm availability and property scope |
+| Week 1 operator | Find ten initial candidates and prioritise checks using available operating information | Confirm availability; use group priorities for new rentals |
 | Weeks 2 and 3 operator and analyst | Check permissions, obtain quotes and assess guest demand | Keep incomplete cases pending and reject homes that fail requirements |
 | Week 4 client | Compare the qualified homes and their cash-flow estimates | Proceed when downside cash flow and cash-buffer requirements are met |
 | Operating trial operator | Record paid nights, workload and net cash flow | Review actual results before expanding |
 
-Ten candidates and 30 days are suggested planning limits. Extend the search when needed, and leave unsuitable leases unsigned. If practical testing finds little benefit from the model, use group rates as the main guide.
+The ten homes form the initial pool. Investigate higher-priority homes first and replace rejected candidates. Ten candidates and 30 days are planning limits; extend the search when needed. If practical testing finds little benefit from the model, use group rates as the main guide.
 
 ## 7. Limitations and Future Work
 
@@ -188,7 +190,7 @@ For all eligible homes, mean AUC is 0.7084 versus 0.6035, improving in all 50 al
 
 The later-year gap is 12.3 percentage points using unrounded rates, with a conditional 95% range of 5.1-20.1 points. The exact earlier top-three set returns in 51.5% of host resamples. The range holds candidates fixed; reselecting them gives 5.4-20.2 points. Group ranges are pointwise 90%. All ranges hold the eligibility rules and review thresholds fixed.
 
-Data and group checks are in `reports/tables` and `final-presentation/analysis/reference`, which also contains `temporal-validation`. Model results and source scripts are in `final-report/paired-analysis-2026-10-02` and `final-report/screening-followup-2026-10-03`. The published verifier reconstructs scores and metrics without refitting coefficients or rebuilding raw reviews.
+Price diagnostics in `reports/supporting/revenue-analysis.md` use the supplied count, including one extra boundary date. Main results use reconstructed 365-day counts. Group and temporal checks are in `reports/tables` and `final-presentation/analysis/reference`. Model code and results are in `final-report/paired-analysis-2026-10-02` and `final-report/screening-followup-2026-10-03`. The published verifier reconstructs scores and metrics without refitting models or rebuilding raw reviews.
 
 ## Appendix B. Full group comparison
 
