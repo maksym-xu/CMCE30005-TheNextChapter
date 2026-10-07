@@ -4,103 +4,103 @@ CMCE30005 Final Project Report | TheNextChapter Group 2
 
 Eric Huang, Loc Le, Qihang Sun and Maksym Xu
 
-## Current final report reviewed 4 October 2026
+## Current final report reviewed 7 October 2026
 
 [Final report PDF](final-report/report-2026-10-04/Final_Report.pdf) · [Word](final-report/report-2026-10-04/Final_Report.docx) · [Matching report text](final-report/report-2026-10-04/Final_Report.md) · [Files and checks](final-report/report-2026-10-04/README.md)
 
-The complete current report follows. Its analysis is pinned to revision e4c68ca. This report release changes writing, report charts and repository navigation; it does not change the analysis results, presentation or archived interim submission.
+The complete current report follows. Its analysis is pinned to revision e4c68ca. The 7 October refinement makes the writing more direct, explains the sample and dwelling types, and connects the findings to the property investigation plan. Analysis results, figures, presentation files and the archived interim submission remain unchanged.
 
 ## 1. Introduction
 
-Our client plans to rent residential properties and offer short stays through Airbnb. Choosing a property means committing to rent and setup costs before knowing how much guest income it will generate. With limited startup funds, the client needs to decide where to look and which homes deserve a closer inspection.
+Our client plans to lease homes and offer short stays through Airbnb. Rent and setup costs commit scarce startup funds before guest income arrives. The first task is to focus the property search on areas and home types with stronger evidence of guest activity.
 
-We use the Melbourne Inside Airbnb dataset supplied through the subject LMS to help make these choices. Dated guest reviews provide a record of past guest activity. We compare this activity across property groups, then test whether a simple model helps select homes within the most promising groups.
+We recommend starting with two- and three-bedroom apartments in the City of Melbourne. Three-bedroom houses and townhouses in Yarra Ranges provide a second search option. These groups have the strongest historical review activity in our residential comparison.
 
-We recommend starting with two- and three-bedroom apartments in the City of Melbourne. Three-bedroom houses and townhouses in Yarra Ranges offer another search option. Within these groups, 49.6% of homes selected by the model reach at least 30 annual reviews on average, compared with 32.4% using group rates alone. We explain how the client can use these findings to organise a search and assess candidates before signing a lease.
+We then test how to narrow the search within these groups. When selecting a quarter of homes in each group, a simple model produces lists where 49.6% reach at least 30 annual reviews, compared with 32.4% using group rates alone. This gives the client an evidence-based order for investigating established homes with comparable operating information. Lease permissions, quotes and cash flow determine which candidates to pursue.
 
 ## 2. Problem Definition and Objectives
 
-The client faces two decisions. First, which parts of the market deserve attention? Second, how should the client narrow the list of properties found there? We address them through two research questions:
+The client needs to decide where to search and which properties to investigate first. We address two questions:
 
 1. Which property groups have the strongest historical guest-review activity?
 2. Does information about individual homes improve selection beyond each group's historical rate?
 
-A group combines council area, dwelling type and bedroom count. Our analysis covers standard entire homes with one to three bedrooms and at least one year of recorded review history. We define high review activity as at least 30 reviews in the preceding 365 days. This threshold comes from the upper quarter of a separate reference sample.
+A group combines council area, dwelling type and bedroom count. We compare entire apartments, houses and townhouses with one to three bedrooms and at least one year of recorded review history. A home reaches our target when it receives at least 30 reviews in the preceding 365 days. The target reflects the upper quarter of a separate reference sample, giving every group the same benchmark.
 
-Since the interim report, we have replaced the more complex model with logistic regression and added 50 repeated comparisons, including tests within the three priority groups. All completed analysis uses the supplied dataset.
+The final analysis builds on the interim report with a simpler logistic regression model and 50 repeated comparisons, including selection within the three priority groups. All analysis uses the Melbourne Inside Airbnb dataset supplied through the subject LMS.
 
 ## 3. Data Description and Preparation
 
-The dataset contains 25,728 listings collected between 17 June and 1 July 2026 (Inside Airbnb, 2026). We match property details to dated reviews and count reviews in the 365 days before each property's collection date. Calendar availability cannot separate bookings from dates blocked by the host, so we use dated reviews to measure recorded guest activity.
+The snapshot contains 25,728 listings collected between 17 June and 1 July 2026 (Inside Airbnb, 2026). We link property details to dated reviews and count reviews in the year before each listing's collection date. Reviews record past guest activity. Calendar availability combines bookings and host-blocked dates, making reviews the clearer measure for this comparison.
 
-We keep entire rental units, condos, homes and townhouses with one to three bedrooms. We combine rental units and condos as apartments/units, and homes and townhouses as houses/townhouses. These types fit the client's leasing business. Homes need a quoted nightly price of AUD30-1,500 and a first review at least 365 days before collection. The price range is an initial analysis boundary; the history rule provides a longer review record.
+Our residential scope includes four recorded property types: entire rental units, condos, homes and townhouses. Rental units and condos form the apartment/unit category; homes and townhouses form the house/townhouse category. We keep one to three bedrooms, quoted nightly prices of AUD30-1,500 and a first review at least 365 days before collection. The price range sets an exploratory boundary, while the history rule gives each home a full year of observable review history.
 
-We set aside reference hosts before modelling, dividing the 6,891 eligible homes into 5,549 analysis homes and 1,342 reference homes. Keeping groups with at least 50 analysis homes provides a minimum base for comparison. Table 1 shows the sample.
+These rules leave 6,891 eligible homes. We set aside 1,342 homes from separate reference hosts, leaving 5,549 for analysis. Retaining groups with at least 50 analysis homes leaves 3,873 homes in 14 groups. The reference sample then contains 906 homes in those same groups. Table 1 separates the analysis path from the reference branch.
 
-**Table 1. How the comparison sample is formed**
+**Table 1. From the supplied listings to the comparison sample**
 
-| Population | Listings |
+| Sample stage | Listings |
 |---|---:|
-| Supplied snapshot | 25,728 |
+| Supplied snapshot covering all listing types | 25,728 |
 | Entire homes with one to three bedrooms | 16,576 |
-| Four standard dwelling types | 14,895 |
-| Eligible prices and review history | 6,891 |
-| Analysis population before minimum group size | 5,549 |
-| Final analysis sample in 14 groups | 3,873 |
-| Separate reference population before group restriction | 1,342 |
-| Reference within the same 14 groups | 906 |
+| Rental units, condos, homes and townhouses | 14,895 |
+| Nightly price AUD30-1,500 and at least 365 days of review history | 6,891 |
+| Analysis homes after reference hosts are set aside | 5,549 |
+| Final analysis homes in groups with at least 50 homes each | 3,873 |
+| Separate reference branch before group restriction | 1,342 |
+| Reference homes within the same 14 groups | 906 |
 
-The final comparison uses 3,873 homes from 1,726 hosts across six council areas. About 64% are in the City of Melbourne. The median home has 15 annual reviews, and 334 homes, or 8.6%, have none. Keeping these zero-review homes makes quieter listings part of the comparison.
+The 3,873 homes belong to 1,726 hosts across six council areas; about 64% are in the City of Melbourne. The median home has 15 annual reviews. We retain all 334 homes with zero annual reviews, or 8.6%, so the comparison includes quieter properties.
 
-A separate full-snapshot price check excludes 6,801 listings with missing or out-of-range prices. The supplied recent-review count is zero for 82% of these listings, compared with 23.7% of retained listings. Price screening therefore favours more active homes. Our comparison focuses on established, priced homes.
+A separate check across the full snapshot finds 6,801 listings with missing or out-of-range prices. The supplied recent-review count is zero for 82% of these listings, against 23.7% of listings retained by the price check. The price rule therefore shifts the sample towards more active properties. The findings describe established, priced residential homes in the covered areas.
 
-The 906 reference homes give an upper-quarter cutoff of 29.75 reviews, rounded up to 30. Their hosts stay outside model training and testing. Category definitions were fixed after earlier exploration. Each training sample supplies missing-value replacements and comparable-price medians. Three homes lack minimum-stay values; we fill their one-night acceptance category with the most common training category. Appendix A gives the preparation details.
+The 906 reference homes have an upper-quarter cutoff of 29.75 reviews, rounded up to 30. Their hosts remain separate from model training and testing. Category definitions were fixed after earlier exploration; each training sample supplies missing-value replacements and comparable-price medians. Three missing minimum-stay values are filled using the most common training category. Appendix A records the preparation details.
 
 ## 4. Methodology
 
-We begin with a straightforward comparison: what share of homes in each group reach 30 annual reviews? We also resample hosts and recalculate the shares to show how much the results vary. Each host's properties stay together because they can share management practices.
+We first compare the share of homes reaching 30 annual reviews in each group. Repeating the calculation on resampled hosts shows how much those shares vary. Each host's properties stay together because they can share management practices.
 
-For individual homes, we use logistic regression in R (R Core Team, n.d.). It suits our two possible outcomes: a home either reaches 30 reviews or falls below that level. The model learns weights from training homes for six inputs: council area, dwelling type, bedrooms, price compared with similar homes, acceptance of one-night stays and number of amenities. It adds their weighted contributions to form a ranking score. Across the 50 fits, lower relative prices, one-night acceptance and more amenities raise the score when other inputs stay the same. Higher-scoring homes come earlier in the investigation list.
+We use logistic regression in R to rank individual homes (R Core Team, n.d.). Its outcome is whether a home reaches 30 annual reviews. The six inputs are council area, dwelling type, bedroom count, price relative to similar homes, acceptance of one-night stays and amenity count. The model learns a weight for each input from training homes and combines their contributions into a score. Higher scores move homes earlier in the investigation list.
 
-The group-rate baseline uses each group's training rate, adjusted towards the overall training rate. Homes in the same group receive the same score, leaving them equally ranked. We also test a reduced model without price and minimum-stay information to measure how much those two inputs add together.
+Our comparison method assigns every home its group's training success rate, adjusted towards the overall training rate. Homes in one group receive equal scores. A second model removes price and minimum-stay information, showing how much these operating details add to selection.
 
-We test the methods 50 times. Each time, 70% of hosts provide training homes and the remaining 30% provide test homes. Homes from the same host always stay on the same side. All methods see the same test homes and select the same number for investigation.
+We compare the methods over 50 host splits. Each split uses 70% of hosts for training and 30% for testing. All properties belonging to a host stay on the same side. The methods select equal numbers from the same test homes, keeping the comparison fair.
 
-Our main test selects 25% of homes separately within each priority group, asking whether the model helps once the search areas are decided. We average the selected homes' target rate over 50 tests. Trying 10% and 50% lists shows the effect of changing investigation capacity. Appendix A explains rounding and equal treatment of tied scores.
+The main comparison selects 25% of homes separately within each priority group and averages the selected homes' target rate across the 50 tests. We also test 10% and 50% to show how investigation capacity affects the results. Appendix A explains rounding and tied scores.
 
-Finally, we reconstruct two annual review windows from the same snapshot for homes with longer histories. We identify the earlier leading groups and check their performance in the later year. That comparison uses its own 34-review target, set from the earlier reference window.
+To check whether the search priorities hold across time, we reconstruct two consecutive annual review windows from the same snapshot. We choose the earlier leading groups and follow their activity in the later window. This separate comparison uses a 34-review target, fixed from the earlier reference window.
 
 ## 5. Analysis and Results
 
-### 5.1 City apartments provide a clear starting point
+### 5.1 City apartments are the first search priority
 
-Across the full analysis sample, 981 of 3,873 homes reach 30 annual reviews, or 25.3%. Group rates range from 8.2% to 36.6%. A single average would hide these differences.
+Across the analysis sample, 981 of 3,873 homes reach 30 annual reviews, or 25.3%. Group rates range from 8.2% to 36.6%, giving the client a clear reason to focus the search.
 
-City of Melbourne three-bedroom apartments have the highest observed rate: 112 of 306 homes reach the target, or 36.6%. Two-bedroom apartments follow at 32.8%, with 405 of 1,235 homes qualifying. Yarra Ranges three-bedroom houses and townhouses reach 30.0%, or 27 of 90 homes. The two city groups combine stronger observed activity with larger samples, making them our first search priority.
+City of Melbourne three-bedroom apartments lead at 36.6%, with 112 of 306 homes reaching the target. Two-bedroom apartments follow at 32.8%, or 405 of 1,235. Yarra Ranges three-bedroom houses and townhouses reach 30.0%, or 27 of 90. The city groups combine stronger observed activity with larger samples, supporting their position as the first search priority.
 
 ![Three priority property groups](final-report/report-2026-10-04/figures/figure_1_priority_groups.png)
 
 **Figure 1.** Homes reaching at least 30 annual reviews. Horizontal lines show 90% ranges from resampling hosts; the dashed line marks the overall 25.3%. Appendix B shows all 14 groups.
 
-The same three groups remain when the minimum size is 30 or 75 homes, or when we remove the price or history restriction. Broader rules can swap second and third place. The useful result is the shortlist of three groups. Specialised accommodation changes that list, so we keep the residential scope that matches the client's search.
+The same three groups lead when minimum group size changes to 30 or 75 homes, or when the price or history rule is removed. Their order can change, so use the three-group shortlist to guide the search. Adding specialised accommodation changes the shortlist and addresses a broader market than the client's residential search.
 
-### 5.2 The model helps narrow the list within these groups
+### 5.2 The model improves selection within the priority groups
 
-Choosing a group still leaves many homes to investigate. The complete model helps with this next decision. When each method selects 25% within each priority group, the selected homes' average historical target rate is 49.6% for the complete model, 38.6% for the reduced model and 32.4% for the group-rate baseline.
+The complete model helps decide which homes to investigate first. Selecting 25% within each priority group produces an average historical target rate of 49.6%, compared with 38.6% for the model without price and minimum stay and 32.4% for group rates alone.
 
-The complete model's gain is 17.2 percentage points. In practical terms, a list of 100 selected homes contains about 17 more homes with at least 30 annual reviews than a list selected using group rates alone. The model improves the concentration of past guest activity in the investigation list.
+The complete model adds 17.2 percentage points. For a list of 100 selected homes, that means about 17 more homes with at least 30 annual reviews. It directs investigation time towards homes with stronger recorded guest activity.
 
 ![Historical screening results within the priority groups](final-report/report-2026-10-04/figures/figure_2_paired_screening.png)
 
 **Figure 2.** Average historical target rates over 50 tests. Each method selects 25% within each priority group. The reduced model leaves out price and minimum-stay information.
 
-The complete model beats the baseline in 46 of the 50 tests and falls behind in four. This supports using it to prioritise investigations within the chosen groups. Gains vary across the overlapping test samples, so use the average improvement as a planning reference.
+The complete model leads in 46 of the 50 tests and trails in four. Gains fluctuate: the middle 90% run from -0.7 to 31.8 percentage points. These overlapping historical tests support prioritising investigations while showing how much performance varies with the homes available.
 
-Price and minimum-stay information make a substantial difference. Including them raises the average selected rate by 11.0 percentage points over the reduced model. Within a fixed group, the reduced model can distinguish homes only by amenity count. In City of Melbourne three-bedroom apartments, its rate is 33.9%, below the baseline's 35.9%. Our recommendation is therefore to use the complete model for homes with comparable operating information. Group comparisons provide the starting point when that information is unavailable.
+Price and minimum-stay information add 11.0 percentage points over the reduced model. Within a fixed group, that reduced model ranks homes using amenity count alone. For city three-bedroom apartments, it reaches 33.9%, below the baseline's 35.9%. The full six-input model is therefore the stronger tool for established homes with comparable operating details. New rental searches start with the group priorities.
 
-### 5.3 Investigation capacity changes what the client finds
+### 5.3 Investigation capacity determines list size and coverage
 
-A smaller list concentrates attention on homes with stronger historical activity. A larger list finds more of the homes that reach the target. Table 2 shows this trade-off for the complete model within the three priority groups.
+Shorter lists concentrate on stronger historical activity. Longer lists capture more qualifying homes. Table 2 shows the choice available to a client with limited investigation time.
 
 **Table 2. Results at different investigation capacities**
 
@@ -110,48 +110,48 @@ A smaller list concentrates attention on homes with stronger historical activity
 | 25% | 49.6% | 38.3% |
 | 50% | 43.1% | 66.7% |
 
-Values are averages over the 50 tests. At 10% capacity, more than half the selected homes reach the target, but the list finds only 17.1% of all qualifying homes in these groups. At 50%, it finds about two-thirds. The model improves on the baseline at every tested capacity on average, by 22.0, 17.2 and 10.7 percentage points respectively.
+Values are averages over the 50 tests. Investigating 10% gives a list where more than half reach the target, while capturing 17.1% of all qualifying homes. At 50%, the list captures about two-thirds. Average gains over group rates are 22.0, 17.2 and 10.7 percentage points at the three capacities.
 
-Use the 25% results to assess investigation capacity. Begin the practical search with ten candidates, then prioritise detailed checks according to available operating information. Widen the pool when too few homes meet the client's requirements.
+The 25% result is a reference for allocating investigation effort. Our proposed first round starts with ten available candidates, checked in priority order. The operator chooses how many detailed checks the budget supports and expands the pool when suitable homes are scarce.
 
-### 5.4 Earlier leading groups stay ahead in the following year
+### 5.4 Earlier leading groups retain their advantage
 
-The two-year comparison follows 2,657 homes across ten groups. At the fixed 34-review target, 27.1% of homes in the earlier top-three groups qualify in the later year, compared with 14.9% elsewhere. They retain an advantage of around 12 percentage points.
+The two-year comparison follows the same 2,657 homes across ten groups. In the later year, 27.1% of homes in the earlier leading three groups reach the fixed 34-review target, compared with 14.9% in the other seven groups. The advantage is 12.3 percentage points.
 
 ![Historical group advantage across two annual windows](final-report/report-2026-10-04/figures/figure_3_historical_persistence.png)
 
 **Figure 3.** The same homes are compared in both years. The earlier leading groups remain ahead, although their qualifying share falls from 33.6% to 27.1%.
 
-The earlier leaders stay ahead as activity falls. Keep them on the search list and check current conditions for each property.
+The leading groups retain their relative advantage as overall activity falls. This supports keeping them as search priorities and assessing current demand for each candidate property.
 
 ## 6. Key Findings and Recommendations
 
-Search City of Melbourne two- and three-bedroom apartments first. Consider Yarra Ranges three-bedroom houses and townhouses when city homes have unsuitable lease terms or limited availability.
+Search City of Melbourne two- and three-bedroom apartments first. Use Yarra Ranges three-bedroom houses and townhouses as an alternative when city lease terms or availability are unsuitable.
 
-Use the complete model to rank established homes with comparable price, minimum-stay and amenity information. For new rental candidates, use the priority groups to organise the search and compare permissions, rent and operating costs. Scores from proposed settings serve as scenario comparisons. Test these rankings on new openings before using them to choose properties.
+For established homes, collect comparable nightly prices, minimum-stay rules and amenity information, then use the complete model to order investigations. For new rentals, use group priorities and compare permissions, rent and operating costs. Scores based on proposed settings are scenario estimates; their use for selecting new openings needs a prospective test.
 
-Before signing, confirm permitted short-stay use in writing and obtain rent, setup and operating cost quotes. Assess achievable nightly rates and paid nights. Proceed when the expected and downside cash flows meet the client's agreed return and cash-buffer requirements.
+Before signing, obtain written confirmation of permitted short-stay use and quotes for rent, setup and operating costs. Estimate cash flow using achievable nightly rates and paid nights under expected and weaker-demand conditions. Choose a property that meets the client's agreed return and cash-buffer requirements under both conditions.
 
 **Table 3. Proposed first investigation round**
 
 | Timing and owner | Action | Decision condition |
 |---|---|---|
-| Week 1 operator | Find ten initial candidates and prioritise checks using available operating information | Confirm availability; use group priorities for new rentals |
-| Weeks 2 and 3 operator and analyst | Check permissions, obtain quotes and assess guest demand | Keep incomplete cases pending and reject homes that fail requirements |
-| Week 4 client | Compare the qualified homes and their cash-flow estimates | Proceed when downside cash flow and cash-buffer requirements are met |
-| Operating trial operator | Record paid nights, workload and net cash flow | Review actual results before expanding |
+| Week 1 operator | Find ten available candidates in the priority groups and order investigations using comparable operating details | Use group priorities for new rentals |
+| Weeks 2 and 3 operator and analyst | Confirm permissions, obtain cost quotes and assess current guest demand | Keep incomplete cases pending; reject homes that fail the client's requirements |
+| Week 4 client | Compare qualified homes using expected and weaker-demand cash flows | Select a home that meets return and cash-buffer requirements |
+| Operating trial operator | Record paid nights, workload and net cash flow | Review actual performance before expanding |
 
-The ten homes form the initial pool. Investigate higher-priority homes first and replace rejected candidates. Ten candidates and 30 days are planning limits; extend the search when needed. If practical testing finds little benefit from the model, use group rates as the main guide.
+Ten homes form the initial search pool. Investigate higher-priority candidates first and replace rejected homes. Ten candidates and 30 days set the first round's workload; extend the search when necessary. If the model adds little value in the trial, continue using group rates to direct the search.
 
 ## 7. Limitations and Future Work
 
-The findings support a focused search. Profitability still depends on paid nights, stay length and costs, which reviews do not measure directly. A trial should record these outcomes alongside review activity.
+Reviews measure recorded guest activity. Paid nights, stay length and costs determine profit. The operating trial should collect these measures alongside reviews to connect our search priorities to financial performance.
 
-Our sample covers established homes in selected areas. A first review shows the length of the review record, and continuous operation remains unknown. The next coverage check should include new entrants and other areas. Leaving price out of the model also leaves the original price-filtered sample unchanged.
+The sample covers established, priced homes in selected council areas. The first-review rule establishes the length of the review record; continuous operation remains unknown. The next coverage test should include new entrants, other areas and homes excluded by price screening. Removing price as a model input still uses the original price-filtered sample.
 
-Price and minimum-stay settings were recorded at collection and can reflect earlier performance. Their combined contribution supports screening with that information; the effect of changing either setting needs a separate prospective test.
+Price and minimum-stay settings were recorded at collection and may reflect earlier performance. Across the 50 fits, lower relative prices, one-night acceptance and more amenities raise model scores when other inputs stay fixed. Test planned changes prospectively to establish their effect on guest activity.
 
-The next validation should freeze the chosen groups, model and selection rule before testing newly observed outcomes. The current 50 comparisons reuse records and follow earlier exploration. We should also check how well scores match observed rates before presenting them as individual probabilities. Appendix A records the uncertainty in the published comparisons.
+For the next validation, fix the search groups, model and selection rule before collecting new outcomes. This creates a fresh test beyond the overlapping historical comparisons and earlier exploration. Check whether model scores match observed rates before using them as individual probabilities. Appendix A provides the full comparison evidence.
 
 ## 8. References
 

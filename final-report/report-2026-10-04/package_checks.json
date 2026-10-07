@@ -1,15 +1,15 @@
 {
-  "approx_body_words": 2238,
-  "approx_total_words": 2877,
+  "approx_body_words": 2195,
+  "approx_total_words": 2834,
   "figures": 4,
   "source_commit": "e4c68cae863e35bd1e7df0af4738c41b589f0bad",
-  "word_count_full_document": 2803,
+  "word_count_full_document": 2755,
   "pdf_pages": 8,
   "docx_md_ordered_text_match": true,
   "pdf_key_numbers_present": true,
   "pdf_repository_link_present": true,
-  "visual_qa": "All eight final rendered pages inspected; action table intact; no isolated acknowledgement or appendix continuation pages",
-  "render_method": "Microsoft Word PDF export and Poppler page rendering; LibreOffice unavailable",
+  "visual_qa": "Passed: all eight Microsoft Word PDF pages inspected, with readable figures, complete tables and captions, and no clipping or overlap",
+  "render_method": "Microsoft Word PDF export and bundled PDFium page rendering; packaged LibreOffice renderer unavailable",
   "verification_boundary": "Published aggregate arithmetic independently recalculated, methods and source inspection; no private data rebuild or independent model refit",
   "coefficient_direction_checks": {
     "price_vs_similar_10": {
@@ -30,11 +30,20 @@
   "followup_paired_summary_rows_checked": 54,
   "main_result_scope": "Separate 25 percent selection quota within each fixed priority group; equal mean of 50 host allocations",
   "sha256": {
-    "Final_Report.md": "2c15a9b6d94cec2551cd692e0ffb6d4d7e7c437b9b7991c2203dcff7c9882cb0",
-    "Final_Report.docx": "5ecd987bed541bfc4ed77c0eb73dbc204fc5e98f0f8a456a0b91b04cdfb81987",
-    "Final_Report.pdf": "7c44a8381ebefb8739a9d38628412d0909dc8d23cf603b3cc0c77b475ec20500"
+    "Final_Report.md": "69a968b90aed55237400a05e35d786c8a4337f3a72e0e6085cb1e0c03237e5b1",
+    "Final_Report.docx": "50d3d45d47a24a8a102e3615ab5a3f9157b1ab9bb81ad88dfd0e903c5fa7a22a",
+    "Final_Report.pdf": "42d5a3bffd06577b160b6b53562d9f776615e30c690f200d42182f11013a90f9"
   },
-  "revision": "Four targeted refinements to model use, investigation workflow, variability and data preparation",
+  "revision": "Direct business prose, explicit sample stages and dwelling coverage, and a connected investigation workflow",
   "model_refitted_this_revision": false,
-  "numerical_findings_unchanged": true
+  "numerical_findings_unchanged": true,
+  "word_count_body_sections_1_to_7": 2124,
+  "revision_date": "2026-10-07",
+  "screening_claims_checked_this_revision": {
+    "full": 49.6158948206191,
+    "property_only": 38.6142887753612,
+    "baseline": 32.4269107917818
+  },
+  "previous_arithmetic_audit_revision": "9dcad51",
+  "references_and_appendices_unchanged": true
 }

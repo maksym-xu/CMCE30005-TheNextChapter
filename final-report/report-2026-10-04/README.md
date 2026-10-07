@@ -1,14 +1,14 @@
-# Final report reviewed 4 October 2026
+# Final report reviewed 7 October 2026
 
 [Report PDF](Final_Report.pdf) · [Report Word](Final_Report.docx) · [Matching report text](Final_Report.md)
 
-The root [README](../../README.md) includes the complete report. The report uses analysis revision e4c68cae863e35bd1e7df0af4738c41b589f0bad. This release changes the report wording, presentation of results and repository navigation, without changing source analyses or the final presentation. The latest refinement clarifies model use for established homes and new rentals, the initial ten-property pool, variability beside the main result, and the effect of price screening on sample coverage.
+The root [README](../../README.md) includes the complete report. The report uses analysis revision e4c68cae863e35bd1e7df0af4738c41b589f0bad. The 7 October refinement makes the prose more direct, clarifies how 25,728 listings become 3,873 analysis homes, names the covered dwelling types, and connects screening capacity to the initial ten-property investigation pool. Source analyses, figures and the final presentation remain unchanged. The package stays at this stable path so existing links continue to work.
 
 ## Publication checks
 
-Microsoft Word counted 2,803 words including title, tables, captions, references and appendices. The PDF has 8 pages, all rendered and inspected. Word and Markdown match in ordered text, apart from the Word title block and heading formatting. The PDF contains the reported numbers and clickable links to this report branch and the frozen analysis revision.
+Microsoft Word counted 2,124 words for sections 1-7, including their tables and captions, and 2,755 words for the full document including title, references, acknowledgement and appendices. The PDF has 8 pages, all rendered and inspected. Word and Markdown match in ordered text, apart from the Word title block and heading formatting. The PDF contains the reported numbers and clickable links to this report branch and the frozen analysis revision.
 
-[Package checks](package_checks.json) record file hashes and the check scope. Public arithmetic was independently recalculated for 2,700 metric rows and 54 paired summaries; private records and raw review counts were not rebuilt, and no model was independently refitted.
+[Package checks](package_checks.json) record file hashes and the check scope. The earlier analysis review recalculated public arithmetic for 2,700 metric rows and 54 paired summaries. The 7 October edit checked the headline screening figures and capacity results against those published tables; private records, raw reviews and model fits were unchanged.
 
 ## Figures and their sources
 

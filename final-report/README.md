@@ -1,6 +1,6 @@
 # Final report and evidence
 
-## Current final report reviewed 4 October 2026
+## Current final report reviewed 7 October 2026
 
 The [current report package](report-2026-10-04/README.md) contains the [PDF](report-2026-10-04/Final_Report.pdf), [Word](report-2026-10-04/Final_Report.docx), matching [report text](report-2026-10-04/Final_Report.md), print-sized charts and publication checks. The root [README](../README.md) includes the complete report.
 
