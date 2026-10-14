@@ -2,7 +2,7 @@
 
 [Report PDF](Final_Report.pdf) · [Report Word](Final_Report.docx) · [Matching report text](Final_Report.md)
 
-The current report is prepared by Eric Huang and Maksym Xu. It combines the revised business narrative, APA 7 data-source reference and a short AI acknowledgement with the listing benchmarks and saved coefficient summaries published in revision 4e2dd23. The model analysis remains pinned to e4c68cae863e35bd1e7df0af4738c41b589f0bad. Models, headline screening results, figures, historical submissions and presentation files are unchanged.
+The current report is prepared by Eric Huang and Maksym Xu. It combines the revised business narrative, APA 7 data, R-documentation and versioned-code references and a short AI acknowledgement with the listing benchmarks and saved coefficient summaries published in revision 4e2dd23. The model analysis remains pinned to e4c68cae863e35bd1e7df0af4738c41b589f0bad. Models, headline screening results, figures, historical submissions and presentation files are unchanged.
 
 ## Additional descriptive and model evidence
 
@@ -46,6 +46,8 @@ This report integrates Maksym Xu's analysis and Eric Huang's report drafting and
 
 ## Current document verification
 
-Microsoft Word counted 2,334 words for Sections 1–7, including tables and captions, and 2,974 words for the full document including title, references, acknowledgement and appendices. The PDF has eight pages, all rendered and inspected using Microsoft Word and PDFium. Word and Markdown match in ordered text. All four original figures and tables are retained; the four-week action table stays on one page.
+Microsoft Word counted 2,350 words for Sections 1–7, including tables and captions, and 2,988 words for the full document including title, references, acknowledgement and appendices. The PDF has eight pages, all rendered and inspected using Microsoft Word and PDFium. Word and Markdown match in ordered text. All four original figures and tables are retained; the four-week action table stays on one page.
 
-References contain the Inside Airbnb dataset in APA 7 format. AI use is acknowledged briefly outside the reference list. The previous R and AI-tool bibliography entries have been removed. The saved coefficients from the 50 repeated host splits were independently aggregated again; no model was refitted and the private listing medians were not recomputed in this publication step.
+The three APA 7 references cover the versioned Group 2 analysis repository, Inside Airbnb data and R's generalised linear model documentation. AI use remains a brief acknowledgement outside the reference list. The main text now reports the three operating-variable odds ratios, and Appendix A specifies that they are calculated by exponentiating the mean saved coefficient. Each priority group's advertised price, one-night acceptance and amenity count is listed in the same order as the group ranking. Numerical columns in Tables 1, 2 and A1 are right-aligned; the sample-branching and 50-host-split paragraphs remain together.
+
+The saved coefficients from the 50 repeated host splits were independently aggregated again; no model was refitted and the private listing medians were not recomputed in this publication step. Models, headline results, figure files and historical submissions remain unchanged.

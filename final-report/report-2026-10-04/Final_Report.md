@@ -11,7 +11,7 @@ Our client plans to lease homes in Greater Melbourne and offer short stays throu
 
 We recommend starting with two- and three-bedroom apartments in the City of Melbourne. Three-bedroom houses and townhouses in Yarra Ranges provide a second search option. These three groups have the strongest historical review activity in our residential comparison.
 
-We then test how to narrow the search within these priority groups. When selecting a quarter of homes in each group, a six-input logistic regression model produces lists where 49.6% reach at least 30 annual reviews, compared with 32.4% using group rates alone. This gives the client an evidence-based order for investigating established listings that already have comparable price, minimum-stay and amenity information. Lease permissions, quotes and cash flow determine which candidates to pursue.
+When selecting a quarter of established homes in each priority group, the model produces lists where 49.6% reach at least 30 annual reviews, compared with 32.4% using group rates. Comparable prices, stay rules and amenities guide investigation order; permissions, quotes and cash flow determine which candidates to pursue.
 
 ## 2. Problem Definition and Objectives
 
@@ -55,7 +55,7 @@ The 906 reference homes set our benchmark: their upper-quarter cutoff is 29.75 a
 
 We first compare the share of homes reaching 30 annual reviews across the 14 eligible groups. Repeating the calculation across 1,000 resamples of hosts shows how much those shares vary. Each host's properties stay together because multi-listing hosts can share management practices.
 
-We use binary logistic regression in R to rank individual homes. Its **outcome variable** is whether a home reaches at least 30 annual reviews. The **six independent variables (inputs)** are council area, dwelling type, bedroom count, nightly price relative to the median of similar training homes, acceptance of one-night stays, and amenity count. The model learns a weight for each input from training homes and combines their contributions into a score. Higher scores move homes earlier in the investigation list. Group median prices and replacements for three missing minimum-stay values are calculated strictly within each training sample (Appendix A).
+We use binary logistic regression in R to rank individual homes (R Core Team, n.d.). Its **outcome variable** is whether a home reaches at least 30 annual reviews. The **six independent variables (inputs)** are council area, dwelling type, bedroom count, nightly price relative to the median of similar training homes, acceptance of one-night stays, and amenity count. The model learns a weight for each input from training homes and combines their contributions into a score. Higher scores move homes earlier in the investigation list. Group median prices and replacements for three missing minimum-stay values are calculated strictly within each training sample (Appendix A).
 
 Our **group-rate baseline** assigns every home its group's smoothed training target rate. Because all homes in one group receive equal baseline scores, selecting a fixed share within a single group using the baseline matches choosing homes at random within that group. A **reduced four-input model** removes price and minimum-stay information, ranking homes within a group by amenity count alone to show how much current operating details add to selection.
 
@@ -71,7 +71,7 @@ Across the analysis sample, 981 of 3,873 homes reach 30 annual reviews, or 25.3%
 
 City of Melbourne three-bedroom apartments lead at 36.6% (112 of 306 homes), followed by City of Melbourne two-bedroom apartments at 32.8% (405 of 1,235) and Yarra Ranges three-bedroom houses and townhouses at 30.0% (27 of 90). The city groups combine stronger observed activity with larger samples, supporting their position as the first search priority.
 
-In the supplied snapshot, median quoted nightly prices are AUD 285, AUD 450 and AUD 425.75 for Melbourne two-bedroom apartments, Melbourne three-bedroom apartments and Yarra Ranges three-bedroom houses/townhouses, respectively. One-night acceptance ranges from 22.2% to 59.8%, and median amenity counts from 44 to 55. These are advertised rates, not rents or prices actually paid.
+Median advertised nightly prices are AUD 450 for Melbourne three-bedroom apartments, AUD 285 for Melbourne two-bedroom apartments and AUD 425.75 for Yarra Ranges three-bedroom houses/townhouses. In that order, one-night acceptance is 58.8%, 59.8% and 22.2%, and median amenity counts are 47, 44 and 55. These are advertised rates, not rents or prices actually paid.
 
 ![Figure 1](figures/figure_1_priority_groups.png)
 
@@ -91,7 +91,7 @@ The complete model adds **17.2 percentage points** over group rates alone. For a
 
 The complete model leads in **46 of the 50 tests** and trails in four, with the middle 90% of gains running from **-0.7 to 31.8 percentage points**. These overlapping historical tests support prioritising investigations while showing how much performance varies with the homes available.
 
-Across all 50 fits, holding property group fixed, **lower relative nightly prices, acceptance of one-night stays, and more amenities each raise a home's predicted score**. Together, price and minimum-stay information add 11.0 percentage points over the reduced model (49.6% versus 38.6%).
+Across all 50 fits, accepting one-night stays and offering more amenities raise the score, while higher relative prices reduce it. Holding other inputs constant, **odds ratios are 3.27 for one-night acceptance, 1.27 per ten amenities and 0.88 per price increase equal to 10% of the group median** (Appendix A). Odds compare the chance of reaching the target with the chance of falling below it. Price and minimum-stay information add 11.0 percentage points over the reduced model (49.6% versus 38.6%).
 
 Without price and minimum-stay inputs, the reduced model ranks homes within a fixed group using amenity count alone—and in city three-bedroom apartments, its 33.9% target rate falls below the baseline's 35.9%. Because unleased new rentals do not yet have established Airbnb prices or stay rules, the reduced model is not a reliable substitute. Use the full six-input model to rank established listings with comparable operating details, and start new rental searches with the group priorities.
 
@@ -148,7 +148,11 @@ For the next validation, fix the search groups, model weights and selection rule
 
 ## 8. References
 
+Group 2. (2026). *Melbourne Airbnb market screening* (Version 4e2dd23) [Source code and analysis results]. GitHub. [https://github.com/maksym-xu/CMCE30005-TheNextChapter/tree/4e2dd2373f72d3a418d8cd7a2908bee39add083d](https://github.com/maksym-xu/CMCE30005-TheNextChapter/tree/4e2dd2373f72d3a418d8cd7a2908bee39add083d)
+
 Inside Airbnb. (2026). *Melbourne listings and dated reviews* (CMCE30005 LMS snapshot) [Data set]. [https://insideairbnb.com/get-the-data/](https://insideairbnb.com/get-the-data/)
+
+R Core Team. (n.d.). *Fitting generalized linear models*. R Documentation. [https://stat.ethz.ch/R-manual/R-devel/library/stats/html/glm.html](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/glm.html)
 
 ### AI acknowledgement
 
@@ -162,7 +166,7 @@ Eric Huang and Maksym Xu jointly completed the analysis, validation and report p
 
 The complete model uses unpenalised logistic regression. Area, dwelling type, bedrooms and one-night acceptance are categorical factors, with Melbourne, apartment/unit, one bedroom and no one-night acceptance as reference levels. Relative price is `(price / training_group_median - 1) * 10`, and amenities are divided by ten. Training modes fill three missing acceptance values, and the overall training median covers any unseen price group. The baseline score is `(group_positives + 10 * overall_positive_share) / (group_count + 10)`. The reduced model retains area, dwelling type, bedrooms and amenities and is refitted on each training set, converging without warnings in all 50 splits.
 
-Across the 50 repeated training fits, mean log-odds weights are +1.183 for one-night acceptance (odds ratio 3.27), +0.237 per ten additional amenities (1.27), and -0.127 per price increase equal to 10% of the training-group median (0.88). All three directions persist in 50/50 fits. These odds ratios describe conditional historical associations, not probability changes or causal effects.
+Mean log-odds coefficients across the 50 repeated fits are +1.183 for one-night acceptance, +0.237 per ten amenities and -0.127 per price increase equal to 10% of the training-group median. Exponentiating these means gives the reported odds ratios of 3.27, 1.27 and 0.88. All directions agree in 50/50 fits. These are conditional historical associations, not probability changes or causal effects.
 
 **Table A1. Separate evaluation designs at 25 percent capacity**
 
@@ -173,13 +177,13 @@ Across the 50 repeated training fits, mean log-odds weights are +1.183 for one-n
 | Mean of 50 allocations three priority groups in one pool | 48.91% | 32.37% | +16.54 |
 | Mean of 50 allocations separate group quotas (main report) | 49.62% | 32.43% | +17.19 |
 
-Table A1 reconciles four evaluation designs at a 25% quota. Row 1 reports the pooled five-fold cross-validation across all 3,873 homes, where each home gets one held-out score; its 969 selections include 423 target-reaching homes and 546 below, leaving 558 qualifying homes outside the list. Rows 2–4 reuse the 50 host splits (70% training, 30% testing), computing precision within each split before averaging across splits: selecting 25% across all 14 groups (43.42%), pooling the three priority groups (48.91%), and selecting 25% separately within each priority group (49.62%, reported as 49.6% in Section 5.2). In every comparison, quotas round upward, methods select identical numbers of homes, and tied cutoff scores share boundary places equally without using outcomes.
+Table A1 separates four 25%-quota evaluations. Row 1 gives each of the 3,873 homes one held-out score across five host-grouped folds. Its 969 selections include 423 target-reaching homes and 546 below target, leaving 558 qualifying homes outside. Rows 2–4 average within-split target rates over the same 50 host splits (70% training, 30% testing), using all groups, pooled priority groups or separate group quotas. Quotas round upward, methods select identical numbers, and tied cutoff scores share boundary places equally without using outcomes.
 
 Within separate 25% group quotas, complete-model gains average +16.37 percentage points in Melbourne two-bedroom apartments, +17.60 in Melbourne three-bedroom apartments and +24.99 in Yarra Ranges houses/townhouses. Reduced-model gains are +7.21, -2.05 and +19.35 points respectively. At 25%, the complete model captures 38.29% of qualifying homes, beating the reduced model in 42 splits and trailing in eight; the middle 90% of paired full-versus-baseline gains span -0.7 to 31.8 percentage points across the overlapping splits.
 
 For all 3,873 eligible homes, mean AUC (ranking discrimination) is 0.7084 versus 0.6035, improving in all 50 splits. Mean Brier score (squared probability error) improves from 0.18406 to 0.17151, improving in 44 splits.
 
-In the two-year comparison of 2,657 homes across ten groups, the later-year gap is 12.3 percentage points using unrounded rates, with a conditional 95% host-resample range of 5.1–20.1 points holding the earlier top three groups fixed, and 5.4–20.2 points when reselecting the top three groups in each resample (the exact earlier top-three set returns in 51.5% of resamples). Price diagnostics in `reports/supporting/revenue-analysis.md` use the supplied summary count, whereas main results use reconstructed 365-day counts. Code and verification files are in `final-report/paired-analysis-2026-10-02` and `final-report/screening-followup-2026-10-03`.
+In the two-year comparison of 2,657 homes across ten groups, the later-year gap is 12.3 percentage points using unrounded rates, with a conditional 95% host-resample range of 5.1–20.1 points holding the earlier top three groups fixed, and 5.4–20.2 points when reselecting the top three groups in each resample (the exact earlier top-three set returns in 51.5% of resamples). Price diagnostics in `reports/supporting/revenue-analysis.md` use the supplied summary count, whereas main results use reconstructed 365-day counts. Code and verification files (Group 2, 2026) are in `final-report/paired-analysis-2026-10-02` and `final-report/screening-followup-2026-10-03`.
 
 ## Appendix B. Full Group Comparison
 

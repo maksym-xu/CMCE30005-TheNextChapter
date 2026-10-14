@@ -1,6 +1,6 @@
 {
   "revision_date": "2026-10-14",
-  "base_report_commit": "4e2dd2373f72d3a418d8cd7a2908bee39add083d",
+  "base_report_commit": "25b73645afdc93de8d652ed0418ce742a09dbee9",
   "source_analysis_commit": "e4c68cae863e35bd1e7df0af4738c41b589f0bad",
   "authors": [
     "Eric Huang",
@@ -10,11 +10,13 @@
   "existing_screening_results_unchanged": true,
   "figures_unchanged": true,
   "pdf_pages": 8,
-  "visual_qa": "Passed: all eight pages inspected; four-week action table kept together; no clipping or overlap.",
+  "visual_qa": "Passed: all eight pages inspected; target paragraphs and action table kept together; no clipping or overlap.",
   "render_method": "Microsoft Word DOCX to PDF; PDFium page PNGs inspected",
   "pagination_changes": [
     "Kept the four-week action table on one page",
-    "Kept the final Appendix A evidence paragraph together"
+    "Kept the final Appendix A evidence paragraph together",
+    "Kept the sample-branching paragraph together",
+    "Kept the 50-host-split paragraph together"
   ],
   "new_passages_synchronized_in_docx_markdown_root_readme": true,
   "independent_aggregate_arithmetic_match": true,
@@ -43,19 +45,31 @@
     "not_repeated_by_this_document_update": true
   },
   "sha256": {
-    "Final_Report.md": "e3a14a2428b44b4905725f38d565d21dde9356f6e3b2f1c33abad126478927b7",
-    "Final_Report.docx": "7830494a79c463d0a8bfb94250a8f4a8e9905c30c704e3cd81e52ef471e5c405",
-    "Final_Report.pdf": "860031242e902dc282e6ce4b380b50c3a0391c4fbc0557fb0af4fb0dc0bcecc5",
+    "Final_Report.md": "34f3528b043cf6399b04d1787382277b43ca6db63ec3c69ce7ffe0d878660d16",
+    "Final_Report.docx": "891ee3121d8fb8d81704ca7af7ae6df178b2c88feee066722fdd2955ae210ddf",
+    "Final_Report.pdf": "924b6f7a9f89d0b1b2afcb9a9626c8cb58b4593ca55f367e5af6be7647b4f1e2",
     "outputs/priority_group_descriptives.csv": "df97a0ff6240255cc540293234bfd3e09cec39be5da0939add3f61078a371e80",
     "outputs/operating_coefficient_summary.csv": "6153d2297028146b7f7f8d6c089e69a2de035031ef32e88fccb73331515b32e0",
     "outputs/report_additions.json": "91aa072d74072f0e3ee404d28b7a67940f227effff8504bb3d5ae53900f7e5c0"
   },
-  "report_style": "Revised business narrative with APA 7 data-source reference",
-  "word_count_body_sections_1_to_7": 2334,
-  "word_count_full_document": 2974,
-  "current_reference_entries": 1,
+  "report_style": "Direct business narrative with explicit group settings and operating-variable interpretation",
+  "word_count_body_sections_1_to_7": 2350,
+  "word_count_full_document": 2988,
+  "current_reference_entries": 3,
   "ai_acknowledgement": "ChatGPT, Gemini and Claude Code assisted with writing and coding; Eric Huang and Maksym Xu reviewed the outputs.",
   "saved_coefficient_aggregation_rechecked_this_revision": true,
   "private_input_recomputed_this_revision": false,
-  "project_name": "Group 2"
+  "project_name": "Group 2",
+  "reference_style": "APA 7 alphabetical order, italic titles, 0.5-inch hanging indents and double spacing",
+  "numeric_columns_right_aligned": [
+    "Table 1",
+    "Table 2",
+    "Table A1"
+  ],
+  "priority_group_settings_individually_mapped": true,
+  "main_text_odds_ratios": [
+    3.27,
+    1.27,
+    0.88
+  ]
 }
