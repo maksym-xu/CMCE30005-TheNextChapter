@@ -1,5 +1,5 @@
 {
-  "title": "The Next Chapter: Final Presentation Speaking Script",
+  "title": "Group 2: Final Presentation Speaking Script",
   "language": "English",
   "model_provenance": "The main presentation retains the reproduced five-fold results. A paired comparison on fifty repeated host splits adds exploratory evidence about sensitivity to the training-test allocation. The earlier matched-input random forest remains historical comparison evidence.",
   "target_seconds": 540,
@@ -283,6 +283,6 @@
     "presentation": "2026-10-01",
     "paired_analysis": "2026-10-02"
   },
-  "publication_url": "https://github.com/maksym-xu/CMCE30005-TheNextChapter/tree/final-presentation-release-2026-10-01/final-presentation/english-script-2026-10-02",
-  "analysis_publication_url": "https://github.com/maksym-xu/CMCE30005-TheNextChapter/tree/final-presentation-release-2026-10-01/final-report/paired-analysis-2026-10-02"
+  "publication_url": "https://github.com/maksym-xu/CMCE30005-TheNextChapter/tree/e4c68cae863e35bd1e7df0af4738c41b589f0bad/final-presentation/english-script-2026-10-02",
+  "analysis_publication_url": "https://github.com/maksym-xu/CMCE30005-TheNextChapter/tree/e4c68cae863e35bd1e7df0af4738c41b589f0bad/final-report/paired-analysis-2026-10-02"
 }

@@ -14,7 +14,7 @@ from docx.opc.constants import RELATIONSHIP_TYPE
 
 ROOT = Path(__file__).resolve().parents[1]
 data = json.loads((ROOT / "code/script.json").read_text())
-OUT = ROOT / "deliverables/TheNextChapter_English_Speaking_Script.docx"
+OUT = ROOT / "deliverables/Group_2_English_Speaking_Script.docx"
 assert len(data["slides"]) == 10 and len(data["qa"]) == 12
 assert sum(s["seconds"] for s in data["slides"]) == 540
 assert not re.search(r"[\u3400-\u9fff]", json.dumps(data, ensure_ascii=False))
@@ -53,7 +53,7 @@ for name, size in [("Title", 26), ("Heading 1", 19), ("Heading 2", 14)]:
     style.paragraph_format.space_after = Pt(7)
     style.paragraph_format.keep_with_next = True
 header = section.header.paragraphs[0]
-header.text = "TheNextChapter Group 2    CMCE30005 final presentation"
+header.text = "Group 2    CMCE30005 final presentation"
 header.runs[0].font.size = Pt(9)
 footer = section.footer.paragraphs[0]
 footer.alignment = WD_ALIGN_PARAGRAPH.RIGHT
@@ -187,15 +187,15 @@ table([["Metric", "Logistic", "Baseline", "Better splits"],
 para("Each split used the same test hosts and the same shortlist quota for both methods. The mean paired target-rate gain was 11.46 percentage points. Its fifth to ninety-fifth percentiles were 2.37 to 19.72 points. These describe split sensitivity, not a confidence interval. Higher AUC and lower Brier are better.", 10.5)
 para("The one-night indicator followed earlier outcome inspection. The split checks therefore evaluate a frozen exploratory specification. They do not repeat variable selection inside training or create an untouched external test. The random-forest, priority-group and historical-window results are earlier supplementary analyses.", 10.5)
 para("The independent arithmetic check reconstructed scores from fitted coefficients and recalculated the metrics. It did not fit the model with a second engine or rebuild the original dated-review input.", 10.5)
-base = "https://github.com/maksym-xu/CMCE30005-TheNextChapter/tree/final-presentation-release-2026-10-01/"
+base = "https://github.com/maksym-xu/CMCE30005-TheNextChapter/tree/e4c68cae863e35bd1e7df0af4738c41b589f0bad/"
 link("Repeated comparison code and aggregate results", base + "final-report/paired-analysis-2026-10-02")
 link("Original presentation evidence and source map", base + "final-presentation")
 link("English script source and deliverables", base + "final-presentation/english-script-2026-10-02")
 
 doc.core_properties.title = "Melbourne Airbnb Final Presentation Script"
 doc.core_properties.subject = "English presentation script and questions"
-doc.core_properties.author = "TheNextChapter Group 2"
-doc.core_properties.last_modified_by = "TheNextChapter Group 2"
+doc.core_properties.author = "Group 2"
+doc.core_properties.last_modified_by = "Group 2"
 doc.core_properties.comments = ""
 doc.core_properties.keywords = "Melbourne Airbnb final presentation"
 OUT.parent.mkdir(parents=True, exist_ok=True)
@@ -223,6 +223,6 @@ clean_copy.replace(OUT)
 spoken = ["Melbourne Airbnb Final Presentation Script", "English edition 2 October 2026", ""]
 for s in data["slides"]:
     spoken.extend([f"Slide {s['slide']}  {s['title']}", f"{s['speaker']}  {s['seconds']} seconds", s["script"], ""])
-(ROOT / "deliverables/TheNextChapter_English_Speaking_Script.txt").write_text("\n".join(spoken).rstrip() + "\n")
+(ROOT / "deliverables/Group_2_English_Speaking_Script.txt").write_text("\n".join(spoken).rstrip() + "\n")
 print(OUT.name)
 print(f"Spoken words: {data['spoken_word_count']}")

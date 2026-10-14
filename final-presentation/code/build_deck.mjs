@@ -85,7 +85,7 @@ function selectedBreakdown(s){
 // 1. The client decision, with original illustrative architecture.
 {
  const s=pres.slides.add();fullArt(s,'residential-search-3d');sources.push('Inside Airbnb Melbourne, subject-supplied data; Group 2 analysis.');
- text(s,'THENEXTCHAPTER · GROUP 2',64,48,700,33,20,'#C6D9D1',true);
+ text(s,'Group 2',64,48,700,33,20,'#C6D9D1',true);
  text(s,'Where should\nwe look first?',64,147,650,180,63,C.white,true,heading);
  text(s,'Melbourne Airbnb\nA focused search before signing a lease',64,365,620,100,30,C.white);
  text(s,'Start with City of Melbourne\n2–3-bedroom apartments.',64,504,630,96,31,'#F1B98E',true);
@@ -211,7 +211,7 @@ for(let i=0;i<10;i++){
  const details=JSON.stringify(D.provenance[i]||{},null,2);
  const art=[0,7,9].includes(i)?'Illustrative 3D scene generated with OpenAI image_gen. This is not an actual listing. Assets and prompt provenance are included in assets/.':'';
  const ai=i===9?'AI acknowledgement: OpenAI Codex assisted with evidence organisation, drafting, code, slide and document layout, and checks. Image generation produced illustrative architectural scenes. Group members are responsible for checking and understanding the work.':'';
- pres.slides.items[i].speakerNotes.textFrame.setText(`${n.speaker} | ${n.seconds} seconds\n\n${n.script}\n\n中文排练提示: ${n.zh_cue}\n\nSource: ${sources[i]}\n${details}\n\nEvidence and code: https://github.com/maksym-xu/CMCE30005-TheNextChapter/tree/final-presentation-release-2026-10-01/final-presentation . See EVIDENCE_MAP.md for per-slide sources and the boundary between public aggregate checks and authorised-data reproduction. Raw school records and listing-level predictions are excluded from the public package.\n${art}\n${ai}`);
+ pres.slides.items[i].speakerNotes.textFrame.setText(`${n.speaker} | ${n.seconds} seconds\n\n${n.script}\n\n中文排练提示: ${n.zh_cue}\n\nSource: ${sources[i]}\n${details}\n\nEvidence and code: https://github.com/maksym-xu/CMCE30005-TheNextChapter/tree/e4c68cae863e35bd1e7df0af4738c41b589f0bad/final-presentation . See EVIDENCE_MAP.md for per-slide sources and the boundary between public aggregate checks and authorised-data reproduction. Raw school records and listing-level predictions are excluded from the public package.\n${art}\n${ai}`);
 }
 const raw=path.join(BUILD,'candidate-raw.pptx');
 await (await PresentationFile.exportPptx(pres)).save(raw);
@@ -227,7 +227,7 @@ const candidate=path.join(BUILD,'candidate-animated.pptx');
 const styled=path.join(BUILD,'candidate-styled.pptx');
 execFileSync(PY,[path.join(ROOT,'code/style_native_charts.py'),raw,styled],{stdio:'inherit'});
 execFileSync(PY,[path.join(ROOT,'code/add_transitions.py'),styled,candidate],{stdio:'inherit'});
-const finalPath=process.env.FINAL_PPTX || path.join(ROOT,'deliverables','TheNextChapter_Final.pptx');
+const finalPath=process.env.FINAL_PPTX || path.join(ROOT,'deliverables','Group_2_Final.pptx');
 const receipt=path.join(BUILD,path.basename(finalPath)+'.validation.json');
 const result=await finalizePresentation({workspaceDir:ROOT,candidatePath:candidate,finalPath,pythonExecutable:PY,
  integrityValidatorPath:path.join(SKILL,'container_tools/inspect_presentation_package_integrity.py'),layoutValidatorPath:path.join(SKILL,'container_tools/inspect_presentation_layout_geometry.py'),

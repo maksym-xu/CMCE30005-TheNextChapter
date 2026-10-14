@@ -4,7 +4,7 @@
 # Supporting analysis of Inside Airbnb's modelled price/revenue fields; not used in the interim report.
 # Purpose: Describe supply, price, demand seasonality and the revenue
 #          segments of the Melbourne Airbnb market
-# Author: TheNextChapter (Group 2)
+# Author: Group 2
 # Date: 6 August 2026
 # ============================================================
 #

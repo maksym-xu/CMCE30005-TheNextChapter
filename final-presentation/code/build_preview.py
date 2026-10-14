@@ -26,7 +26,7 @@ TEMPLATE = r'''<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
-<title>TheNextChapter · Animated Slide Preview</title>
+<title>Group 2 · Animated Slide Preview</title>
 <style>
 :root{color-scheme:dark;font-family:Arial,"PingFang SC","Microsoft YaHei",sans-serif;background:#101b1b;color:#eff6f2}
 *{box-sizing:border-box}body{margin:0;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
@@ -48,7 +48,7 @@ button:hover{background:#355f52}button:focus-visible{outline:3px solid #e6bd80;o
 </head>
 <body>
 <header>
-<h1>TheNextChapter · 动态幻灯片预览</h1>
+<h1>Group 2 · 动态幻灯片预览</h1>
 <p>这是最终幻灯片渲染图的淡入预览，不是 PowerPoint 动画播放验证。左右箭头或空格翻页；F 全屏。四秒轮播仅用于预览，默认暂停。</p>
 </header>
 <main><div id="stage" role="region" aria-label="幻灯片预览" tabindex="0">
@@ -131,8 +131,8 @@ def main() -> None:
     pdf = preview / "Slide_Preview.pdf"
     page_w, page_h = 960, 540
     doc = canvas.Canvas(str(pdf), pagesize=(page_w, page_h), pageCompression=1)
-    doc.setTitle("TheNextChapter Final Presentation — Rendered Slide Preview")
-    doc.setAuthor("TheNextChapter — Group 2")
+    doc.setTitle("Group 2 Final Presentation — Rendered Slide Preview")
+    doc.setAuthor("Group 2")
     doc.setSubject("Ten rendered slide images; this PDF is not an animation playback test.")
     for p in images:
         with Image.open(p) as source:

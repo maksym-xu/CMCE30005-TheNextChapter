@@ -2,8 +2,8 @@
 
 This edition follows the ten-slide final presentation and adds the 2 October paired comparison to the spoken explanation and questions. The main script has 940 whitespace-counted words, divided across four presenters. The planned speaking time is nine minutes, with one minute available for pauses and handoffs; confirm the timing in rehearsal.
 
-- [Word script with questions and evidence notes](deliverables/TheNextChapter_English_Speaking_Script.docx)
-- [Plain-text spoken passages](deliverables/TheNextChapter_English_Speaking_Script.txt)
+- [Word script with questions and evidence notes](deliverables/Group_2_English_Speaking_Script.docx)
+- [Plain-text spoken passages](deliverables/Group_2_English_Speaking_Script.txt)
 - [Editable source](code/script.json)
 - [Repeated model comparison](../../final-report/paired-analysis-2026-10-02/README.md)
 

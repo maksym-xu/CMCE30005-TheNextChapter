@@ -101,7 +101,7 @@ def main():
     manifest.write_text(json.dumps(hashes, indent=2) + "\n", encoding="utf-8")
     print(f"Wrote manifest for {len(hashes)} explicitly allowed files.")
     if args.archive:
-        archive = ROOT / "TheNextChapter_Final_Report_Analysis_2026-10-02.zip"
+        archive = ROOT / "Group_2_Final_Report_Analysis_2026-10-02.zip"
         packaged = sorted(hashes) + [manifest.name]
         with zipfile.ZipFile(archive, "w", compression=zipfile.ZIP_DEFLATED) as handle:
             for relative in packaged:

@@ -10,7 +10,7 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 ap = argparse.ArgumentParser(description=__doc__)
-ap.add_argument('--pptx', type=Path, default=ROOT/'deliverables/TheNextChapter_Final.pptx')
+ap.add_argument('--pptx', type=Path, default=ROOT/'deliverables/Group_2_Final.pptx')
 args = ap.parse_args()
 script = json.loads((ROOT/'code/script.json').read_text())
 ns = {'p': 'http://schemas.openxmlformats.org/presentationml/2006/main',

@@ -5,7 +5,7 @@
 # Purpose: Decompose Inside Airbnb's modelled listing revenue into price and
 #          review-derived activity, and identify what is associated with
 #          achieving any recent activity and with sustaining it
-# Author: TheNextChapter (Group 2)
+# Author: Group 2
 # Date: 14 August 2026
 # ============================================================
 #

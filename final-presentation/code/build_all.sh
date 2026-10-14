@@ -20,8 +20,8 @@ fi
 if [[ -z "${FONTCONFIG_FILE:-}" && -f "$PACKAGE_ROOT/qa/fonts.conf" ]]; then
   export FONTCONFIG_FILE="$PACKAGE_ROOT/qa/fonts.conf"
 fi
-export FINAL_PPTX="$PACKAGE_ROOT/deliverables/TheNextChapter_Final_Rebuilt_$REBUILD_ID.pptx"
-export FINAL_DOCX="$PACKAGE_ROOT/deliverables/TheNextChapter_Final_Script_Rebuilt_$REBUILD_ID.docx"
+export FINAL_PPTX="$PACKAGE_ROOT/deliverables/Group_2_Final_Rebuilt_$REBUILD_ID.pptx"
+export FINAL_DOCX="$PACKAGE_ROOT/deliverables/Group_2_Final_Script_Rebuilt_$REBUILD_ID.docx"
 
 test -x "$RUNTIME_PYTHON"
 test -x "$RUNTIME_NODE"

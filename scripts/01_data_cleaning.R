@@ -3,7 +3,7 @@
 # Script: 01_data_cleaning.R
 # Purpose: Clean the Inside Airbnb Melbourne snapshot and build the
 #          analysis-ready tables used by scripts 07-09, rq_scope_feasibility.py and scripts/supporting
-# Author: TheNextChapter (Group 2)
+# Author: Group 2
 # Date: 6 August 2026
 # ============================================================
 #

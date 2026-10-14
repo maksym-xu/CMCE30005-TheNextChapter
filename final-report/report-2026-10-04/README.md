@@ -2,7 +2,7 @@
 
 [Report PDF](Final_Report.pdf) · [Report Word](Final_Report.docx) · [Matching report text](Final_Report.md)
 
-The current report is prepared by Eric Huang and Maksym Xu. The model analysis remains pinned to e4c68cae863e35bd1e7df0af4738c41b589f0bad. This update adds two short passages: observed listing settings for the priority groups in Section 5.1, and operating-variable coefficient magnitudes in Appendix A. It does not refit models or change the screening results, charts or historical submissions.
+The current report is prepared by Eric Huang and Maksym Xu. It combines the revised business narrative, APA 7 data-source reference and a short AI acknowledgement with the listing benchmarks and saved coefficient summaries published in revision 4e2dd23. The model analysis remains pinned to e4c68cae863e35bd1e7df0af4738c41b589f0bad. Models, headline screening results, figures, historical submissions and presentation files are unchanged.
 
 ## Additional descriptive and model evidence
 
@@ -43,3 +43,9 @@ python final-report/report-2026-10-04/scripts/test_report_additions.py \
 This report integrates Maksym Xu's analysis and Eric Huang's report drafting and review. Historical interim and presentation files retain their original team details. The existing acknowledgement remains in the report.
 
 [Package checks](package_checks.json) separate this update's aggregation and document checks from earlier model and published-arithmetic checks. The private records and model fits are unchanged.
+
+## Current document verification
+
+Microsoft Word counted 2,334 words for Sections 1–7, including tables and captions, and 2,974 words for the full document including title, references, acknowledgement and appendices. The PDF has eight pages, all rendered and inspected using Microsoft Word and PDFium. Word and Markdown match in ordered text. All four original figures and tables are retained; the four-week action table stays on one page.
+
+References contain the Inside Airbnb dataset in APA 7 format. AI use is acknowledged briefly outside the reference list. The previous R and AI-tool bibliography entries have been removed. The saved coefficients from the 50 repeated host splits were independently aggregated again; no model was refitted and the private listing medians were not recomputed in this publication step.

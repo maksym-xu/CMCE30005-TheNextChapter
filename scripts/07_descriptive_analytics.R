@@ -4,7 +4,7 @@
 # Purpose: Week 5 workshop - descriptive analytics on the project dataset.
 #          Summarises, aggregates and visualises the cleaned Melbourne
 #          snapshot to establish what the data looks like before modelling.
-# Author: TheNextChapter (Group 2)
+# Author: Group 2
 # Date: 3 September 2026
 # ============================================================
 #

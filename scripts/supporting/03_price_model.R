@@ -4,7 +4,7 @@
 # Supporting analysis of Inside Airbnb's modelled price/revenue fields; not used in the interim report.
 # Purpose: Hedonic regression of nightly price - which listing, host and
 #          location attributes drive price variation across Melbourne
-# Author: TheNextChapter (Group 2)
+# Author: Group 2
 # Date: 6 August 2026
 # ============================================================
 #

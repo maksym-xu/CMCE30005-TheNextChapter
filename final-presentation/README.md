@@ -1,13 +1,13 @@
 # Final presentation and supporting evidence
 
-TheNextChapter Group 2 · CMCE30005 · 1 October 2026
+Group 2 · CMCE30005 · 1 October 2026
 
 Our proposal is to investigate City of Melbourne two- and three-bedroom apartments first, with Yarra Ranges three-bedroom houses/townhouses as an alternative. The observed review rates and comparison sample sizes support this search order. Actual quotes and permissions may change it. Every candidate still needs permission and a conservative cash-flow assessment before a lease.
 
 ## Presentation files
 
-- [PowerPoint presentation](deliverables/TheNextChapter_Final.pptx): 10 slides, editable charts, illustrative 3D images and manual fade transitions.
-- [Speaking script and Q&A](deliverables/TheNextChapter_Final_Speaking_Script.docx): English main speech, Chinese rehearsal cues, handovers, ten prepared questions and technical source notes.
+- [PowerPoint presentation](deliverables/Group_2_Final.pptx): 10 slides, editable charts, illustrative 3D images and manual fade transitions.
+- [Speaking script and Q&A](deliverables/Group_2_Final_Speaking_Script.docx): English main speech, Chinese rehearsal cues, handovers, ten prepared questions and technical source notes.
 - [PDF slide preview](preview/Slide_Preview.pdf): a static rendering for quick review. Present and submit the PowerPoint when the assessment requires PPTX.
 - [Evidence map](EVIDENCE_MAP.md): each slide's claims, source files, calculations and limits.
 - [Analysis and reproduction guide](analysis/README.md): published aggregate checks and the separate route requiring authorised school data.

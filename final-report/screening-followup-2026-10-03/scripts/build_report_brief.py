@@ -29,7 +29,7 @@ normal=doc.styles['Normal'];normal.font.size=Pt(11)
 for name,size in [('Title',24),('Heading 1',16),('Heading 2',13)]:
     st=doc.styles[name];st.font.size=Pt(size);st.paragraph_format.keep_with_next=True;st.paragraph_format.space_before=Pt(10)
 foot=sec.footer.paragraphs[0];foot.alignment=WD_ALIGN_PARAGRAPH.RIGHT
-foot.add_run('TheNextChapter Group 2   ').font.size=Pt(9)
+foot.add_run('Group 2   ').font.size=Pt(9)
 field=OxmlElement('w:fldSimple');field.set(qn('w:instr'),'PAGE');foot._p.append(field)
 def p(t,size=11,bold=False):
     x=doc.add_paragraph();x.paragraph_format.widow_control=True
@@ -101,8 +101,8 @@ for drawing in doc.element.xpath('.//wp:docPr'):
 
 doc.core_properties.title='Additional Screening Evidence'
 doc.core_properties.subject='Final report evidence on candidate screening'
-doc.core_properties.author='TheNextChapter Group 2';doc.core_properties.last_modified_by='TheNextChapter Group 2';doc.core_properties.comments=''
-out=ROOT/'deliverables/TheNextChapter_Screening_Findings.docx';doc.save(out)
+doc.core_properties.author='Group 2';doc.core_properties.last_modified_by='Group 2';doc.core_properties.comments=''
+out=ROOT/'deliverables/Group_2_Screening_Findings.docx';doc.save(out)
 clean=out.with_suffix('.clean.docx')
 with ZipFile(out) as source,ZipFile(clean,'w') as target:
     for info in source.infolist():

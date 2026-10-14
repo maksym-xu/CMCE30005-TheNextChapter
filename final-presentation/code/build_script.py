@@ -18,7 +18,7 @@ from docx.oxml.ns import qn
 ROOT = Path(__file__).resolve().parents[1]
 DATA = json.loads((ROOT / 'code/script.json').read_text())
 requested_output = os.environ.get('FINAL_DOCX')
-OUT = Path(requested_output).expanduser() if requested_output else ROOT / 'deliverables/TheNextChapter_Final_Speaking_Script.docx'
+OUT = Path(requested_output).expanduser() if requested_output else ROOT / 'deliverables/Group_2_Final_Speaking_Script.docx'
 if not OUT.is_absolute():
     OUT = ROOT / OUT
 OUT.parent.mkdir(parents=True, exist_ok=True)
@@ -69,7 +69,7 @@ for name, size in [('Heading 1',19),('Heading 2',14),('Heading 3',12)]:
     st.paragraph_format.keep_with_next=True
 
 header = section.header.paragraphs[0]
-header.text = 'TheNextChapter Group 2   |   CMCE30005 final presentation'
+header.text = 'Group 2   |   CMCE30005 final presentation'
 header.runs[0].font.size = Pt(9)
 footer=section.footer.paragraphs[0]
 footer.alignment=WD_ALIGN_PARAGRAPH.RIGHT
@@ -199,7 +199,7 @@ heading('AI acknowledgement',2)
 para(nt['ai_acknowledgement'],9)
 DOC.core_properties.title=DATA['title']
 DOC.core_properties.subject='CMCE30005 business presentation rehearsal and questions'
-DOC.core_properties.author='TheNextChapter Group 2'
+DOC.core_properties.author='Group 2'
 DOC.core_properties.keywords='Airbnb Melbourne presentation script'
 DOC.save(OUT)
 print(OUT)

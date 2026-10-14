@@ -302,6 +302,6 @@
   ],
   "version_date": "2026-10-01",
   "evidence_location": "Evidence and code: repository final-presentation directory; exact files are listed in EVIDENCE_MAP.md.",
-  "publication_url": "https://github.com/maksym-xu/CMCE30005-TheNextChapter/tree/final-presentation-release-2026-10-01/final-presentation",
+  "publication_url": "https://github.com/maksym-xu/CMCE30005-TheNextChapter/tree/e4c68cae863e35bd1e7df0af4738c41b589f0bad/final-presentation",
   "word_count_method": "Whitespace-separated English main-script tokens; excludes Chinese cues, notes and Q&A. May differ from Microsoft Word counting."
 }

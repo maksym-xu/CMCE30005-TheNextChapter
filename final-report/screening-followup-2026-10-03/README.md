@@ -70,7 +70,7 @@ This follow-up preserves every stored full-model and baseline test score. It doe
 | `outputs/property_only_coefficients.csv`, `property_only_fit_diagnostics.csv` | Fifty reduced fits, coefficient estimates, convergence and sample checks |
 | [outputs/run_checks.json](outputs/run_checks.json), [outputs/verification.json](outputs/verification.json) | Provenance, score-preservation checks and independent verification |
 | `figures/` | PNG and SVG comparisons generated from aggregate tables |
-| [deliverables/TheNextChapter_Screening_Findings.docx](deliverables/TheNextChapter_Screening_Findings.docx) | English findings brief |
+| [deliverables/Group_2_Screening_Findings.docx](deliverables/Group_2_Screening_Findings.docx) | English findings brief |
 
 Each summary gives equal weight to each split. Paired differences are computed within a split before summarising. Screening precision/recall differences are percentage points; AUC, Brier and expected-count differences retain their original units. Finite-value counts are explicit. Better/tied/worse counts use tolerance 1e-12. Do not pool overlapping test rows or take the difference between separately computed marginal percentiles.
 
