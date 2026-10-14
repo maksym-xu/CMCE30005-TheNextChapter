@@ -1,49 +1,54 @@
 {
-  "approx_body_words": 2195,
-  "approx_total_words": 2834,
-  "figures": 4,
-  "source_commit": "e4c68cae863e35bd1e7df0af4738c41b589f0bad",
-  "word_count_full_document": 2755,
-  "pdf_pages": 8,
-  "docx_md_ordered_text_match": true,
-  "pdf_key_numbers_present": true,
-  "pdf_repository_link_present": true,
-  "visual_qa": "Passed: all eight Microsoft Word PDF pages inspected, with readable figures, complete tables and captions, and no clipping or overlap",
-  "render_method": "Microsoft Word PDF export and bundled PDFium page rendering; packaged LibreOffice renderer unavailable",
-  "verification_boundary": "Published aggregate arithmetic independently recalculated, methods and source inspection; no private data rebuild or independent model refit",
-  "coefficient_direction_checks": {
-    "price_vs_similar_10": {
-      "fits": 50,
-      "direction": "negative"
-    },
-    "one_nightYes": {
-      "fits": 50,
-      "direction": "positive"
-    },
-    "amenities_10": {
-      "fits": 50,
-      "direction": "positive"
-    }
-  },
-  "additional_max_analyses": "All three MAX analyses integrated from audited e4c68ca aggregates",
-  "followup_public_metric_rows_checked": 2700,
-  "followup_paired_summary_rows_checked": 54,
-  "main_result_scope": "Separate 25 percent selection quota within each fixed priority group; equal mean of 50 host allocations",
-  "sha256": {
-    "Final_Report.md": "69a968b90aed55237400a05e35d786c8a4337f3a72e0e6085cb1e0c03237e5b1",
-    "Final_Report.docx": "50d3d45d47a24a8a102e3615ab5a3f9157b1ab9bb81ad88dfd0e903c5fa7a22a",
-    "Final_Report.pdf": "42d5a3bffd06577b160b6b53562d9f776615e30c690f200d42182f11013a90f9"
-  },
-  "revision": "Direct business prose, explicit sample stages and dwelling coverage, and a connected investigation workflow",
+  "revision_date": "2026-10-14",
+  "base_report_commit": "e54558ab178b74eed72a7e4c6fbb1245f20615af",
+  "source_analysis_commit": "e4c68cae863e35bd1e7df0af4738c41b589f0bad",
+  "authors": [
+    "Eric Huang",
+    "Maksym Xu"
+  ],
   "model_refitted_this_revision": false,
-  "numerical_findings_unchanged": true,
-  "word_count_body_sections_1_to_7": 2124,
-  "revision_date": "2026-10-07",
-  "screening_claims_checked_this_revision": {
-    "full": 49.6158948206191,
-    "property_only": 38.6142887753612,
-    "baseline": 32.4269107917818
+  "existing_screening_results_unchanged": true,
+  "figures_unchanged": true,
+  "pdf_pages": 8,
+  "visual_qa": "Passed: all eight rendered PDF pages inspected; no clipping, overlap or isolated pages.",
+  "render_method": "LibreOffice DOCX to PDF and page PNG rendering",
+  "pagination_changes": [
+    "Removed forced page breaks before Appendix A and Appendix B; typography, margins and figures unchanged."
+  ],
+  "new_passages_synchronized_in_docx_markdown_root_readme": true,
+  "independent_aggregate_arithmetic_match": true,
+  "unit_tests_passed": 6,
+  "verification_scope": "Recomputed observed summaries and saved coefficient statistics; no raw review rebuild or model fitting.",
+  "observed_sample_rows": 3873,
+  "missing_stay_records_excluded_from_descriptive_denominator": 3,
+  "priority_groups_missing_stay_records": 0,
+  "coefficient_fits_included": 50,
+  "coefficient_design": "repeated_host_split",
+  "host_fold_fits_excluded": 5,
+  "coefficient_odds_ratio_definition": "exp(mean log-odds coefficient); geometric mean of fit-specific odds ratios",
+  "analysis_input_sha256": "bf286ed7bfb89a3e06f7a52e10c3913507296e62432a56596b24fef88a6dee20",
+  "coefficient_input_sha256": "d26d2245d6e89afb76caa53caebd20d4a7a488fddd8b35330f92310fbd7bf7a2",
+  "new_statistics_source": "outputs/report_additions.json",
+  "approx_body_words": 2233,
+  "approx_total_words": 2925,
+  "word_count_method": "Regex estimate from Markdown, not Microsoft Word count",
+  "previous_release_word_counts": {
+    "revision_date": "2026-10-07",
+    "word_count_full_document": 2755,
+    "word_count_body_sections_1_to_7": 2124
   },
-  "previous_arithmetic_audit_revision": "9dcad51",
-  "references_and_appendices_unchanged": true
+  "previous_model_arithmetic_audit": {
+    "revision": "9dcad51",
+    "metric_rows": 2700,
+    "paired_summary_rows": 54,
+    "not_repeated_by_this_document_update": true
+  },
+  "sha256": {
+    "Final_Report.md": "97d6644850c9fab5705ac0ef9745b98fea2ce12ed907972ac440c3d9392e63fe",
+    "Final_Report.docx": "38dfe438edb7da43a0cebd16d1660f2b0d6417b21d93ec14f1d817ba2afde179",
+    "Final_Report.pdf": "0c6b49ce1321236dbf94db02a1eb52074e8e6b730c7daa4f5ec97817a159dc11",
+    "outputs/priority_group_descriptives.csv": "df97a0ff6240255cc540293234bfd3e09cec39be5da0939add3f61078a371e80",
+    "outputs/operating_coefficient_summary.csv": "6153d2297028146b7f7f8d6c089e69a2de035031ef32e88fccb73331515b32e0",
+    "outputs/report_additions.json": "91aa072d74072f0e3ee404d28b7a67940f227effff8504bb3d5ae53900f7e5c0"
+  }
 }

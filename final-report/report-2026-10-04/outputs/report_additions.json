@@ -1,0 +1,94 @@
+{
+  "analysis_input_sha256": "bf286ed7bfb89a3e06f7a52e10c3913507296e62432a56596b24fef88a6dee20",
+  "coefficient_input_sha256": "d26d2245d6e89afb76caa53caebd20d4a7a488fddd8b35330f92310fbd7bf7a2",
+  "coefficient_policy": "50 repeated_host_split fits only; excludes five host folds; OR is exp(mean beta)",
+  "coefficient_training_scope": "Pooled eligible-home training samples, not group-specific model fits",
+  "coefficients": [
+    {
+      "maximum_coefficient": 1.39825993794038,
+      "mean_coefficient": 1.1834890778460434,
+      "mean_direction": "positive",
+      "minimum_coefficient": 0.929545316241452,
+      "odds_ratio_exp_mean_coefficient": 3.26574879971139,
+      "same_sign_fits": 50,
+      "same_sign_percent": 100.0,
+      "term": "one_nightYes",
+      "training_fits": 50
+    },
+    {
+      "maximum_coefficient": 0.342584710592056,
+      "mean_coefficient": 0.23716692448013751,
+      "mean_direction": "positive",
+      "minimum_coefficient": 0.14014469745755,
+      "odds_ratio_exp_mean_coefficient": 1.2676527023838073,
+      "same_sign_fits": 50,
+      "same_sign_percent": 100.0,
+      "term": "amenities_10",
+      "training_fits": 50
+    },
+    {
+      "maximum_coefficient": -0.0620062118756803,
+      "mean_coefficient": -0.12742085315793683,
+      "mean_direction": "negative",
+      "minimum_coefficient": -0.190094662915732,
+      "odds_ratio_exp_mean_coefficient": 0.8803630910354231,
+      "same_sign_fits": 50,
+      "same_sign_percent": 100.0,
+      "term": "price_vs_similar_10",
+      "training_fits": 50
+    }
+  ],
+  "descriptive_policy": "Observed values only; missing stay rules excluded from percentage denominators",
+  "descriptives": [
+    {
+      "area": "All eligible homes",
+      "configuration": "All 14 groups",
+      "median_amenity_count": 43.0,
+      "median_nightly_price_aud": 262.0,
+      "missing_stay_count": 3,
+      "n_listings": 3873,
+      "observed_stay_count": 3870,
+      "one_night_count": 1746,
+      "one_night_percent": 45.116279069767444
+    },
+    {
+      "area": "Melbourne",
+      "configuration": "2BR Apartment/unit",
+      "median_amenity_count": 44.0,
+      "median_nightly_price_aud": 285.0,
+      "missing_stay_count": 0,
+      "n_listings": 1235,
+      "observed_stay_count": 1235,
+      "one_night_count": 739,
+      "one_night_percent": 59.83805668016194
+    },
+    {
+      "area": "Melbourne",
+      "configuration": "3BR Apartment/unit",
+      "median_amenity_count": 47.0,
+      "median_nightly_price_aud": 450.0,
+      "missing_stay_count": 0,
+      "n_listings": 306,
+      "observed_stay_count": 306,
+      "one_night_count": 180,
+      "one_night_percent": 58.8235294117647
+    },
+    {
+      "area": "Yarra Ranges",
+      "configuration": "3BR House/townhouse",
+      "median_amenity_count": 55.0,
+      "median_nightly_price_aud": 425.75,
+      "missing_stay_count": 0,
+      "n_listings": 90,
+      "observed_stay_count": 90,
+      "one_night_count": 20,
+      "one_night_percent": 22.22222222222222
+    }
+  ],
+  "model_refitted": false,
+  "report_text": {
+    "appendix_a_append": "Across the 50 repeated training fits, mean log-odds weights are +1.183 for one-night acceptance (odds ratio 3.27), +0.237 per ten additional amenities (1.27), and -0.127 per price increase equal to 10% of the training-group median (0.88). All three directions persist in 50/50 fits. These odds ratios describe conditional historical associations, not probability changes or causal effects.",
+    "section_5_1_append": "In the supplied snapshot, median quoted nightly prices are AUD285, AUD450 and AUD425.75 for Melbourne two-bedroom apartments, Melbourne three-bedroom apartments and Yarra Ranges three-bedroom houses/townhouses, respectively. One-night acceptance ranges from 22.2% to 59.8%, and median amenity counts from 44 to 55. These are advertised rates, not rents or prices actually paid."
+  },
+  "schema_version": 1
+}

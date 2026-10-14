@@ -1,34 +1,45 @@
-# Final report reviewed 7 October 2026
+# Final report 14 October 2026
 
 [Report PDF](Final_Report.pdf) · [Report Word](Final_Report.docx) · [Matching report text](Final_Report.md)
 
-The root [README](../../README.md) includes the complete report. The report uses analysis revision e4c68cae863e35bd1e7df0af4738c41b589f0bad. The 7 October refinement makes the prose more direct, clarifies how 25,728 listings become 3,873 analysis homes, names the covered dwelling types, and connects screening capacity to the initial ten-property investigation pool. Source analyses, figures and the final presentation remain unchanged. The package stays at this stable path so existing links continue to work.
+The current report is prepared by Eric Huang and Maksym Xu. The model analysis remains pinned to e4c68cae863e35bd1e7df0af4738c41b589f0bad. This update adds two short passages: observed listing settings for the priority groups in Section 5.1, and operating-variable coefficient magnitudes in Appendix A. It does not refit models or change the screening results, charts or historical submissions.
 
-## Publication checks
+## Additional descriptive and model evidence
 
-Microsoft Word counted 2,124 words for sections 1-7, including their tables and captions, and 2,755 words for the full document including title, references, acknowledgement and appendices. The PDF has 8 pages, all rendered and inspected. Word and Markdown match in ordered text, apart from the Word title block and heading formatting. The PDF contains the reported numbers and clickable links to this report branch and the frozen analysis revision.
+[Listing settings](outputs/priority_group_descriptives.csv) cover all 3,873 analysis homes and each priority group. Prices and amenities are medians of the observed records. One-night percentages exclude missing minimum-stay records: three are missing in the full sample and none in the priority groups. The observed minimum stay is at least one night, so `minimum_nights == 1` agrees with the model's `minimum_nights <= 1` category. Advertised nightly rates are not residential rents or rates actually paid by guests.
 
-[Package checks](package_checks.json) record file hashes and the check scope. The earlier analysis review recalculated public arithmetic for 2,700 metric rows and 54 paired summaries. The 7 October edit checked the headline screening figures and capacity results against those published tables; private records, raw reviews and model fits were unchanged.
+[Operating coefficients](outputs/operating_coefficient_summary.csv) use only the 50 `repeated_host_split` fits in the saved [full-model coefficients](../screening-followup-2026-10-03/reference/prior_full_coefficients.csv). The five `host_fold` fits are excluded. The actual price term is `price_vs_similar_10`, defined as `(price / training-group median - 1) * 10`; amenities are divided by ten. The reported odds ratio is `exp(mean coefficient)`, not the arithmetic mean of odds ratios. Direction agreement across overlapping training samples is descriptive, not a causal or significance test.
+
+[Aggregate output and source hashes](outputs/report_additions.json) contain no listing or host identifiers. The private input is not included in the repository. Its hash matches the existing [input fingerprint](../screening-followup-2026-10-03/reference/input_fingerprints.json).
+
+```sh
+python final-report/report-2026-10-04/scripts/summarize_report_additions.py \
+  --analysis-input /path/to/private/analysis_input.csv
+python final-report/report-2026-10-04/scripts/test_report_additions.py --unit-tests
+```
+
+The summary and unit tests use only Python's standard library. Full document consistency checks also require pypdf. Supply both original inputs and the repository root:
+
+```sh
+python final-report/report-2026-10-04/scripts/test_report_additions.py \
+  --phase modified --report-root . \
+  --analysis-input /path/to/private/analysis_input.csv \
+  --coefficients final-report/screening-followup-2026-10-03/reference/prior_full_coefficients.csv
+```
 
 ## Figures and their sources
 
-| Figure | Files | Published numerical source |
-|---|---|---|
-| Figure 1 priority groups | [PNG](figures/figure_1_priority_groups.png), [SVG](figures/figure_1_priority_groups.svg) | [Group rates and host-resampled ranges](../../final-presentation/analysis/reference/segment_ladder.csv) |
-| Figure 2 screening comparison | [PNG](figures/figure_2_paired_screening.png), [SVG](figures/figure_2_paired_screening.svg) | [Screening summary](../screening-followup-2026-10-03/outputs/screening_summary.csv), scope priority_fixed_quota, fraction 0.25 |
-| Figure 3 two annual windows | [PNG](figures/figure_3_historical_persistence.png), [SVG](figures/figure_3_historical_persistence.svg) | [Temporal validation metrics](../../final-presentation/analysis/reference/temporal-validation/validation_metrics.json) |
-| Appendix B all 14 groups | [PNG](figures/appendix_all_14_groups.png), [SVG](figures/appendix_all_14_groups.svg) | [Complete group table](../../final-presentation/analysis/reference/segment_ladder.csv) |
+| Figure | Published numerical source |
+|---|---|
+| Figure 1 priority groups | [Group rates and host-resampled ranges](../../final-presentation/analysis/reference/segment_ladder.csv) |
+| Figure 2 screening comparison | [Screening summary](../screening-followup-2026-10-03/outputs/screening_summary.csv), priority_fixed_quota, fraction 0.25 |
+| Figure 3 two annual windows | [Temporal metrics](../../final-presentation/analysis/reference/temporal-validation/validation_metrics.json) |
+| Appendix B all 14 groups | [Complete group table](../../final-presentation/analysis/reference/segment_ladder.csv) |
 
-[build_figures.py](build_figures.py) regenerates all four charts from these published aggregates. It requires numpy and matplotlib:
+`build_figures.py` still regenerates the four figures from the existing published aggregates. The images were not changed by this update.
 
-```sh
-python final-report/report-2026-10-04/build_figures.py
-```
+## Current and historical contributions
 
-No private listing or host identifiers are included in this report package. The source packages document the conditions needed to rerun the models: [paired analysis](../paired-analysis-2026-10-02/README.md) and [screening follow-up](../screening-followup-2026-10-03/README.md).
+This report integrates Maksym Xu's analysis and Eric Huang's report drafting and review. Historical interim and presentation files retain their original team details. The existing acknowledgement remains in the report.
 
-## Contributions and review status
-
-The report integrates the analysis published by Maksym Xu and the report review and drafting coordinated by Eric Huang. The listed authors remain the four project group members. This release does not assign unverified contribution percentages. The group should review the final wording and AI acknowledgement before its LMS submission.
-
-The AI acknowledgement is integrated into the report. There is no separate declaration attachment. Existing interim files and presentation files remain unchanged.
+[Package checks](package_checks.json) separate this update's aggregation and document checks from earlier model and published-arithmetic checks. The private records and model fits are unchanged.

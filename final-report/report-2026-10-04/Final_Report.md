@@ -66,7 +66,7 @@ To check whether the search priorities hold across time, we reconstruct two cons
 
 Across the analysis sample, 981 of 3,873 homes reach 30 annual reviews, or 25.3%. Group rates range from 8.2% to 36.6%, giving the client a clear reason to focus the search.
 
-City of Melbourne three-bedroom apartments lead at 36.6%, with 112 of 306 homes reaching the target. Two-bedroom apartments follow at 32.8%, or 405 of 1,235. Yarra Ranges three-bedroom houses and townhouses reach 30.0%, or 27 of 90. The city groups combine stronger observed activity with larger samples, supporting their position as the first search priority.
+City of Melbourne three-bedroom apartments lead at 36.6%, with 112 of 306 homes reaching the target. Two-bedroom apartments follow at 32.8%, or 405 of 1,235. Yarra Ranges three-bedroom houses and townhouses reach 30.0%, or 27 of 90. The city groups combine stronger observed activity with larger samples, supporting their position as the first search priority. In the supplied snapshot, median quoted nightly prices are AUD285, AUD450 and AUD425.75 for Melbourne two-bedroom apartments, Melbourne three-bedroom apartments and Yarra Ranges three-bedroom houses/townhouses, respectively. One-night acceptance ranges from 22.2% to 59.8%, and median amenity counts from 44 to 55. These are advertised rates, not rents or prices actually paid.
 
 ![Three priority property groups](figures/figure_1_priority_groups.png)
 
@@ -161,7 +161,7 @@ The group used ChatGPT for planning, interpreting results, drafting and editing,
 
 ## Appendix A. Model specification and comparison evidence
 
-The complete model uses unpenalised logistic regression. Area, dwelling type, bedrooms and one-night acceptance are categorical. Reference levels are Melbourne, apartment/unit, one bedroom and no one-night acceptance. Relative price is `(price / training group median - 1) * 10`; amenities are divided by ten. Training modes fill missing acceptance categories, and the overall training median covers an unseen price group. The baseline is `(group positives + 10 * overall positive share) / (group count + 10)`. The reduced model retains area, dwelling type, bedrooms and amenities and is refitted on each training set. All 50 reduced fits converge without warnings.
+The complete model uses unpenalised logistic regression. Area, dwelling type, bedrooms and one-night acceptance are categorical. Reference levels are Melbourne, apartment/unit, one bedroom and no one-night acceptance. Relative price is `(price / training group median - 1) * 10`; amenities are divided by ten. Training modes fill missing acceptance categories, and the overall training median covers an unseen price group. The baseline is `(group positives + 10 * overall positive share) / (group count + 10)`. The reduced model retains area, dwelling type, bedrooms and amenities and is refitted on each training set. All 50 reduced fits converge without warnings. Across the 50 repeated training fits, mean log-odds weights are +1.183 for one-night acceptance (odds ratio 3.27), +0.237 per ten additional amenities (1.27), and -0.127 per price increase equal to 10% of the training-group median (0.88). All three directions persist in 50/50 fits. These odds ratios describe conditional historical associations, not probability changes or causal effects.
 
 **Table A1. Separate evaluation designs at 25 percent capacity**
 

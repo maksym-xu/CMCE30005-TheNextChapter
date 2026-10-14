@@ -1,0 +1,5 @@
+area,configuration,n_listings,median_nightly_price_aud,one_night_count,observed_stay_count,missing_stay_count,one_night_percent,median_amenity_count
+All eligible homes,All 14 groups,3873,262.0,1746,3870,3,45.116279069767444,43.0
+Melbourne,2BR Apartment/unit,1235,285.0,739,1235,0,59.83805668016194,44.0
+Melbourne,3BR Apartment/unit,306,450.0,180,306,0,58.8235294117647,47.0
+Yarra Ranges,3BR House/townhouse,90,425.75,20,90,0,22.22222222222222,55.0

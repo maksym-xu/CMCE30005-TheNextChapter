@@ -1,0 +1,4 @@
+term,training_fits,mean_coefficient,odds_ratio_exp_mean_coefficient,mean_direction,same_sign_fits,same_sign_percent,minimum_coefficient,maximum_coefficient
+one_nightYes,50,1.1834890778460434,3.26574879971139,positive,50,100.0,0.929545316241452,1.39825993794038
+amenities_10,50,0.23716692448013751,1.2676527023838073,positive,50,100.0,0.14014469745755,0.342584710592056
+price_vs_similar_10,50,-0.12742085315793683,0.8803630910354231,negative,50,100.0,-0.190094662915732,-0.0620062118756803
