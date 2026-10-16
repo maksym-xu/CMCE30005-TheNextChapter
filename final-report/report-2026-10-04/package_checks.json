@@ -1,75 +1,15 @@
 {
-  "revision_date": "2026-10-14",
-  "base_report_commit": "25b73645afdc93de8d652ed0418ce742a09dbee9",
-  "source_analysis_commit": "e4c68cae863e35bd1e7df0af4738c41b589f0bad",
-  "authors": [
-    "Eric Huang",
-    "Maksym Xu"
-  ],
-  "model_refitted_this_revision": false,
-  "existing_screening_results_unchanged": true,
-  "figures_unchanged": true,
-  "pdf_pages": 8,
-  "visual_qa": "Passed: all eight pages inspected; target paragraphs and action table kept together; no clipping or overlap.",
-  "render_method": "Microsoft Word DOCX to PDF; PDFium page PNGs inspected",
-  "pagination_changes": [
-    "Kept the four-week action table on one page",
-    "Kept the final Appendix A evidence paragraph together",
-    "Kept the sample-branching paragraph together",
-    "Kept the 50-host-split paragraph together"
-  ],
-  "new_passages_synchronized_in_docx_markdown_root_readme": true,
-  "independent_aggregate_arithmetic_match": true,
-  "unit_tests_passed": 6,
-  "verification_scope": "Recomputed observed summaries and saved coefficient statistics; no raw review rebuild or model fitting.",
-  "observed_sample_rows": 3873,
-  "missing_stay_records_excluded_from_descriptive_denominator": 3,
-  "priority_groups_missing_stay_records": 0,
-  "coefficient_fits_included": 50,
-  "coefficient_design": "repeated_host_split",
-  "host_fold_fits_excluded": 5,
-  "coefficient_odds_ratio_definition": "exp(mean log-odds coefficient); geometric mean of fit-specific odds ratios",
-  "analysis_input_sha256": "bf286ed7bfb89a3e06f7a52e10c3913507296e62432a56596b24fef88a6dee20",
-  "coefficient_input_sha256": "d26d2245d6e89afb76caa53caebd20d4a7a488fddd8b35330f92310fbd7bf7a2",
-  "new_statistics_source": "outputs/report_additions.json",
-  "word_count_method": "Microsoft Word ComputeStatistics",
-  "previous_release_word_counts": {
-    "revision_date": "2026-10-07",
-    "word_count_full_document": 2755,
-    "word_count_body_sections_1_to_7": 2124
+  "revision_date": "2026-10-16",
+  "branch": "final-report-marking-fixes-2026-10-16",
+  "checks_passed": true,
+  "failures": [],
+  "simple_word_count_full_document": 2905,
+  "values_checked_against_outputs": 32,
+  "ai_acknowledgement_unchanged": true,
+  "pdf": {
+    "pages": 9,
+    "unembedded_fonts": []
   },
-  "previous_model_arithmetic_audit": {
-    "revision": "9dcad51",
-    "metric_rows": 2700,
-    "paired_summary_rows": 54,
-    "not_repeated_by_this_document_update": true
-  },
-  "sha256": {
-    "Final_Report.md": "34f3528b043cf6399b04d1787382277b43ca6db63ec3c69ce7ffe0d878660d16",
-    "Final_Report.docx": "891ee3121d8fb8d81704ca7af7ae6df178b2c88feee066722fdd2955ae210ddf",
-    "Final_Report.pdf": "924b6f7a9f89d0b1b2afcb9a9626c8cb58b4593ca55f367e5af6be7647b4f1e2",
-    "outputs/priority_group_descriptives.csv": "df97a0ff6240255cc540293234bfd3e09cec39be5da0939add3f61078a371e80",
-    "outputs/operating_coefficient_summary.csv": "6153d2297028146b7f7f8d6c089e69a2de035031ef32e88fccb73331515b32e0",
-    "outputs/report_additions.json": "91aa072d74072f0e3ee404d28b7a67940f227effff8504bb3d5ae53900f7e5c0"
-  },
-  "report_style": "Direct business narrative with explicit group settings and operating-variable interpretation",
-  "word_count_body_sections_1_to_7": 2350,
-  "word_count_full_document": 2988,
-  "current_reference_entries": 3,
-  "ai_acknowledgement": "ChatGPT, Gemini and Claude Code assisted with writing and coding; Eric Huang and Maksym Xu reviewed the outputs.",
-  "saved_coefficient_aggregation_rechecked_this_revision": true,
-  "private_input_recomputed_this_revision": false,
-  "project_name": "Group 2",
-  "reference_style": "APA 7 alphabetical order, italic titles, 0.5-inch hanging indents and double spacing",
-  "numeric_columns_right_aligned": [
-    "Table 1",
-    "Table 2",
-    "Table A1"
-  ],
-  "priority_group_settings_individually_mapped": true,
-  "main_text_odds_ratios": [
-    3.27,
-    1.27,
-    0.88
-  ]
+  "microsoft_word_count_full_document": 2934,
+  "render_method": "Microsoft Word for Mac: DOCX saved as PDF (fonts embedded)"
 }

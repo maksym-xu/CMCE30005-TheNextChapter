@@ -1,0 +1,4 @@
+homes_label,homes,median_price_aud,median_amenities,one_night_percent,min_stay_7plus_percent,two_or_three_bed_percent,city_of_melbourne_percent,median_est_nights,median_est_revenue_aud
+Reached 30 reviews,981,254,44,67.6530612244898,0,64.8318042813456,76.8603465851172,255,58395
+Below 30 reviews,2892,266,43,37.4740484429066,5.70934256055363,54.6334716459198,59.5781466113416,60,16618
+All analysis homes,3873,262,43,45.1162790697674,4.26356589147287,57.2166279369997,63.9555899819262,96,24732

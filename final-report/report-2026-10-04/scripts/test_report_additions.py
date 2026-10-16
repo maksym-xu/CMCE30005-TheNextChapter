@@ -71,6 +71,12 @@ class SummaryTests(unittest.TestCase):
 
 
 def check_report(report_root, analysis_input, coefficients, phase):
+    """Recompute the saved aggregates, then run the current package checks.
+
+    The sentence-level checks of the 14 October revision were replaced on 16 October
+    2026, when the report was rewritten; check_report_package.py now checks the
+    Markdown, Word, PDF and README versions against each other and the outputs.
+    """
     package = report_root / "final-report/report-2026-10-04"
     result = summarize(analysis_input, coefficients)
     expected_n = [3873, 1235, 306, 90]
@@ -78,40 +84,13 @@ def check_report(report_root, analysis_input, coefficients, phase):
         raise AssertionError("Unexpected eligible/priority sample counts")
     if result["descriptives"][0]["missing_stay_count"] != 3:
         raise AssertionError("Unexpected missing-stay count")
-    md = (package / "Final_Report.md").read_text(encoding="utf-8")
-    readme = (report_root / "README.md").read_text(encoding="utf-8")
-    paragraphs = word_paragraphs(package / "Final_Report.docx")
-    docx = normalized(" ".join(paragraphs))
-    for addition in result["report_text"].values():
-        if phase == "baseline":
-            if addition in md or normalized(addition) in docx:
-                raise AssertionError("Baseline unexpectedly contains the new additions")
-        else:
-            if md.count(addition) != 1 or readme.count(addition) != 1:
-                raise AssertionError("Markdown/root README additions are not synchronized")
-            if docx.count(normalized(addition)) != 1:
-                raise AssertionError("Word addition is absent or duplicated")
-    for unchanged in ("49.6%", "32.4%", "46", "50", "34-review"):
-        if unchanged not in md:
-            raise AssertionError(f"Existing headline missing: {unchanged}")
+    saved = json.loads((package / "outputs/report_additions.json").read_text())
+    if result != saved:
+        raise AssertionError("Saved aggregate output differs from recomputation")
     if phase == "modified":
-        if paragraphs[2] != "Eric Huang and Maksym Xu":
-            raise AssertionError("The current report must list the two current members")
-        if "Loc Le" in docx or "Qihang Sun" in docx:
-            raise AssertionError("Former members remain in the current report")
-        saved = json.loads((package / "outputs/report_additions.json").read_text())
-        if result != saved:
-            raise AssertionError("Saved aggregate output differs from recomputation")
-        from pypdf import PdfReader
-        pdf = normalized(" ".join(page.extract_text() or "" for page in
-                                  PdfReader(package / "Final_Report.pdf").pages))
-        for token in ("Eric Huang and Maksym Xu", "AUD285", "AUD450", "AUD425.75",
-                      "22.2%", "59.8%", "+1.183", "+0.237", "-0.127", "3.27",
-                      "1.27", "0.88", "conditional historical associations"):
-            if token not in pdf:
-                raise AssertionError(f"PDF lacks new value/phrase: {token}")
-        if "Loc Le" in pdf or "Qihang Sun" in pdf:
-            raise AssertionError("Former members remain in the current PDF")
+        import subprocess, sys
+        subprocess.run([sys.executable, str(Path(__file__).with_name("check_report_package.py"))],
+                       cwd=report_root, check=True)
     print(f"PASS: {phase} report; 3873 rows; 50 repeated fits; 3 missing stay rules excluded")
 
 

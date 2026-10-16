@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-16",
+  "scope": "Aggregate evidence for the 16 Oct 2026 revision; analysis homes = 3,873 (1,726 hosts).",
+  "review_distribution": {
+    "homes": 3873,
+    "zero_reviews": 334,
+    "p25": 5,
+    "median": 15,
+    "p75": 30,
+    "p90": 47,
+    "max": 153,
+    "mean": 20.21378776,
+    "reaching_target": 981
+  },
+  "nights_at_30_reviews": [
+    {
+      "homes": 56,
+      "min_nights": 180,
+      "max_nights": 180
+    }
+  ],
+  "model_assumptions": {
+    "max_gvif_adjusted": 1.62802737,
+    "squared_terms_lr_test": {
+      "chisq": 6.98457494,
+      "df": 2,
+      "p_value": 0.03043118
+    },
+    "squared_terms_coefficients": [
+      [-0.00102415, 0.00234732, -0.4363049, 0.66261553],
+      [-0.04622691, 0.01815089, -2.54681224, 0.01087119]
+    ],
+    "squared_terms_host_clustered_p": [0.86446627, 0.17404541],
+    "se_ratio_range": [1.05746516, 2.58927309]
+  },
+  "same_top3_share": 0.504,
+  "bootstrap": {
+    "draws": 1000,
+    "seed": 30005,
+    "unit": "analysis hosts, with replacement",
+    "tie_rule": "rank by rate, then by number of homes"
+  }
+}
