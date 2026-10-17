@@ -1,4 +1,4 @@
-# CMCE30005 Group 2: evidence added in the 16 October 2026 report revision.
+# CMCE30005 Group 2: evidence added in the 16-17 October 2026 report revision.
 # Run from the repository root:
 #   Rscript final-report/report-2026-10-04/scripts/revision_evidence.R
 # Private inputs (not published): final-report/report-2026-10-04/private-inputs/analysis_input.csv
@@ -103,13 +103,18 @@ price_check <- res[, .(listings = .N, zero_recent_review_percent = 100 * mean(nu
                    by = .(price_rule = fifelse(price_ok, "Kept by price rule", "Removed by price rule"))]
 fwrite(price_check, file.path(OUT, "residential_price_check.csv"))
 
-# ---- 4. Estimated nights and revenue by group ---------------------------------
+# ---- 4. Estimated nights and revenue by group (all homes and below target) ----
 group_money <- d[, .(homes = .N, target_share = mean(busy),
                      median_est_nights = median(est_nights),
                      median_est_revenue_aud = median(est_revenue),
-                     median_est_revenue_reached_aud = median(est_revenue[busy == 1L])),
+                     median_est_revenue_reached_aud = median(est_revenue[busy == 1L]),
+                     median_est_nights_below_target = median(est_nights[busy == 0L]),
+                     median_est_revenue_below_target_aud = median(est_revenue[busy == 0L])),
                  by = group][order(-target_share)]
 group_money[, median_weekly_aud := median_est_revenue_aud / 52]
+group_money[, median_weekly_below_target_aud := median_est_revenue_below_target_aud / 52]
+group_money[, rank_target_share := frank(-target_share, ties.method = "min")]
+group_money[, rank_median_revenue := frank(-median_est_revenue_aud, ties.method = "min")]
 group_money[, priority := group %in% PRIORITY]
 fwrite(group_money, file.path(OUT, "group_estimated_revenue.csv"))
 

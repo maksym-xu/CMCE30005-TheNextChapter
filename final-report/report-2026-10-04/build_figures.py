@@ -75,7 +75,7 @@ finish(fig, 'figure_1_review_distribution')
 # Figure 2: all 14 groups, the three priority groups highlighted.
 ladder = sorted(readcsv(REPO / 'final-presentation/analysis/reference/segment_ladder.csv'),
                 key=lambda r: float(r['observed_target_rate']), reverse=True)
-fig, ax = plt.subplots(figsize=(4.0, 6.4))
+fig, ax = plt.subplots(figsize=(4.0, 5.8))
 labels = []
 for i, r in enumerate(ladder):
     p = float(r['observed_target_rate']) * 100
@@ -124,7 +124,7 @@ temporal = json.loads((REPO / 'final-presentation/analysis/reference/temporal-va
 tt = temporal['top3_vs_rest_recent_window']
 x = np.arange(2)
 w = .32
-fig, ax = plt.subplots(figsize=(7.2, 2.8))
+fig, ax = plt.subplots(figsize=(7.2, 2.3))
 sets = [('Top three groups (chosen on the earlier year)', BLUE,
          [tt['top3_earlier_rate_listing_weighted'], tt['listing_weighted']['top3_recent_rate']], -w / 2),
         ('Other seven groups', GREY,

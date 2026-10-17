@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check the final report package for the 16 October 2026 revision.
+"""Check the final report package for the 16-17 October 2026 revision.
 
 Run from the repository root (needs pypdf for the PDF checks):
     python final-report/report-2026-10-04/scripts/check_report_package.py
@@ -7,7 +7,7 @@ Run from the repository root (needs pypdf for the PDF checks):
 Checks that
   * Final_Report.md, Final_Report.docx, Final_Report.pdf and the root README.md carry the same report;
   * the AI acknowledgement is unchanged from the 14 October report (commit 3e6e043);
-  * the whole document stays under the 3,000-word limit;
+  * the whole document stays under the 3,000-word limit (simple count and Microsoft Word's recorded count);
   * every font in the PDF is embedded;
   * the report's key numbers match the committed aggregate outputs.
 Writes the results to final-report/report-2026-10-04/package_checks.json.
@@ -154,6 +154,10 @@ def main():
     for group in ('Melbourne 3BR Apartment/unit', 'Melbourne 2BR Apartment/unit', 'Yarra Ranges 3BR House/townhouse'):
         expect.append(f"{round(float(money[group]['median_est_revenue_aud']), -2):,.0f}")
         expect.append(f"{round(float(money[group]['median_weekly_aud']), -1):,.0f}")
+        # Table 4: rank on revenue and the below-target median, side by side in the group's row.
+        expect.append(f"| {int(money[group]['rank_median_revenue'])} | "
+                      f"{round(float(money[group]['median_est_revenue_below_target_aud']), -2):,.0f} |")
+        expect.append(f"{round(float(money[group]['median_weekly_below_target_aud']), -1):,.0f}")
     confusion = read_csv(ROOT / 'final-presentation/analysis/outputs/test_confusion.csv')[0]
     expect += [f"{int(confusion[k]):,}" for k in ('true_positives', 'false_positives', 'false_negatives', 'true_negatives')]
     for r in read_csv(out / 'all_term_odds_ratios.csv'):
@@ -170,7 +174,7 @@ def main():
         fail(failures, f'Values from committed outputs not found in the report: {absent}')
 
     result = {
-        'revision_date': '2026-10-16',
+        'revision_date': '2026-10-17',
         'branch': 'final-report-marking-fixes-2026-10-16',
         'checks_passed': not failures,
         'failures': failures,
@@ -183,6 +187,10 @@ def main():
     for key in ('microsoft_word_count_full_document', 'render_method'):
         if key in previous:
             result[key] = previous[key]
+    if result.get('microsoft_word_count_full_document', 0) >= WORD_LIMIT:
+        fail(failures, f"Microsoft Word count {result['microsoft_word_count_full_document']} is not under {WORD_LIMIT}")
+        result['checks_passed'] = False
+        result['failures'] = failures
     (PKG / 'package_checks.json').write_text(json.dumps(result, indent=2) + '\n')
     if failures:
         print('FAIL:\n  ' + '\n  '.join(failures))

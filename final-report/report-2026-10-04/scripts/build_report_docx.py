@@ -146,16 +146,19 @@ def plain(text):
 
 def add_table(doc, rows, aligns):
     ncol = len(rows[0])
-    # Each column first gets enough width for its longest word (so no word breaks),
-    # then the remaining width is shared in proportion to content length.
+    # Each column first gets enough width for its longest word (so no word breaks;
+    # bold header words are wider), then the remaining width is shared in proportion
+    # to content length.
     minimum, desired = [], []
     for c in range(ncol):
         cells = [plain(r[c]) for r in rows]
-        longest_word = max((len(w) for t in cells for w in t.split()), default=4)
+        header_word = max((len(w) for w in cells[0].split()), default=4)
+        body_word = max((len(w) for t in cells[1:] for w in t.split()), default=4)
         numeric = [len(t) for t in cells[1:] if re.fullmatch(r'[-+0-9.,%–]+', t.strip())]
-        need = max(longest_word * 125, max(numeric, default=0) * 115) + 200
+        need = max(header_word * 145, body_word * 125, max(numeric, default=0) * 115) + 200
         minimum.append(need)
-        desired.append(max(len(t) for t in cells[1:]) if len(rows) > 1 else 10)
+        body = max(len(t) for t in cells[1:]) if len(rows) > 1 else 10
+        desired.append(max(body, len(cells[0]) / 3))
     spare = max(0, TEXT_WIDTH_TWIPS - sum(minimum))
     widths = [int(m + spare * d / sum(desired)) for m, d in zip(minimum, desired)]
     table = doc.add_table(rows=len(rows), cols=ncol)
@@ -243,6 +246,8 @@ def build():
             p = doc.add_paragraph(style='Heading 1')
             set_run_font(p.add_run(line[3:].strip()))
             p.paragraph_format.keep_with_next = True
+            # The appendix starts on a new page so its text and table stay together.
+            p.paragraph_format.page_break_before = line.startswith('## Appendix')
         elif line.startswith('### '):
             in_refs = False if line.startswith('### Author') or line.startswith('### AI') else in_refs
             p = doc.add_paragraph(style='Heading 2')

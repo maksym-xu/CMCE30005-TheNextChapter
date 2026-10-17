@@ -1,4 +1,4 @@
-# Final report package (revised 16 October 2026)
+# Final report package (revised 17 October 2026)
 
 [Report PDF](Final_Report.pdf) · [Report Word](Final_Report.docx) · [Report text](Final_Report.md)
 
@@ -11,7 +11,7 @@ Prepared by Eric Huang and Maksym Xu. `Final_Report.md` is the source text; the 
 | `Final_Report.md`, `.docx`, `.pdf` | The report in three formats |
 | `figures/figure_1_review_distribution` … `figure_4_two_years` (`.png`, `.svg`) | The four report figures |
 | `build_figures.py` | Builds the four figures from committed aggregate tables (matplotlib) |
-| `scripts/revision_evidence.R` | Evidence added on 16 October: data exploration, estimated nights and revenue, model assumption checks, top-three stability and the all-input odds ratios |
+| `scripts/revision_evidence.R` | Evidence added on 16–17 October: data exploration, estimated nights and revenue (all homes and homes below target, with each group's rank on both measures), model assumption checks, top-three stability and the all-input odds ratios |
 | `outputs/revision/` | Aggregate outputs of `revision_evidence.R` (no listing or host identifiers) |
 | `scripts/build_report_docx.py`, `reference/report_template.docx` | Builds the Word file from the Markdown with the report's template |
 | `scripts/sync_readme.py` | Copies the report into the root `README.md` |
@@ -38,7 +38,7 @@ python final-report/report-2026-10-04/scripts/check_report_package.py
 |---|---|
 | Figure 1, Table 3 | `outputs/revision/review_histogram_bins.csv`, `review_distribution.csv`, `target_profile.csv` |
 | Figure 2 | `../../final-presentation/analysis/reference/segment_ladder.csv` (group rates and 1,000-draw host-resampled ranges) |
-| Table 4, Recommendation 3 | `outputs/revision/group_estimated_revenue.csv` and `outputs/priority_group_descriptives.csv` |
+| Table 4, Recommendation 3, Section 5.2 rankings, worked example | `outputs/revision/group_estimated_revenue.csv` (`rank_median_revenue`, `median_est_revenue_below_target_aud`, `median_weekly_aud`, `median_weekly_below_target_aud`) and `outputs/priority_group_descriptives.csv`; the worked example's rents and costs are illustrative, not data |
 | Figure 3, Table 6 | `../screening-followup-2026-10-03/outputs/screening_summary.csv` (scope `priority_fixed_quota`) |
 | Table 5 | `../../final-presentation/analysis/outputs/test_confusion.csv` (pooled five-fold scores) |
 | Section 5.3 scenario chances | `../../final-presentation/analysis/reference/final_logit_scenarios.csv` |
@@ -59,6 +59,16 @@ The report's headline (Figure 3) picks 25% of test homes separately in each prio
 | 50 host splits, separate quota in each priority group (report headline) | 49.62% | 32.43% | +17.19 | 46 of 50 |
 
 In the pooled five-fold design, group-rate scores from five different training sets share one list, which tends to favour the model. Across the 50 splits on all groups, mean AUC is 0.708 against 0.603 (better in 50 of 50) and mean Brier score 0.1715 against 0.1841 (better in 44). Within the separate group quotas, gains average +16.4 points in City two-bedroom apartments, +17.6 in City three-bedroom apartments and +25.0 in Yarra Ranges houses; Yarra Ranges contributes only 5–9 picked homes per split.
+
+## Changes on 17 October
+
+- Table 4 now gives each priority group's rank on estimated revenue (of 14) and the median revenue of its homes below target; the one-night column it replaced is still in `outputs/priority_group_descriptives.csv`.
+- Section 5.2 explains how to choose when the activity and revenue rankings differ: activity sets where to search, revenue tests each lease, and between leases that pass the larger margin of typical revenue over costs wins. Recommendation 1 now points to this rule instead of ranking Yarra Ranges houses strictly behind City leases.
+- Section 6 adds a worked example for two unlisted rentals (rents and costs are illustrative, not data). Recommendation 3 gives below-target weekly revenue as the amount a cash buffer must cover, and Table 7's week-4 rule uses it instead of the all-group 60 nights.
+- Recommendation 2 now says the model orders candidates already on Airbnb; Section 4 describes the reduced model as a test of what price and minimum stay add.
+- About 150 words were cut elsewhere to stay under 3,000 words (Microsoft Word count 2,982). Figures 2 and 4 are slightly shorter and the appendix starts on a new page, so the report stays at nine pages.
+- The whole analysis was re-run from the three course CSV files (SHA-256 checked); see the root README.
+- `check_report_package.py` also checks the new Table 4 values and Microsoft Word's recorded word count.
 
 ## Changes in the 16 October revision
 
