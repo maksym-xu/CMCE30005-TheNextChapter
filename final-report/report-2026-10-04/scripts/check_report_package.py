@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check the final report package for the 16-17 October 2026 revision.
+"""Check the final report package for the 16-18 October 2026 revision.
 
 Run from the repository root (needs pypdf for the PDF checks):
     python final-report/report-2026-10-04/scripts/check_report_package.py
@@ -174,7 +174,7 @@ def main():
         fail(failures, f'Values from committed outputs not found in the report: {absent}')
 
     result = {
-        'revision_date': '2026-10-17',
+        'revision_date': '2026-10-18',
         'branch': 'final-report-marking-fixes-2026-10-16',
         'checks_passed': not failures,
         'failures': failures,
