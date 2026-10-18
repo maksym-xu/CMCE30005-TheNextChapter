@@ -1,4 +1,4 @@
-"""Build the four report figures from committed aggregate tables.
+"""Build the five report figures from committed aggregate tables.
 
 Run from anywhere: python final-report/report-2026-10-04/build_figures.py
 Needs matplotlib and numpy. No model is refitted and no listing-level data is read.
@@ -7,6 +7,7 @@ Sources:
   Figure 2  final-presentation/analysis/reference/segment_ladder.csv
   Figure 3  final-report/screening-followup-2026-10-03/outputs/screening_summary.csv
   Figure 4  final-presentation/analysis/reference/temporal-validation/validation_metrics.json
+  Figure 5  outputs/revision/weekly_revenue_reach.csv
 """
 from pathlib import Path
 import csv
@@ -141,4 +142,26 @@ ax.legend(loc='upper center', bbox_to_anchor=(.5, 1.25), ncol=2, frameon=False, 
 tidy(ax, 'y')
 finish(fig, 'figure_4_two_years')
 
-print('Built four report figures from committed aggregate tables; no models refitted.')
+# Figure 5: share of each priority group's homes whose estimated weekly revenue reached a weekly cost.
+reach = readcsv(ROOT / 'outputs/revision/weekly_revenue_reach.csv')
+fig, ax = plt.subplots(figsize=(7.2, 2.6))
+lines = [('Melbourne 3BR Apartment/unit', 'City 3-bed apartments', BLUE, '-'),
+         ('Melbourne 2BR Apartment/unit', 'City 2-bed apartments', BLUE, '--'),
+         ('Yarra Ranges 3BR House/townhouse', 'Yarra Ranges 3-bed houses', GREY, '-')]
+for key, label, color, style in lines:
+    pts = [(float(r['weekly_cost_aud']), float(r['share_reaching']) * 100) for r in reach if r['group'] == key]
+    xs, ys = zip(*[p for p in pts if p[0] <= 1600])
+    ax.plot(xs, ys, color=color, ls=style, lw=2, label=label)
+ax.axhline(50, color='#555', ls=':', lw=1)
+ax.text(1600, 51.5, 'half of homes', ha='right', fontsize=10, color='#555')
+ax.set_xlim(0, 1600)
+ax.set_ylim(0, 100)
+ax.yaxis.set_major_formatter(PercentFormatter(100, decimals=0))
+ax.set_xlabel('Weekly rent and running costs of a lease (AUD)')
+ax.set_ylabel('Homes earning\nat least this')
+ax.xaxis.set_major_formatter(matplotlib.ticker.StrMethodFormatter('{x:,.0f}'))
+ax.legend(loc='upper right', bbox_to_anchor=(1, .93), frameon=False, fontsize=10)
+tidy(ax, 'y')
+finish(fig, 'figure_5_weekly_reach')
+
+print('Built five report figures from committed aggregate tables; no models refitted.')

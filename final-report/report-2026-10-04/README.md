@@ -9,8 +9,8 @@ Prepared by Eric Huang and Maksym Xu. `Final_Report.md` is the source text; the 
 | Path | Purpose |
 |---|---|
 | `Final_Report.md`, `.docx`, `.pdf` | The report in three formats |
-| `figures/figure_1_review_distribution` … `figure_4_two_years` (`.png`, `.svg`) | The four report figures |
-| `build_figures.py` | Builds the four figures from committed aggregate tables (matplotlib) |
+| `figures/figure_1_review_distribution` … `figure_5_weekly_reach` (`.png`, `.svg`) | The five report figures |
+| `build_figures.py` | Builds the five figures from committed aggregate tables (matplotlib) |
 | `scripts/revision_evidence.R` | Evidence added on 16–17 October: data exploration, estimated nights and revenue (all homes and homes below target, with each group's rank on both measures), model assumption checks, top-three stability and the all-input odds ratios |
 | `outputs/revision/` | Aggregate outputs of `revision_evidence.R` (no listing or host identifiers) |
 | `scripts/build_report_docx.py`, `reference/report_template.docx` | Builds the Word file from the Markdown with the report's template |
@@ -42,6 +42,7 @@ python final-report/report-2026-10-04/scripts/check_report_package.py
 | Figure 3, Table 6 | `../screening-followup-2026-10-03/outputs/screening_summary.csv` (scope `priority_fixed_quota`) |
 | Table 5 | `../../final-presentation/analysis/outputs/test_confusion.csv` (pooled five-fold scores) |
 | Section 5.3 scenario chances | `../../final-presentation/analysis/reference/final_logit_scenarios.csv` |
+| Figure 5 | `outputs/revision/weekly_revenue_reach.csv` (share of each priority group's homes whose estimated weekly revenue reached each weekly cost, AUD 0–2,000 in steps of 10) |
 | Figure 4, Section 5.5 | `../../final-presentation/analysis/reference/temporal-validation/validation_metrics.json` |
 | Section 4 assumptions | `outputs/revision/model_gvif.csv`, `model_se_ratio.csv`, `revision_summary.json` |
 | Section 5.2 stability | `outputs/revision/top3_resample_shares.csv` |
@@ -66,7 +67,8 @@ In the pooled five-fold design, group-rate scores from five different training s
 - Section 2 states that 30 reviews equal about 180 nights only with three-night stays (Inside Airbnb uses the minimum stay when it is longer).
 - Ten candidates are a starting pool: listed homes are ranked within their group and inspected as time and budget allow, and hits can differ widely from the test averages.
 - Corrected two descriptions: the 8.7-point gap counts each host once within each set of groups, and Table A1's odds ratios come from the average coefficient over the 50 fits. The 42% and 18% chances are labelled as coming from the model fitted to all homes.
-- Table 4 is lighter: units moved to the title, nightly price moved to the text, shorter headers. One source note under Figure 1 covers all figures and tables. Microsoft Word count 2,987; nine pages.
+- Table 4 is lighter: units moved to the title, nightly price moved to the text, shorter headers. One source note under Figure 1 covers all figures and tables.
+- After a further marking round: Section 6 gains Figure 5 (share of each priority group's homes whose estimated weekly revenue reached a given weekly cost) to support Recommendation 3; Section 5.3 explains why Table 5's hit rate (43.7%, all homes in one list) is below 49.6% (within priority groups); the assumption and two-year passages use plainer words; future work lists three concrete steps. Microsoft Word count 2,987; ten pages.
 
 ## Changes on 17 October
 

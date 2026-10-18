@@ -118,6 +118,14 @@ group_money[, rank_median_revenue := frank(-median_est_revenue_aud, ties.method 
 group_money[, priority := group %in% PRIORITY]
 fwrite(group_money, file.path(OUT, "group_estimated_revenue.csv"))
 
+# Share of each priority group's homes whose estimated weekly revenue reached a given weekly cost.
+cost_grid <- seq(0, 2000, by = 10)
+weekly_curve <- d[group %in% PRIORITY,
+                  .(weekly_cost_aud = cost_grid,
+                    share_reaching = vapply(cost_grid, function(x) mean(est_revenue / 52 >= x), numeric(1))),
+                  by = group]
+fwrite(weekly_curve, file.path(OUT, "weekly_revenue_reach.csv"))
+
 # ---- 5. Model assumptions (full-sample fit of the six-input model) ------------
 d[, area := factor(neighbourhood_cleansed, levels = AREAS)]
 d[, dwelling := factor(ifelse(grepl("House", configuration), "House/townhouse", "Apartment/unit"),
