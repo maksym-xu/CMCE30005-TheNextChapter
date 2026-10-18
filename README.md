@@ -36,14 +36,14 @@ On 17 October 2026, all eight steps were re-run from the three course CSV files,
 
 ## Team and contributions
 
-| Member | Contribution (from the commit history and reports) |
-|---|---|
-| Maksym Xu | Data cleaning, sample and review-target design, models and validation packages, presentation analysis, report evidence (39 commits) |
-| Eric Huang | Project setup, research question, interim and final report drafting and revision (19 commits) |
-| Qihang Sun | Created the repository; early analysis and interim-stage updates (30 commits, August–September) |
-| Loc Le | Project-plan README update (1 commit, August) |
+| Member | Final report | Earlier work (proposal, interim report, presentation) |
+|---|---|---|
+| Maksym Xu | Led data preparation, modelling and validation: sample and review-target design, model tests, revision evidence, figures and report checks | Data cleaning, models and validation packages, presentation analysis |
+| Eric Huang | Led report drafting and review | Project setup, research question, interim report drafting |
+| Qihang Sun | Left before the final report | Set up the repository; early analysis; co-authored the interim report and presentation |
+| Loc Le | Left before the final report | Project plan; co-authored the interim report and presentation |
 
-Loc Le and Qihang Sun left the group before the final report. Earlier files (interim report, presentation) keep the original four-member team details.
+Contributions are described by the work done, not by commit counts, which leave out drafting, review and presenting. Earlier files (interim report, presentation) keep the original four-member team details.
 
 <!-- final report starts here -->
 
