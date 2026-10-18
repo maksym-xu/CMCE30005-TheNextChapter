@@ -1,4 +1,4 @@
-# Final report package (revised 18 October 2026)
+# Final report package (revised 19 October 2026)
 
 [Report PDF](Final_Report.pdf) · [Report Word](Final_Report.docx) · [Report text](Final_Report.md)
 
@@ -60,6 +60,14 @@ The report's headline (Figure 3) picks 25% of test homes separately in each prio
 | 50 host splits, separate quota in each priority group (report headline) | 49.62% | 32.43% | +17.19 | 46 of 50 |
 
 In the pooled five-fold design, group-rate scores from five different training sets share one list, which tends to favour the model. Across the 50 splits on all groups, mean AUC is 0.708 against 0.603 (better in 50 of 50) and mean Brier score 0.1715 against 0.1841 (better in 44). Within the separate group quotas, gains average +16.4 points in City two-bedroom apartments, +17.6 in City three-bedroom apartments and +25.0 in Yarra Ranges houses; Yarra Ranges contributes only 5–9 picked homes per split.
+
+## Changes on 19 October
+
+- Integrated this revision on top of `ad63ad8`, preserving its weekly-cost coverage curve and all published model results. The curve's axis explicitly labels revenue as estimated.
+- Methods keeps the plain-language assumptions; the diagnostic numbers and host-weighted comparison are in Appendix A. Section 5.3 distinguishes the 50 priority-group tests from the pooled five-fold test.
+- The next steps specify rent and cost quotes, client paid nights and net cash flow, and a later-snapshot test of the unchanged model and selection rule.
+- README opens with the project summary, report links and full report; repository instructions and historical contributions remain after it. Current-report contributions name Eric Huang and Maksym Xu.
+- Microsoft Word count: 2,954; ten pages. The exact Word file was exported as PDF/A with all fonts embedded. The package check, six existing unit tests and three new navigation/figure tests passed. All 603 weekly-cost coverage points were independently recalculated from the original CSVs; the largest rounding difference was below 1e-15. No model was refitted in this revision.
 
 ## Changes on 18 October (team review)
 

@@ -12,6 +12,7 @@ import zipfile
 
 from docx import Document
 from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx.enum.table import WD_CELL_VERTICAL_ALIGNMENT
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.opc.constants import RELATIONSHIP_TYPE as RT
@@ -174,6 +175,7 @@ def add_table(doc, rows, aligns):
             trpr.append(OxmlElement('w:tblHeader'))
         for c, text in enumerate(row):
             cell = tr.cells[c]
+            cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
             cell.width = widths[c] * 635  # twips to EMU
             tcw = cell._tc.get_or_add_tcPr().find(qn('w:tcW'))
             if tcw is not None:

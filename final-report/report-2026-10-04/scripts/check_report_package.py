@@ -175,7 +175,7 @@ def main():
         fail(failures, f'Values from committed outputs not found in the report: {absent}')
 
     result = {
-        'revision_date': '2026-10-18',
+        'revision_date': '2026-10-19',
         'branch': 'final-report-marking-fixes-2026-10-16',
         'checks_passed': not failures,
         'failures': failures,
