@@ -2,48 +2,11 @@
 
 CMCE30005 Final Project Report | Group 2 | Eric Huang and Maksym Xu
 
+A rent-to-rent operator in Greater Melbourne must decide where to lease homes for Airbnb short stays and which homes to inspect first. Using one Inside Airbnb snapshot of Melbourne (25,728 listings and 1,026,690 reviews), we rank 14 property groups by the share of homes with at least 30 reviews a year and test a simple logistic regression within the leading groups. City of Melbourne two- and three-bedroom apartments lead, with Yarra Ranges three-bedroom houses a less certain second option; within these groups the model picks busy homes 49.6% of the time, against 32.4% at random.
+
 **Final report (revised 18 October 2026):** [PDF](final-report/report-2026-10-04/Final_Report.pdf) · [Word](final-report/report-2026-10-04/Final_Report.docx) · [Markdown](final-report/report-2026-10-04/Final_Report.md) · [Report package and checks](final-report/report-2026-10-04/README.md)
 
-The full report text follows the repository guide below.
-
-## Repository guide
-
-| Folder | What it holds |
-|---|---|
-| `final-report/report-2026-10-04/` | The final report (PDF, Word, Markdown), its four figures, the revision evidence script and outputs, and the scripts that build and check the report |
-| `final-report/screening-followup-2026-10-03/` | The main model test: picking 25% of homes within each priority group (49.6% / 38.6% / 32.4%), plus 10% and 50% quotas |
-| `final-report/paired-analysis-2026-10-02/` | The 50 repeated host splits comparing the model with group rates across all groups (AUC, Brier score, shortlist rates) |
-| `final-presentation/` | The final presentation, its speaking script and its analysis package (the six-input logistic model, scenario chances, confusion counts) |
-| `scripts/` | Data cleaning (`01`), sample and review target (`rq_scope_feasibility.py`), group ranking with host resampling (`08`), interim-stage models (`09`–`13`) and the two-year check (`validation/temporal_holdout.py`) |
-| `reports/` | The interim report, interim-stage tables and figures, and supporting analyses |
-| `config/review_analysis.json` | Eligibility rules, review-target design and random seed |
-| `tests/` | Unit tests for cleaning, sample design and the group-rate baseline |
-
-## How to reproduce the results
-
-The three course CSV files (listings, reviews and calendar) are not published. Place them in `data/raw/` as `listings_airbnb.csv`, `reviews_airbnb.csv` and `calendar_airbnb.csv`. Software: R 4.5.3 with data.table, jsonlite, sandwich, ggplot2, scales, digest and stringr; Python 3.12 with the packages in `requirements-analysis.txt`, plus matplotlib, python-docx and pypdf for the report files. Run from the repository root:
-
-1. `Rscript scripts/01_data_cleaning.R` (cleaned listings and review counts in `data/processed/`)
-2. `python scripts/rq_scope_feasibility.py` (sample, reference hosts and the 30-review target)
-3. `Rscript scripts/08_peer_ranking.R` (14 group rates with host-resampled ranges)
-4. `python scripts/validation/temporal_holdout.py` (two-year check)
-5. In `final-presentation/analysis/`: `mkdir -p private-inputs && Rscript scripts/prepare_private_input.R ../..`, then `sh run.sh` (six-input model)
-6. In `final-report/paired-analysis-2026-10-02/`: copy `analysis_input.csv` and `../../final-presentation/analysis/working/oof_predictions_PRIVATE.csv` (renamed `legacy_oof_predictions_PRIVATE.csv`) into `private-inputs/`, then `bash run.sh`
-7. In `final-report/screening-followup-2026-10-03/`: copy `analysis_input.csv` and the paired package's `working/test_predictions_PRIVATE.csv` and `working/split_membership_PRIVATE.csv` (prefixed `prior_`) into `private-inputs/`, then `bash run.sh`
-8. Copy `analysis_input.csv` into `final-report/report-2026-10-04/private-inputs/`, then run `Rscript final-report/report-2026-10-04/scripts/revision_evidence.R`, `python final-report/report-2026-10-04/build_figures.py` and `python final-report/report-2026-10-04/scripts/build_report_docx.py`; export the PDF from Word; check with `python final-report/report-2026-10-04/scripts/check_report_package.py`
-
-On 17 October 2026, all eight steps were re-run from the three course CSV files, whose SHA-256 fingerprints match those in `data/processed/cleaning_manifest.json`. Every committed number and figure was reproduced; the only differences were run dates, software version labels and rounding below 10⁻¹⁵ in the interim-stage random forest. All unit tests passed.
-
-## Team and contributions
-
-| Member | Final report | Earlier work (proposal, interim report, presentation) |
-|---|---|---|
-| Maksym Xu | Led data preparation, modelling and validation: sample and review-target design, model tests, revision evidence, figures and report checks | Data cleaning, models and validation packages, presentation analysis |
-| Eric Huang | Led report drafting and review | Project setup, research question, interim report drafting |
-| Qihang Sun | Left before the final report | Set up the repository; early analysis; co-authored the interim report and presentation |
-| Loc Le | Left before the final report | Project plan; co-authored the interim report and presentation |
-
-Contributions are described by the work done, not by commit counts, which leave out drafting, review and presenting. Earlier files (interim report, presentation) keep the original four-member team details.
+After the report: [Repository guide](#repository-guide) · [How to reproduce the results](#how-to-reproduce-the-results) · [Contributions](#contributions)
 
 <!-- final report starts here -->
 
@@ -290,3 +253,41 @@ We fitted the model in R (R Core Team, 2026). Group median prices and fills for 
 | Three bedrooms (one) | 1.31 | 0.86–1.84 |
 
 Across the 50 tests on all 14 groups, the model ranked a random busy home above a random quiet one 71% of the time, against 60% for group rates (AUC 0.71 and 0.60). Other evaluation designs are in `final-report/report-2026-10-04/README.md` (Huang & Xu, 2026).
+
+<!-- final report ends here -->
+
+---
+
+## Repository guide
+
+| Folder | What it holds |
+|---|---|
+| `final-report/report-2026-10-04/` | The final report (PDF, Word, Markdown), its four figures, the revision evidence script and outputs, and the scripts that build and check the report |
+| `final-report/screening-followup-2026-10-03/` | The main model test: picking 25% of homes within each priority group (49.6% / 38.6% / 32.4%), plus 10% and 50% quotas |
+| `final-report/paired-analysis-2026-10-02/` | The 50 repeated host splits comparing the model with group rates across all groups (AUC, Brier score, shortlist rates) |
+| `final-presentation/` | The final presentation, its speaking script and its analysis package (the six-input logistic model, scenario chances, confusion counts) |
+| `scripts/` | Data cleaning (`01`), sample and review target (`rq_scope_feasibility.py`), group ranking with host resampling (`08`), interim-stage models (`09`–`13`) and the two-year check (`validation/temporal_holdout.py`) |
+| `reports/` | The interim report, interim-stage tables and figures, and supporting analyses |
+| `config/review_analysis.json` | Eligibility rules, review-target design and random seed |
+| `tests/` | Unit tests for cleaning, sample design and the group-rate baseline |
+
+## How to reproduce the results
+
+The three course CSV files (listings, reviews and calendar) are not published. Place them in `data/raw/` as `listings_airbnb.csv`, `reviews_airbnb.csv` and `calendar_airbnb.csv`. Software: R 4.5.3 with data.table, jsonlite, sandwich, ggplot2, scales, digest and stringr; Python 3.12 with the packages in `requirements-analysis.txt`, plus matplotlib, python-docx and pypdf for the report files. Run from the repository root:
+
+1. `Rscript scripts/01_data_cleaning.R` (cleaned listings and review counts in `data/processed/`)
+2. `python scripts/rq_scope_feasibility.py` (sample, reference hosts and the 30-review target)
+3. `Rscript scripts/08_peer_ranking.R` (14 group rates with host-resampled ranges)
+4. `python scripts/validation/temporal_holdout.py` (two-year check)
+5. In `final-presentation/analysis/`: `mkdir -p private-inputs && Rscript scripts/prepare_private_input.R ../..`, then `sh run.sh` (six-input model)
+6. In `final-report/paired-analysis-2026-10-02/`: copy `analysis_input.csv` and `../../final-presentation/analysis/working/oof_predictions_PRIVATE.csv` (renamed `legacy_oof_predictions_PRIVATE.csv`) into `private-inputs/`, then `bash run.sh`
+7. In `final-report/screening-followup-2026-10-03/`: copy `analysis_input.csv` and the paired package's `working/test_predictions_PRIVATE.csv` and `working/split_membership_PRIVATE.csv` (prefixed `prior_`) into `private-inputs/`, then `bash run.sh`
+8. Copy `analysis_input.csv` into `final-report/report-2026-10-04/private-inputs/`, then run `Rscript final-report/report-2026-10-04/scripts/revision_evidence.R`, `python final-report/report-2026-10-04/build_figures.py` and `python final-report/report-2026-10-04/scripts/build_report_docx.py`; export the PDF from Word; check with `python final-report/report-2026-10-04/scripts/check_report_package.py`
+
+On 17 October 2026, all eight steps were re-run from the three course CSV files, whose SHA-256 fingerprints match those in `data/processed/cleaning_manifest.json`. Every committed number and figure was reproduced; the only differences were run dates, software version labels and rounding below 10⁻¹⁵ in the interim-stage random forest. All unit tests passed.
+
+## Contributions
+
+Eric Huang and Maksym Xu wrote the final report. Maksym Xu led data preparation, modelling and validation (sample and review-target design, model tests, revision evidence, figures and report checks); Eric Huang led report drafting and review. Contributions are described by the work done, not by commit counts.
+
+Project history: Qihang Sun and Loc Le were members until the interim stage and co-authored the interim report and presentation; Qihang Sun also set up the repository and contributed early analysis. Earlier files keep the original four-member team details.

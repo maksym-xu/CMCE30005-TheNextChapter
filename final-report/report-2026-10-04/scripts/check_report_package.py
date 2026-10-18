@@ -74,9 +74,10 @@ def main():
     readme = (ROOT / 'README.md').read_text(encoding='utf-8')
     plain = md_plain(md)
 
-    # 1. README carries the report from Section 1 to the end (figure paths differ only).
-    body = md[md.index('## 1. Introduction'):]
-    readme_body = readme[readme.index('## 1. Introduction'):] if '## 1. Introduction' in readme else ''
+    # 1. README carries the report from Section 1 to the end marker (figure paths differ only).
+    body = md[md.index('## 1. Introduction'):].rstrip()
+    end = readme.find('<!-- final report ends here -->')
+    readme_body = readme[readme.index('## 1. Introduction'):end].rstrip() if '## 1. Introduction' in readme and end > 0 else ''
     if readme_body.replace('final-report/report-2026-10-04/figures/', 'figures/') != body:
         fail(failures, 'README.md report text differs from Final_Report.md')
 
