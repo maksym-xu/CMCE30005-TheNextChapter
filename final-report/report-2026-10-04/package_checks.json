@@ -3,13 +3,13 @@
   "branch": "final-report-marking-fixes-2026-10-16",
   "checks_passed": true,
   "failures": [],
-  "simple_word_count_full_document": 2927,
+  "simple_word_count_full_document": 2957,
   "values_checked_against_outputs": 38,
   "ai_acknowledgement_unchanged": true,
   "pdf": {
     "pages": 10,
     "unembedded_fonts": []
   },
-  "microsoft_word_count_full_document": 2954,
-  "render_method": "Microsoft Word for Windows: exact DOCX exported as PDF/A (fonts embedded)"
+  "microsoft_word_count_full_document": 2984,
+  "render_method": "Microsoft Word for Mac: DOCX saved as PDF (fonts embedded)"
 }

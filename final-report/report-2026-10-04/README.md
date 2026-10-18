@@ -67,7 +67,9 @@ In the pooled five-fold design, group-rate scores from five different training s
 - Methods keeps the plain-language assumptions; the diagnostic numbers and host-weighted comparison are in Appendix A. Section 5.3 distinguishes the 50 priority-group tests from the pooled five-fold test.
 - The next steps specify rent and cost quotes, client paid nights and net cash flow, and a later-snapshot test of the unchanged model and selection rule.
 - README opens with the project summary, report links and full report; repository instructions and historical contributions remain after it. Current-report contributions name Eric Huang and Maksym Xu.
-- Microsoft Word count: 2,954; ten pages. The exact Word file was exported as PDF/A with all fonts embedded. The package check, six existing unit tests and three new navigation/figure tests passed. All 603 weekly-cost coverage points were independently recalculated from the original CSVs; the largest rounding difference was below 1e-15. No model was refitted in this revision.
+- Follow-up the same day: Section 2 states what changed since the interim report (an explainable logistic regression in place of the random forest, plus tests within the leading groups); Recommendation 3 again names the owners' corporation check on stays under 28 days; the sentence on price and minimum stay now follows the result it explains.
+- Before the follow-up: Microsoft Word count 2,954; ten pages; exported from Word for Windows as PDF/A with all fonts embedded. The package check, six existing unit tests and three new navigation/figure tests passed. All 603 weekly-cost coverage points were independently recalculated from the original CSVs; the largest rounding difference was below 1e-15. No model was refitted in this revision.
+- After the follow-up: Microsoft Word count 2,984; ten pages; saved as PDF from Word for Mac with all fonts embedded.
 
 ## Changes on 18 October (team review)
 

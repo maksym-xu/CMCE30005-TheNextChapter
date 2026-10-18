@@ -30,6 +30,8 @@ A **group** combines council area, dwelling type and bedroom count. A home is **
 
 We rank on reviews rather than revenue because Inside Airbnb's revenue estimate multiplies these nights by the advertised price, and without rents a higher price does not mean a better lease. Rents, costs and profit are outside our data.
 
+Since the interim report, we replaced its random forest with an explainable logistic regression and added tests within the leading groups.
+
 ## 3. Data Description and Preparation
 
 We use one Inside Airbnb snapshot of Melbourne, supplied through the subject LMS and collected 17 June–1 July 2026 (Inside Airbnb, 2026). It holds 25,728 listings with 90 fields and 1,026,690 dated reviews. We did not use the calendar, which cannot separate bookings from blocked nights.
@@ -129,7 +131,7 @@ The same three groups lead when the price rule or the review-history rule is rem
 
 ### 5.3 Predictive screening: the model improves selection within the priority groups
 
-Picking a quarter of each priority group, the full model found busy homes 49.6% of the time, against 38.6% for the reduced model and 32.4% for random picking (Figure 3). That is five busy homes in ten, not three.
+Picking a quarter of each priority group, the full model found busy homes 49.6% of the time, against 38.6% for the reduced model and 32.4% for random picking (Figure 3). That is five busy homes in ten, not three. Price and minimum stay carry most of this gain.
 
 ![Figure 3](final-report/report-2026-10-04/figures/figure_3_screening.png)
 
@@ -147,8 +149,6 @@ The 49.6% result picks within three priority groups over 50 tests. Table 5 inste
 | Not picked | 558 | 2,346 | 2,904 |
 
 The model fitted to all homes gives a typical City two-bedroom apartment a 42% chance of being busy with one-night stays and 18% without. Starting from 42%, ten more amenities gives 48%; a 20% price premium gives 36%, holding other inputs fixed (Appendix A). These historical associations do not establish that changing settings causes more bookings.
-
-Price and minimum stay carry most of this gain.
 
 ### 5.4 Prescriptive trade-off: inspection capacity sets list length
 
@@ -184,7 +184,7 @@ The earlier year's top three groups had 33.6% of homes reaching 34 reviews, agai
 
 1. **Search City of Melbourne two- and three-bedroom apartments first**, then Yarra Ranges three-bedroom houses; between leases that pass, choose as in Section 5.2.
 2. **Order candidates already on Airbnb with the model.** For an unlisted rental, price near similar listings and trial one-night stays where allowed.
-3. **Compare weekly rent and running costs with group revenue.** Typical weekly estimates are AUD 590 for City two-bedroom apartments, 930 for City three-bedroom apartments and 890 for Yarra Ranges houses; below-target medians are 320, 620 and 600. Figure 5 shows how many historical homes covered a proposed cost. Drop candidates costing more than typical revenue; assess the rest through their own cash-flow plans. Budget for a year of the below-target shortfall. Obtain written landlord consent and check building rules (Consumer Affairs Victoria, n.d.). Airbnb collects Victoria's 7.5% short-stay levy on applicable bookings (State Revenue Office Victoria, n.d.).
+3. **Compare weekly rent and running costs with group revenue.** Typical weekly estimates are AUD 590 for City two-bedroom apartments, 930 for City three-bedroom apartments and 890 for Yarra Ranges houses; below-target medians are 320, 620 and 600. Figure 5 shows how many historical homes covered a proposed cost. Drop candidates costing more than typical revenue; assess the rest through their own cash-flow plans. Budget for a year of the below-target shortfall. Obtain written landlord consent and check that any owners' corporation has not banned stays under 28 days (Consumer Affairs Victoria, n.d.). Airbnb collects Victoria's 7.5% short-stay levy on applicable bookings (State Revenue Office Victoria, n.d.).
 
 **Table 7. Four-week inspection plan**
 
