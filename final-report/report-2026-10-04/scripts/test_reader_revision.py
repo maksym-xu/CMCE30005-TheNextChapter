@@ -8,6 +8,23 @@ ROOT=PKG.parents[1]
 
 
 class ReaderRevisionTests(unittest.TestCase):
+    def test_report_repository_links_point_to_main(self):
+        import re
+        from pypdf import PdfReader
+        md=(PKG/'Final_Report.md').read_text(encoding='utf-8')
+        expected='https://github.com/maksym-xu/CMCE30005-TheNextChapter/tree/main'
+        links=re.findall(r'\]\((https://github.com/[^)]+)\)',md)
+        self.assertEqual(links,[expected,expected])
+        pdf_links=[]
+        for page in PdfReader(PKG/'Final_Report.pdf').pages:
+            for ref in page.get('/Annots',[]):
+                action=ref.get_object().get('/A',{})
+                url=action.get('/URI','')
+                if 'github.com/' in url:
+                    pdf_links.append(str(url))
+        self.assertTrue(pdf_links)
+        self.assertEqual(set(pdf_links),{expected})
+
     def test_figures_and_direct_links_present(self):
         import re
         md=(PKG/'Final_Report.md').read_text(encoding='utf-8')

@@ -63,10 +63,11 @@ In the pooled five-fold design, group-rate scores from five different training s
 
 ## Changes on 20 October
 
-- Used the supplied Gemini revision as the writing base, retaining its structure and business explanations. Clarified the two screening results, the all-home revenue medians and the ten-candidate inspection workflow.
+- Clarified the two screening results, the all-home revenue medians and the ten-candidate inspection workflow, retaining the report's structure and business explanations.
 - Restored five figure embeds and seven direct source links. Kept the model, aggregate outputs and figures unchanged.
 - Microsoft Word count: 2,957 words across ten pages. Exported this revision through Microsoft Word on Windows as PDF/A; all font resources are embedded.
-- The package check reconciles 38 values with the saved outputs. Six additions tests and four reader-revision tests pass. This revision does not retrain models.
+- The package check reconciles 38 values with the saved outputs. Six additions tests and five reader-revision tests pass. This revision does not retrain models.
+- The report's repository links point directly to `main`. Release descriptions use neutral project wording.
 
 ## Changes on 19 October
 
