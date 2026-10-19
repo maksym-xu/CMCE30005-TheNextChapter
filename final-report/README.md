@@ -1,8 +1,8 @@
 # Final report and evidence
 
-## Current final report (revised 19 October 2026)
+## Current final report (revised 20 October 2026)
 
-The [report package](report-2026-10-04/README.md) holds the [PDF](report-2026-10-04/Final_Report.pdf), [Word](report-2026-10-04/Final_Report.docx) and [Markdown](report-2026-10-04/Final_Report.md) versions, the five figures, the scripts that build and check them, and the evidence added in the 16–19 October revision. The root [README](../README.md) carries the complete report.
+The [report package](report-2026-10-04/README.md) holds the [PDF](report-2026-10-04/Final_Report.pdf), [Word](report-2026-10-04/Final_Report.docx) and [Markdown](report-2026-10-04/Final_Report.md) versions, the five figures, the scripts that build and check them, and the evidence added in the 16–20 October revisions. The root [README](../README.md) carries the complete report.
 
 The report's main model result picks 25% of test homes separately within each of the three priority groups: 49.6% of the full model's picks reached 30 annual reviews, against 38.6% for the reduced model without price and minimum stay, and 32.4% for group rates (random picking within a group). The package README lists the other evaluation designs and why their numbers differ.
 

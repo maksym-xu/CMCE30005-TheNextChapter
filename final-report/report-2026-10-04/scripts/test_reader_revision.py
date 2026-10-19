@@ -8,6 +8,15 @@ ROOT=PKG.parents[1]
 
 
 class ReaderRevisionTests(unittest.TestCase):
+    def test_figures_and_direct_links_present(self):
+        import re
+        md=(PKG/'Final_Report.md').read_text(encoding='utf-8')
+        figures=re.findall(r'!\[[^\]]*\]\(([^)]+)\)',md)
+        self.assertEqual(len(figures),5)
+        self.assertTrue(all((PKG/path).is_file() for path in figures))
+        self.assertNotIn('google.com/search',md)
+        self.assertNotIn('all-market',md.lower())
+
     def test_report_precedes_repository_guide(self):
         md=(PKG/'Final_Report.md').read_text(encoding='utf-8')
         readme=(ROOT/'README.md').read_text(encoding='utf-8')

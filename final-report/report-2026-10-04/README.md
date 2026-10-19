@@ -1,4 +1,4 @@
-# Final report package (revised 19 October 2026)
+# Final report package (revised 20 October 2026)
 
 [Report PDF](Final_Report.pdf) · [Report Word](Final_Report.docx) · [Report text](Final_Report.md)
 
@@ -60,6 +60,13 @@ The report's headline (Figure 3) picks 25% of test homes separately in each prio
 | 50 host splits, separate quota in each priority group (report headline) | 49.62% | 32.43% | +17.19 | 46 of 50 |
 
 In the pooled five-fold design, group-rate scores from five different training sets share one list, which tends to favour the model. Across the 50 splits on all groups, mean AUC is 0.708 against 0.603 (better in 50 of 50) and mean Brier score 0.1715 against 0.1841 (better in 44). Within the separate group quotas, gains average +16.4 points in City two-bedroom apartments, +17.6 in City three-bedroom apartments and +25.0 in Yarra Ranges houses; Yarra Ranges contributes only 5–9 picked homes per split.
+
+## Changes on 20 October
+
+- Used the supplied Gemini revision as the writing base, retaining its structure and business explanations. Clarified the two screening results, the all-home revenue medians and the ten-candidate inspection workflow.
+- Restored five figure embeds and seven direct source links. Kept the model, aggregate outputs and figures unchanged.
+- Microsoft Word count: 2,957 words across ten pages. Exported this revision through Microsoft Word on Windows as PDF/A; all font resources are embedded.
+- The package check reconciles 38 values with the saved outputs. Six additions tests and four reader-revision tests pass. This revision does not retrain models.
 
 ## Changes on 19 October
 
