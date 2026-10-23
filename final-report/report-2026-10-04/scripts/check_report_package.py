@@ -172,8 +172,11 @@ def main():
                f"{float(price['Kept by price rule']['zero_recent_review_percent']):.1f}%"]
     ratings = {(r['scope'], r['status']): r for r in read_csv(out / 'rating_check.csv')}
     for status in ('Busy (30+ reviews)', 'Below 30'):
-        expect += [f"{float(ratings[('All 14 groups', status)]['mean_rating']):.2f}",
-                   f"{float(ratings[('All 14 groups', status)]['share_below_4_5']) * 100:.1f}%"]
+        expect.append(f"{float(ratings[('All 14 groups', status)]['mean_rating']):.2f}")
+    tone = {(r['scope'], r['status']): r for r in read_csv(out / 'review_sentiment.csv')}
+    for status in ('Busy (30+ reviews)', 'Below 30', 'All homes'):
+        expect.append(f"{float(tone[('All 14 groups', status)]['share_negative']) * 100:.1f}%")
+    expect.append(f"{sum(int(tone[('All 14 groups', s)]['reviews_scored']) for s in ('Busy (30+ reviews)', 'Below 30')):,} reviews")
     rule = read_csv(out / 'two_setting_rule.csv')
     expect += [f"{float(r['share_busy']) * 100:.1f}% ({int(r['homes'])} homes)" for r in rule if r['one_night']]
     expect.append(f"{float(rule[-1]['share_of_homes_picked']) * 100:.0f}% of homes")

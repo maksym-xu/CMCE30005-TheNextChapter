@@ -12,6 +12,7 @@ Prepared by Eric Huang and Maksym Xu. `Final_Report.md` is the source text; the 
 | `figures/figure_1_review_distribution` … `figure_6_weekly_reach` (`.png`, `.svg`) | The six report figures |
 | `build_figures.py` | Builds the six figures from committed aggregate tables (matplotlib) |
 | `scripts/revision_evidence.R` | Evidence added on 16–17 October: data exploration, estimated nights and revenue (all homes and homes below target, with each group's rank on both measures), model assumption checks, top-three stability and the all-input odds ratios |
+| `scripts/review_sentiment.py` | Scores the tone of each analysis home's reviews in its collection year with VADER (`vaderSentiment==3.3.2`); checks that the window reproduces every home's review count |
 | `scripts/feedback_checks.R` | Evidence added on 23 October after the final-presentation feedback: guest ratings of busy homes and the rest, and the two-setting rule (one-night stays, price at or below the group median) in the priority groups |
 | `outputs/revision/` | Aggregate outputs of `revision_evidence.R` and `feedback_checks.R` (no listing or host identifiers) |
 | `scripts/build_report_docx.py`, `reference/report_template.docx` | Builds the Word file from the Markdown with the report's template |
@@ -27,6 +28,7 @@ From the repository root, with the private analysis input copied to `final-repor
 ```sh
 Rscript final-report/report-2026-10-04/scripts/revision_evidence.R
 Rscript final-report/report-2026-10-04/scripts/feedback_checks.R   # also needs data/raw/listings_airbnb.csv
+python final-report/report-2026-10-04/scripts/review_sentiment.py   # needs vaderSentiment and data/raw/reviews_airbnb.csv
 python final-report/report-2026-10-04/build_figures.py
 python final-report/report-2026-10-04/scripts/build_report_docx.py
 # export Final_Report.pdf from Final_Report.docx in Microsoft Word (embeds fonts)
@@ -38,13 +40,14 @@ python final-report/report-2026-10-04/scripts/check_report_package.py
 
 | Report item | Source |
 |---|---|
-| Figure 1, Table 3 | `outputs/revision/review_histogram_bins.csv`, `review_distribution.csv`, `target_profile.csv`; rating rows and the Section 5.1 priority-group check from `rating_check.csv` |
+| Figure 1, Table 3 | `outputs/revision/review_histogram_bins.csv`, `review_distribution.csv`, `target_profile.csv`; rating row from `rating_check.csv`; negative-tone row and the Section 5.1 tone results from `review_sentiment.csv` |
 | Figure 2 | `../../final-presentation/analysis/reference/segment_ladder.csv` (group rates and 1,000-draw host-resampled ranges) |
 | Table 4, Recommendation 3, Section 5.2 rankings, worked example | `outputs/revision/group_estimated_revenue.csv` (`rank_median_revenue`, `median_est_revenue_below_target_aud`, `median_weekly_aud`, `median_weekly_below_target_aud`) and `outputs/priority_group_descriptives.csv`; the worked example's rents and costs are illustrative, not data |
 | Figure 3, Section 5.3 scenario chances | `../../final-presentation/analysis/reference/final_logit_scenarios.csv` (model fitted to all study homes; host-clustered 95% ranges) |
 | Table 5, Section 5.3 two-setting rule | `outputs/revision/two_setting_rule.csv` |
 | Figure 4 | `../screening-followup-2026-10-03/outputs/screening_summary.csv` (scope `priority_fixed_quota`); list lengths of 10%, 25% and 50% are in the same file, and the reduced model by group in `priority_group_summary.csv` |
 | Table A2 | `../../final-presentation/analysis/outputs/test_confusion.csv` (pooled five-fold scores) |
+| Table A3 | `outputs/revision/top3_resample_shares.csv`; `../../reports/tables/rq_support_rule_top3.csv`; `../../final-presentation/analysis/reference/temporal-validation/validation_metrics.json` (host-weighted gap); `../screening-followup-2026-10-03/outputs/screening_summary.csv` and `priority_group_summary.csv` |
 | Figure 6 | `outputs/revision/weekly_revenue_reach.csv` (share of each priority group's homes whose estimated weekly revenue reached each weekly cost, AUD 0–2,000 in steps of 10) |
 | Figure 5, Section 5.4 | `../../final-presentation/analysis/reference/temporal-validation/validation_metrics.json` |
 | Section 4 assumptions | `outputs/revision/model_gvif.csv`, `model_se_ratio.csv`, `revision_summary.json` |
@@ -63,6 +66,14 @@ The report's headline (Figure 4) picks 25% of test homes separately in each prio
 | 50 host splits, separate quota in each priority group (report headline) | 49.62% | 32.43% | +17.19 | 46 of 50 |
 
 In the pooled five-fold design, group-rate scores from five different training sets share one list, which tends to favour the model. Across the 50 splits on all groups, mean AUC is 0.708 against 0.603 (better in 50 of 50) and mean Brier score 0.1715 against 0.1841 (better in 44). Within the separate group quotas, gains average +16.4 points in City two-bedroom apartments, +17.6 in City three-bedroom apartments and +25.0 in Yarra Ranges houses; Yarra Ranges contributes only 5–9 picked homes per split.
+
+## Changes on 23 October, third pass (toward the instructor's 2,000-word guide)
+
+- The body (Sections 1–7) is about 2,370 words, down from about 2,500; technical checks sit in Appendix A, now with Table A3 (further checks) referenced from Sections 2, 5.2 and 5.3.
+- One term throughout: homes are **busy** (30+ reviews in the year) or **not busy**.
+- Section 3 justifies each scope rule; Section 4 says which question each check answers.
+- Review text is scored for tone with VADER (Hutto & Gilbert, 2014) in `scripts/review_sentiment.py`: about 90% of the 78,288 reviews read as positive in both groups, and 1.6% of busy homes' reviews read as negative against 2.9% for the rest. This replaces the "rated below 4.5 stars" row, which was noisy for homes with few reviews.
+- The introduction gives the three main answers as a short list; key findings add a separate finding on guest satisfaction.
 
 ## Changes on 23 October (presentation feedback and Week 12)
 
