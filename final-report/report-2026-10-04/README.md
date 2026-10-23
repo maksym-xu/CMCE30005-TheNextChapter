@@ -75,7 +75,8 @@ The final-presentation feedback said the group did not explain what review activ
 - Appendix A reports the curvature test in full (ordinary p = 0.03; p = 0.17 with host-clustered errors) and explains that the odds-ratio ranges are not confidence intervals.
 - The legal checks (landlord consent, owners' corporation rules, short-stay levy) moved from Recommendation 3 into the inspection plan, because they come from public guidance rather than our analysis.
 - Figures renumbered: 3 factors (new), 4 screening, 5 two years, 6 weekly reach. No model was refitted; the two new tables come from the analysis input and the raw listings file.
-- Microsoft Word count 2,974 words (whole document) across ten pages; Sections 1–7 are about 2,490 words. PDF saved from Word for Mac with all fonts embedded.
+- A five-lens review (numbers, logic, the instructor's feedback, plain language, structure), with two skeptics per finding, led to plainer key findings, an explicit in-sample caveat for the two-setting rule, star ratings named as the sentiment check, and corrected wording of the curvature test.
+- Microsoft Word count 2,980 words (whole document) across ten pages; Sections 1–7 are about 2,500 words. PDF saved from Word for Mac with all fonts embedded.
 
 ## Changes on 20 October
 

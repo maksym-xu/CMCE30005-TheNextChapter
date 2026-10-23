@@ -139,7 +139,7 @@ ax.text(base, -0.95, f'Typical City 2-bed apartment: {base:.0f}%', ha='center', 
 ax.set_ylim(len(rows) - 0.5, -1.3)
 ax.set_xlim(0, 65)
 ax.xaxis.set_major_formatter(PercentFormatter(100, decimals=0))
-ax.set_xlabel('Model-estimated chance of 30+ reviews in the year\n(dot) and 95% range')
+ax.set_xlabel('Model-estimated chance of 30+ reviews in the year\n(dot) and 95% confidence interval')
 ax.tick_params(axis='y', length=0)
 tidy(ax, 'x')
 finish(fig, 'figure_3_factors')

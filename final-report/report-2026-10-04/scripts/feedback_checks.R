@@ -44,6 +44,7 @@ summarise <- function(x) x[, .(homes = .N, rated = sum(!is.na(review_scores_rati
                            by = .(status = fifelse(busy, "Busy (30+ reviews)", "Below 30"))]
 ratings <- rbind(
   cbind(scope = "All 14 groups", summarise(d)),
+  cbind(scope = "All 14 groups", summarise(copy(d)[, busy := NA])[, status := "All homes"]),
   cbind(scope = "Three priority groups", summarise(d[group %in% PRIORITY])),
   rbindlist(lapply(PRIORITY, function(g) cbind(scope = g, summarise(d[group == g]))))
 )
@@ -66,6 +67,7 @@ rule <- data.table(one_night = NA, at_or_below_median = NA,
                    homes = nrow(both), busy = sum(both$busy), share_busy = mean(both$busy),
                    share_of_homes_picked = nrow(both) / nrow(p),
                    share_of_busy_found = sum(both$busy) / sum(p$busy),
-                   share_busy_rest = mean(p[!(one_night & at_or_below_median)]$busy))
+                   share_busy_rest = mean(p[!(one_night & at_or_below_median)]$busy),
+                   share_busy_all_priority_homes = mean(p$busy))
 fwrite(rbind(cells, rule, fill = TRUE), file.path(OUT, "two_setting_rule.csv"))
 print(rbind(cells, rule, fill = TRUE))

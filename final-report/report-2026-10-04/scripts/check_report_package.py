@@ -177,6 +177,8 @@ def main():
     rule = read_csv(out / 'two_setting_rule.csv')
     expect += [f"{float(r['share_busy']) * 100:.1f}% ({int(r['homes'])} homes)" for r in rule if r['one_night']]
     expect.append(f"{float(rule[-1]['share_of_homes_picked']) * 100:.0f}% of homes")
+    expect.append(f"{float(rule[-1]['share_busy_all_priority_homes']) * 100:.1f}%")
+    expect.append(f"{float(ratings[('All 14 groups', 'All homes')]['mean_rating']):.2f}")
     absent = [e for e in expect if e not in md]
     if absent:
         fail(failures, f'Values from committed outputs not found in the report: {absent}')

@@ -3,13 +3,13 @@
   "branch": "final-report-week12-fixes-2026-10-23",
   "checks_passed": true,
   "failures": [],
-  "simple_word_count_full_document": 2947,
-  "values_checked_against_outputs": 47,
+  "simple_word_count_full_document": 2951,
+  "values_checked_against_outputs": 49,
   "ai_acknowledgement_unchanged": true,
   "pdf": {
     "pages": 10,
     "unembedded_fonts": []
   },
-  "microsoft_word_count_full_document": 2974,
+  "microsoft_word_count_full_document": 2980,
   "render_method": "Microsoft Word for Mac: Save as PDF; all fonts embedded"
 }

@@ -149,7 +149,7 @@ L 490.10521 10.175766
     </g>
     <g id="text_8">
      <text style="font-size: 11px; font-family: 'DejaVu Sans'" transform="translate(220.147031 224.587121)">Model-estimated chance of 30+ reviews in the year</text>
-     <text style="font-size: 11px; font-family: 'DejaVu Sans'" transform="translate(305.509609 237.790129)">(dot) and 95% range</text>
+     <text style="font-size: 11px; font-family: 'DejaVu Sans'" transform="translate(268.676797 237.790129)">(dot) and 95% confidence interval</text>
     </g>
    </g>
    <g id="matplotlib.axis_2">

@@ -2,7 +2,7 @@
 
 CMCE30005 Final Project Report | Group 2 | Eric Huang and Maksym Xu
 
-We help a rent-to-rent operator choose where to search and which homes to inspect. One Melbourne Airbnb snapshot identifies City two- and three-bedroom apartments as the first search priority, with Yarra Ranges three-bedroom houses as a less certain alternative. Within these groups, homes that accept one-night stays and are priced at or below similar homes were busy half the time (50.4%), as often as homes picked by our logistic model (49.6%) and well above random picking (32.4%).
+We help a rent-to-rent operator choose where to search and which homes to inspect. One Melbourne Airbnb snapshot identifies City two- and three-bedroom apartments as the first search priority, with Yarra Ranges three-bedroom houses as a less certain alternative. Within these groups, half of the homes that accept one-night stays and are priced at or below similar homes were busy (50.4%), close to the share among homes our logistic model picked from unseen hosts (49.6%), against a third of all their homes (33.4%).
 
 **Final report (revised 23 October 2026):** [PDF](final-report/report-2026-10-04/Final_Report.pdf) · [Word](final-report/report-2026-10-04/Final_Report.docx) · [Markdown](final-report/report-2026-10-04/Final_Report.md) · [Report package and checks](final-report/report-2026-10-04/README.md)
 
@@ -14,23 +14,23 @@ After the report: [Repository guide](#repository-guide) · [How to reproduce the
 
 Our client plans to lease homes in Greater Melbourne for Airbnb short stays. Rent and setup costs come before guest income, so a poor lease ties up scarce startup funds.
 
-We recommend City of Melbourne two- and three-bedroom apartments first, then Yarra Ranges three-bedroom houses and townhouses. These groups had the highest shares of homes with strong guest activity, and their typical homes earned an estimated AUD 30,600–48,600 a year before costs, against AUD 24,700 across the study.
+We recommend City of Melbourne two- and three-bedroom apartments first, then Yarra Ranges three-bedroom houses and townhouses. These groups had the highest shares of busy homes (30+ reviews a year, about 180+ booked nights) and typical estimated revenue of AUD 30,600–48,600 a year before costs, against AUD 24,700 overall.
 
-Within these groups, homes that accepted one-night stays and were priced at or below similar homes were busy half the time (50.4%), against one in three at random (32.4%). Section 6 turns this into a search order, a checklist and a cost test.
+Within these groups, half of the homes that accepted one-night stays and were priced at or below similar homes were busy (50.4%), against a third of all their homes (33.4%). Section 6 turns this into a search order, a checklist and a cost test.
 
 ## 2. Problem Definition and Objectives
 
 The business question is: **where should a rent-to-rent operator with limited funds search, and which homes should it inspect first?** We set three objectives:
 
 1. Rank property groups by their share of homes with strong guest activity, and express this in nights and revenue.
-2. Identify which home settings go with strong activity, and test whether they pick better homes within the leading groups than random picking.
+2. Identify which home settings go with strong activity, and whether they help pick homes within the leading groups.
 3. Turn the results into a search order and a four-week inspection plan.
 
-Objective 1 needs only a simple summary by group (Section 5.2). Objective 2 needs a model, because a group summary gives every home in a group the same rate.
+Objective 1 needs only a simple summary by group (Section 5.2). Objective 2 uses a model to separate settings from location, then tests a simpler two-setting rule.
 
-A **group** combines council area, dwelling type and bedroom count. A home is **busy** (reaches our target) when it receives at least 30 guest reviews in the year before data collection, a level reached by a quarter of separate reference homes (Section 3). Inside Airbnb (n.d.) assumes half of stays are reviewed and each lasts three nights (or the minimum stay if longer), capping estimated nights at 255 a year, so 30 reviews means about 180 booked nights.
+A **group** combines council area, dwelling type and bedroom count. A home is **busy** (reaches our target) when it receives at least 30 guest reviews in the year before data collection, a level reached by a quarter of set-aside reference homes (Section 3). Inside Airbnb (n.d.) assumes half of stays are reviewed and each lasts three nights (or the minimum stay if longer). Estimated nights are capped at 255 a year; 30 reviews means about 180 booked nights.
 
-**What review activity measures.** Guests review only after a stay, so reviews track completed bookings, a guide to demand and occupancy; this matters because empty nights are the operator's main risk. Reviews do not show profit (rents and costs are outside our data) or satisfaction (reviews can be negative), so we convert them into nights and revenue and check ratings (Section 5.1). We do not rank on revenue: Inside Airbnb estimates it from reviews and advertised prices, and without rents a higher price is not a better lease.
+**What review activity measures.** Guests review only after a stay, so reviews track completed bookings, a guide to demand and occupancy; this matters because empty nights are the operator's main risk. Review counts show neither profit (rents and costs are unknown) nor satisfaction (reviews can be negative), so we convert them into nights and revenue and check sentiment through star ratings (Section 5.1). We do not rank on revenue: Inside Airbnb estimates it from reviews and advertised prices, and without rents a higher price is not a better lease.
 
 Since the interim report, we replaced its random forest with an explainable logistic regression.
 
@@ -60,7 +60,7 @@ The 3,873 analysis homes belong to 1,726 hosts in six council areas, the only ar
 
 ## 4. Methodology
 
-**Group comparison.** We compare the share of busy homes in the 14 groups; redrawing hosts at random 1,000 times shows how much each share could move by chance (middle 90% of results).
+**Group comparison.** We compare the share of busy homes in the 14 groups; redrawing hosts at random 1,000 times shows how much each share could move by chance.
 
 **Two-setting rule.** To test whether a simple summary does as well as the model, we split priority-group homes by one-night stays and by price at or below the group median.
 
@@ -80,11 +80,9 @@ The 3,873 analysis homes belong to 1,726 hosts in six council areas, the only ar
 
 We compare this **full model** with two simpler options. The **group rate** (a group's share of busy homes) scores all its homes equally, which within a group is **random picking**. The **reduced model** drops price and minimum stay to show what they add.
 
-**Assumptions.** Homes of the same host can perform alike, so they stay together in every test. Each 10% price step and ten extra amenities have a fixed effect on the score; Appendix A checks overlap between inputs and curved relationships.
+**Assumptions.** Homes of the same host can perform alike, so they stay together in every test. Each 10% price step, or ten more amenities, has the same effect wherever it occurs; Appendix A finds little overlap between inputs and only weak signs of curvature.
 
 **Testing.** Each of 50 tests builds the model on 70% of hosts and scores the other 30%. In each priority group, each method picks a quarter of these homes, and we compare the share that were busy.
-
-**Two-year check.** We rank groups on an earlier year and follow the top three into the next (Section 5.4).
 
 ## 5. Analysis and Results
 
@@ -109,7 +107,7 @@ Guest activity is very uneven (Figure 1). The median home received 15 reviews, a
 | Mean guest rating (out of 5 stars) | 4.84 | 4.69 | 4.73 |
 | Rated below 4.5 stars | 1.1% | 15.2% | 11.6% |
 
-Busy homes were slightly cheaper but far more often accepted one-night stays and sat in the City of Melbourne (Table 3); their revenue estimate is higher partly because it is calculated from reviews. They were also better rated: only 1.1% averaged below 4.5 stars, against 15.2% of the rest, a gap that holds in each priority group (Huang & Xu, 2026). High activity comes with satisfied guests, not complaints.
+Busy homes were slightly cheaper but far more often accepted one-night stays and sat in the City of Melbourne (Table 3); their higher revenue estimate comes from their review counts, not higher prices. They were also better rated: only 1.1% averaged below 4.5 stars, against 15.2% of the rest, though averages over few reviews vary more (Huang & Xu, 2026). So high review counts do not appear to reflect unhappy guests.
 
 ### 5.2 Descriptive comparison: a simple summary puts City apartments first
 
@@ -128,19 +126,19 @@ Group rates range from 8.2% to 36.6% against 25.3% overall, and the three priori
 | Yarra Ranges 3-bed houses | 90 | 30.0% | 120 | 46,100 | 2 | 31,100 |
 | All 14 groups | 3,873 | 25.3% | 96 | 24,700 | – | 16,600 |
 
-The same three groups lead without the price or review-history rule (Huang & Xu, 2026). The City groups stayed in the top three in 94% and 90% of 1,000 host redraws and Yarra Ranges houses in 64%, a less certain second option.
+The same three groups lead without the price limits or one-year review rule (Huang & Xu, 2026). In 1,000 host redraws, the City groups stayed in the top three in 94% and 90% of them, and Yarra Ranges houses in only 64%.
 
 **When the rankings differ.** On median revenue (Table 4), Yarra Ranges houses rank second and City two-bedroom apartments fifth, mainly because the houses charge more a night (AUD 426 against 285). With rents unknown, activity guides the search; revenue tests each lease.
 
-### 5.3 Predictive analysis: what goes with being busy, and does it help pick homes?
+### 5.3 Predictive analysis: one-night stays and price go with busy homes
 
 Holding other inputs fixed, three settings an operator controls go with busy homes (Figure 3; Table A1). A typical City two-bedroom apartment has a **42%** chance of being busy with one-night stays but **18%** with a two-night minimum or longer. Pricing 20% above similar homes lowers it to **36%**; ten more amenities raise it to **48%**. These are associations: changing a setting alone does not guarantee more bookings.
 
 ![Figure 3](final-report/report-2026-10-04/figures/figure_3_factors.png)
 
-**Figure 3.** Model-estimated chance that a typical City two-bedroom apartment is busy when one input changes, with 95% ranges.
+**Figure 3.** Model-estimated chance that a typical City two-bedroom apartment is busy when one input changes, with 95% confidence intervals.
 
-A simple two-setting rule captures most of this (Table 5): in the priority groups, homes that accepted one-night stays and were priced at or below their group median were busy **50.4%** of the time, and homes with neither **9.3%**.
+A simple two-setting rule captures most of this (Table 5). In the priority groups, **50.4%** of homes that accepted one-night stays and were priced at or below their group median were busy, against **33.4%** of all their homes and **9.3%** of homes with neither. Only 20 of 90 Yarra Ranges houses accept one-night stays, so the rule rests mainly on City apartments.
 
 **Table 5. Share of busy homes in the three priority groups, by two settings**
 
@@ -149,7 +147,7 @@ A simple two-setting rule captures most of this (Table 5): in the priority group
 | One night accepted | 50.4% (462 homes) | 36.1% (477 homes) |
 | Two nights or more | 30.2% (358 homes) | 9.3% (334 homes) |
 
-Tested on unseen hosts, the model's top quarter of each priority group was busy **49.6%** of the time, against **38.6%** for the reduced model and **32.4%** at random (Figure 4), winning 46 of 50 tests. The two-setting rule does about as well: it picks 28% of homes, and 50.4% of them were busy, though it was checked on the homes that suggested it. The model's value is in showing which settings matter; Table A2 gives its hits and misses.
+Tested on unseen hosts, **49.6%** of the model's top quarter in each priority group were busy, against **38.6%** for the reduced model and **32.4%** for random picking (Figure 4); the model beat random picking in 46 of 50 tests. The two-setting rule does about as well (it picks 28% of homes), though it was checked on the homes that suggested it. The model also separates location from settings: with the same settings, the typical apartment's 42% chance would be 26–27% in Port Phillip or Stonnington (Figure 3). Table A2 gives its hits and misses across all 14 groups.
 
 ![Figure 4](final-report/report-2026-10-04/figures/figure_4_screening.png)
 
@@ -157,7 +155,7 @@ Tested on unseen hosts, the model's top quarter of each priority group was busy 
 
 ### 5.4 Over time: the leading groups stayed ahead
 
-For 2,657 homes with two years of reviews in ten groups, the earlier year's top three were the same priority groups: 33.6% of their homes reached that year's reference level of 34 reviews, against 19.9% elsewhere (Figure 5). A year later they still led (**27.1% against 14.9%**) and remained the top three, although Yarra Ranges houses fell to 21.4%. With hosts weighted equally, the later-year lead is 8.7 points.
+We ranked ten groups (2,657 homes with two years' history) on the earlier year. The priority groups came top: 33.6% of their homes reached 34 reviews (the earlier year's reference level), against 19.9% elsewhere (Figure 5). A year later they still led (**27.1% against 14.9%**) and remained the top three, although Yarra Ranges houses fell to 21.4%.
 
 ![Figure 5](final-report/report-2026-10-04/figures/figure_5_two_years.png)
 
@@ -167,15 +165,15 @@ For 2,657 homes with two years of reviews in ten groups, the earlier year's top 
 
 ### Key findings
 
-1. **Where:** City of Melbourne two- and three-bedroom apartments led on busy homes and above-median revenue, followed less certainly by Yarra Ranges three-bedroom houses; all three stayed ahead a year later (Figures 2 and 5, Table 4).
-2. **What goes with high activity:** One-night stays and a price at or below similar homes. In the priority groups, 50.4% of homes with both were busy, against 9.3% with neither (Table 5, Figure 3), though part of the one-night effect is built into the review count. Busy homes were also better rated (Table 3).
-3. **Which home first:** These two settings pick busy homes about as well as the model: one in two, against one in three at random (Figure 4).
+1. **Where:** City of Melbourne two- and three-bedroom apartments led on busy homes, then Yarra Ranges three-bedroom houses, less certainly; all three stayed ahead a year later and had above-median revenue (Figures 2 and 5, Table 4).
+2. **What goes with high activity:** One-night stays, a price at or below similar homes and, with other inputs fixed, more amenities (Figure 3). In the priority groups, 50.4% of homes with the first two were busy, against 9.3% with neither (Table 5), though one-night stays partly inflate review counts. Busy homes were also better rated (Table 3).
+3. **Which home first:** These two settings found 50.4% busy, near the model's 49.6%, though only the model was tested on unseen hosts; random picking found 32.4% (Table 5, Figure 4).
 
 ### Recommendations
 
 1. **Search City of Melbourne two- and three-bedroom apartments first, then Yarra Ranges three-bedroom houses** (Figure 2, Table 4). Between leases that pass, choose the larger cash-flow margin; if margins are similar, choose the group with the higher share of busy homes.
-2. **Prefer homes that can take one-night stays at a price at or below similar listings** (Table 5, Figure 3). At inspection, check that building rules allow one-night stays and that this price covers costs (Recommendation 3); then run the home this way (Table 6).
-3. **Compare weekly rent and running costs with group revenue** (Figure 6). Typical weekly revenue (all-home medians) is **AUD 590** for City two-bedroom apartments, **930** for City three-bedroom apartments and **890** for Yarra Ranges houses; below-target medians are **320, 620 and 600**. Only about half of a group's homes covered a cost equal to its typical figure. Drop candidates costing more than typical revenue, assess the rest through their own cash-flow plans, and budget for a year of the below-target shortfall.
+2. **Prefer homes that can take one-night stays at a price at or below similar listings** (Table 5, Figure 3). At inspection, check that building rules allow one-night stays and that this price covers costs (Recommendation 3); then trial these settings and track results (Table 6).
+3. **Compare weekly rent and running costs with group revenue** (Figure 6). Typical weekly revenue is **AUD 590** for City two-bedroom apartments, **930** for City three-bedroom apartments and **890** for Yarra Ranges houses, but **320, 620 and 600** for homes below target (under 30 reviews). Because these are medians, only half of a group's homes covered a cost equal to its typical figure. Drop candidates costing more than typical revenue, assess the rest through their own cash-flow plans, and budget for a year of the below-target shortfall.
 
 **Table 6. Four-week inspection plan**
 
@@ -183,24 +181,24 @@ For 2,657 homes with two years of reviews in ten groups, the earlier year's top 
 |---|---|---|
 | **Week 1** (Operator) | Pool ten candidate homes in the priority groups; check one-night stays and price | Inspect homes meeting both first, in group order |
 | **Weeks 2–3** (Operator & Analyst) | Get written landlord consent; check that no owners' corporation rule bans stays under 28 days (Consumer Affairs Victoria, n.d.); negotiate rent; get cost quotes | Replace homes that fail any check |
-| **Week 4** (Client) | Cash-flow plan: quotes and Victoria's 7.5% short-stay levy (State Revenue Office Victoria, n.d.) against typical and below-target revenue (Figure 6) | Sign only if the plan covers setup costs and required return, and the buffer covers a year of below-target loss |
+| **Week 4** (Client) | Cash-flow plan: quotes and Victoria's 7.5% short-stay levy (State Revenue Office Victoria, n.d.) against typical and below-target revenue (Recommendation 3) | Sign only if the plan covers setup costs, required return and a year of below-target loss |
 | **First 30 days** (Operator) | Record paid nights, stay length, workload, net cash flow and reviews | Expand only if results match the plan |
 
 ![Figure 6](final-report/report-2026-10-04/figures/figure_6_weekly_reach.png)
 
 **Figure 6.** Share of each priority group's homes whose estimated weekly revenue reached a given weekly cost.
 
-**Worked example (illustrative costs).** A City two-bedroom apartment costing **AUD 620** a week in rent and running costs exceeds its group's typical AUD 590 and is dropped. A Yarra Ranges house costing **AUD 700** clears its typical AUD 890; earning like a below-target home (AUD 600), it would lose AUD 100 a week, so the buffer needs AUD 5,200 a year, plus setup costs and the required return.
+**Worked example (illustrative costs).** A City two-bedroom apartment costing **AUD 620** a week in rent and running costs exceeds its group's typical AUD 590 and is dropped. A Yarra Ranges house costing **AUD 700** clears its typical AUD 890; earning like a below-target home (AUD 600), it would lose AUD 100 a week, so the buffer needs AUD 5,200 a year.
 
 ## 7. Limitations and Future Work
 
-- **Reviews are not bookings, profit or satisfaction.** Inside Airbnb's 50% review rate sits within published estimates of 30.5%–72% (Inside Airbnb, n.d.), so dollar figures are rough; activity also fell in the later year (Figure 5). Ratings are lifetime averages near five stars, and we did not analyse review text.
-- **One snapshot of surviving homes.** Homes that left Airbnb are missing, revenue uses June–July prices, and new entrants, unpriced listings and outer areas are not covered.
+- **Reviews are not bookings, profit or satisfaction.** Inside Airbnb's 50% review rate sits within published estimates of 30.5%–72% (Inside Airbnb, n.d.), so dollar figures are rough; activity also fell in the later year (Figure 5). Ratings are lifetime averages near five stars.
+- **One snapshot of surviving homes.** Homes that left Airbnb are missing, revenue uses June–July prices, and new, unpriced and outer-area listings are not covered.
 - **Short stays inflate reviews and revenue.** A one-night minimum allows more stays for the same nights, so part of its effect is built into the target, and counting each stay as three nights may overstate revenue.
 - **Associations, not causes.** Settings may respond to earlier performance, and we chose the inputs, rule and priority groups after seeing all homes, so the tests may overstate the gain.
 - **No rent, cost or regulation data.** Recommendation 3 relies on the client's own quotes.
 
-Next, collect rent and cost quotes, track paid nights and net cash flow to test whether review activity identifies good businesses, and recheck the groups, model and two-setting rule on the next snapshot.
+Next, collect rent and cost quotes, track paid nights and net cash flow to test whether review activity identifies good businesses, analyse review text in the priority groups, and recheck the groups, model and two-setting rule on the next snapshot.
 
 ## 8. References
 
@@ -226,7 +224,7 @@ Maksym Xu led data preparation, modelling and validation; Eric Huang led report 
 
 ## Appendix A. Model Details
 
-We fitted the model in R (R Core Team, 2026), with group median prices and fills for missing minimum stays taken from training homes only. Table A1 gives each input's odds ratio (the change in the odds of being busy, from its average weight over the 50 fits) and its range across fits; above 1 means a higher chance, below 1 a lower one.
+Group median prices and stand-ins for missing minimum stays use only homes each model was built on. In Table A1, each odds ratio (from the input's average weight over the 50 fits) multiplies the odds of being busy (busy homes per quiet home); above 1 raises the chance, below 1 lowers it.
 
 **Table A1. Odds ratios across 50 fits**
 
@@ -245,7 +243,7 @@ We fitted the model in R (R Core Team, 2026), with group median prices and fills
 | Two bedrooms (one) | 1.16 | 0.89–1.41 |
 | Three bedrooms (one) | 1.31 | 0.86–1.84 |
 
-The ranges show stability across fits, not confidence intervals; those including 1 (for example, Yarra Ranges) leave the direction uncertain. Across all 14 groups, the model ranked a random busy home above a random quiet one 71% of the time, against 60% for group rates (AUC 0.71 and 0.60). Host-clustered standard errors are 1.1–2.6 times ordinary ones, and variance inflation factors sit below 3 (little overlap between inputs). An ordinary test suggests slight curvature in amenities (p = 0.03), which is unclear once homes of the same host are treated as related (p = 0.17). Full evaluation tables are in the repository (Huang & Xu, 2026).
+The ranges show stability across fits, not confidence intervals; those including 1 (for example, Yarra Ranges) leave the direction uncertain. Across all 14 groups, the model ranked a random busy home above a random quiet one 71% of the time, against 60% for group rates (AUC 0.71 and 0.60). Treating same-host homes as related widens margins of error to 1.1–2.6 times ordinary ones. Inputs overlap little (variance inflation factors below 3). An ordinary test of curved price and amenity effects suggests slight curvature (p = 0.03; amenities alone, p = 0.011); treating same-host homes as related makes this unclear (amenities, p = 0.17). Full evaluation tables are in the repository (Huang & Xu, 2026).
 
 **Table A2. Hits and misses: top quarter picked across all 14 groups**
 
