@@ -1,4 +1,4 @@
-"""Public-input regression checks for report-first navigation and Figure 5."""
+"""Public-input regression checks for report-first navigation and the weekly-cost figure (Figure 6)."""
 from pathlib import Path
 import csv, hashlib, unittest, zipfile
 from collections import defaultdict
@@ -29,7 +29,7 @@ class ReaderRevisionTests(unittest.TestCase):
         import re
         md=(PKG/'Final_Report.md').read_text(encoding='utf-8')
         figures=re.findall(r'!\[[^\]]*\]\(([^)]+)\)',md)
-        self.assertEqual(len(figures),5)
+        self.assertEqual(len(figures),6)
         self.assertTrue(all((PKG/path).is_file() for path in figures))
         self.assertNotIn('google.com/search',md)
         self.assertNotIn('all-market',md.lower())
@@ -55,8 +55,8 @@ class ReaderRevisionTests(unittest.TestCase):
             self.assertEqual(points[0][1],1)
             self.assertTrue(all(a[1]>=b[1] for a,b in zip(points,points[1:])))
 
-    def test_figure_five_embedded_in_word(self):
-        expected=hashlib.sha256((PKG/'figures/figure_5_weekly_reach.png').read_bytes()).digest()
+    def test_weekly_cost_figure_embedded_in_word(self):
+        expected=hashlib.sha256((PKG/'figures/figure_6_weekly_reach.png').read_bytes()).digest()
         with zipfile.ZipFile(PKG/'Final_Report.docx') as z:
             media={hashlib.sha256(z.read(n)).digest() for n in z.namelist() if n.startswith('word/media/')}
         self.assertIn(expected,media)

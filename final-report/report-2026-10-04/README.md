@@ -1,4 +1,4 @@
-# Final report package (revised 20 October 2026)
+# Final report package (revised 23 October 2026)
 
 [Report PDF](Final_Report.pdf) · [Report Word](Final_Report.docx) · [Report text](Final_Report.md)
 
@@ -9,10 +9,11 @@ Prepared by Eric Huang and Maksym Xu. `Final_Report.md` is the source text; the 
 | Path | Purpose |
 |---|---|
 | `Final_Report.md`, `.docx`, `.pdf` | The report in three formats |
-| `figures/figure_1_review_distribution` … `figure_5_weekly_reach` (`.png`, `.svg`) | The five report figures |
-| `build_figures.py` | Builds the five figures from committed aggregate tables (matplotlib) |
+| `figures/figure_1_review_distribution` … `figure_6_weekly_reach` (`.png`, `.svg`) | The six report figures |
+| `build_figures.py` | Builds the six figures from committed aggregate tables (matplotlib) |
 | `scripts/revision_evidence.R` | Evidence added on 16–17 October: data exploration, estimated nights and revenue (all homes and homes below target, with each group's rank on both measures), model assumption checks, top-three stability and the all-input odds ratios |
-| `outputs/revision/` | Aggregate outputs of `revision_evidence.R` (no listing or host identifiers) |
+| `scripts/feedback_checks.R` | Evidence added on 23 October after the final-presentation feedback: guest ratings of busy homes and the rest, and the two-setting rule (one-night stays, price at or below the group median) in the priority groups |
+| `outputs/revision/` | Aggregate outputs of `revision_evidence.R` and `feedback_checks.R` (no listing or host identifiers) |
 | `scripts/build_report_docx.py`, `reference/report_template.docx` | Builds the Word file from the Markdown with the report's template |
 | `scripts/sync_readme.py` | Copies the report into the root `README.md` |
 | `scripts/check_report_package.py` | Checks the four versions against each other, the word limit, PDF font embedding, the unchanged AI acknowledgement and key numbers against the outputs |
@@ -25,6 +26,7 @@ From the repository root, with the private analysis input copied to `final-repor
 
 ```sh
 Rscript final-report/report-2026-10-04/scripts/revision_evidence.R
+Rscript final-report/report-2026-10-04/scripts/feedback_checks.R   # also needs data/raw/listings_airbnb.csv
 python final-report/report-2026-10-04/build_figures.py
 python final-report/report-2026-10-04/scripts/build_report_docx.py
 # export Final_Report.pdf from Final_Report.docx in Microsoft Word (embeds fonts)
@@ -36,21 +38,22 @@ python final-report/report-2026-10-04/scripts/check_report_package.py
 
 | Report item | Source |
 |---|---|
-| Figure 1, Table 3 | `outputs/revision/review_histogram_bins.csv`, `review_distribution.csv`, `target_profile.csv` |
+| Figure 1, Table 3 | `outputs/revision/review_histogram_bins.csv`, `review_distribution.csv`, `target_profile.csv`; rating rows and the Section 5.1 priority-group check from `rating_check.csv` |
 | Figure 2 | `../../final-presentation/analysis/reference/segment_ladder.csv` (group rates and 1,000-draw host-resampled ranges) |
 | Table 4, Recommendation 3, Section 5.2 rankings, worked example | `outputs/revision/group_estimated_revenue.csv` (`rank_median_revenue`, `median_est_revenue_below_target_aud`, `median_weekly_aud`, `median_weekly_below_target_aud`) and `outputs/priority_group_descriptives.csv`; the worked example's rents and costs are illustrative, not data |
-| Figure 3, Table 6 | `../screening-followup-2026-10-03/outputs/screening_summary.csv` (scope `priority_fixed_quota`) |
-| Table 5 | `../../final-presentation/analysis/outputs/test_confusion.csv` (pooled five-fold scores) |
-| Section 5.3 scenario chances | `../../final-presentation/analysis/reference/final_logit_scenarios.csv` |
-| Figure 5 | `outputs/revision/weekly_revenue_reach.csv` (share of each priority group's homes whose estimated weekly revenue reached each weekly cost, AUD 0–2,000 in steps of 10) |
-| Figure 4, Section 5.5 | `../../final-presentation/analysis/reference/temporal-validation/validation_metrics.json` |
+| Figure 3, Section 5.3 scenario chances | `../../final-presentation/analysis/reference/final_logit_scenarios.csv` (model fitted to all study homes; host-clustered 95% ranges) |
+| Table 5, Section 5.3 two-setting rule | `outputs/revision/two_setting_rule.csv` |
+| Figure 4 | `../screening-followup-2026-10-03/outputs/screening_summary.csv` (scope `priority_fixed_quota`); list lengths of 10%, 25% and 50% are in the same file, and the reduced model by group in `priority_group_summary.csv` |
+| Table A2 | `../../final-presentation/analysis/outputs/test_confusion.csv` (pooled five-fold scores) |
+| Figure 6 | `outputs/revision/weekly_revenue_reach.csv` (share of each priority group's homes whose estimated weekly revenue reached each weekly cost, AUD 0–2,000 in steps of 10) |
+| Figure 5, Section 5.4 | `../../final-presentation/analysis/reference/temporal-validation/validation_metrics.json` |
 | Section 4 assumptions | `outputs/revision/model_gvif.csv`, `model_se_ratio.csv`, `revision_summary.json` |
-| Section 5.2 stability | `outputs/revision/top3_resample_shares.csv` |
+| Section 5.2 stability | `outputs/revision/top3_resample_shares.csv`; the same top three without the price or history rule and under other group-size rules: `../../reports/tables/rq_support_rule_top3.csv` |
 | Table A1 | `outputs/revision/all_term_odds_ratios.csv` (from `../screening-followup-2026-10-03/reference/prior_full_coefficients.csv`) |
 
 ## Evaluation designs
 
-The report's headline (Figure 3) picks 25% of test homes separately in each priority group. Other designs give different numbers because they test different homes or allocate places differently; they should not be compared as if they were the same test.
+The report's headline (Figure 4) picks 25% of test homes separately in each priority group. Other designs give different numbers because they test different homes or allocate places differently; they should not be compared as if they were the same test.
 
 | Design (25% of homes picked) | Model | Group rates | Gain (points) | Model better |
 |---|---:|---:|---:|---:|
@@ -60,6 +63,19 @@ The report's headline (Figure 3) picks 25% of test homes separately in each prio
 | 50 host splits, separate quota in each priority group (report headline) | 49.62% | 32.43% | +17.19 | 46 of 50 |
 
 In the pooled five-fold design, group-rate scores from five different training sets share one list, which tends to favour the model. Across the 50 splits on all groups, mean AUC is 0.708 against 0.603 (better in 50 of 50) and mean Brier score 0.1715 against 0.1841 (better in 44). Within the separate group quotas, gains average +16.4 points in City two-bedroom apartments, +17.6 in City three-bedroom apartments and +25.0 in Yarra Ranges houses; Yarra Ranges contributes only 5–9 picked homes per split.
+
+## Changes on 23 October (presentation feedback and Week 12)
+
+The final-presentation feedback said the group did not explain what review activity measures or consider review sentiment, spent most of its time on model accuracy rather than the factors behind activity, and could have reached the top-three groups with a simple summary. The Week 12 lecture asked for recommendations based on the group's own evidence, insight before equations, and every table, figure and appendix item referenced in the text.
+
+- Section 2 explains what review activity measures (completed bookings, a guide to demand and occupancy) and what it does not (profit, satisfaction), and says Objective 1 needs only a group summary while Objective 2 needs a model.
+- Table 3 and Section 5.1 add guest ratings: busy homes averaged 4.84 stars against 4.69, and only 1.1% averaged below 4.5 against 15.2% of the rest; the gap holds in each priority group (`scripts/feedback_checks.R`).
+- Section 5.3 leads with the factors (new Figure 3 of model-estimated chances) and adds a two-setting rule (Table 5): in the priority groups, homes with one-night stays priced at or below the group median were busy 50.4% of the time, against 9.3% with neither, about the model's 49.6%. Recommendation 2 is now this checklist rather than the model ranking.
+- The confusion matrix moved to Appendix A (Table A2); the list-length table and per-group reduced-model results moved to the repository. Section 5.4 is the two-year check, now naming the three groups and Yarra Ranges' later-year 21.4%.
+- Appendix A reports the curvature test in full (ordinary p = 0.03; p = 0.17 with host-clustered errors) and explains that the odds-ratio ranges are not confidence intervals.
+- The legal checks (landlord consent, owners' corporation rules, short-stay levy) moved from Recommendation 3 into the inspection plan, because they come from public guidance rather than our analysis.
+- Figures renumbered: 3 factors (new), 4 screening, 5 two years, 6 weekly reach. No model was refitted; the two new tables come from the analysis input and the raw listings file.
+- Microsoft Word count 2,974 words (whole document) across ten pages; Sections 1–7 are about 2,490 words. PDF saved from Word for Mac with all fonts embedded.
 
 ## Changes on 20 October
 

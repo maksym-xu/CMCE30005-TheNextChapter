@@ -1,13 +1,14 @@
-"""Build the five report figures from committed aggregate tables.
+"""Build the six report figures from committed aggregate tables.
 
 Run from anywhere: python final-report/report-2026-10-04/build_figures.py
 Needs matplotlib and numpy. No model is refitted and no listing-level data is read.
 Sources:
   Figure 1  outputs/revision/review_histogram_bins.csv and revision_summary.json
   Figure 2  final-presentation/analysis/reference/segment_ladder.csv
-  Figure 3  final-report/screening-followup-2026-10-03/outputs/screening_summary.csv
-  Figure 4  final-presentation/analysis/reference/temporal-validation/validation_metrics.json
-  Figure 5  outputs/revision/weekly_revenue_reach.csv
+  Figure 3  final-presentation/analysis/reference/final_logit_scenarios.csv
+  Figure 4  final-report/screening-followup-2026-10-03/outputs/screening_summary.csv
+  Figure 5  final-presentation/analysis/reference/temporal-validation/validation_metrics.json
+  Figure 6  outputs/revision/weekly_revenue_reach.csv
 """
 from pathlib import Path
 import csv
@@ -103,7 +104,47 @@ ax.tick_params(axis='y', length=0)
 tidy(ax, 'x')
 finish(fig, 'figure_2_group_rates')
 
-# Figure 3: within-group screening at a 25% quota, mean of 50 tests.
+# Figure 3: what goes with being busy, shown as chances for one typical home.
+scen = readcsv(REPO / 'final-presentation/analysis/reference/final_logit_scenarios.csv')
+base = float(scen[0]['predicted_chance_busy']) * 100
+rows = [('Location and size (before leasing)', None),
+        ('In Yarra', 'Same apartment in Yarra'),
+        ('In Port Phillip', 'Same apartment in Port Phillip'),
+        ('In Stonnington', 'Same apartment in Stonnington'),
+        ('Three bedrooms, not two', '3 bedrooms instead of 2'),
+        ('One bedroom, not two', '1 bedroom instead of 2'),
+        ('Settings (running the home)', None),
+        ('Two-night minimum or longer', 'Requires a minimum of 2+ nights'),
+        ('Price 20% above similar homes', 'Priced 20% above similar listings'),
+        ('Price 20% below similar homes', 'Priced 20% below similar listings'),
+        ('Ten fewer amenities', '10 fewer amenities'),
+        ('Ten more amenities', '10 more amenities')]
+fig, ax = plt.subplots(figsize=(5.4, 3.3))
+labels = []
+for i, (label, key) in enumerate(rows):
+    labels.append(label)
+    if key is None:
+        continue
+    r = next(s for s in scen if s['scenario'] == key)
+    p, lo, hi = (float(r[k]) * 100 for k in ('predicted_chance_busy', 'ci95_lo', 'ci95_hi'))
+    color = BLUE if p > base else GREY
+    ax.errorbar(p, i, xerr=[[p - lo], [hi - p]], fmt='o', color=color, markersize=6, capsize=3, lw=1.5)
+    ax.text(1.01, i, f'{p:.0f}%', transform=ax.get_yaxis_transform(), va='center', fontsize=10.5, color=color)
+ax.set_yticks(range(len(rows)), labels, fontsize=10.5)
+for tick, (label, key) in zip(ax.get_yticklabels(), rows):
+    if key is None:
+        tick.set_fontweight('bold')
+ax.axvline(base, color='#333', ls='--', lw=1)
+ax.text(base, -0.95, f'Typical City 2-bed apartment: {base:.0f}%', ha='center', fontsize=10.5, color='#333')
+ax.set_ylim(len(rows) - 0.5, -1.3)
+ax.set_xlim(0, 65)
+ax.xaxis.set_major_formatter(PercentFormatter(100, decimals=0))
+ax.set_xlabel('Model-estimated chance of 30+ reviews in the year\n(dot) and 95% range')
+ax.tick_params(axis='y', length=0)
+tidy(ax, 'x')
+finish(fig, 'figure_3_factors')
+
+# Figure 4: within-group screening at a 25% quota, mean of 50 tests.
 screening = readcsv(REPO / 'final-report/screening-followup-2026-10-03/outputs/screening_summary.csv')
 models = ['baseline', 'property_only', 'full']
 vals = [float(next(r for r in screening if r['scope'] == 'priority_fixed_quota' and float(r['fraction']) == .25
@@ -118,9 +159,9 @@ for y, p in zip([2, 1, 0], vals):
     ax.text(p + 1, y, f'{p:.1f}%', va='center', fontsize=12)
 ax.tick_params(axis='y', length=0)
 tidy(ax, 'x')
-finish(fig, 'figure_3_screening')
+finish(fig, 'figure_4_screening')
 
-# Figure 4: the same 2,657 surviving homes in two consecutive years.
+# Figure 5: the same 2,657 surviving homes in two consecutive years.
 temporal = json.loads((REPO / 'final-presentation/analysis/reference/temporal-validation/validation_metrics.json').read_text())
 tt = temporal['top3_vs_rest_recent_window']
 x = np.arange(2)
@@ -140,9 +181,9 @@ ax.yaxis.set_major_formatter(PercentFormatter(100, decimals=0))
 ax.set_ylabel('Homes with 34+ reviews')
 ax.legend(loc='upper center', bbox_to_anchor=(.5, 1.25), ncol=2, frameon=False, fontsize=10)
 tidy(ax, 'y')
-finish(fig, 'figure_4_two_years')
+finish(fig, 'figure_5_two_years')
 
-# Figure 5: share of each priority group's homes whose estimated weekly revenue reached a weekly cost.
+# Figure 6: share of each priority group's homes whose estimated weekly revenue reached a weekly cost.
 reach = readcsv(ROOT / 'outputs/revision/weekly_revenue_reach.csv')
 fig, ax = plt.subplots(figsize=(7.2, 2.6))
 lines = [('Melbourne 3BR Apartment/unit', 'City 3-bed apartments', BLUE, '-'),
@@ -162,6 +203,6 @@ ax.set_ylabel('Homes with estimated revenue\nat least this cost')
 ax.xaxis.set_major_formatter(matplotlib.ticker.StrMethodFormatter('{x:,.0f}'))
 ax.legend(loc='upper right', bbox_to_anchor=(1, .93), frameon=False, fontsize=10)
 tidy(ax, 'y')
-finish(fig, 'figure_5_weekly_reach')
+finish(fig, 'figure_6_weekly_reach')
 
-print('Built five report figures from committed aggregate tables; no models refitted.')
+print('Built six report figures from committed aggregate tables; no models refitted.')

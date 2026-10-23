@@ -1,15 +1,15 @@
 {
-  "revision_date": "2026-10-20",
-  "branch": "final-report-marking-fixes-2026-10-16",
+  "revision_date": "2026-10-23",
+  "branch": "final-report-week12-fixes-2026-10-23",
   "checks_passed": true,
   "failures": [],
-  "simple_word_count_full_document": 2930,
-  "values_checked_against_outputs": 38,
+  "simple_word_count_full_document": 2947,
+  "values_checked_against_outputs": 47,
   "ai_acknowledgement_unchanged": true,
   "pdf": {
     "pages": 10,
     "unembedded_fonts": []
   },
-  "microsoft_word_count_full_document": 2957,
-  "render_method": "Microsoft Word for Windows: PDF/A export; all font resources embedded"
+  "microsoft_word_count_full_document": 2974,
+  "render_method": "Microsoft Word for Mac: Save as PDF; all fonts embedded"
 }

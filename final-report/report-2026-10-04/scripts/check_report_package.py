@@ -170,13 +170,20 @@ def main():
     price = {r['price_rule']: r for r in read_csv(out / 'residential_price_check.csv')}
     expect += [f"{float(price['Removed by price rule']['zero_recent_review_percent']):.1f}%",
                f"{float(price['Kept by price rule']['zero_recent_review_percent']):.1f}%"]
+    ratings = {(r['scope'], r['status']): r for r in read_csv(out / 'rating_check.csv')}
+    for status in ('Busy (30+ reviews)', 'Below 30'):
+        expect += [f"{float(ratings[('All 14 groups', status)]['mean_rating']):.2f}",
+                   f"{float(ratings[('All 14 groups', status)]['share_below_4_5']) * 100:.1f}%"]
+    rule = read_csv(out / 'two_setting_rule.csv')
+    expect += [f"{float(r['share_busy']) * 100:.1f}% ({int(r['homes'])} homes)" for r in rule if r['one_night']]
+    expect.append(f"{float(rule[-1]['share_of_homes_picked']) * 100:.0f}% of homes")
     absent = [e for e in expect if e not in md]
     if absent:
         fail(failures, f'Values from committed outputs not found in the report: {absent}')
 
     result = {
-        'revision_date': '2026-10-20',
-        'branch': 'final-report-marking-fixes-2026-10-16',
+        'revision_date': '2026-10-23',
+        'branch': 'final-report-week12-fixes-2026-10-23',
         'checks_passed': not failures,
         'failures': failures,
         'simple_word_count_full_document': words,
