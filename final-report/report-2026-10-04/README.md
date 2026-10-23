@@ -69,7 +69,12 @@ In the pooled five-fold design, group-rate scores from five different training s
 
 ## Changes on 23 October, third pass (toward the instructor's 2,000-word guide)
 
-- The body (Sections 1–7) is about 2,370 words, down from about 2,500; technical checks sit in Appendix A, now with Table A3 (further checks) referenced from Sections 2, 5.2 and 5.3.
+- Team review (Eric Huang): the two-setting rule is presented as a quick first check found in this sample, not as matching the model's tested hit rate; Section 2 says review counts record past guest activity and that converting them into nights needs assumptions about review rates and stay length; the model assumption is stated in terms of odds; Table 3 labels the rating as lifetime.
+- Section 3 now says the 30-review target came from the set-aside hosts' homes within the 14 groups (the busiest quarter of those 906 homes), not from all 1,342 set-aside homes.
+- Negative reviews are described as a share of each group's reviews ("proportionally fewer"), not a count.
+- Microsoft Word count 2,972 words (whole document) across eleven pages; Sections 1–7 are about 2,420 words. PDF saved from Word for Mac with all fonts embedded.
+
+- The body (Sections 1–7) is about 2,420 words, down from about 2,500; technical checks sit in Appendix A, now with Table A3 (further checks) referenced from Sections 2, 5.2 and 5.3.
 - One term throughout: homes are **busy** (30+ reviews in the year) or **not busy**.
 - Section 3 justifies each scope rule; Section 4 says which question each check answers.
 - Review text is scored for tone with VADER (Hutto & Gilbert, 2014) in `scripts/review_sentiment.py`: about 90% of the 78,288 reviews read as positive in both groups, and 1.6% of busy homes' reviews read as negative against 2.9% for the rest. This replaces the "rated below 4.5 stars" row, which was noisy for homes with few reviews.
@@ -86,8 +91,8 @@ The final-presentation feedback said the group did not explain what review activ
 - Appendix A reports the curvature test in full (ordinary p = 0.03; p = 0.17 with host-clustered errors) and explains that the odds-ratio ranges are not confidence intervals.
 - The legal checks (landlord consent, owners' corporation rules, short-stay levy) moved from Recommendation 3 into the inspection plan, because they come from public guidance rather than our analysis.
 - Figures renumbered: 3 factors (new), 4 screening, 5 two years, 6 weekly reach. No model was refitted; the two new tables come from the analysis input and the raw listings file.
-- A five-lens review (numbers, logic, the instructor's feedback, plain language, structure), with two skeptics per finding, led to plainer key findings, an explicit in-sample caveat for the two-setting rule, star ratings named as the sentiment check, and corrected wording of the curvature test.
-- Microsoft Word count 2,980 words (whole document) across ten pages; Sections 1–7 are about 2,500 words. PDF saved from Word for Mac with all fonts embedded.
+- Plainer key findings, a note that the two-setting rule was checked only on the homes that suggested it, star ratings named as the sentiment check, and corrected wording of the curvature test.
+- Microsoft Word count 2,980 words (whole document) across ten pages after the second pass. PDF saved from Word for Mac with all fonts embedded.
 
 ## Changes on 20 October
 
