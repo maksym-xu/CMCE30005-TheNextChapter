@@ -7,7 +7,9 @@ Run from the repository root (needs pypdf for the PDF checks):
 Checks that
   * Final_Report.md, Final_Report.docx, Final_Report.pdf and the root README.md carry the same report;
   * the AI acknowledgement is unchanged from the 14 October report (commit 3e6e043);
-  * the whole document stays under the 3,000-word limit (simple count and Microsoft Word's recorded count);
+  * the counted part (everything before Appendix A, references and statements included) stays under the
+    3,000-word limit, by a simple count and by Microsoft Word's recorded count; the appendix is reported
+    separately because the instructor set no limit on it;
   * every font in the PDF is embedded;
   * the report's key numbers match the committed aggregate outputs.
 Writes the results to final-report/report-2026-10-04/package_checks.json.
@@ -105,10 +107,12 @@ def main():
         if text.count(AI_ACK) != 1:
             fail(failures, f'AI acknowledgement changed or duplicated in {name}')
 
-    # 4. Word limit (simple count; Microsoft Word's own count is recorded separately).
+    # 4. Word limit on the counted part (simple count; Microsoft Word's own count is recorded separately).
     words = word_count(plain)
-    if words >= WORD_LIMIT:
-        fail(failures, f'Word count {words} is not under {WORD_LIMIT}')
+    counted = word_count(md_plain(md[:md.index('## Appendix A')]))
+    appendix = word_count(md_plain(md[md.index('## Appendix A'):]))
+    if counted >= WORD_LIMIT:
+        fail(failures, f'Counted word count {counted} is not under {WORD_LIMIT}')
 
     # 5. PDF: same text and every font embedded.
     pdf_info = {}
@@ -191,24 +195,27 @@ def main():
         'branch': 'final-report-week12-fixes-2026-10-23',
         'checks_passed': not failures,
         'failures': failures,
+        'simple_word_count_counted_part': counted,
+        'simple_word_count_appendix': appendix,
         'simple_word_count_full_document': words,
         'values_checked_against_outputs': len(expect),
         'ai_acknowledgement_unchanged': not any('AI acknowledgement' in f for f in failures),
         'pdf': pdf_info,
     }
     previous = json.loads((PKG / 'package_checks.json').read_text()) if (PKG / 'package_checks.json').exists() else {}
-    for key in ('microsoft_word_count_full_document', 'render_method'):
+    for key in ('microsoft_word_count_counted_part', 'microsoft_word_count_full_document', 'render_method'):
         if key in previous:
             result[key] = previous[key]
-    if result.get('microsoft_word_count_full_document', 0) >= WORD_LIMIT:
-        fail(failures, f"Microsoft Word count {result['microsoft_word_count_full_document']} is not under {WORD_LIMIT}")
+    if result.get('microsoft_word_count_counted_part', 0) >= WORD_LIMIT:
+        fail(failures, f"Microsoft Word count {result['microsoft_word_count_counted_part']} (counted part) is not under {WORD_LIMIT}")
         result['checks_passed'] = False
         result['failures'] = failures
     (PKG / 'package_checks.json').write_text(json.dumps(result, indent=2) + '\n')
     if failures:
         print('FAIL:\n  ' + '\n  '.join(failures))
         sys.exit(1)
-    print(f'PASS: report package consistent; {words} words; {len(expect)} values match committed outputs.')
+    print(f'PASS: report package consistent; {counted} counted words (appendix {appendix}, full {words}); '
+          f'{len(expect)} values match committed outputs.')
 
 
 if __name__ == '__main__':

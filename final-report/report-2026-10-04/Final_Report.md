@@ -23,7 +23,7 @@ The business question is: **where should a rent-to-rent operator with limited fu
 
 A **group** combines council area, dwelling type and bedroom count. A home is **busy** if it received at least 30 guest reviews in the year before data collection. Inside Airbnb (n.d.) assumes half of stays are reviewed, so with three-night stays, 30 reviews means about 180 booked nights, roughly half the year.
 
-**Why reviews?** Empty nights are the operator's main risk. Guests can review only after a stay, so review counts record past guest activity, the best public guide to demand. Turning them into booked nights needs assumptions about review rates and stay length, and shorter stays bring more reviews for the same nights. Review counts show neither profit (rents and costs are not in the data) nor satisfaction, so we translate them into nights and revenue and check what guests wrote (Section 5.1).
+**Why reviews?** Empty nights are the operator's main risk. Review counts are an indirect record of past guest activity and a public indicator of demand. Turning them into booked nights needs assumptions about review rates and stay length, and shorter stays bring more reviews for the same nights. Review counts show neither profit (rents and costs are not in the data) nor satisfaction, so we translate them into nights and revenue and check guest ratings and review text (Section 5.1).
 
 Since the interim report (in the repository), we replaced its random forest with one explainable logistic regression and moved technical checks to Appendix A.
 
@@ -84,7 +84,7 @@ Homes of one host stay together in every check, because they can perform alike. 
 
 ## 5. Analysis and Results
 
-### 5.1 Data exploration: activity is uneven, and busy homes are well reviewed
+### 5.1 Data exploration: activity is uneven, and busy homes are better rated
 
 Guest activity is very uneven (Figure 1). The median home received 15 reviews in the year; a quarter (981 homes, 25.3%) were busy, and 334 (8.6%) received none.
 
@@ -107,7 +107,7 @@ Busy homes were slightly cheaper, but far more often accepted one-night stays an
 | Mean lifetime guest rating (out of 5 stars) | 4.84 | 4.69 | 4.73 |
 | Reviews in the year with a negative tone | 1.6% | 2.9% | 2.2% |
 
-Busy homes also had happier guests: a higher mean rating (4.84 against 4.69 stars) and proportionally fewer negative reviews (1.6% against 2.9%). We scored all 78,288 reviews from that year with VADER, a word-list tool (Hutto & Gilbert, 2014); about 90% read as positive in both groups. So the high review counts of busy homes came with satisfied guests, not complaints.
+Busy homes also had a higher mean lifetime rating (4.84 against 4.69 stars), and a smaller share of their reviews was classified as negative (1.6% against 2.9%). We scored all 78,288 reviews from that year with VADER, a word-list tool for English text (Hutto & Gilbert, 2014); about 90% were classified as positive in both groups. The text score is a supporting indicator, not a tested measure of satisfaction.
 
 ### 5.2 Descriptive analysis: City apartments lead
 
@@ -163,14 +163,14 @@ We repeated the ranking on the earlier year (ten groups, 2,657 homes with two ye
 
 ### Key findings
 
-1. **Where:** City of Melbourne two- and three-bedroom apartments had the most busy homes, then, less certainly, Yarra Ranges three-bedroom houses. All three stayed ahead a year later and had above-median revenue (Figures 2 and 5, Table 4).
+1. **Where:** City of Melbourne two- and three-bedroom apartments had the highest shares of busy homes, then, less certainly, Yarra Ranges three-bedroom houses. All three stayed ahead a year later and had above-median revenue (Figures 2 and 5, Table 4).
 2. **What goes with being busy:** one-night stays and a price at or below similar homes (Figure 3, Table 5), though shorter stays partly inflate review counts.
-3. **Satisfied guests:** busy homes had higher ratings and proportionally fewer negative reviews (Table 3).
+3. **Guest feedback:** busy homes had a higher mean rating and a smaller share of reviews classified as negative (Table 3).
 4. **Which home first:** the two settings give a quick first check (Table 5). Tested on unseen hosts, 49.6% of the model's picks were busy, against 32.4% for random picking (Figure 4).
 
 ### Recommendations
 
-1. **Search City of Melbourne two- and three-bedroom apartments first, then Yarra Ranges three-bedroom houses** (Figure 2, Table 4). Between leases that pass Recommendation 3, choose the larger cash-flow margin; if margins are similar, choose the group with more busy homes.
+1. **Search City of Melbourne two- and three-bedroom apartments first, then Yarra Ranges three-bedroom houses** (Figure 2, Table 4). Between leases that pass Recommendation 3, choose the larger cash-flow margin; if margins are similar, choose the group with the higher share of busy homes.
 2. **Favour homes that can take one-night stays at a price at or below similar listings** (Figure 3, Table 5); the evidence is strongest for City apartments. At inspection, check that building rules allow one-night stays and that this price covers costs. Trial these settings and track the results (Table 6).
 3. **Drop leases whose weekly costs exceed the group's typical revenue** (Figure 6). Typical estimated weekly revenue is **AUD 590** for City two-bedroom apartments, **930** for City three-bedroom apartments and **890** for Yarra Ranges houses, but only half of homes reach it; for homes that were not busy it was **AUD 320, 620 and 600**. Assess each remaining lease with its own cash-flow plan, and hold cash to cover a year's shortfall at that lower revenue.
 
@@ -191,7 +191,7 @@ We repeated the ranking on the earlier year (ten groups, 2,657 homes with two ye
 
 ## 7. Limitations and Future Work
 
-- **Reviews measure activity indirectly.** Inside Airbnb's 50% review rate sits within published estimates of 30.5%–72% (Inside Airbnb, n.d.), so nights and dollar figures are rough. Ratings are lifetime averages, and the text tool reads English best.
+- **Reviews measure activity indirectly.** Inside Airbnb's 50% review rate sits within published estimates of 30.5%–72% (Inside Airbnb, n.d.), so nights and dollar figures are rough. Ratings are lifetime averages, and VADER does not translate reviews written in other languages.
 - **One snapshot of surviving homes.** Departed, new, unpriced and outer-area listings are missing, and revenue uses June–July prices. The two-year check uses the same snapshot.
 - **Short stays inflate reviews.** A one-night minimum allows more stays for the same nights booked.
 - **Associations, not causes.** Settings may respond to past performance, and we chose the inputs, rule and priority groups after seeing all homes.
@@ -229,7 +229,7 @@ Maksym Xu led data preparation, modelling and validation; Eric Huang led report 
 
 ## Appendix A. Model Details and Further Checks
 
-In Table A1, each odds ratio multiplies the odds of being busy (busy homes per home that is not busy), averaged over the 50 fits; above 1 raises the chance, below 1 lowers it.
+Group median prices, and the most common minimum stay used to fill gaps, come only from the homes each model was built on. In Table A1, each odds ratio multiplies the odds of being busy (busy homes per home that is not busy), averaged over the 50 fits; above 1 raises the chance, below 1 lowers it.
 
 **Table A1. Odds ratios across 50 fits**
 
@@ -248,7 +248,7 @@ In Table A1, each odds ratio multiplies the odds of being busy (busy homes per h
 | Two bedrooms (one) | 1.16 | 0.89–1.41 |
 | Three bedrooms (one) | 1.31 | 0.86–1.84 |
 
-Ranges show stability across fits, not confidence intervals; those including 1 (for example, Yarra Ranges) leave the direction uncertain. Treating same-host homes as related widens margins of error to 1.1–2.6 times ordinary ones. Inputs overlap little (variance inflation factors below 3). An ordinary test of curved price and amenity effects suggests slight curvature (p = 0.03; amenities alone, p = 0.011), but this is unclear once same-host homes are treated as related (amenities, p = 0.17). Full evaluation tables are in the repository (Huang & Xu, 2026).
+Ranges show stability across fits, not confidence intervals; those including 1 (for example, Yarra Ranges) leave the direction uncertain. Across the 50 tests on all 14 groups, the model ranked a random busy home above a random home that was not busy 71% of the time, against 60% for group rates (AUC 0.71 and 0.60). Treating same-host homes as related widens margins of error to 1.1–2.6 times ordinary ones. Inputs overlap little (variance inflation factors below 3). An ordinary test of curved price and amenity effects suggests slight curvature (p = 0.03; amenities alone, p = 0.011), but this is unclear once same-host homes are treated as related (amenities, p = 0.17). Full evaluation tables are in the repository (Huang & Xu, 2026).
 
 **Table A2. Hits and misses: top quarter picked across all 14 groups**
 
@@ -257,7 +257,7 @@ Ranges show stability across fits, not confidence intervals; those including 1 (
 | Picked by model | 423 | 546 | 969 |
 | Not picked | 558 | 2,346 | 2,904 |
 
-Each home was scored by a model built without its host (five folds of hosts). Of the 969 picked, 43.7% were busy (precision), against 25.3% overall, and they included 43.1% of busy homes (recall).
+Each home was scored by a model built without its host (five folds of hosts). Of the 969 picked, 43.7% were busy (precision), against 25.3% overall, and they included 43.1% of busy homes (recall). Accuracy (71.5%) is not a useful guide here, because calling every home "not busy" scores 74.7%.
 
 **Table A3. Further checks**
 
@@ -265,6 +265,8 @@ Each home was scored by a model built without its host (five folds of hosts). Of
 |---|---|
 | Top three in 1,000 host redraws | City 3-bed 94%, City 2-bed 90%, Yarra Ranges 64% of redraws |
 | Without the price rule, or without the one-year review rule | Same three groups; Yarra Ranges houses rank second |
+| Minimum group size of 30 or 75 homes | Same three groups, same order |
 | Two-year check with hosts weighted equally | Later-year lead of 8.7 points |
 | Model against random picking, 50 tests | Model better in 46 tests |
+| Model picks 10%, 25% or 50% of each priority group | 54.5%, 49.6% and 43.1% of picks busy; they include 17.1%, 38.3% and 66.7% of busy homes |
 | Reduced model against random picking, by group | City 2-bed 38.9% vs 31.7%; City 3-bed 33.9% vs 35.9%; Yarra Ranges 49.7% vs 30.4% |

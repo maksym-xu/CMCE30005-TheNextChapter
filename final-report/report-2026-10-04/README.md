@@ -67,6 +67,14 @@ The report's headline (Figure 4) picks 25% of test homes separately in each prio
 
 In the pooled five-fold design, group-rate scores from five different training sets share one list, which tends to favour the model. Across the 50 splits on all groups, mean AUC is 0.708 against 0.603 (better in 50 of 50) and mean Brier score 0.1715 against 0.1841 (better in 44). Within the separate group quotas, gains average +16.4 points in City two-bedroom apartments, +17.6 in City three-bedroom apartments and +25.0 in Yarra Ranges houses; Yarra Ranges contributes only 5–9 picked homes per split.
 
+## Changes on 23 October, fourth pass (team review)
+
+- Key Finding 1 and Recommendation 1 now speak of the share of busy homes in a group, which is what the ranking uses, not the number of busy homes.
+- The VADER result is stated as measured: a higher mean lifetime rating and a smaller share of reviews classified as negative. The text score is described as a supporting indicator, not a tested measure of satisfaction, and the limitations note that VADER does not translate other languages.
+- Section 2 no longer says guests can review only after a stay or calls reviews the best public guide; review counts are described as an indirect record of past guest activity.
+- Word count: the instructor set no limit on the appendix, so the package check now applies the 3,000-word limit to everything before Appendix A (references and statements included) and reports the appendix separately. Appendix A again carries results cut earlier only for length: where the group medians come from, the AUC comparison, why accuracy is not used, the group-size check and the list-length results.
+- Microsoft Word count: 2,634 words before Appendix A (references and statements included); 3,106 for the whole document; eleven pages. PDF saved from Word for Mac with all fonts embedded.
+
 ## Changes on 23 October, third pass (toward the instructor's 2,000-word guide)
 
 - Team review (Eric Huang): the two-setting rule is presented as a quick first check found in this sample, not as matching the model's tested hit rate; Section 2 says review counts record past guest activity and that converting them into nights needs assumptions about review rates and stay length; the model assumption is stated in terms of odds; Table 3 labels the rating as lifetime.
