@@ -4,6 +4,12 @@
 
 Prepared by Eric Huang and Maksym Xu. `Final_Report.md` is the source text; the Word file is built from it, the PDF is exported from the Word file, and the root `README.md` carries the same report.
 
+## Final wording and export on 23 October
+
+- Clarified the denominator of the 33.4% comparison, connected the model discussion to the two-setting rule, and stated where the earlier-year 34-review threshold came from. No analysis results or figures changed.
+- Microsoft Word counts 2,641 words before Appendix A (including references and statements), and 3,113 words in the full document. The appendix is excluded from the assessment word limit.
+- Exported the eleven-page report through Microsoft Word on Windows as PDF/A, with all font resources embedded. Markdown, Word, PDF and the root README are synchronized.
+
 ## Files
 
 | Path | Purpose |

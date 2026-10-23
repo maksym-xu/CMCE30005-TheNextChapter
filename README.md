@@ -63,7 +63,7 @@ To avoid setting the target with the same homes we compare, we first set aside o
 
 **Descriptive (Objective 1).** A simple summary, not a model, ranks the 14 groups by their share of busy homes, adding Inside Airbnb's estimated nights and revenue.
 
-**Predictive (Objective 2).** A logistic regression estimates each home's chance of being busy from six inputs, holding the others fixed (Table 2; R Core Team, 2026). This separates location from how a home is run. We also test a simpler two-setting rule: one-night stays, and a price at or below the group median.
+**Predictive (Objective 2).** A logistic regression estimates each home's chance of being busy from six inputs, holding the others fixed (Table 2; R Core Team, 2026). This separates location from how a home is run. We then distil this into a simpler two-setting rule: one-night stays, and a price at or below the group median.
 
 **Table 2. Outcome and inputs of the model**
 
@@ -141,7 +141,7 @@ Holding other inputs fixed, a typical City two-bedroom apartment has a **42%** c
 
 **Figure 3.** Chance that a typical City two-bedroom apartment (one-night stays, median price and amenities) is busy as one input changes; 95% confidence intervals.
 
-A two-setting rule turns this into a simple check (Table 5). In the priority groups, half (50.4%) of homes with one-night stays priced at or below their group median were busy, against a third (33.4%) of all their homes and 9.3% with neither setting. Only 20 of 90 Yarra Ranges houses accept one-night stays, so the rule rests mainly on City apartments.
+A two-setting rule turns this into a simple check (Table 5). In the priority groups, half (50.4%) of homes with one-night stays priced at or below their group median were busy, against a third (33.4%) of all homes in these groups and 9.3% with neither setting. Only 20 of 90 Yarra Ranges houses accept one-night stays, so the rule rests mainly on City apartments.
 
 **Table 5. Share of busy homes in the three priority groups, by two settings**
 
@@ -158,7 +158,7 @@ The rule picks 28% of homes in this sample and suits a quick first check. The mo
 
 ### 5.4 Over time: the leading groups stayed ahead
 
-We repeated the ranking on the earlier year (ten groups, 2,657 homes with two years of reviews), with a 34-review bar set the same way. The same three groups led: 33.6% of their homes reached it, against 19.9% elsewhere (Figure 5). On the same bar a year later, they still led (27.1% against 14.9%), although Yarra Ranges houses fell to 21.4%.
+We repeated the ranking on the earlier year (ten groups, 2,657 homes with two years of reviews), with a 34-review threshold set from the earlier year's reference homes. The same three groups led: 33.6% of their homes reached it, against 19.9% elsewhere (Figure 5). On the same threshold a year later, they still led (27.1% against 14.9%), although Yarra Ranges houses fell to 21.4%.
 
 ![Figure 5](final-report/report-2026-10-04/figures/figure_5_two_years.png)
 
